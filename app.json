@@ -1,12 +1,33 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/details/detailsIndex/index",
+    "pages/personal/index/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/tab_youxiquan.png",
+        "selectedIconPath": "static/images/tab_youxiquan_s@3x.png",
+        "text": "拼团"
+      },
+      {
+        "pagePath": "pages/details/detailsIndex/index",
+        "iconPath": "static/images/tab_my@3x.png",
+        "selectedIconPath": "static/images/tab_my_s@3x.png",
+        "text": "个人中心"
+      }
+    ]
   }
 }
