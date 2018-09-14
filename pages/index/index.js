@@ -26,8 +26,9 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-    var userData = JSON.stringify(e.detail.userInfo);
-    app.RequiseData('user.info.saveinfo', { data:userData}, res=> {
+
+    var userData = e.detail.userInfo;
+    app.RequiseData('user.info.saveinfo', { data: encodeURI(JSON.stringify(userData))}, res=> {
       console.log(res)
     }, err => {
 
