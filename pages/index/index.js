@@ -16,7 +16,6 @@ Page({
     })
   },
   onLoad: function () {
-    console.log(app.globalData.userInfo)
     if (app.globalData.userInfo) {
      
     }
@@ -27,8 +26,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  },
-  bindGetUserInfo: function(e){
-    console.log(e)
+    var userData = e.detail.userInfo
+    app.RequiseData('user.info.saveinfo', { data: userData}, res=> {
+      console.log(res)
+    }, err => {
+
+    })
   }
 })

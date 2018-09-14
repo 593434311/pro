@@ -16,16 +16,21 @@ function appRequest(methods, data, callback, errFun) {
   Object.keys(data).forEach(function (key) {
     keyname += key + '=' + data[key] + '&';
   });
-  console.log(keyname)
+  var header = {
+    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+  }
+  if (wx.getStorageSync('to-ken')){
+    header['user-token'] = wx.getStorageSync('to-ken')
+  }
   wx.request({
     url: api_url, // api接口地址请求
     method: 'POST', //
-    header: {
-      'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
-    },
+    header: header,
     dataType: 'json',
     data: keyname,
     success: function (res) {
+      console.log(res)
+      if (res.data.status == '299') wx.removeStorage({ key: 'to-ken'})
       callback(res.data);
     },
     fail: function (err) {

@@ -14,8 +14,8 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(res)
         request.request('login.login.login', { code: res.code, type: 2 }, res => {
+          wx.setStorageSync('to-ken', res.data)
           console.log(res)
         }, err => {
           console.log(err)
