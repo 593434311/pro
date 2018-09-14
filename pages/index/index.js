@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+var bas64 = require('../../utils/bas64.js')
 const app = getApp()
 
 Page({
@@ -26,9 +27,9 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-
     var userData = e.detail.userInfo;
-    app.RequiseData('user.info.saveinfo', { data: encodeURI(JSON.stringify(userData))}, res=> {
+    console.log(userData)
+    app.RequiseData('user.info.saveinfo', { userinfo: bas64(JSON.stringify(userData))}, res=> {
       console.log(res)
     }, err => {
 
