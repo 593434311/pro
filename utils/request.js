@@ -29,8 +29,7 @@ function appRequest(methods, data, callback, errFun) {
     dataType: 'json',
     data: keyname,
     success: function (res) {
-      console.log(res)
-      if (res.data.status == '299') wx.removeStorage({ key: 'to-ken'})
+      if (res.data.status == '299') wx.removeStorage({ key: 'to-ken'});
       callback(res.data);
     },
     fail: function (err) {
