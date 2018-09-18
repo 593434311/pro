@@ -1,10 +1,64 @@
 /**app.wxss**/
 .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
   box-sizing: border-box;
+}
+view,ul,li,div,p,sapn{
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  width: 100%;
+  font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
 } 
+input {
+  font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
+  padding: 0px;
+  border: none;
+  box-shadow: none;
+}
+input:focus, input:active, input:hover{
+  box-shadow: none;
+  outline: none;
+}
+
+input::placeholder{
+  color: aliceblue
+}
+
+input::-ms-clear {
+  color: aliceblue;
+  display: none;
+}
+
+a {
+  text-decoration: none
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+button, input, textarea{
+  outline: none
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+  
+li {
+  list-style: none;
+}
+  
+table {
+  border: 0;
+  margin: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+} 
+table, th, td {
+  padding: 0;
+}
