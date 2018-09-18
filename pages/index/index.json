@@ -1,1 +1,8 @@
-{}
+{
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "咖友街",
+    "navigationBarTextStyle": "black"
+  }
+}

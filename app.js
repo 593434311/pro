@@ -13,13 +13,23 @@ App({
     // 登录
     wx.login({
       success: res => {
+        if (wx.getStorageSync('to-ken')) {
+          request.request('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {
+            if (!res.data) {
+              request.request('login.login.login', { code: res.code, type: 2 }, res => {
+                wx.setStorageSync('to-ken', res.data.token)
+              })
+            }
+          })
+        } else {
+          request.request('login.login.login', { code: res.code, type: 2 }, res => {
+            if(res.status == 0){
+              wx.setStorageSync('to-ken', res.data.token)
+            }// else console.error(res)
+          })
+        }
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        request.request('login.login.login', { code: res.code, type: 2 }, res => {
-          wx.setStorageSync('to-ken', res.data.token)
-          console.log(res)
-        }, err => {
-          console.log(err)
-        })
+
       }
     })
     // 获取用户信息

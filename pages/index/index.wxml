@@ -1,13 +1,63 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+ <view class='banner'>
+    <swiper class='swiper-box' current="{{swiperCurrent}}" imgwidth="imgwidth" bindchange="swiperChange" autoplay="false" interval="5000" duration="1000">
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="286" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+    <view class='kaituan'></view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class='main'>
+    <view class="data_">
+      <view class='data_list' wx:for="[]">
+        <view class='list_left'>
+          <image style="width: 230rpx; height: 230rpx; background-color: #eeeeee;" mode="scaleToFill" src="/static/images/index/527789659580904728.png"></image>
+        </view>
+        <view class='list_right'>
+          <text class='GroupName'><text>【2人团】</text>大学生台球patty|带上你的女朋友抬眼台球3小时 </text>
+          <view class='price'>
+            <text>单页价￥120 <text>￥80</text></text>
+          </view>
+          <view class='list_time'>
+            <text>剩余时间</text>
+            <view class='time_'>
+              <text>8</text>:
+              <text>23</text>:
+              <text>56</text>
+            </view>
+          </view>
+          <view class='like'>
+            <view class='like_q'>
+              <text class='wontGo ioc'></text>
+              3625人想去
+            </view>
+            <view class='cart'></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='active'>
+      <view class='requer'></view>
+      <view class='hot_active'></view>
+      <view class='active_'>
+        <view class='active_list'>
+          <image src='/static/images/index/775214810346420280.png'></image>
+          <text class='GroupName'><text>【2人团】</text>大学生台球patty|带上你的女朋友抬眼台球3小时 </text>
+          <text>
+            <text>上海</text>
+            <text>松江大学城</text>
+            <text></text>
+          </text>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

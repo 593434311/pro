@@ -1,32 +1,39 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/details/detailsIndex/index",
-    "pages/personal/index/index"
+    "pages/personal/index/index",
+    "pages/find/find",
+    "pages/details/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "咖友街",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#dddddd",
-    "selectedColor": "#3cc51f",
-    "borderStyle": "black",
+    "color": "#999",
+    "selectedColor": "#ff3739",
+    "borderStyle": "1px solid #ccc",
     "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "static/images/tab_youxiquan.png",
-        "selectedIconPath": "static/images/tab_youxiquan_s@3x.png",
+        "iconPath": "static/images/tabar/574909981906785859.png",
+        "selectedIconPath": "static/images/tabar/85958540329004083.png",
         "text": "拼团"
       },
       {
-        "pagePath": "pages/details/detailsIndex/index",
-        "iconPath": "static/images/tab_my@3x.png",
-        "selectedIconPath": "static/images/tab_my_s@3x.png",
-        "text": "个人中心"
+        "pagePath": "pages/find/find",
+        "iconPath": "static/images/tabar/22081532755178670.png",
+        "selectedIconPath": "static/images/tabar/577952809328792818.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "iconPath": "static/images/tabar/170571711685383073.png",
+        "selectedIconPath": "static/images/tabar/350054131244882432.png",
+        "text": "我的"
       }
     ]
   }
