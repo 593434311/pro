@@ -1,63 +1,285 @@
 <!--index.wxml-->
-<view class="container">
- <view class='banner'>
-    <swiper class='swiper-box' current="{{swiperCurrent}}" imgwidth="imgwidth" bindchange="swiperChange" autoplay="false" interval="5000" duration="1000">
-      <block wx:for="{{imgUrls}}" wx:key="unique">
-        <swiper-item>
-          <image src="{{item}}" class="slide-image" width="286" height="150"/>
-        </swiper-item>
-      </block>
-    </swiper>
+<!--index.wxml-->
+<!--轮播-->
+<view class="header">
+  <view  class="swiper-container">
+     <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+        <block wx:for="{{slider}}" wx:key="unique">
+          <swiper-item class="swiper-item">
+            <view>
+              <image src="{{item.picUrl}}"></image>
+            </view> 
+          </swiper-item>
+        </block>
+    </swiper> 
     <view class="dots">
-      <block wx:for="{{imgUrls}}" wx:key="unique">
+      <block wx:for="{{slider}}" wx:key="unique">
         <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
       </block>
     </view>
-    <view class='kaituan'></view>
-  </view>
-  <view class='main'>
-    <view class="data_">
-      <view class='data_list' wx:for="[]">
-        <view class='list_left'>
-          <image style="width: 230rpx; height: 230rpx; background-color: #eeeeee;" mode="scaleToFill" src="/static/images/index/527789659580904728.png"></image>
-        </view>
-        <view class='list_right'>
-          <text class='GroupName'><text>【2人团】</text>大学生台球patty|带上你的女朋友抬眼台球3小时 </text>
-          <view class='price'>
-            <text>单页价￥120 <text>￥80</text></text>
-          </view>
-          <view class='list_time'>
-            <text>剩余时间</text>
-            <view class='time_'>
-              <text>8</text>:
-              <text>23</text>:
-              <text>56</text>
-            </view>
-          </view>
-          <view class='like'>
-            <view class='like_q'>
-              <text class='wontGo ioc'></text>
-              3625人想去
-            </view>
-            <view class='cart'></view>
-          </view>
-        </view>
-      </view>
-    </view>
-    <view class='active'>
-      <view class='requer'></view>
-      <view class='hot_active'></view>
-      <view class='active_'>
-        <view class='active_list'>
-          <image src='/static/images/index/775214810346420280.png'></image>
-          <text class='GroupName'><text>【2人团】</text>大学生台球patty|带上你的女朋友抬眼台球3小时 </text>
-          <text>
-            <text>上海</text>
-            <text>松江大学城</text>
-            <text></text>
-          </text>
-        </view>
-      </view>
-    </view>
   </view>
 </view>
+
+<!--即将成团-->
+<view class="content_tuan">
+  <view class="tuan_title">
+    <image src="/static/images/icon/jijiangchengtuan@2x.png"></image>
+  </view>
+  <view class="tuan">
+    <block>
+      <view class="tuan_list flex" wx:for="[]">
+          <view class="tuan_lt">
+            <view class="tuan_img">
+              <image src="/static/images/index/tuan_img.png" mode="aspectFill"></image>
+            </view>
+          </view>
+          <view class="tuan_rt">
+            <view class="rt_tit">
+              <text>【2人团】</text>大学生台球party | 带上你的女朋友体验台球
+            </view>
+            <view class="price">
+              <s>单价买￥128</s>
+              <s>￥88</s>
+            </view>
+            <view class="count_dn flex">
+              <text>剩余时间</text>
+              <view class="time"><i>8</i>:<i>23</i>:<i>56</i></view>
+            </view>
+            <view class="collect flex">
+            <view class="want">
+              <image src="/static/images/icon/aixinhui@2x.png"></image>
+              <text>569人想玩</text>
+            </view>
+            <image class="purchase" src="/static/images/icon/lijiqianggou@2x.png"></image>
+          </view> 
+        </view>
+        
+      </view>
+
+    </block> 
+  </view>
+  
+</view>
+
+<!-- 热门活动 -->
+<view class="load">
+      <image src="/static/images/icon/huanyipi@2x.png" ></image>
+  </view>
+<view class="content_active">
+  <view class="active_title">
+    <image src="/static/images/icon/remenhuodong@2x.png"></image>
+  </view>
+ 
+  <view class="active">
+  
+    <block>
+      <view class="active_list">
+        
+            
+            
+              
+         
+      
+      
+      
+      
+      </view>
+      
+    
+    
+    
+    </block> 
+  
+  
+  </view>
+
+
+</view>
+  <!-- <view class="tuan contentW">
+    <view class="title1 flex">
+      <text class="text1">即将成团</text>
+      <view class="change">
+        <text>换一批</text>
+        <image src="/assets/image/change.png"></image>
+      </view>
+    </view>
+    <view class="part">
+      <block>
+        <view class="part_list">
+          <navigator url="">
+            <view class="part_t flex">
+              <view class="part_img">
+                <image src="/assets/image/tuan_01.png" mode="aspectFill"></image>
+              </view>
+              <view class="part_rt">
+                <b>大学生台球part</b>
+                <i>大学生台球part |带上你的朋友</i>
+                <view class="rt_m flex">
+                  <view class="progress flex">
+                    <image src="/assets/image/progress.png"></image>
+                    <text>还差2人</text>
+                  </view>
+                  <view class="price flex">
+                    <s>￥128</s>
+                    <s>￥88</s>
+                  </view>
+                </view>
+              </view> 
+            </view>
+            <view class="part_b msg flex">
+                <view class="location">
+                  <image src="/assets/image/location.png"></image>
+                  <text>上海 松江大学城</text>
+                </view>
+                <view class="collect">
+                  <image src="/assets/image/collect_01.png"></image>
+                  <text>569人想玩</text>
+                </view>
+                <view class="end">
+                  <span>2天</span>
+                  <text>后结束</text>
+                </view>
+              </view>
+            <view>
+            </view>
+          </navigator>
+        </view>
+        <view class="part_list">
+          <navigator url="">
+            <view class="part_t flex">
+              <view class="part_img">
+                <image src="/assets/image/tuan_01.png" mode="aspectFill"></image>
+              </view>
+              <view class="part_rt">
+                <b>大学生台球part</b>
+                <i>大学生台球part |带上你的朋友</i>
+                <view class="rt_m flex">
+                  <view class="progress flex">
+                    <image src="/assets/image/progress.png"></image>
+                    <text>还差2人</text>
+                  </view>
+                  <view class="price flex">
+                    <s>￥128</s>
+                    <s>￥88</s>
+                  </view>
+                </view>
+              </view> 
+            </view>
+            <view class="part_b msg flex">
+              <view class="location">
+                <image src="/assets/image/location.png"></image>
+                <text>上海 松江大学城</text>
+              </view>
+              <view class="collect">
+                <image src="/assets/image/collect_01.png"></image>
+                <text>569人想玩</text>
+              </view>
+              <view class="end">
+                <span>2天</span>
+                <text>后结束</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </block> 
+    </view>
+  </view>  -->
+<!--热门活动-->  
+<!-- <view class="hot contentW">
+  <view class="title2 flex">
+    <text>热门活动</text>
+    <text>查看更多</text>
+  </view>
+  <view class="active">
+    <block>
+      <view class="active_list">
+        <navigator>
+          <view class="active_t">
+            <image src="/assets/image/active_01.png" class="active_img1"></image>
+             <view class="active_collect">
+              <image src="/assets/image/collect_02.png" class="active_img2"></image>
+              <text class="want">23人想去</text>
+            </view>
+            <text class="handwork">#手工艺品#</text>
+          </view>
+          <view class="active_b">
+            <b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b>
+            <view class="rt_m flex">
+              <view class="price flex">
+                <s>￥25</s>
+                <s>￥45</s>
+              </view>
+              <text>30人团</text>
+            </view>
+            <view class="msg flex">
+              <view class="location">
+                <image src="/assets/image/location.png"></image>
+                <text>上海 松江大学城</text>
+              </view>
+              <view class="end">
+                <text>12月11日结束</text>
+              </view>
+            </view>
+          
+          </view>
+        </navigator>
+      </view>
+      <view class="active_list">
+        <navigator>
+          <view class="active_t">
+            <image src="/assets/image/active_01.png" class="active_img1"></image>
+            <view class="active_collect">
+             <image src="/assets/image/collect_02.png" class="active_img2"></image>
+              <text class="want">23人想去</text>
+            </view>
+            <text class="handwork">#手工艺品#</text>
+          </view>
+          <view class="active_b">
+            <b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b>
+            <view class="rt_m flex">
+              <view class="price flex">
+                <s>￥25</s>
+                <s>￥45</s>
+              </view>
+              <text>30人团</text>
+            </view>
+            <view class="msg flex">
+              <view class="location">
+                <image src="/assets/image/location.png"></image>
+                <text>上海 松江大学城</text>
+              </view>
+              <view class="end">
+                <text>12月11日结束</text>
+              </view>
+            </view>
+            
+            
+              
+          
+          </view>
+        
+        
+        
+        
+        
+        </navigator>
+      
+      
+      
+      
+      </view>
+      
+    
+    
+    
+    </block> 
+  
+  
+  </view>
+
+
+
+
+</view> -->
+
+
