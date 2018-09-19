@@ -2,16 +2,15 @@
 .container {
   box-sizing: border-box;
 }
+view {
+  font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
+  font-size: 14px;
+}
 view,ul,li,div,p,sapn{
   box-sizing: border-box;
 }
-body {
-  font-size: 14px;
-  width: 100%;
-  font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
-} 
 input {
-  font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
+  font-family: PingFangSC-Regular, sans-serif,Microsoft Yahei,Microsoft Jhenghei;
   padding: 0px;
   border: none;
   box-shadow: none;
