@@ -99,18 +99,7 @@
             <image src="/static/images/icon/aixin@2x.png"></image>
             <text>36270人想去</text>
           </view>
-        
-        
         </view>
-
-            
-            
-              
-         
-      
-      
-      
-      
       </view>
     </block> 
     <view class="more">
@@ -119,193 +108,27 @@
   
   
   </view>
-
-
+  <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="770rpx" class="coupon">
+    <image src='/static/images/icon/67782958429263482.png' mode="widthFix" style='border-radius: 5px'></image>
+    <view class='text'>这位新朋友你好，送你一张券试试看呗，不是骗子</view>
+    <view class='coupon_reduce'>
+      <view class='reduce_left'>
+        <view class='left_left'>
+          <text>￥5</text>
+          <view>满50元可用</view>
+        </view>
+        <view class='left_right'>
+          <view>参团立减</view>
+          <text>有效期：10日</text>
+        </view>
+      </view>
+      <view class='reduce_right'>
+        <view>立减卷</view>
+      </view>
+    </view>
+    <button data-deat='true' bindtap='getCoupon'>立即领取</button>
+    <view style='text-align:center;margin-top: 38rpx;' data-deat='false' bindtap='getCoupon'>不要</view>
+  </coupon>
 </view>
-  <!-- <view class="tuan contentW">
-    <view class="title1 flex">
-      <text class="text1">即将成团</text>
-      <view class="change">
-        <text>换一批</text>
-        <image src="/assets/image/change.png"></image>
-      </view>
-    </view>
-    <view class="part">
-      <block>
-        <view class="part_list">
-          <navigator url="">
-            <view class="part_t flex">
-              <view class="part_img">
-                <image src="/assets/image/tuan_01.png" mode="aspectFill"></image>
-              </view>
-              <view class="part_rt">
-                <b>大学生台球part</b>
-                <i>大学生台球part |带上你的朋友</i>
-                <view class="rt_m flex">
-                  <view class="progress flex">
-                    <image src="/assets/image/progress.png"></image>
-                    <text>还差2人</text>
-                  </view>
-                  <view class="price flex">
-                    <s>￥128</s>
-                    <s>￥88</s>
-                  </view>
-                </view>
-              </view> 
-            </view>
-            <view class="part_b msg flex">
-                <view class="location">
-                  <image src="/assets/image/location.png"></image>
-                  <text>上海 松江大学城</text>
-                </view>
-                <view class="collect">
-                  <image src="/assets/image/collect_01.png"></image>
-                  <text>569人想玩</text>
-                </view>
-                <view class="end">
-                  <span>2天</span>
-                  <text>后结束</text>
-                </view>
-              </view>
-            <view>
-            </view>
-          </navigator>
-        </view>
-        <view class="part_list">
-          <navigator url="">
-            <view class="part_t flex">
-              <view class="part_img">
-                <image src="/assets/image/tuan_01.png" mode="aspectFill"></image>
-              </view>
-              <view class="part_rt">
-                <b>大学生台球part</b>
-                <i>大学生台球part |带上你的朋友</i>
-                <view class="rt_m flex">
-                  <view class="progress flex">
-                    <image src="/assets/image/progress.png"></image>
-                    <text>还差2人</text>
-                  </view>
-                  <view class="price flex">
-                    <s>￥128</s>
-                    <s>￥88</s>
-                  </view>
-                </view>
-              </view> 
-            </view>
-            <view class="part_b msg flex">
-              <view class="location">
-                <image src="/assets/image/location.png"></image>
-                <text>上海 松江大学城</text>
-              </view>
-              <view class="collect">
-                <image src="/assets/image/collect_01.png"></image>
-                <text>569人想玩</text>
-              </view>
-              <view class="end">
-                <span>2天</span>
-                <text>后结束</text>
-              </view>
-            </view>
-          </navigator>
-        </view>
-      </block> 
-    </view>
-  </view>  -->
-<!--热门活动-->  
-<!-- <view class="hot contentW">
-  <view class="title2 flex">
-    <text>热门活动</text>
-    <text>查看更多</text>
-  </view>
-  <view class="active">
-    <block>
-      <view class="active_list">
-        <navigator>
-          <view class="active_t">
-            <image src="/assets/image/active_01.png" class="active_img1"></image>
-             <view class="active_collect">
-              <image src="/assets/image/collect_02.png" class="active_img2"></image>
-              <text class="want">23人想去</text>
-            </view>
-            <text class="handwork">#手工艺品#</text>
-          </view>
-          <view class="active_b">
-            <b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b>
-            <view class="rt_m flex">
-              <view class="price flex">
-                <s>￥25</s>
-                <s>￥45</s>
-              </view>
-              <text>30人团</text>
-            </view>
-            <view class="msg flex">
-              <view class="location">
-                <image src="/assets/image/location.png"></image>
-                <text>上海 松江大学城</text>
-              </view>
-              <view class="end">
-                <text>12月11日结束</text>
-              </view>
-            </view>
-          
-          </view>
-        </navigator>
-      </view>
-      <view class="active_list">
-        <navigator>
-          <view class="active_t">
-            <image src="/assets/image/active_01.png" class="active_img1"></image>
-            <view class="active_collect">
-             <image src="/assets/image/collect_02.png" class="active_img2"></image>
-              <text class="want">23人想去</text>
-            </view>
-            <text class="handwork">#手工艺品#</text>
-          </view>
-          <view class="active_b">
-            <b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b>
-            <view class="rt_m flex">
-              <view class="price flex">
-                <s>￥25</s>
-                <s>￥45</s>
-              </view>
-              <text>30人团</text>
-            </view>
-            <view class="msg flex">
-              <view class="location">
-                <image src="/assets/image/location.png"></image>
-                <text>上海 松江大学城</text>
-              </view>
-              <view class="end">
-                <text>12月11日结束</text>
-              </view>
-            </view>
-            
-            
-              
-          
-          </view>
-        
-        
-        
-        
-        
-        </navigator>
-      
-      
-      
-      
-      </view>
-      
-    
-    
-    
-    </block> 
-  
-  
-  </view>
 
-
-
-
-</view> -->
 

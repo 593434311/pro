@@ -11,28 +11,32 @@ App({
     wx.setStorageSync('logs', logs)
     
     // 登录
-    wx.login({
-      success: res => {
-        if (wx.getStorageSync('to-ken')) {
-          request.request('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {
-            if (!res.data) {
-              request.request('login.login.login', { code: res.code, type: 2 }, res => {
-                wx.setStorageSync('to-ken', res.data.token)
+    if (wx.getStorageSync('to-ken')) {
+      request.request('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {
+        if (!res.status == 0) {
+          wx.login({
+            success: res => {
+              request.request('login.login.login', { code: res.code, type: 2 }, reques => {
+                wx.setStorageSync('to-ken', reques.data.token)
+                wx.setStorageSync('cuea', false); // 
               })
             }
           })
-        } else {
+        }
+      })
+    } else {
+      wx.login({
+        success: res => {
           request.request('login.login.login', { code: res.code, type: 2 }, res => {
-            if(res.status == 0){
+            if (res.status == 0) {
               wx.setStorageSync('to-ken', res.data.token)
-              
             }// else console.error(res)
           })
         }
+      })
+    }
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
 
-      }
-    })
     // 获取用户信息
     wx.getSetting({
       success: res => {

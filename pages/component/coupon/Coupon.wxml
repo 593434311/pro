@@ -1,2 +1,7 @@
 <!--pages/component/coupon/Coupon.wxml-->
-<text>pages/component/coupon/Coupon.wxml</text>
+<view class='Coupon_mask'>
+  <view class='Coupon_' style='width: {{width_a}};height:{{height_a}}'>
+    <slot></slot>
+  </view>
+</view>
+
