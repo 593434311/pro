@@ -27,7 +27,7 @@
   </view>
   <view class="tuan">
     <block>
-      <view class="tuan_list flex" wx:for="[]">
+      <view class="tuan_list flex" wx:for="[]" wx:key="{{index}}" data-_id='123' bindtap="goDetails">
           <view class="tuan_lt">
             <view class="tuan_img">
               <image src="/static/images/index/tuan_img.png" mode="aspectFill"></image>
@@ -71,7 +71,7 @@
   </view>
   <view class="active">
     <block>
-      <view class="active_list" wx:for="[]">
+      <view class="active_list" wx:for="[]" wx:key="{{index}}">
         <view class="active_top">
           <image src="/static/images/index/active_img.png"></image>
         </view>

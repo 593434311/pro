@@ -25,6 +25,7 @@ App({
           request.request('login.login.login', { code: res.code, type: 2 }, res => {
             if(res.status == 0){
               wx.setStorageSync('to-ken', res.data.token)
+              
             }// else console.error(res)
           })
         }

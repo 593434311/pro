@@ -14,6 +14,12 @@ Page({
     ],
     swiperCurrent: 0,
   },
+  goDetails(_id) {
+    console.log(_id)
+    wx.navigateTo({
+      url: '/pages/details/index/index',
+    })
+  },
   swiperChange: function (e) {
     this.setData({
       swiperCurrent: e.detail.current
