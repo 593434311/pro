@@ -4,7 +4,7 @@
 }
 view {
   font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
-  font-size: 14px;
+  font-size: 14rpx;
 }
 
 view,ul,li,div,p,text,sapn{

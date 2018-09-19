@@ -125,6 +125,7 @@ height:303rpx;
   display:inline-block;
   width:44rpx;
   height:44rpx;
+  line-height:44rpx;
   background:linear-gradient(#fbfbfb 50%, #ffffff 50%);
   border-radius:6rpx;
   margin:0 5rpx;
