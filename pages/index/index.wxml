@@ -69,12 +69,40 @@
   <view class="active_title">
     <image src="/static/images/icon/remenhuodong@2x.png"></image>
   </view>
- 
   <view class="active">
-  
     <block>
-      <view class="active_list">
+      <view class="active_list" wx:for="[]">
+        <view class="active_top">
+          <image src="/static/images/index/active_img.png"></image>
+        </view>
+        <view class="active_bm">
+          <view class="bm_t">
+            <view class="bm_tit">
+              <text>【2人团】</text>大学生台球party | 带上你的女朋友体验台球3小时畅打的乐趣吧
+            </view>
+            <view class="location">
+              <text>上海市 松江大学城</text>
+              <text>#台球#</text>
+            </view>
+            <view class="bm_t_m">
+              <view class="count_dn">
+                <image src="/static/images/icon/biao@2x.png"></image>
+                <text>01天28小时35分</text>
+              </view>
+              <view class="price">
+                <s>单价买￥120</s>
+                <s>￥80</s>
+              </view>
+            </view>
+          </view>
+          <view class="bm_b want">
+            <image src="/static/images/icon/aixin@2x.png"></image>
+            <text>36270人想去</text>
+          </view>
         
+        
+        </view>
+
             
             
               
@@ -84,11 +112,10 @@
       
       
       </view>
-      
-    
-    
-    
     </block> 
+    <view class="more">
+      <image src="/static/images/icon/gengduo@2x.png"></image>
+    </view>
   
   
   </view>

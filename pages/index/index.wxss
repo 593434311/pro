@@ -89,37 +89,30 @@ height:303rpx;
   color:#ff484a;
   margin-right:10rpx; 
 }
-.tuan_rt .rt_tit text{
-  
-}
-.tuan_rt .price{
+
+ .price{
   display:flex;
-  justify-content: flex-start;
   align-items:baseline;
-  margin-bottom: 30rpx;
+  margin-bottom: 25rpx;
 }
-.tuan_rt .price s:nth-of-type(1){
+.price s:nth-of-type(1){
   color:#b8b8b8;
   font-size:20rpx;
   margin-right:20rpx;
 }
-.tuan_rt .price s:nth-of-type(2){
+ .price s:nth-of-type(2){
   color:#ff3638;
   font-size:36rpx;
 }
-/* .tuan_rt .time{
-  width:283rpx;
 
-} */
 .tuan_rt .count_dn{
   display:flex;
   justify-content: flex-start;
-  line-height:44rpx;
-
 }
 .tuan_rt .count_dn text{
   color:#939393;
   font-size:24rpx;
+  line-height:44rpx;
   margin-right:19rpx;
 
 }
@@ -150,11 +143,12 @@ height:303rpx;
   justify-content:space-between;
 
 }
-/* .collect {
+
+ .want{
   display: flex;
-  align-items: center;
-} */
-.collect .want image{
+  align-items:center;
+}
+ .want image{
   width:17rpx;
   height:15rpx;
   margin-right:6rpx;
@@ -183,9 +177,88 @@ height:303rpx;
   width:373rpx;
   height:52rpx;
 }
+.content_active .active{
+  background-color:#f9f9fa;
+}
+.active_list{
+   padding:24rpx 24rpx 0 24rpx;
+  background-color:#fff;
+  margin-bottom: 24rpx;
+}
+.active_list .active_top{
+  margin-bottom:18rpx;
+}
 
+.active_list .active_top image{
+  width:702rpx;
+  height:355rpx;
+}
 
+.active_bm .bm_t{
+  border-bottom:1rpx solid #e5e5e5;
+}
+.bm_t .bm_tit{
+  font-size:30rpx;
+  line-height:45rpx;
+  color:#727272;
+  margin-bottom: 20rpx;
+}
+.bm_t .bm_tit text{
+  color:#ff5246;
+  margin-right:10rpx; 
+}
+.bm_t .location{
+  margin-bottom:11rpx;
+}
+.bm_t .location text{
+  font-size:24rpx;
+  line-height:45rpx;
 
+}
+.bm_t .location text:nth-of-type(1){
+  color:#939393;
+  margin-right:44rpx;
+
+}
+.bm_t .location text:nth-of-type(2){
+  color:#ffa4a5;
+
+}
+.bm_t_m{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom: 18rpx;
+}
+.bm_t_m .count_dn{
+  color:#b8b8b8;
+  font-size:24rpx;
+  line-height: 46rpx;
+  display:flex;
+  align-items:center;
+}
+.bm_t_m .count_dn image{
+  width:37rpx;
+  height:37rpx;
+  margin-right:11rpx;
+}
+.bm_t_m .price{
+  line-height: 46rpx;
+  margin-bottom: 0;
+}
+.active_bm .bm_b{
+  padding:22rpx 0 28rpx 0;
+}
+.active_bm .bm_b text{
+  font-size:20rpx;
+  color:#b8b8b8;
+}
+.active .more{
+   padding:12px 326rpx 84rpx 326rpx; 
+}
+.active .more image{
+  width:99rpx;
+  height:57rpx;
+}
 
   
 
