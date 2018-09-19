@@ -6,7 +6,7 @@
     "pages/details/index/index"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "center",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "咖友街",
     "navigationBarTextStyle": "black"
