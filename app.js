@@ -13,12 +13,17 @@ App({
     // 登录
     if (wx.getStorageSync('to-ken')) {
       request.request('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {
-        if (!res.status == 0) {
+        if (res.status == 0) {
+          this.globalData.openId = res.data.openid;
+        } else {
           wx.login({
-            success: res => {
-              request.request('login.login.login', { code: res.code, type: 2 }, reques => {
-                wx.setStorageSync('to-ken', reques.data.token)
-                wx.setStorageSync('cuea', false); // 
+            success: resa => {
+              request.request('login.login.login', { code: resa.code, type: 2 }, reques => {
+                if (reques.status == 0) {
+                  this.globalData.openId = reques.data.openid;
+                  wx.setStorageSync('to-ken', reques.data.token);
+                  wx.setStorageSync('cuea', false); // 
+                }
               })
             }
           })
@@ -27,9 +32,10 @@ App({
     } else {
       wx.login({
         success: res => {
-          request.request('login.login.login', { code: res.code, type: 2 }, res => {
-            if (res.status == 0) {
-              wx.setStorageSync('to-ken', res.data.token)
+          request.request('login.login.login', { code: res.code, type: 2 }, resd => {
+            if (resd.status == 0) {
+              this.globalData.openId = resd.data.openid
+              wx.setStorageSync('to-ken', resd.data.token)
             }// else console.error(res)
           })
         }
@@ -51,6 +57,7 @@ App({
     request.request(methods, data, callback, errFun)
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    openId: null
   }
 })
