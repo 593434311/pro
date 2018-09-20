@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/details/index/index",
     "pages/index/index",
     "pages/personal/index/index",
-    "pages/find/find",
-    "pages/details/index/index"
+    "pages/find/find"
   ],
   "window": {
     "backgroundTextStyle": "center",
