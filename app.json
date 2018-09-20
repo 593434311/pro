@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/details/index/index",
     "pages/index/index",
     "pages/personal/index/index",
-    "pages/find/find",
-    "pages/details/index/index"
+    "pages/find/find"
+    
   ],
   "window": {
     "backgroundTextStyle": "center",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#ff6d84",
     "navigationBarTitleText": "咖友街",
     "navigationBarTextStyle": "black"
   },

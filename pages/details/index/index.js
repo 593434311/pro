@@ -1,12 +1,22 @@
 // pages/details/index/index.js
 Page({
+  data: {
+    imgUrls: [
+      '/static/images/details_index/banner@2x.png',
+      '/static/images/details_index/banner@2x.png',
+      '/static/images/details_index/banner@2x.png',
+      '/static/images/details_index/banner@2x.png'
+    ],
+    duration: 1000,
+    indicatorDots: true,
+    autoplay: true
+
+  },
 
   /**
    * 页面的初始数据
    */
-  data: {
-
-  },
+  
 
   /**
    * 生命周期函数--监听页面加载
