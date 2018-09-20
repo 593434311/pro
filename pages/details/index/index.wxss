@@ -314,11 +314,17 @@
   align-items: center;
   color: #737373;
 }
-.bottom .bot_left>view {
-  height: 65rpx;
+.bottom .bot_left>view,.bottom .bot_left>button {
+  height: 75rpx;
   text-align: center;  
 }
-.bottom .bot_left>view view{
+.bottom .bot_left > button{
+  background: none;
+  border: none;
+  color: #737373;
+  overflow:initial;
+}
+.bottom .bot_left>view view,.bottom .bot_left>button view{
   font-size: 18rpx;
   margin-top: 10rpx;
   line-height: 20rpx;
@@ -328,10 +334,12 @@
   width: 445rpx;
 }
 .busi {
-  margin-left: 41rpx;  
+  width: 104rpx;
+  height: 74rpx;
 }
 .Custo {
-  margin-left: 65rpx;
+  width: 68rpx;
+  height: 74rpx;
 }
 .business {
   width: 32rpx;
