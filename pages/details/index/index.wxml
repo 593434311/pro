@@ -40,7 +40,7 @@
       </view>
     </view>
   </view>
-
+ 
 </view>
 <!-- 参团详情 -->
 <view class="tuan_detail contentW">
@@ -200,3 +200,25 @@
 
 
 </view>
+ <view class='bottom'>
+    <view class='bot_left'>
+      <view class='busi'>
+        <view class='business'></view>
+        <view>商家</view>
+      </view>
+      <view class='Custo'>
+        <view class='Customer_se'></view>
+        <view>客服</view>
+      </view>
+    </view>
+    <view class='Placeanorder'>
+      <view class='Private'>
+        <view>￥80</view>
+        <view>自己开团</view>
+      </view>
+      <view class='participate'>
+        <view>￥80</view>
+        <view>参与拼团</view>
+      </view>
+    </view>
+  </view>

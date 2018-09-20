@@ -2,6 +2,12 @@
 .container {
   box-sizing: border-box;
 }
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f9f9fa;
+}
+
 view {
   font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
   font-size: 28rpx;
