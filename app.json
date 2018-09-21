@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/details/index/index",
-    "pages/index/index",
     "pages/personal/index/index",
-    "pages/find/find"
+    "pages/index/index",
+    "pages/details/index/index",
+    "pages/find/index/index",
+    "pages/personal/unpaid/unpaid"
   ],
   "window": {
     "backgroundTextStyle": "center",
@@ -24,13 +25,13 @@
         "text": "拼团"
       },
       {
-        "pagePath": "pages/find/find",
+        "pagePath": "pages/find/index/index",
         "iconPath": "static/images/tabar/22081532755178670.png",
         "selectedIconPath": "static/images/tabar/577952809328792818.png",
         "text": "发现"
       },
       {
-        "pagePath": "pages/find/find",
+        "pagePath": "pages/personal/index/index",
         "iconPath": "static/images/tabar/170571711685383073.png",
         "selectedIconPath": "static/images/tabar/350054131244882432.png",
         "text": "我的"

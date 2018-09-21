@@ -1,2 +1,6 @@
-<!--pages/personal/index/index.wxml-->
-<text>pages/personal/index/index.wxml</text>
+<view>
+  <navigator url="/pages/personal/unpaid/unpaid">跳转 </navigator>
+</view>
+<view>
+  <navigator></navigator>
+</view>
