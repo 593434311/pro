@@ -99,3 +99,11 @@
     <view class="discounts">优惠价格：<text>￥5</text></view>
   </view>
 </view>
+<view class="bottom">
+  <view class="bottom_cont">
+    <view class="bottom_text">实际支付：<text>￥75</text></view>
+    <view class="bottom_pay">立即支付</view>
+  </view>
+  
+
+</view>

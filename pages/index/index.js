@@ -19,7 +19,7 @@ Page({
       wx.removeStorageSync('cuea')
     }
     this.setData({
-      isCoupon: true
+      isCoupon: false
     })
   },
   goDetails(_id) {
