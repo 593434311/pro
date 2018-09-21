@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/personal/index/index",
     "pages/index/index",
     "pages/details/index/index",
+    "pages/personal/index/index",
     "pages/find/index/index",
     "pages/personal/unpaid/unpaid"
   ],

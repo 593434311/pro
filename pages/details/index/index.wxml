@@ -197,8 +197,7 @@
 
 
   </view>
-
-
+<button open-type='share'>分享</button>
 </view>
  <view class='bottom'>
     <view class='bot_left'>
@@ -206,10 +205,10 @@
         <view class='business'></view>
         <view>商家</view>
       </view>
-      <view class='Custo'>
+      <button class='Custo'open-type="contact">
         <view class='Customer_se'></view>
         <view>客服</view>
-      </view>
+      </button>
     </view>
     <view class='Placeanorder'>
       <view class='Private'>
