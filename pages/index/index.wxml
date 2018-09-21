@@ -1,134 +1,135 @@
 <!--index.wxml-->
-<!--index.wxml-->
+<scroll-view scroll-y="{{isloaddData}}" style="width: 100%;height:{{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrolltolower">
+
+
 <!--轮播-->
-<view class="header">
-  <view  class="swiper-container">
-     <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+  <view class="header">
+    <view  class="swiper-container">
+      <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+          <block wx:for="{{slider}}" wx:key="unique">
+            <swiper-item class="swiper-item">
+              <view>
+                <image src="{{item.picUrl}}"></image>
+              </view> 
+            </swiper-item>
+          </block>
+      </swiper> 
+      <view class="dots">
         <block wx:for="{{slider}}" wx:key="unique">
-          <swiper-item class="swiper-item">
-            <view>
-              <image src="{{item.picUrl}}"></image>
-            </view> 
-          </swiper-item>
+          <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
         </block>
-    </swiper> 
-    <view class="dots">
-      <block wx:for="{{slider}}" wx:key="unique">
-        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
-      </block>
+      </view>
     </view>
   </view>
-</view>
 
-<!--即将成团-->
-<view class="content_tuan">
-  <view class="tuan_title">
-    <image src="/static/images/icon/jijiangchengtuan@2x.png"></image>
-  </view>
-  <view class="tuan">
-    <block>
-      <view class="tuan_list flex" wx:for="[]" wx:key="{{index}}" data-_id='123' bindtap="goDetails">
-          <view class="tuan_lt">
-            <view class="tuan_img">
-              <image src="/static/images/index/tuan_img.png" mode="aspectFill"></image>
+  <!--即将成团-->
+  <view class="content_tuan">
+    <view class="tuan_title">
+      <image src="/static/images/icon/jijiangchengtuan@2x.png"></image>
+    </view>
+    <view class="tuan">
+      <block>
+        <view class="tuan_list flex" wx:for="[]" wx:key="{{index}}" data-_id='123' bindtap="goDetails">
+            <view class="tuan_lt">
+              <view class="tuan_img">
+                <image src="/static/images/index/tuan_img.png" mode="aspectFill"></image>
+              </view>
             </view>
-          </view>
-          <view class="tuan_rt">
-            <view class="rt_tit">
-              <text>【2人团】</text>大学生台球party | 带上你的女朋友体验台球
-            </view>
-            <view class="price">
-              <s>单价买￥128</s>
-              <s>￥88</s>
-            </view>
-            <view class="count_dn flex">
-              <text>剩余时间</text>
-              <view class="time"><i>8</i>:<i>23</i>:<i>56</i></view>
-            </view>
-            <view class="collect flex">
-            <view class="want">
-              <image src="/static/images/icon/aixinhui@2x.png"></image>
-              <text>569人想玩</text>
-            </view>
-            <image class="purchase" src="/static/images/icon/lijiqianggou@2x.png"></image>
-          </view> 
-        </view>
-        
-      </view>
-
-    </block> 
-  </view>
-  
-</view>
-
-<!-- 热门活动 -->
-<view class="load">
-      <image src="/static/images/icon/huanyipi@2x.png" ></image>
-  </view>
-<view class="content_active">
-  <view class="active_title">
-    <image src="/static/images/icon/remenhuodong@2x.png"></image>
-  </view>
-  <view class="active">
-    <block>
-      <view class="active_list" wx:for="[]" wx:key="{{index}}">
-        <view class="active_top">
-          <image src="/static/images/index/active_img.png"></image>
-        </view>
-        <view class="active_bm">
-          <view class="bm_t">
-            <view class="bm_tit">
-              <text>【2人团】</text>大学生台球party | 带上你的女朋友体验台球3小时畅打的乐趣吧
-            </view>
-            <view class="location">
-              <text>上海市 松江大学城</text>
-              <text>#台球#</text>
-            </view>
-            <view class="bm_t_m">
-              <view class="count_dn">
-                <image src="/static/images/icon/biao@2x.png"></image>
-                <text>01天28小时35分</text>
+            <view class="tuan_rt">
+              <view class="rt_tit">
+                <text>【2人团】</text>大学生台球party | 带上你的女朋友体验台球
               </view>
               <view class="price">
-                <s>单价买￥120</s>
-                <s>￥80</s>
+                <s>单价买￥128</s>
+                <s>￥88</s>
+              </view>
+              <view class="count_dn flex">
+                <text>剩余时间</text>
+                <view class="time"><i>8</i>:<i>23</i>:<i>56</i></view>
+              </view>
+              <view class="collect flex">
+              <view class="want">
+                <image src="/static/images/icon/aixinhui@2x.png"></image>
+                <text>569人想玩</text>
+              </view>
+              <image class="purchase" src="/static/images/icon/lijiqianggou@2x.png"></image>
+            </view> 
+          </view>
+          
+        </view>
+
+      </block> 
+    </view>
+    
+  </view>
+
+  <!-- 热门活动 -->
+  <view class="load">
+        <image src="/static/images/icon/huanyipi@2x.png" ></image>
+    </view>
+  <view class="content_active">
+    <view class="active_title">
+      <image src="/static/images/icon/remenhuodong@2x.png"></image>
+    </view>
+    <view class="active">
+      <block>
+        <view class="active_list" wx:for="[]" wx:key="{{index}}">
+          <view class="active_top">
+            <image src="/static/images/index/active_img.png"></image>
+          </view>
+          <view class="active_bm">
+            <view class="bm_t">
+              <view class="bm_tit">
+                <text>【2人团】</text>大学生台球party | 带上你的女朋友体验台球3小时畅打的乐趣吧
+              </view>
+              <view class="location">
+                <text>上海市 松江大学城</text>
+                <text>#台球#</text>
+              </view>
+              <view class="bm_t_m">
+                <view class="count_dn">
+                  <image src="/static/images/icon/biao@2x.png"></image>
+                  <text>01天28小时35分</text>
+                </view>
+                <view class="price">
+                  <s>单价买￥120</s>
+                  <s>￥80</s>
+                </view>
               </view>
             </view>
-          </view>
-          <view class="bm_b want">
-            <image src="/static/images/icon/aixin@2x.png"></image>
-            <text>36270人想去</text>
+            <view class="bm_b want">
+              <image src="/static/images/icon/aixin@2x.png"></image>
+              <text>36270人想去</text>
+            </view>
           </view>
         </view>
+      </block> 
+      <view class="more">
+        <image src="/static/images/icon/gengduo@2x.png"></image>
       </view>
-    </block> 
-    <view class="more">
-      <image src="/static/images/icon/gengduo@2x.png"></image>
     </view>
-  
-  
+    <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="770rpx" class="coupon" catchtouchmove="false">
+      <image src='/static/images/icon/67782958429263482.png' mode="widthFix" style='border-radius: 5px'></image>
+      <view class='text'>这位新朋友你好，送你一张券试试看呗，不是骗子</view>
+      <view class='coupon_reduce'>
+        <view class='reduce_left'>
+          <view class='left_left'>
+            <text>￥5</text>
+            <view>满50元可用</view>
+          </view>
+          <view class='left_right'>
+            <view>参团立减</view>
+            <text>有效期：10日</text>
+          </view>
+        </view>
+        <view class='reduce_right'>
+          <view>立减卷</view>
+        </view>
+      </view>
+      <button data-deat='true' bindtap='getCoupon'>立即领取</button>
+      <view style='text-align:center;margin-top: 38rpx;' data-deat='false' bindtap='getCoupon'>不要</view>
+    </coupon>
   </view>
-  <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="770rpx" class="coupon">
-    <image src='/static/images/icon/67782958429263482.png' mode="widthFix" style='border-radius: 5px'></image>
-    <view class='text'>这位新朋友你好，送你一张券试试看呗，不是骗子</view>
-    <view class='coupon_reduce'>
-      <view class='reduce_left'>
-        <view class='left_left'>
-          <text>￥5</text>
-          <view>满50元可用</view>
-        </view>
-        <view class='left_right'>
-          <view>参团立减</view>
-          <text>有效期：10日</text>
-        </view>
-      </view>
-      <view class='reduce_right'>
-        <view>立减卷</view>
-      </view>
-    </view>
-    <button data-deat='true' bindtap='getCoupon'>立即领取</button>
-    <view style='text-align:center;margin-top: 38rpx;' data-deat='false' bindtap='getCoupon'>不要</view>
-  </coupon>
-</view>
+</scroll-view>
 
 
