@@ -12,8 +12,19 @@ Page({
       { picUrl: '/static/images/index/banner.png' },
     ],
     swiperCurrent: 0,
-    isCoupon: false
+    isCoupon: false,
+    isloaddData: true,
+    Regiment:{
+      befoDtat: [],
+      allData: [],
+      befoPage: 1,
+      allPage: 0,
+      clientHeight:0
+    }
   },
+  /**
+   * 页面的初始数据
+   */
   onLoad: function (options) {
     if (wx.getStorageSync('cuea')) {
       wx.removeStorageSync('cuea')
@@ -21,11 +32,22 @@ Page({
     this.setData({
       isCoupon: true
     })
+    wx.getSystemInfo({
+      success: res => {
+        this.setData({
+          clientHeight: res.windowHeight - 50
+        });
+      }
+    });
+    console.log(wx.getStorageSync('to-ken') )
   },
   goDetails(_id) {
     wx.navigateTo({
       url: '/pages/details/index/index',
     })
+  },
+  scrolltolower(e) {
+    console.log(e) // activity.index.actlist
   },
   getCoupon(e){
     console.log(e.currentTarget.dataset.deat)
