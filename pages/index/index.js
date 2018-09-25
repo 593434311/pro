@@ -30,7 +30,7 @@ Page({
       wx.removeStorageSync('cuea')
     }
     this.setData({
-      isCoupon: true
+      isCoupon: false
     })
     wx.getSystemInfo({
       success: res => {
