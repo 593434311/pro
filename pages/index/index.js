@@ -35,11 +35,11 @@ Page({
     wx.getSystemInfo({
       success: res => {
         this.setData({
-          clientHeight: res.windowHeight - 50
+          clientHeight: res.windowHeight
         });
       }
     });
-    console.log(wx.getStorageSync('to-ken') )
+    console.log(wx.getStorageSync('to-ken') ) 
   },
   goDetails(_id) {
     wx.navigateTo({
@@ -47,7 +47,9 @@ Page({
     })
   },
   scrolltolower(e) {
-    console.log(e) // activity.index.actlist
+    app.RequiseData('activity.actor.actlist',{ p: 1, pagesize:10 }, res =>{
+      console.log(res)
+    })
   },
   getCoupon(e){
     console.log(e.currentTarget.dataset.deat)

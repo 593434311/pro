@@ -1,14 +1,16 @@
 {
   "pages": [
+    "pages/details/payment/index",
     "pages/index/index",
     "pages/details/index/index",
     "pages/personal/index/index",
     "pages/find/index/index",
     "pages/personal/unpaid/unpaid"
+    
   ],
   "window": {
     "backgroundTextStyle": "center",
-    "navigationBarBackgroundColor": "#ff6d84",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "咖友街",
     "navigationBarTextStyle": "black"
   },
