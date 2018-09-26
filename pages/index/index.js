@@ -38,13 +38,14 @@ Page({
         });
       }
     });
-    console.log(wx.getStorageSync('to-ken') )
+    console.log(wx.getStorageSync('to-ken') ) 
   },
   goDetails(_id) {
     wx.navigateTo({
       url: '/pages/details/index/index',
     })
   },
+<<<<<<< HEAD
   scrolltolower() {
     this.setData({
       
@@ -53,6 +54,12 @@ Page({
     app.RequiseData('activity.actor.actlist', { p: this.Regiment.Page, pagesize: 10}, res =>{
       console.log(res)
     }) // activity.index.actlist
+=======
+  scrolltolower(e) {
+    app.RequiseData('activity.actor.actlist',{ p: 1, pagesize:10 }, res =>{
+      console.log(res)
+    })
+>>>>>>> 85ccd98cf11d544932582bf6d4d97e0a25b71794
   },
   getCoupon(e){
     console.log(e.currentTarget.dataset.deat)
