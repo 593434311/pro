@@ -15,22 +15,21 @@ Page({
     isCoupon: false,
     clientHeight: 0,
     isloaddData: true,
-    Regiment:{
-      Data: [],
-      Page: 0,
-    }
+    RegimentPage: 1,
+    RegimentData: []
+    
   },
   /**
    * 页面的初始数据
    */
   onLoad: function(option) {
+    var self = this;
     if (wx.getStorageSync('cuea')) {
       wx.removeStorageSync('cuea')
     }
     this.setData({
       isCoupon: true
     })
-    this.scrolltolower()
     wx.getSystemInfo({
       success: res => {
         this.setData({
@@ -38,6 +37,7 @@ Page({
         });
       }
     });
+    this.getActive()
     console.log(wx.getStorageSync('to-ken') ) 
   },
   goDetails(_id) {
@@ -45,21 +45,21 @@ Page({
       url: '/pages/details/index/index',
     })
   },
-<<<<<<< HEAD
   scrolltolower() {
+    this.getActive()
+  },
+  getActive(){
     this.setData({
-      
-     
+      isloaddData: false
     })
-    app.RequiseData('activity.actor.actlist', { p: this.Regiment.Page, pagesize: 10}, res =>{
+    app.RequiseData('activity.actor.actlist', { p: this.data.RegimentPage, pagesize: 10 }, res => {
+      this.setData({
+        isloaddData: true,
+        RegimentData: res.data,
+        RegimentPage: this.data.RegimentPage + 1
+      })
       console.log(res)
-    }) // activity.index.actlist
-=======
-  scrolltolower(e) {
-    app.RequiseData('activity.actor.actlist',{ p: 1, pagesize:10 }, res =>{
-      console.log(res)
-    })
->>>>>>> 85ccd98cf11d544932582bf6d4d97e0a25b71794
+    }) 
   },
   getCoupon(e){
     console.log(e.currentTarget.dataset.deat)
