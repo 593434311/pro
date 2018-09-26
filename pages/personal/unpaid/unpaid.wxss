@@ -141,9 +141,7 @@
 
 /* 购买数量 */
 
-.quantity{
-  padding-right:66rpx;
-}
+
 .quantity .tit_quantity{
   font-size:26rpx;
   color:#737373; 
@@ -179,7 +177,6 @@
 }
 /* 优惠券 */
 .coupon{
-  padding-right:66rpx;
   margin-bottom:112rpx;
 }
 .coupon .money_off{

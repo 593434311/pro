@@ -13,29 +13,28 @@ Page({
     ],
     swiperCurrent: 0,
     isCoupon: false,
+    clientHeight: 0,
     isloaddData: true,
     Regiment:{
-      befoDtat: [],
-      allData: [],
-      befoPage: 1,
-      allPage: 0,
-      clientHeight:0
+      Data: [],
+      Page: 0,
     }
   },
   /**
    * 页面的初始数据
    */
-  onLoad: function (options) {
+  onLoad: function(option) {
     if (wx.getStorageSync('cuea')) {
       wx.removeStorageSync('cuea')
     }
     this.setData({
-      isCoupon: false
+      isCoupon: true
     })
+    this.scrolltolower()
     wx.getSystemInfo({
       success: res => {
         this.setData({
-          clientHeight: res.windowHeight - 50
+          clientHeight: res.windowHeight
         });
       }
     });
@@ -46,8 +45,14 @@ Page({
       url: '/pages/details/index/index',
     })
   },
-  scrolltolower(e) {
-    console.log(e) // activity.index.actlist
+  scrolltolower() {
+    this.setData({
+      
+     
+    })
+    app.RequiseData('activity.actor.actlist', { p: this.Regiment.Page, pagesize: 10}, res =>{
+      console.log(res)
+    }) // activity.index.actlist
   },
   getCoupon(e){
     console.log(e.currentTarget.dataset.deat)
