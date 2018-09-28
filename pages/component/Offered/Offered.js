@@ -9,8 +9,8 @@ Component({
       value: []     // 属性初始值（可选），如果未指定则会根据类型选择一个
     },
     Surplus:{
-      type: Number,
-      value: 0
+      type: Array,
+      value:[]
     }
   },
 

@@ -1,0 +1,33 @@
+<!--pages/component/Businessact/index.wxml-->
+<view class="active_list" data-id='{{listdata.id}}'  bindtap="goDetails">
+  <view class="active_top">
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{listdata.cover_img}}"></image>
+  </view>
+  <view>
+  </view>
+  <view class="active_bm">
+    <view class="bm_t">
+      <view class="bm_tit">
+        <text>【{{listdata.num}}人团】</text>{{listdata.title}}
+      </view>
+      <view class="location">
+        <text>{{listdata.city}} {{listdata.area}}</text>
+        <text>#{{listdata.acttype}}#</text>
+      </view>
+      <view class="bm_t_m">
+        <view class="count_dn">
+          <image src="/static/images/icon/biao@2x.png"></image>
+          <text>{{listdata.str}}</text>
+        </view>
+        <view class="price">
+          <s>单价买￥{{listdata.o_price}}</s>
+          <s>￥{{listdata.p_price}}</s>
+        </view>
+      </view>
+    </view>
+    <view class="bm_b want" data-id='{{listdata.id}}' data-type='1' catchtap='cuitWent'>
+      <image src="/static/images/icon/aixin@2x.png"></image>
+      <text>36270人想去</text>
+    </view>
+  </view>
+</view>

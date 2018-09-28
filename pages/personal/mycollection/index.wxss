@@ -1,0 +1,26 @@
+/* pages/personal/mycollection/index.wxss */
+.page__bd .weui-bar__item_on{
+  color: #f2751a;
+}
+.page__bd .weui-navbar__slider{
+  background-color:#f2751a;
+}
+.page__bd .weui-tab__panel{
+  padding-top: 87rpx
+}
+.weui-navbar{
+  background-color: #fff;
+}
+.page__bd .weui-navbar__item {
+  padding: 26rpx;
+}
+.weui-navbar__item .weui-navbar__title{
+  font-size: 26rpx;
+  color: #737373;
+}
+.page__bd .weui-navbar__slider{
+  width: 130rpx;
+}
+.page__bd .weui-navbar{
+  border-bottom: 0
+}

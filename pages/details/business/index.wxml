@@ -1,0 +1,31 @@
+<!--pages/details/business/index.wxml-->
+<view>
+  <view class='headrer'>
+    <image class='top_img' src='/static/images/tempalry/bj@2x.png'></image>
+    <view class='portrait'>
+      <image src=''></image>
+    </view>
+    <view class='user_name'>德玛西亚盖伦商铺</view>
+    <view class="bm_bottom">
+      <view class="location">
+        <text>{{'act_info.address'}}</text>
+      </view>
+      <view class="time">
+        <image src="/static/images/details_index/riqi@2x.png"></image>
+        <text>  {{'act_info.startdate'}} ~ {{'act_info.enddate'}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='toggle'>
+    <view bindtap="activefun" data-id="1" class="{{activeIndex == 1 ? 'selet':''}}">商家介绍</view>
+    <view bindtap="activefun" data-id="2" class="{{activeIndex == 2 ? 'selet':''}}">TA的活动</view>
+  </view>
+  <view class='toggle_data'>
+    <view wx:if="{{activeIndex == 1}}" class='introduce'>
+      介绍
+    </view>
+    <view wx:if="{{activeIndex == 2}}" class="active">
+      <active></active>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/details/othergro/index.wxml-->
+<view class='member'>
+  <view class="rests_cont rests_tuan" wx:for="{{act_list}}" wx:for-index="index" wx:key="index">
+    <view class="cont_lt">
+      <image src="{{item.avatar}}"></image>
+      <text>{{item.nickname}}的团</text>
+    </view>
+    <view class="cont_rt">
+      <view class="cont_rt_lt">
+        <text>还差{{item.remainder}}人成团</text>
+        <view class="count_dn">
+          <image src="/static/images/details_index/biao@2x.png"></image>
+          <text>01天28小时35分</text>
+        </view>
+      </view>
+      <view class="cont_rt_rt">
+        <image src="/static/images/details_index/qianggou@2x.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view>
+    <view class='kaitButton'>我要自己去开团</view>
+</view>

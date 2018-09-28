@@ -9,58 +9,72 @@
 </view>
 <!-- 我的团购 -->
 <view class="group_buy contentW">
-  <view class="title margin_bm">
-    <view class="tuangou">
-      <text class="tit_text1">我的团购</text>
+  <navigator url="/pages/personal/Orderform/index?id=0">
+    <view class="title margin_bm">
+      <view class="tuangou">
+        <text class="tit_text1">我的团购</text>
+      </view>
+      <view class="tit_rt">
+        <text>更多团购</text>
+        <image class="more" src="/static/images/details_index/more@2x.png"></image>
+      </view>
     </view>
-    <view class="tit_rt">
-      <text>更多团购</text>
-      <image class="more" src="/static/images/details_index/more@2x.png"></image>
-    </view>
-  </view>
+  </navigator>
   <view class="group_buy_cont">
-    <view class="content_cont unpaid" data-num="3">
-      <image src="/static/images/personal/daifukuan@2x .png"></image>
-      <text>待付款</text>
-    </view>
-    <view class="content_cont">
-      <image src="/static/images/personal/yifukuan@2x.png"></image>
-      <text>已付款</text>
-    </view>
-    <view class="content_cont">
-      <image src="/static/images/personal/yichengtuan@2x.png"></image>
-      <text>已成团</text>
-    </view>
-    <view class="content_cont">
-      <image src="/static/images/personal/weichengtuan@2x.png"></image>
-      <text>未成团</text>
-    </view>
+    <navigator url="/pages/personal/Orderform/index?id=1">
+      <view class="content_cont unpaid" data-num="3">
+        <image src="/static/images/personal/daifukuan@2x.png"></image>
+        <text>待付款</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/personal/Orderform/index?id=2">
+      <view class="content_cont">
+        <image src="/static/images/personal/yifukuan@2x.png"></image>
+        <text>已付款</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/personal/Orderform/index?id=3">
+      <view class="content_cont">
+        <image src="/static/images/personal/yichengtuan@2x.png"></image>
+        <text>已成团</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/personal/Orderform/index?id=4">
+      <view class="content_cont">
+        <image src="/static/images/personal/weichengtuan@2x.png"></image>
+        <text>未成团</text>
+      </view>
+    </navigator>
   </view>
 </view>
 <!-- 我的钱包 -->
 <view class="wallet contentW">
-  <view class="title">
-    <view class="qianbao tit_lt">
-      <image src="/static/images/personal/qb@2x.png"></image>
-      <text class="tit_text1">我的钱包</text>
+  <navigator url='/pages/personal/wallet/index'>
+    <view class="title">
+      <view class="qianbao tit_lt">
+        <image src="/static/images/personal/qb@2x.png"></image>
+        <text class="tit_text1">我的钱包</text>
+      </view>
+      <view class="tit_rt">
+        <view class="tit_rt_price">10元</view>
+        <image class="more" src="/static/images/details_index/more@2x.png"></image>
+      </view>
     </view>
-    <view class="tit_rt">
-      <view class="tit_rt_price">10元</view>
-      <image class="more" src="/static/images/details_index/more@2x.png"></image>
-    </view>
-  </view>
+  </navigator>
 </view>
 <!-- 我的收藏 -->
 <view class="collect contentW">
-  <view class="title">
-    <view class="shoucang tit_lt">
-      <image src="/static/images/personal/shoucang@2x.png"></image>
-      <text class="tit_text1">我的收藏</text>
+  <navigator url='/pages/personal/mycollection/index'>
+    <view class="title">
+      <view class="shoucang tit_lt">
+        <image src="/static/images/personal/shoucang@2x.png"></image>
+        <text class="tit_text1">我的收藏</text>
+      </view>
+      <view class="tit_rt tishi">
+        <image  class="more" src="/static/images/details_index/more@2x.png"></image>
+      </view>
     </view>
-    <view class="tit_rt tishi">
-      <image  class="more" src="/static/images/details_index/more@2x.png"></image>
-    </view>
-  </view>
+  </navigator>
 </view>
 <!-- 联系客服 -->
 <view class="service contentW">

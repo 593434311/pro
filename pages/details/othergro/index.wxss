@@ -1,0 +1,114 @@
+/* pages/details/othergro/index.wxss */
+.member {
+  padding: 0 24rpx;
+}
+.rests_cont{
+  display: flex;
+  justify-content:space-between;
+  padding-bottom:36rpx;
+
+}
+.rests_tuan{
+  padding:36rpx 0 30rpx 0;
+  border-top:1px solid #e5e5e5;
+
+}
+.rests_cont .cont_lt{
+  display: flex;
+  justify-content:space-between;
+  padding:0 42rpx;
+
+}
+.rests_cont .cont_lt image{
+  width:87rpx;
+  height:87rpx;
+  margin-right:25rpx;
+}
+.rests_cont .cont_lt text{
+  line-height:87rpx;
+  font-size:26rpx;
+  color:#8d8d8d;
+}
+.cont_rt{
+  display: flex;
+  align-items:center;
+  
+}
+.cont_rt .cont_rt_lt{
+  text-align:right;
+  font-size:24rpx;
+  padding-right:50rpx;
+}
+.cont_rt_lt .count_dn{
+  line-height:46rpx;
+} 
+.cont_rt .cont_rt_lt image{
+  width:24rpx;
+  height:24rpx;
+  margin-right:12rpx;
+}
+.cont_rt .cont_rt_lt text:nth-last-of-type(1){
+  color:#8d8d8d;
+  line-height:24rpx;
+}
+.cont_rt .cont_rt_lt text:nth-last-of-type(2){
+  color:#b8b8b8;
+  line-height:46rpx;
+}
+
+.cont_rt .cont_rt_rt{
+
+}
+.cont_rt .cont_rt_rt image{
+  width:88rpx;
+  height:45rpx;
+}
+/* 拼团攻略 */
+.strategy{
+  
+}
+.strategy .strategy_cont{
+  padding:0 42rpx;
+}
+.strategy_cont .smile{
+  padding:0 38rpx 0 54rpx;
+}
+ .strategy_cont .smile image{
+  width:526rpx;
+  height:32rpx;
+}
+.strategy_bm{
+  display:flex;
+  justify-content:space-between;
+  padding-bottom:34rpx;
+}
+.strategy_bm_cont{
+  /* display:flex;
+  align-content:center; */
+}
+.strategy_bm .strategy_bm_cont text{
+  display:block;
+  text-align: center;
+}
+.strategy_bm_cont text:nth-of-type(1){
+  font-size:24rpx;
+  color:#8d8d8d;
+  padding:30rpx 0 12rpx 0;
+}
+.strategy_bm_cont text:nth-of-type(2){
+  font-size:18rpx;
+  line-height:24rpx;
+  color:#b8b8b8;
+}
+.kaitButton{
+  width: 422rpx;
+  height: 84rpx;
+  margin: 0 auto;
+  margin-top: 72rpx;
+  background: linear-gradient(#fd933d, #fe6e41);
+  color: #fff;
+  border-radius: 42rpx;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 84rpx;
+}

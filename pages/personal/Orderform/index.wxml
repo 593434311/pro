@@ -1,0 +1,33 @@
+<!--pages/personal/Orderform/index.wxml-->
+<view class="page__bd">
+  <view class="weui-tab">
+    <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                <view class="weui-navbar__title">{{item}}</view>
+            </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <beforder></beforder>
+        <oldorder></oldorder>
+        <oldgroup></oldgroup>
+        <befgroup></befgroup>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <beforder></beforder>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <oldorder></oldorder>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+        <oldgroup></oldgroup>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 4}}">
+        <befgroup></befgroup>
+      </view>
+    </view>
+  </view>
+</view>

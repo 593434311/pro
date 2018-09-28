@@ -13,12 +13,12 @@
   <view class="list_bm">
     <view class="bm_top">
       <view class="bm_tit">
-        <text>【2人团】</text>大学生台球party | 带上你的女朋友体验台球3小时畅打的乐趣吧
+        <text>【{{act_info.sub_num}}人团】</text>{{act_info.title}}
       </view>
       <view class="bm_m">
         <view class="price">
-          <s>单价买￥120</s>
-          <s>￥80</s>
+          <s>单价买￥{{act_info.o_price}}</s>
+          <s>￥{{act_info.p_price}}</s>
         </view>
         <view class="want">
           <image src="/static/images/details_index/aixin2@2x.png"></image>
@@ -31,12 +31,11 @@
     </view>
     <view class="bm_bottom">
       <view class="location">
-        <text>上海市 浦东新区 上海浦东新区南汇新城镇马樱丹路
-    133弄11-21号 10月1日  10:30-11:00</text>
+        <text>{{act_info.address}}</text>
       </view>
       <view class="time">
         <image src="/static/images/details_index/riqi@2x.png"></image>
-        <text> 10月1日  10:30-11:00</text>
+        <text>  {{act_info.startdate}} ~ {{act_info.enddate}}</text>
       </view>
     </view>
   </view>
@@ -44,42 +43,10 @@
 </view>
 <!-- 参团详情 -->
 <view class="tuan_detail contentW">
-  <view class="title">
-    <view class="cantuan">
-      <image src="/static/images/details_index/cantuan@2x.png"></image>
-      <text class="tit_text1">参团详情</text>
-    </view>
-    <view class="tit_text2">还差<text>7</text>人成团</view>
-  </view>
-  <view class="head_portrait">
-    <view class="head_img">
-      <view class="touxiang leader">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-
-    </view>
-    <view class="head_more">
-      <image src="/static/images/details_index/more@2x.png"></image>
-    </view>
-  </view>
+  <offered data="{{user_info}}" Surplus="{{act_info}}"></offered>
 </view>
 <!-- 其他人的团 -->
-<view class="rests  contentW">
+<view class="rests contentW">
   <view class="title">
     <view class="qita">
       <image src="/static/images/details_index/qita@2x.png"></image>
@@ -87,14 +54,14 @@
     </view>
     <text class="tit_text2">全部</text>
   </view>
-  <view class="rests_cont rests_tuan">
+  <view class="rests_cont rests_tuan" wx:for="{{act_list}}" wx:for-index="index" wx:key="index" bindtap='gogrolpdet'>
     <view class="cont_lt">
-      <image src="/static/images/details_index/touxiang@2x.png"></image>
-      <text>小胖的团</text>
+      <image src="{{item.avatar}}"></image>
+      <text>{{item.nickname}}的团</text>
     </view>
     <view class="cont_rt">
       <view class="cont_rt_lt">
-        <text>还差<s>7</s>人成团</text>
+        <text>还差{{item.remainder}}人成团</text>
         <view class="count_dn">
           <image src="/static/images/details_index/biao@2x.png"></image>
           <text>01天28小时35分</text>
@@ -104,24 +71,6 @@
         <image src="/static/images/details_index/qianggou@2x.png"></image>
       </view>
 
-    </view>
-  </view>
-  <view class="rests_cont rests_tuan">
-    <view class="cont_lt">
-      <image src="/static/images/details_index/touxiang@2x.png"></image>
-      <text>老徐的团</text>
-    </view>
-    <view class="cont_rt">
-      <view class="cont_rt_lt">
-        <text>还差<s>7</s>人成团</text>
-        <view class="count_dn">
-          <image src="/static/images/details_index/biao@2x.png"></image>
-          <text>01天28小时35分</text>
-        </view>
-      </view>
-      <view class="cont_rt_rt">
-        <image src="/static/images/details_index/qianggou@2x.png"></image>
-      </view>
     </view>
   </view>
 </view>
@@ -166,56 +115,30 @@
     </view>
   </view>
   <view class="presentation_cont">
-    <view class="presentation_text">
-      <text>快来Yumesang艺术教师，
-  罗老师教你
-  亲手为在乎的那个人
-  做一枚
-  辟邪挡灾的
-  御守护身符吧！</text>
-    </view>
-    <view class="image-text">
-      <view class="tu_img">
-        <image src="/static/images/details_index/tu1@2x.png"></image>
-      </view>
-      <text>在日本，御守是愿望的象征。御守最早用来辟邪和解除厄运，逐渐衍生到交通安全、安产、良缘、学业、健康等方面。早期，神社的神官们把所奉神明的名字写在木板或纸片上，再装到小布袋里，出售给前来参拜的信徒们。</text>
-
-    </view>
-    <view class="image-text">
-      <view class="tu_img">
-        <image src="/static/images/details_index/tu2@2x.png"></image>
-      </view>
-      <text>现在，日本人尤其是每年都会购买更换御守。比如升学或比赛前夕会购买合格、或胜利御守以，怀孕期间会购买安产御守，小孩子出生后会购买子供(子女)御守，老人过生日会购买长寿御守以，谈恋爱会购买(结缘)或良缘御守等等，大家都用他来馈赠亲朋以表达自己的祝愿，或是寄托希望、缓解考试或比赛前的压力等等。</text>
-    </view>
-    <view class="image-text">
-      <view class="tu_img">
-        <image src="/static/images/details_index/tu3@2x.png"></image>
-      </view>
-      <text>御守可以佩戴在衣服上，挂在车里，也有的绑在包包上或是放在包包内，各种形式因人而异。御守已经成为日本人生活中必不可少物品。</text>
-
-    </view>
+    {{act_info.info}}
   </view>
-<button open-type='share'>分享</button>
 </view>
- <view class='bottom'>
-    <view class='bot_left'>
-      <view class='busi'>
-        <view class='business'></view>
-        <view>商家</view>
-      </view>
-      <button class='Custo'open-type="contact">
+<view class='bot_tab'>
+  <view class='bot_left'>
+    <view class='busi' data-ids="123" bindtap='gobusiness'>
+      <view class='business'></view>
+      <view>商家</view>
+    </view>
+    <view class='Custo'>
+      <button open-type="contact" style='background-color: #fff;color:#737373'>
         <view class='Customer_se'></view>
         <view>客服</view>
       </button>
     </view>
-    <view class='Placeanorder'>
-      <view class='Private'>
-        <view>￥80</view>
-        <view>自己开团</view>
-      </view>
-      <view class='participate'>
-        <view>￥80</view>
-        <view>参与拼团</view>
-      </view>
+  </view>
+  <view class='Placeanorder'>
+    <view class='Private'>
+      <view>￥80</view>
+      <view>自己开团</view>
+    </view>
+    <view class='participate'>
+      <view>￥80</view>
+      <view>参与拼团</view>
     </view>
   </view>
+</view>

@@ -2,11 +2,16 @@
   "pages": [
     "pages/index/index",
     "pages/personal/index/index",
-    "pages/details/payment/index",
-    "pages/details/index/index",
+    "pages/personal/Orderform/index",
     "pages/find/index/index",
-    "pages/personal/unpaid/unpaid"
-    
+    "pages/details/business/index",
+    "pages/details/actideails/index",
+    "pages/details/index/index",
+    "pages/details/payment/index",
+    "pages/personal/unpaid/unpaid",
+    "pages/details/othergro/index",
+    "pages/personal/wallet/index",
+    "pages/personal/mycollection/index"
   ],
   "window": {
     "backgroundTextStyle": "center",

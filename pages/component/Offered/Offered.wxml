@@ -5,27 +5,15 @@
       <image src="/static/images/details_index/cantuan@2x.png"></image>
       <text class="tit_text1">参团详情</text>
     </view>
-    <view class="tit_text2">还差<text>7</text>人成团</view>
+    <view class="tit_text2">还差<text>{{Surplus.remainder}}</text>人成团</view>
   </view>
   <view class="head_portrait">
     <view class="head_img">
       <view class="touxiang leader">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
+        <image src="{{Surplus.avatar}}"></image>
       </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
+      <view class="touxiang" wx:for="{{data}}" wx:for-index="index" wx:key="index">
+        <image src="{{item.avatar}}"></image>
       </view>
 
     </view>

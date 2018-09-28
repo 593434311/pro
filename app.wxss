@@ -8,13 +8,15 @@ button::after{
 }
 page {
   display: block;
+   font-size: 28rpx;
   min-height: 100%;
   background-color: #f9f9fa;
 }
 
 view {
-  font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
   font-size: 28rpx;
+  font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
+ 
 }
 
 view,ul,li,div,p,text,sapn{
@@ -94,4 +96,8 @@ table, th, td {
   font-size:18rpx;
   padding:0 7rpx;
   line-height: 24rpx;
+}
+.order_box{
+  background-color: #fff;
+  padding: 0 24rpx;
 }

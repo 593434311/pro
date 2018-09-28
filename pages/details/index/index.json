@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "offered": "/pages/component/Offered/Offered"
+  }
+}
