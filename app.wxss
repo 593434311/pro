@@ -1,4 +1,5 @@
 @import '/static/style/weui.wxss';
+@import "/wxParse/wxParse.wxss";
 /**app.wxss**/
 .container {
   box-sizing: border-box;

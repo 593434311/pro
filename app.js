@@ -9,7 +9,6 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    
     // 登录
     if (wx.getStorageSync('to-ken')) {
       request.request('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {
@@ -22,7 +21,6 @@ App({
                 if (reques.status == 0) {
                   this.globalData.openId = reques.data.openid;
                   wx.setStorageSync('to-ken', reques.data.token);
-                  wx.setStorageSync('cuea', false); // 
                 }
               })
             }
@@ -36,6 +34,7 @@ App({
             if (resd.status == 0) {
               this.globalData.openId = resd.data.openid
               wx.setStorageSync('to-ken', resd.data.token)
+              wx.setStorageSync('cuea', 'isd'); // 
             }// else console.error(res)
           })
         }
