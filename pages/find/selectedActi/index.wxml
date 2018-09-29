@@ -1,0 +1,6 @@
+<!--pages/find/selectedActi/index.wxml-->
+<view>
+  <seledactive></seledactive>
+  <seledactive></seledactive>
+  <seledactive></seledactive>
+</view>

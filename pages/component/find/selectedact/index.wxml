@@ -1,0 +1,10 @@
+<!--pages/component/find/selectedact/index.wxml-->
+<view class='selectedainst'>
+  <view class='list_boximg'>
+    <image src='/static/images/find/wz1@2x.png'></image>
+  </view>
+  <view class='box_text'>
+    <view>这是一个好地方</view>
+    <view class='cont'>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</view>
+  </view>
+</view>

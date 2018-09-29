@@ -15,8 +15,9 @@ Page({
     isCoupon: false,
     clientHeight: 0,
     isloaddData: true,
+    isweedata: true,
     RegimentPage: 1,
-    RegimentData: [],
+    RegimentData: [],// 热门活动
     wearList:[],
     activeData: [], // 即将成团
     activePage: 1,
@@ -28,13 +29,17 @@ Page({
    */
   onLoad: function(option) {
     var self = this;
-    
-    if (wx.getStorageSync('cuea')) {
-      wx.removeStorageSync('cuea')
-    }
-    this.setData({
-      isCoupon: false
-    })
+    var cuea = setInterval(() => {
+      if (wx.getStorageSync('cuea')){
+        if (wx.getStorageSync('cuea') === 'isd'){
+          this.setData({
+            isCoupon: true
+          })
+        }
+        clearInterval(cuea)
+        wx.removeStorageSync('cuea')
+      }
+    },2000)
     wx.getSystemInfo({
       success: res => {
         this.setData({
@@ -51,27 +56,23 @@ Page({
       url: `/pages/details/actideails/index?id=${self.currentTarget.dataset.id}`,
     })
   },
-  scrolltolower() {
-    this.setData({
-      isloaddData: false
-    })
-    this.getActive()
-  },
   getActive(){
+    wx.showLoading({
+      title: '玩命加载中',
+    })
     app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 2 }, res => {
-      setTimeout(()=>{
-        this.setData({
-          isloaddData: true
-        })
-      },1000)
-      if(res.status === 0){
+      wx.hideLoading();
+      if(res.data.length === 0){
+        this.data.isweedata = false
+      }
+      if (res.status === 0) {
         this.setData({
           RegimentData: this.data.RegimentData.concat(res.data),
           RegimentPage: this.data.RegimentPage + 1
         })
       }
-      // this.onShow(this.data.RegimentData)
     }) 
+      // this.onShow(this.data.RegimentData)
   },
   gettuan(){
     app.RequiseData('activity.actor.actlist', { p: this.data.RegimentPage, pagesize: 10 }, res => {
@@ -173,7 +174,7 @@ Page({
       actbeforPage = 1
       actbeforData = this.data.activeData.slice(0, 2);
     }
-    console.log(actbeforPage)
+    console.log(actbeforData)
     this.setData({
       actbeforData: actbeforData,
       actbeforPage: actbeforPage
@@ -186,6 +187,14 @@ Page({
     } else this.setData({
       isCoupon: false
     })
+  },
+  onReachBottom(){
+    if (this.data.isweedata) {
+      this.getActive()
+    }
+  },
+  onPullDownRefresh(){
+    wx.showNavigationBarLoading();
   },
   swiperChange: function (e) {
     this.setData({

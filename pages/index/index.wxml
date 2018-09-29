@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<scroll-view scroll-y="{{isloaddData}}" style="width: 100%;height:{{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrolltolower">
+<!-- <scroll-view scroll-y="{{isloaddData}}" style="width: 100%;height:{{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrolltolower"> -->
 <!--轮播-->
   <view class="header">
     <view  class="swiper-container">
@@ -26,9 +26,8 @@
       <image src="/static/images/icon/jijiangchengtuan@2x.png"></image>
     </view>
     <view class="tuan">
-      <berfitem wx:for="{{actbeforData}}" wx:for-index="index" wx:for-item="item" wx:key="index" item="{{item}}"></berfitem>
+      <berfitem wx:for="{{actbeforData}}" wx:for-index="index" wx:for-item="item" wx:key="{{index}}" item="{{item}}"></berfitem>
     </view>
-    
   </view>
 
   <!-- 热门活动 -->
@@ -40,7 +39,7 @@
       <image src="/static/images/icon/remenhuodong@2x.png"></image>
     </view>
     <view class="active">
-        <active wx:for="{{RegimentData}}" wx:for-index="index" wx:for-item="item" wx:key="index" listdata="{{item}}"></active>
+      <active wx:for="{{RegimentData}}" wx:for-index="index" wx:for-item="item" wx:key="index" listdata="{{item}}"></active>
       <view class="more">
         <image src="/static/images/icon/gengduo@2x.png"></image>
       </view>
@@ -67,7 +66,3 @@
       <view style='text-align:center;margin-top: 38rpx;' data-deat='false' bindtap='getCoupon'>不要</view>
     </coupon>
   </view>
- 
-</scroll-view>
-
-

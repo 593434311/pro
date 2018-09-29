@@ -4,43 +4,20 @@
     <image src="/static/images/find/wz@2x.png"></image>
   </view>
   <view class='counter'>
-    <view wx:for="{{[1,2,3]}}">
-      <view class='list_boximg'>
-        <image src='/static/images/find/wz1@2x.png'></image>
-      </view>
-      <view class='box_text'>
-        <view>这是一个好地方</view>
-        <view class='cont'>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</view>
-      </view>
-    </view>
+    <seledactive wx:for="{{[1,2,3]}}"></seledactive>
   </view>
   
   <view class="gengduo">
-    <image src="/static/images/icon/gengduo@2x.png"></image>
+    <image src="/static/images/icon/gengduo@2x.png" bindtap='goSelectedac'></image>
   </view>
   <view class='tuan_title'>
     <image src="/static/images/find/wz@2x.png"></image>
   </view>
-  <view class='quality'>
-    <view class="tit">
-      <view class='quality_boximg'>
-        <image src='/static/images/find/wz1@2x.png'></image>
-      </view>
-      <view class='quality_text'>
-        <view class='qualityname'>陶艺k空间 <text></text></view>
-        <view class='Label'>#哈哈</view>
-      </view>
-    </view>
-    <view class='tex_img'>
-      <view class="tit">让陶泥在你手里.创意无限</view>
-      <view class='img'>
-        <image src='/static/images/find/tu2@2x.png'></image>
-        <image src='/static/images/find/tu2@2x.png'></image>
-        <image src='/static/images/find/tu2@2x.png'></image>
-      </view>
-    </view>
+  <view>
+    <seledmerc></seledmerc>
+    <seledmerc></seledmerc>
   </view>
   <view class="gengduo" style='margin-bottom:60rpx;'>
-    <image src="/static/images/icon/gengduo@2x.png"></image>
+    <image src="/static/images/icon/gengduo@2x.png" bindtap='goSelectedmer'></image>
   </view>
 </view>

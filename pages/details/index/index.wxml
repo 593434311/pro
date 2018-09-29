@@ -1,4 +1,5 @@
 <!--pages/details/index/index.wxml-->
+<import src="../../../wxParse/wxParse.wxml"/>
 <view class="active_list contentW">
   <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
@@ -6,7 +7,6 @@
         <view>
           <image src="{{item}}" mode="aspectFill"></image>
         </view>
-
       </swiper-item>
     </block>
   </swiper>
@@ -31,7 +31,7 @@
     </view>
     <view class="bm_bottom">
       <view class="location">
-        <text>{{act_info.address}}</text>
+        <text>{{act_info.address? act_info.address:'未知地址'}}</text>
       </view>
       <view class="time">
         <image src="/static/images/details_index/riqi@2x.png"></image>
@@ -39,7 +39,6 @@
       </view>
     </view>
   </view>
- 
 </view>
 <!-- 参团详情 -->
 <view class="tuan_detail contentW">
@@ -115,7 +114,7 @@
     </view>
   </view>
   <view class="presentation_cont">
-    {{act_info.info}}
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
   </view>
 </view>
 <view class='bot_tab'>
@@ -132,13 +131,13 @@
     </view>
   </view>
   <view class='Placeanorder'>
-    <view class='Private'>
+    <button class='Private' open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>
       <view>￥80</view>
       <view>自己开团</view>
-    </view>
-    <view class='participate'>
+    </button>
+    <button class='participate' bindtap='goOrderform'>
       <view>￥80</view>
       <view>参与拼团</view>
-    </view>
+    </button>
   </view>
 </view>

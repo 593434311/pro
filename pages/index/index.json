@@ -3,5 +3,6 @@
     "coupon": "/pages/component/coupon/Coupon",
     "active": "/pages/component/Businessact/index",
     "berfitem": "/pages/component/befteam/index"
-  }
+  },
+  "enablePullDownRefresh": true
 }

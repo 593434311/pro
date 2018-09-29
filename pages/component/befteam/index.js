@@ -9,7 +9,12 @@ Component({
   properties: { // 即将成团
     item: {
       type: Object,
-      value: {}
+      value: {},
+      observer: function (newVal, oldVal, changedPath) {
+        this.setData({
+          data: newVal
+        })
+      }
     }
   },
 
@@ -20,9 +25,7 @@ Component({
     data: {}
   },
   ready(){
-    this.setData({
-      data: this.properties.item
-    })
+
   },
   /**
    * 组件的方法列表

@@ -1,5 +1,6 @@
 // pages/details/index/index.js
 const app = getApp()
+var WxParse = require('../../../wxParse/wxParse.js')
 Page({
   data: {
     imgUrls: [
@@ -19,8 +20,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.RequiseData('activity.actor.actinfo', { id: options.id }, res => {
+    app.RequiseData('activity.index.actinfo', { id: options.id }, res => {
       if(res.status === 0){
+        WxParse.wxParse('article', 'html', res.data.act_info.info, this, 5)
         this.setData({
           act_info: res.data.act_info,
           act_list: res.data.act_list,

@@ -18,10 +18,10 @@
         <view class="time"><i>{{data.day}}</i>天<i>{{data.hour}}</i>时<i>{{data.minute}}</i></view>
       </view>
       <view class="collect flex">
-      <view class="want" data-id='{{data.id}}' data-type='2' data-behavior="{{data.iscollect?'no_collect':'collect'}}" catchtap='cuitWent'>
+      <view class="want" data-id='{{data.id}}' data-type='2' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
         <image wx:if="{{!data.iscollect}}" src="/static/images/icon/aixinhui@2x.png"></image>
         <image wx:else src="/static/images/icon/aixin@2x.png"></image>
-        <text>{{data.collectnum}}人想玩</text>
+        <text>{{data.attribute_num.collect}}人想玩</text>
       </view>
       <image class="purchase" src="/static/images/icon/lijiqianggou@2x.png"></image>
     </view> 

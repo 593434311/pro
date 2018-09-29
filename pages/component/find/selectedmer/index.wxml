@@ -1,0 +1,20 @@
+<!--pages/component/find/selectedmer/index.wxml-->
+<view class='quality'>
+    <view class="tit">
+      <view class='quality_boximg'>
+        <image src='/static/images/find/wz1@2x.png'></image>
+      </view>
+      <view class='quality_text'>
+        <view class='qualityname'>陶艺k空间 <text></text></view>
+        <view class='Label'>#哈哈</view>
+      </view>
+    </view>
+    <view class='tex_img'>
+      <view class="tit">让陶泥在你手里.创意无限</view>
+      <view class='img'>
+        <image src='/static/images/find/tu2@2x.png'></image>
+        <image src='/static/images/find/tu2@2x.png'></image>
+        <image src='/static/images/find/tu2@2x.png'></image>
+      </view>
+    </view>
+  </view>

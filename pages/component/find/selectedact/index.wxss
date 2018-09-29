@@ -1,0 +1,25 @@
+/* pages/component/find/selectedact/index.wxss */
+.selectedainst{
+  display: flex;
+  flex-direction: row;
+  padding: 24rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+}
+.list_boximg image{
+  width: 124rpx;
+  height: 124rpx;
+  border-radius: 5px;
+}
+.box_text{
+  position: relative;
+  width: 100%;
+  margin-left: 18rpx;
+  font-size: 26rpx;
+  color: #7b7b7b;
+}
+.cont {
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+}

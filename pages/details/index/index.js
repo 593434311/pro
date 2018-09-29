@@ -1,5 +1,6 @@
 // pages/details/index/index.js
 const app = getApp()
+var WxParse = require('../../../wxParse/wxParse.js')
 Page({
   data: {
     imgUrls: [
@@ -21,6 +22,7 @@ Page({
   onLoad: function (options) {
     app.RequiseData('activity.actor.actinfo', { id: options.id }, res => {
       if(res.status === 0){
+        WxParse.wxParse('article', 'html', res.data.act_info.info, this, 5)
         this.setData({
           act_info: res.data.act_info,
           act_list: res.data.act_list,
@@ -38,11 +40,13 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
+  getPhoneNumber(e){
+    // wx.navigateTo({
+    //   url: `/pages/personal/unpaid/unpaid?data=${12})}`,
+    // })
+    console.log(e)
   },
   gogrolpdet(self) {
-    console.log(self)
     wx.navigateTo({
       url: `/pages/details/othergro/index?data=${JSON.stringify(self.currentTarget.dataset.data)}`,
     })

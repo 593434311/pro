@@ -1,0 +1,6 @@
+<!--pages/find/selectedmerc/index.wxml-->
+<view>
+  <seledmerc></seledmerc>
+  <seledmerc></seledmerc>
+  <seledmerc></seledmerc>
+</view>
