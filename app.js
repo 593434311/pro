@@ -14,6 +14,7 @@ App({
       request.request('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {
         if (res.status == 0) {
           this.globalData.openId = res.data.openid;
+          this.globalData.user_info = res.data.user_info;          
         } else {
           wx.login({
             success: resa => {
@@ -54,6 +55,9 @@ App({
   },
   RequiseData(methods, data, callback, errFun) {
     request.request(methods, data, callback, errFun)
+  },
+  setuserinfo(data, callback) {
+    request.setuserinfo(data, callback)
   },
   globalData: {
     userInfo: null,

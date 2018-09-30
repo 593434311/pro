@@ -7,7 +7,7 @@
     </view>
     <view class="tit_text2">还差<text>{{Surplus.remainder}}</text>人成团</view>
   </view>
-  <view class="head_portrait">
+  <view class="head_portrait" data-data="{{data}}" data-jondata='{{Surplus}}' bindtap='godetails'>
     <view class="head_img">
       <view class="touxiang leader">
         <image src="{{Surplus.avatar}}"></image>
@@ -15,7 +15,6 @@
       <view class="touxiang" wx:for="{{data}}" wx:for-index="index" wx:key="index">
         <image src="{{item.avatar}}"></image>
       </view>
-
     </view>
     <view class="head_more">
       <image src="/static/images/details_index/more@2x.png"></image>

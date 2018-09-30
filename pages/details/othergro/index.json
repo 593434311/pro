@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "othergroup": "/pages/component/order/Othergroup/index"
+  }
+}

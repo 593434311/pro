@@ -25,6 +25,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    godetails(e){
+      const data = JSON.stringify(e.currentTarget.dataset.data)
+      const jondata = JSON.stringify(e.currentTarget.dataset.jondata)
+      wx.navigateTo({
+        url: `/pages/details/Joindeta/index?data=${data}&joundata=${jondata}`,
+      })
+    }
   }
 })

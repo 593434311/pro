@@ -40,6 +40,7 @@
   background-size:100%; 
 }
 .head_portrait{
+  padding-top: 35rpx;
   padding-bottom:50rpx;
   display: flex;
   justify-content:space-between;
@@ -57,6 +58,7 @@
 .head_img .touxiang image{
   width:87rpx;
   height:87rpx;
+  border-radius: 50%;
 }
 .head_portrait .head_more image{
   width:12rpx;

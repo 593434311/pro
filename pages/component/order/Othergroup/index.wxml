@@ -1,0 +1,19 @@
+<!--pages/component/order/Othergroup/index.wxml-->
+<view class="rests_cont rests_tuan">
+  <view class="cont_lt">
+    <image src="{{ohtgro.avatar}}"></image>
+    <text>{{ohtgro.nickname}}的团</text>
+  </view>
+  <view class="cont_rt">
+    <view class="cont_rt_lt">
+      <text>还差{{ohtgro.remainder}}人成团</text>
+      <view class="count_dn">
+        <image src="/static/images/details_index/biao@2x.png"></image>
+        <text>01天28小时35分</text>
+      </view>
+    </view>
+    <view class="cont_rt_rt">
+      <image src="/static/images/details_index/qianggou@2x.png"></image>
+    </view>
+  </view>
+</view>

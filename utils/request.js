@@ -1,4 +1,5 @@
 var md5 = require('md5.js')
+var bas64 = require('bas64.js')
 var api_url = 'https://test.gtdysd.com/Rest/business/';
 var appid = 1000;
 var _timestamp = Math.round(new Date().getTime() / 1000).toString();
@@ -71,6 +72,12 @@ function signature(data) {
   sign_str += client_secret
   return md5.hexMD5(sign_str)
 }
+function setuserinfo(data, Callback){
+  appRequest('user.info.saveinfo', { userinfo: bas64(data) }, res => {
+    Callback(res)
+  })
+}
 module.exports = {
-  request: appRequest
+  request: appRequest,
+  setuserinfo: setuserinfo
 }  

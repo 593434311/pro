@@ -39,9 +39,12 @@ Component({
     cuitWent(even){
       var eve = even.currentTarget.dataset
       app.RequiseData('user.info.userDeed', { behavior: eve.behavior, actId: eve.id, type: eve.type}, res => {
-        console.log(res)
+        // to doing
       })
-      this.data.data.iscollect = !this.data.data.iscollect
+      if (eve.behavior == 'collect')
+        this.data.data.attribute_num.collect = Number(this.data.data.attribute_num.collect) + 1
+      else this.data.data.attribute_num.collect = Number(this.data.data.attribute_num.collect) - 1
+      this.data.data.user_attribute.collect = !this.data.data.user_attribute.collect
       this.setData({
         data: this.data.data
       })

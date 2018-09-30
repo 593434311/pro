@@ -13,7 +13,8 @@
     "pages/personal/wallet/index",
     "pages/personal/mycollection/index",
     "pages/find/selectedActi/index",
-    "pages/find/selectedmerc/index"
+    "pages/find/selectedmerc/index",
+    "pages/details/Joindeta/index"
   ],
   "window": {
     "backgroundTextStyle": "center",

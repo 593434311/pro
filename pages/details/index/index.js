@@ -15,6 +15,8 @@ Page({
     act_info: [],
     act_list: [],
     user_info: [],
+    getPhNumber: false
+    // getPhNumber: 'getPhoneNumber'
   },
   /**
    * 生命周期函数--监听页面加载
@@ -30,25 +32,49 @@ Page({
         })
       }
     })
-  },
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+    wx.getSetting({
+      success:res =>{
+        console.log(res)
+      }
+    })
   },
   /**
    * 页面上拉触底事件的处理函数
    */
-  getPhoneNumber(e){
-    // wx.navigateTo({
-    //   url: `/pages/personal/unpaid/unpaid?data=${12})}`,
-    // })
-    console.log(e)
+  bindGetUserInfo(e){
+    wx.showToast({ title: '请稍后...', icon: 'loading'});
+    if(!app.globalData.user_info){ // 判断本地是否有数据
+      app.setuserinfo(e.detail.rawData, res =>{
+        if(res.status === 0){
+          this.orderdown(e.currentTarget.dataset)
+        }
+      })
+    } else this.orderdown(e.currentTarget.dataset)
   },
-  gogrolpdet(self) {
+  orderdown(ty){
+    app.RequiseData('activity.index.openact', 
+    { act_id: this.data.act_info.id, target_user_id: ty.type?this.data.act_info.user_id:'', inviter_id: '' }, res => {
+      wx.hideToast();
+      if(res.status === 0){
+        wx.navigateTo({
+          url: `/pages/personal/unpaid/unpaid?older=${res.data}`
+        })
+      }else if(res.status === 203){
+        wx.showModal({
+          content: res.msg,
+          showCancel: false,
+          success: resa => {
+            if (resa.confirm) {
+              this.onLoad(this.options)
+            }
+          }
+        });
+      }
+    })
+  },
+  gogrolpdet() {
     wx.navigateTo({
-      url: `/pages/details/othergro/index?data=${JSON.stringify(self.currentTarget.dataset.data)}`,
+      url: `/pages/details/othergro/index?data=${JSON.stringify(this.data.act_list)}`,
     })
   },
   gobusiness(self){
