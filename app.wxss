@@ -9,8 +9,7 @@ button::after{
 }
 page {
   display: block;
-   font-size: 28rpx;
-  min-height: 100%;
+  font-size: 28rpx;
   background-color: #f9f9fa;
 }
 

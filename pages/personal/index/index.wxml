@@ -1,7 +1,11 @@
 <view class="header">
-  <view class="user">
-    <image src="/static/images/personal/touxiang@2x.png"></image>
-    <text>蒜苗君。</text>
+  <view wx:if="{{getuser}}" class="user">
+    <image wx:if="{{getuser.avatar}}" src="{{getuser.avatar}}"></image>
+    <image wx:else src='/static/images/icon/767123217235158646.png'></image>
+    <text>{{getuser.nickname}}</text>
+  </view>
+  <view wx:else class="user">
+    <image src='/static/images/icon/767123217235158646.png'></image>
   </view>
   <view class="or_code">
     <image src="/static/images/personal/erweima@2x.png"></image>
@@ -22,25 +26,25 @@
   </navigator>
   <view class="group_buy_cont">
     <navigator url="/pages/personal/Orderform/index?id=1">
-      <view class="content_cont unpaid" data-num="3">
+      <view class="{{num.no_pay? 'content_cont unpaid':'content_cont'}}" data-num="{{num.no_pay}}">
         <image src="/static/images/personal/daifukuan@2x.png"></image>
         <text>待付款</text>
       </view>
     </navigator>
     <navigator url="/pages/personal/Orderform/index?id=2">
-      <view class="content_cont">
+      <view class="{{num.yes_pay? 'content_cont unpaid':'content_cont'}}" data-num="{{num.yes_pay}}">
         <image src="/static/images/personal/yifukuan@2x.png"></image>
         <text>已付款</text>
       </view>
     </navigator>
     <navigator url="/pages/personal/Orderform/index?id=3">
-      <view class="content_cont">
+      <view class="{{num.yes_group? 'content_cont unpaid':'content_cont'}}" data-num="{{num.yes_group}}">
         <image src="/static/images/personal/yichengtuan@2x.png"></image>
         <text>已成团</text>
       </view>
     </navigator>
     <navigator url="/pages/personal/Orderform/index?id=4">
-      <view class="content_cont">
+      <view class="{{num.no_group? 'content_cont unpaid':'content_cont'}}" data-num="{{num.no_group}}">
         <image src="/static/images/personal/weichengtuan@2x.png"></image>
         <text>未成团</text>
       </view>
@@ -56,7 +60,7 @@
         <text class="tit_text1">我的钱包</text>
       </view>
       <view class="tit_rt">
-        <view class="tit_rt_price">10元</view>
+        <view class="tit_rt_price" wx:if="{{getuser.money!=='0'}}">{{getuser.money}}元</view>
         <image class="more" src="/static/images/details_index/more@2x.png"></image>
       </view>
     </view>

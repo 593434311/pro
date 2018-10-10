@@ -1,2 +1,24 @@
 <!--pages/personal/wallet/index.wxml-->
-<text>pages/personal/wallet/index.wxml</text>
+<view class='wallet'>
+  <view class='wall_head'>
+    <view class='wall_bg'></view>
+    <view class='wall_mary'>
+      <view class='Price'><text>￥</text>0.00</view>
+      <view class='sure'>可提现金额</view>
+      <view class='bill'>
+        <view class='settled'>
+          <view>￥0.00</view>
+          <view>已结算</view>
+        </view>
+        <view class='line'></view>
+        <view class='audited'>
+          <view>￥50.00</view>
+          <view>待审核</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='counter'>
+    <text><image src='/static/images/icon'></image>最低提现额度20元，点击提现后一周内会提现至您的微信零钱</text>
+  </view>
+</view>

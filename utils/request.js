@@ -2,10 +2,11 @@ var md5 = require('md5.js')
 var bas64 = require('bas64.js')
 var api_url = 'https://test.gtdysd.com/Rest/business/';
 var appid = 1000;
-var _timestamp = Math.round(new Date().getTime() / 1000).toString();
+var _timestamp;
 function appRequest(methods, data, callback, errFun) {
+  _timestamp = Math.round(new Date().getTime() / 1000).toString();
   var data = data;
-  var sign = api(data, methods);
+  var sign = api(data, methods, _timestamp);
   var keyname = '';
   data.v = '1.0'
   data.method = methods
@@ -38,14 +39,14 @@ function appRequest(methods, data, callback, errFun) {
     }
   })
 }
-function api(data, method){
+function api(data, method, timestamp){
   var request_data = [];
   request_data['v'] = '1.0';
   request_data['appid'] = appid;
   request_data['method'] = method;
   request_data['uuid'] = "webseaver_crm";
   request_data['platform'] = "web";
-  request_data['_timestamp'] = _timestamp;
+  request_data['_timestamp'] = timestamp;
   for (var d in data) {
     request_data[d] = data[d];
   }
@@ -72,7 +73,7 @@ function signature(data) {
   sign_str += client_secret
   return md5.hexMD5(sign_str)
 }
-function setuserinfo(data, Callback){
+function setuserinfo(data, Callback){  
   appRequest('user.info.saveinfo', { userinfo: bas64(data) }, res => {
     Callback(res)
   })

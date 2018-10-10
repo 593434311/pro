@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "offered": "/pages/component/Offered/Offered",
+    "befgroup": "/pages/component/order/befgroup/index"
+  }
+}

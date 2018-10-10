@@ -6,7 +6,8 @@ Page({
    */
   data: {
     data: [],
-    joundata:{}
+    joundata:{},
+    Surplus:{}
   },
  
   /**
@@ -15,57 +16,41 @@ Page({
   onLoad: function (options) {
     this.setData({
       data: JSON.parse(options.data),
-      joundata: JSON.parse(options.joundata)
+      joundata: JSON.parse(options.joundata),
+      Surplus: JSON.parse(options.Surplus)
     })
-    console.log(this.data.data)
+    this.tuantimeOut(this.data.Surplus)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  tuantimeOut(dates) {
+    let that = this;
+    let len = dates.length;//时间数据长度
+    function nowTime() { //时间函数
+      var intDiff = dates.second;//获取数据中的时间戳
+      // console.log(intDiff)
+      var day = 0, hour = 0, minute = 0, second = 0;
+      if (intDiff > 0) {//转换时间
+        day = Math.floor(intDiff / (60 * 60 * 24));
+        hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+        minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+        second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+        if (hour <= 9) hour = '0' + hour;
+        if (minute <= 9) minute = '0' + minute;
+        if (second <= 9) second = '0' + second;
+        dates.second = dates.second - 60;
+        var str = day + '天' + hour + '时' + minute + '分'
+        // console.log(str)    
+      } else {
+        var str = "已结束！";
+        //area
+      }
+      dates.day = day;//在数据中添加difftime参数名，把时间放进去
+      dates.hour = hour;//在数据中添加difftime参数名，把时间放进去
+      dates.minute = minute;//在数据中添加difftime参数名，把时间放进去
+      that.setData({
+        order_info: dates
+      })
+    }
+    nowTime();
+    var timer = setInterval(nowTime, 60000);
   }
 })

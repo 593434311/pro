@@ -1,0 +1,10 @@
+/* pages/details/selecoupon/index].wxss */
+.noconpon{
+  position: fixed;
+  width: 100%;
+  bottom: 75rpx;
+  text-align: center;
+  color:#ff9394;
+  font-size:24rpx;
+  text-decoration : underline;
+}

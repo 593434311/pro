@@ -6,62 +6,52 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    order_info:{},
+    user_list: [],
+    wxconpon: null,
+    onponmony:null,
+    isload: false
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    app.RequiseData('order.index.orderinfo', { orderid: options.older}, res =>{
+      if(res.status === 0){
+        this.setData({
+          order_info: res.data.order_info,
+          user_list: res.data.user_list,
+          isload: true
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getorder_id(){
+    var wxconpon = app.globalData[this.data.order_info.order_id] || null;
+    var mony;
+    if (wxconpon){
+      mony = (Number(this.data.order_info.act_info.p_price) - Number(JSON.parse(wxconpon).money_reduce_y))
+    }else{
+      mony = null
+    }
+    this.setData({
+      wxconpon: JSON.parse(wxconpon),
+      onponmony: mony
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  onShow(){
+    if (this.data.isload){
+      this.getorder_id()
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  gocuoer(){
+    var orderId = this.data.order_info.order_id
+    var o_price = this.data.order_info.act_info.p_price
+    wx.navigateTo({
+      url: `/pages/details/selecoupon/index?orderid=${orderId}&o_price=${o_price}`
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  getPhoneNumber(e){
+    console.log(e)
   }
 })

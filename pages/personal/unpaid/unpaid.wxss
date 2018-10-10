@@ -7,7 +7,7 @@
 .bottom_border{
   position: relative;
 }
-.bottom_border::after{
+.bottom_border::after {
   position: absolute;
   left: -20rpx;
   bottom: 0;
@@ -16,7 +16,6 @@
   height: 2rpx;
   background-color:#f2f2f2;
 }
-
 .unpaid{
   padding:24rpx 66rpx 38rpx;
   display:flex;
@@ -27,7 +26,6 @@
 .unpaid .unpaid_lt{
   text-align: center;
 }
-
 .unpaid .unpaid_lt image{
   width:134rpx;
   height:106rpx;
@@ -38,9 +36,10 @@
   color:#fff;
   font-size:24rpx;
 }
-.unpaid  .unpaid_rt{
+.unpaid .unpaid_rt{
   position:relative;
   padding-left:50rpx;
+  width: 400rpx;
 }
 .unpaid  .unpaid_rt::before{
   content:"";
@@ -55,13 +54,9 @@
   color:#fff;
   font-size:28rpx;
   height:42rpx;
-
 }
-/* 参团详情 */
-.tuan_detail{
 
-}
- .title {
+.title {
   display:flex;
   justify-content:space-between;
   align-items:baseline;
@@ -224,10 +219,11 @@
 }
 .bottom .bottom_cont{
   padding:0 24rpx;
+  height:100rpx;
   display: flex;
   justify-content:flex-end;
   align-items:center;
-}
+} 
 .bottom .bottom_cont .bottom_text{
   color:#8d8d8d;
   font-size: 26rpx;

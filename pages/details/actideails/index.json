@@ -1,2 +1,5 @@
 {
+  "usingComponents": {
+    "ohtgro": "/pages/component/order/Othergroup/index"
+  }
 }

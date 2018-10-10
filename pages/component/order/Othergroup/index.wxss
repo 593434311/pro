@@ -19,6 +19,7 @@
 .rests_cont .cont_lt image{
   width:87rpx;
   height:87rpx;
+  border-radius: 50%;
   margin-right:25rpx;
 }
 .rests_cont .cont_lt text{

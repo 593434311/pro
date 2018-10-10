@@ -397,11 +397,14 @@ button::after{ border: none; }
 }
 .participate {
   width: 323rpx;
-  height: 64rpx;
-  border-radius: 32rpx;
-  background: linear-gradient(#ff7e9c, #ff3638);
+  color: #fff;
+  height: 84rpx;
+  border-radius: 42rpx;
+  background: linear-gradient(#fd933d, #fe6e41);
 }
-
+.participate view:first-child{
+  margin-top: 10rpx;
+}
 .participate view{
   line-height: 34rpx;
   text-align: center;

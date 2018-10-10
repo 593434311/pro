@@ -1,6 +1,6 @@
 function base64_encode(str) { // 编码，配合encodeURIComponent使用
   var c1, c2, c3;
-  var base64EncodeChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+  var base64EncodeChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
   var i = 0, len = str.length, strin = '';
   while (i < len) {
     c1 = str.charCodeAt(i++) & 0xff;
@@ -25,4 +25,5 @@ function base64_encode(str) { // 编码，配合encodeURIComponent使用
     strin += base64EncodeChars.charAt(c3 & 0x3F)
   }
   return strin
-} module.exports = base64_encode
+} 
+module.exports = base64_encode

@@ -19,7 +19,6 @@
       </view>
     </view>
   </view>
-
   <!--即将成团-->
   <view class="content_tuan">
     <view class="tuan_title">
@@ -29,7 +28,6 @@
       <berfitem wx:for="{{actbeforData}}" wx:for-index="index" wx:for-item="item" wx:key="{{index}}" item="{{item}}"></berfitem>
     </view>
   </view>
-
   <!-- 热门活动 -->
   <view class="load" >
       <image bindtap='Another' src="/static/images/icon/huanyipi@2x.png" ></image>
@@ -44,7 +42,7 @@
         <image src="/static/images/icon/gengduo@2x.png"></image>
       </view>
     </view>
-    <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="770rpx" class="coupon" catchtouchmove="false">
+    <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="700rpx" class="coupon" catchtouchmove="false">
       <image src='/static/images/icon/67782958429263482.png' mode="widthFix" style='border-radius: 5px'></image>
       <view class='text'>这位新朋友你好，送你一张券试试看呗，不是骗子</view>
       <view class='coupon_reduce'>
@@ -61,8 +59,7 @@
         <view class='reduce_right'>
           <view>立减卷</view>
         </view>
-      </view>
-      <button data-deat='true' bindtap='getCoupon'>立即领取</button>
-      <view style='text-align:center;margin-top: 38rpx;' data-deat='false' bindtap='getCoupon'>不要</view>
+      </view> 
+      <button open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>立即领取</button>
     </coupon>
   </view>

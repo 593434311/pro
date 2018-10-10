@@ -2,7 +2,7 @@
 <import src="../../../wxParse/wxParse.wxml"/>
 <view class="active_list contentW">
   <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
       <swiper-item>
         <view>
           <image src="{{item}}" mode="aspectFill"></image>
@@ -20,9 +20,10 @@
           <s>单价买￥{{act_info.o_price}}</s>
           <s>￥{{act_info.p_price}}</s>
         </view>
-        <view class="want">
-          <image src="/static/images/details_index/aixin2@2x.png"></image>
-          <text>36270人想去</text>
+        <view class="want" data-id='{{act_info.id}}' data-type='2' data-behavior="{{act_info.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
+          <image wx:if="{{!act_info.user_attribute.collect}}" src="/static/images/icon/aixinhui@2x.png"></image>
+          <image wx:else src="/static/images/icon/aixin@2x.png"></image>
+          <text>{{act_info.attribute_num.collect}}人想去</text>
         </view>
       </view>
       <view class="return_money">

@@ -6,44 +6,12 @@
     <text>待支付</text>
   </view>
   <view class="unpaid_rt">
-    <text>带上你的女朋友体验台球3小时
-畅打的魅力吧</text>
+    <text>{{order_info.act_info.title}}</text>
   </view>
 </view>
 <!-- 参与详情 -->
 <view class="tuan_detail contentW">
-  <view class="title">
-    <view class="cantuan">
-      <image src="/static/images/details_index/cantuan@2x.png"></image>
-      <text class="tit_text1">参团详情</text>
-    </view>
-    <view class="tit_text2">还差<text>7</text>人成团</view>
-  </view>
-  <view class="head_portrait">
-    <view class="head_img">
-      <view class="touxiang leader">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-      <view class="touxiang">
-        <image src="/static/images/details_index/touxiang@2x.png"></image>
-      </view>
-    </view>
-    <view class="head_more">
-      <image src="/static/images/details_index/more@2x.png"></image>
-    </view>
-  </view>
+ <offered data="{{user_list}}" Surplus="{{order_info.act_info}}" ></offered>
 </view>
 <!-- 信息填写 -->
 <view class="information contentW">
@@ -77,33 +45,32 @@
   <view class="quantity_cont">
     <text class="return_money bottom_border">(省钱攻略：如有同伴请邀请TA入团，可获返现)</text>
     <view class="price">
-      <text>单价买￥128</text>
-      <view class="group_price">参团价:<text>￥88</text></view>
+      <text>单价买￥{{order_info.act_info.o_price}}</text>
+      <view class="group_price">参团价:<text>￥{{order_info.act_info.p_price}}</text></view>
     </view>
   </view>
 </view>
 <!-- 优惠券 -->
 <view class="coupon contentW">
-  <view class="title bottom_border">
+  <view class="title bottom_border" bindtap='gocuoer'>
     <view class="yhj">
       <image src="/static/images/icon2/youhuiquan@2x.png"></image>
       <text class="tit_text1">优惠券</text>
     </view>
     <view class="money_off">
-      <text>满50元减5元</text>
+      <text wx:if="{{wxconpon}}">满{{wxconpon.money_max_y}}元减{{wxconpon.money_reduce_y}}元</text>
+      <text wx:else style='color:#b8b8b8'>暂无</text>
       <image src="/static/images/details_index/more@2x.png"></image>
     </view>
   </view>
   <view class="payment">
-    <view class="payment_price">支付价格：<text>￥75</text></view>
-    <view class="discounts">优惠价格：<text>￥5</text></view>
+    <view class="payment_price">支付价格：<text>￥{{order_info.act_info.p_price}}</text></view>
+    <view class="discounts">优惠价格：<text>￥{{wxconpon ? wxconpon.money_reduce_y:'0'}}</text></view>
   </view>
 </view>
-<view class="bottom">
+<view class="bottom"> 
   <view class="bottom_cont">
-    <view class="bottom_text">实际支付：<text>￥75</text></view>
-    <view class="bottom_pay">立即支付</view>
+    <view class="bottom_text">实际支付：<text>￥{{onponmony?onponmony:order_info.act_info.p_price}}</text></view>
+    <view><button class="bottom_pay" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即支付</button></view>
   </view>
-  
-
 </view>

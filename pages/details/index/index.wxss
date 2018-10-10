@@ -56,8 +56,8 @@
   align-items:center;
 }
 .bm_m .want image{
-  width:19rpx;
-  height:17rpx;
+  width:22rpx;
+  height:19rpx;
   margin-right: 12rpx;
 }
 .bm_m .want text{

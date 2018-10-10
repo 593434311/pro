@@ -34,7 +34,7 @@ Page({
     })
     wx.getSetting({
       success:res =>{
-        console.log(res)
+        // console.log(res)
       }
     })
   },
@@ -88,6 +88,19 @@ Page({
       success: function () {
 
       }
+    })
+  },
+  cuitWent(even) {
+    var eve = even.currentTarget.dataset
+    app.RequiseData('user.info.userDeed', { behavior: eve.behavior, actId: eve.id, type: eve.type }, res => {
+      // to doing
+    })
+    if (eve.behavior == 'collect')
+      this.data.act_info.attribute_num.collect = Number(this.data.act_info.attribute_num.collect) + 1
+    else this.data.act_info.attribute_num.collect = Number(this.data.act_info.attribute_num.collect) - 1
+    this.data.act_info.user_attribute.collect = !this.data.act_info.user_attribute.collect
+    this.setData({
+      act_info: this.data.act_info
     })
   },
   /**

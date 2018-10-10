@@ -5,18 +5,21 @@
       <image src="/static/images/details_index/cantuan@2x.png"></image>
       <text class="tit_text1">参团详情</text>
     </view>
-    <view class="tit_text2">还差<text>{{Surplus.remainder}}</text>人成团</view>
+
+    <view wx:if="{{state == 1}}" class="tit_text2">拼团成功</view>
+    <view wx:elif="{{state == 2}}" class="tit_text2">拼团失败</view>
+    <view  wx:else class="tit_text2">还差<text>{{Surplus.remainder}}</text>人成团</view>
   </view>
   <view class="head_portrait" data-data="{{data}}" data-jondata='{{Surplus}}' bindtap='godetails'>
     <view class="head_img">
       <view class="touxiang leader">
-        <image src="{{Surplus.avatar}}"></image>
+        <image src="{{Surplus.avatar || '/static/images/icon/767123217235158646.png'}}"></image>
       </view>
       <view class="touxiang" wx:for="{{data}}" wx:for-index="index" wx:key="index">
         <image src="{{item.avatar}}"></image>
       </view>
     </view>
-    <view class="head_more">
+    <view class="head_more" wx:if="{{!state}}">
       <image src="/static/images/details_index/more@2x.png"></image>
     </view>
   </view>

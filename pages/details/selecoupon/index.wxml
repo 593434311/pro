@@ -1,0 +1,5 @@
+<!--pages/details/selecoupon/index].wxml-->
+<view>
+  <copes wx:for="{{codelist}}" item="{{item}}" data-id="{{item}}"  bindtap='useConpon' wx:key="{{index}}"></copes>
+  <view class='noconpon' bindtap='noconpon'>不使用优惠卷</view>
+</view>
