@@ -119,7 +119,8 @@ Page({
       this.setData({
         isCoupon: false
       })
-      app.setuserinfo(e.detail.rawData, res => {
+      console.log(e.detail)
+      app.setuserinfo(e.detail.userInfo, res => {
         if (res.status === 0) {
           app.globalData.user_info = res.data
           app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {

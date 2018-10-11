@@ -74,14 +74,15 @@ function signature(data) {
   return md5.hexMD5(sign_str)
 }
 function setuserinfo(data, Callback){  
-  appRequest('user.info.saveinfo', { userinfo: bas64(data) }, res => {
+  appRequest('user.info.saveinfo', { nickname: data.nickName, avatar: data.avatarUrl, gender: data.gender }, res => {
     Callback(res)
   })
 }
 function setPhone(data, Callback) {
-  appRequest('user.info.saveinfo', { userinfo: bas64(data) }, res => {
+  appRequest('user.info.saveinfo', { nickname: data.nickName, avatar: data.avatarUrl, gender: data.gender  }, res => {
     Callback(res)
   })
+
 }
 module.exports = {
   request: appRequest,
