@@ -53,7 +53,7 @@ Page({
   },
   orderdown(ty){
     app.RequiseData('activity.index.openact', 
-    { act_id: this.data.act_info.id, target_user_id: ty.type?this.data.act_info.user_id:'', inviter_id: '' }, res => {
+      { act_id: this.data.act_info.act_id, target_user_id: ty.type?this.data.act_info.user_id:'', inviter_id: '' }, res => {
       wx.hideToast();
       if(res.status === 0){
         wx.navigateTo({
