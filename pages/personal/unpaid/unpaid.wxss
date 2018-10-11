@@ -122,6 +122,7 @@
 
 }
 .information .information_cont{
+  position: relative;
   display: flex;
   align-items:center;
   padding:30rpx 42rpx;
@@ -241,5 +242,19 @@
   padding:0 94rpx;
   background:linear-gradient(#ff7f9d,#ff3739);
   border-radius:42rpx;
-  
 }
+.usename{
+  position: absolute;
+  right: 0;
+  top: 30rpx;
+  color: red;
+  content: '错误'
+}
+
+.telephone {
+  position: absolute;
+  right: 0;
+  top: 30rpx;
+  color: red;
+  content: '错误'
+} 

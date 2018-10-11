@@ -78,6 +78,11 @@ function setuserinfo(data, Callback){
     Callback(res)
   })
 }
+function setPhone(data, Callback) {
+  appRequest('user.info.saveinfo', { userinfo: bas64(data) }, res => {
+    Callback(res)
+  })
+}
 module.exports = {
   request: appRequest,
   setuserinfo: setuserinfo

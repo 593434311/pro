@@ -21,17 +21,17 @@
       <text class="tit_text1">信息填写</text>
     </view>
   </view>
-  <form>
-    <view class="name information_cont bottom_border">
+    <view class="information_cont bottom_border">
       <view>姓名</view>
-      <input name="input" placeholder="请输入收货人姓名" />
+      <input type='text' placeholder="请输入姓名" data-type='1' bindinput="voteuser" />
+      <view wx:if="{{isusernum!= null && !isusernum}}" class='usename'>bbbb</view>
     </view>
-    <view class="telephone information_cont">
+    <view class="information_cont">
       <view>电话</view>
-      <input name="input" placeholder="请输入手机号码" />
+      <input type='number' placeholder="请输入手机号码" data-type='2' bindinput="voteuser" />
+      <view wx:if="{{isuseripne!= null && !isuseripne}}" class="telephone">aaaa</view>
     </view>
 
-  </form>
 </view>
 <!-- 购买数量 -->
 <view class="quantity contentW">
@@ -71,6 +71,7 @@
 <view class="bottom"> 
   <view class="bottom_cont">
     <view class="bottom_text">实际支付：<text>￥{{onponmony?onponmony:order_info.act_info.p_price}}</text></view>
-    <view><button class="bottom_pay" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即支付</button></view>
+    <view wx:if="{{isusernum && isuseripne}}"><button class="bottom_pay" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即支付</button></view>
+    <view wx:else class="bottom_pay" bindtap='regulte'>立即支付</view>
   </view>
 </view>

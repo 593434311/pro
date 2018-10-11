@@ -112,21 +112,30 @@ Page({
     })
   },
   bindGetUserInfo: function (e) {
-    this.setData({
-      isCoupon: false
-    })
-    app.setuserinfo(e.detail.rawData, res => {
-      if (res.status === 0) {
-        app.globalData.user_info = res.data
-      }
-    })
-    app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {
-      wx.showToast({
-        title: '领取成功',
-        icon: 'success',
-        duration: 2000
+    if (e.detail.iv){
+      this.setData({
+        isCoupon: false
       })
-    })
+      app.setuserinfo(e.detail.rawData, res => {
+        if (res.status === 0) {
+          app.globalData.user_info = res.data
+        }
+        console.log(app.globalData.user_info)
+      })
+      app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {
+        wx.showToast({
+          title: '领取成功',
+          icon: 'success',
+          duration: 2000
+        })
+      })
+    }else{
+      wx.showLoading({
+        title: '授权失败',
+        icon: 'none',
+        duration: 1000
+      })
+    }
   },
   onReachBottom(){
     if (this.data.isweedata) {
@@ -135,6 +144,11 @@ Page({
   },
   onPullDownRefresh(){
     wx.showNavigationBarLoading();
+    this.onLoad()
+    setTimeout(() => {
+      wx.hideNavigationBarLoading();
+      wx.stopPullDownRefresh()
+    },1500)
   },
   swiperChange: function (e) {
     this.setData({
