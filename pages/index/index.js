@@ -113,22 +113,29 @@ Page({
   },
   bindGetUserInfo: function (e) {
     if (e.detail.iv){
+      wx.showLoading({
+        title: '加载中',
+      })
       this.setData({
         isCoupon: false
       })
       app.setuserinfo(e.detail.rawData, res => {
         if (res.status === 0) {
           app.globalData.user_info = res.data
+          app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {
+            wx.hideLoading()
+            if(res.status == 0){
+              wx.showToast({
+                title: '领取成功',
+                icon: 'success',
+                duration: 2000
+              })
+            }
+          })
         }
         console.log(app.globalData.user_info)
       })
-      app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {
-        wx.showToast({
-          title: '领取成功',
-          icon: 'success',
-          duration: 2000
-        })
-      })
+     
     }else{
       wx.showLoading({
         title: '授权失败',
