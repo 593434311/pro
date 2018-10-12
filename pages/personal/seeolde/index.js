@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    actUser: {},
     order_info: {},
     user_list: []
   },
@@ -18,6 +19,7 @@ Page({
     app.RequiseData('order.index.orderinfo', { orderid: options.order }, res => {
       if (res.status === 0) {
         this.setData({
+          actUser: res.data.act_user,
           order_info: res.data.order_info,
           user_list: res.data.user_list
         })

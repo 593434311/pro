@@ -8,6 +8,7 @@ Page({
    */
   data: {
     order_info:{},
+    actUser: {},
     user_list: [],
     wxconpon: null,
     onponmony:null,
@@ -15,17 +16,21 @@ Page({
     usernum: '',
     useripne: '',
     isusernum: null,
-    isuseripne: null
+    isuseripne: null,
+    is_mobile: false
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     app.RequiseData('order.index.orderinfo', { orderid: options.older}, res =>{
+      console.log(res)
       if(res.status === 0){
         this.setData({
           order_info: res.data.order_info,
+          actUser: res.data.act_user,
           user_list: res.data.user_list,
+          is_mobile: res.data.is_mobile,
           isload: true
         })
       }
@@ -57,19 +62,24 @@ Page({
     })
   },
   regular(){
-    this.setData({
-      isusernum: /^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/.test(this.data.usernum)
-    })
-    this.setData({
-      isuseripne: /^[1][3,4,5,6,7,8,9][0-9]{9}$/.test(this.data.useripne)
-    })
+    var num = /^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/.test(this.data.usernum)
+    var ipne = /^[1][3,4,5,6,7,8,9][0-9]{9}$/.test(this.data.useripne)
+    if (num){
+      this.setData({
+        isusernum: /^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/.test(this.data.usernum)
+      })
+    } else return false
+    if (num) {
+      this.setData({
+        isuseripne: /^[1][3,4,5,6,7,8,9][0-9]{9}$/.test(this.data.useripne)
+      })
+    } else return false
+    return true
   },
   regulte(){ // 按钮验证
-    this.regular()
-    this.setData({
-      isusernum: this.data.isusernum,
-      isuseripne: this.data.isuseripne
-    })
+    if (this.regular()){
+      console.log('通过')
+    }
   },
   voteuser(e){
     if (e.currentTarget.dataset.type == '1'){
@@ -103,7 +113,9 @@ Page({
             signType: signType,
             paySign: paySign,
             success: res =>{
-              console.log(res)
+              wx.navigateTo({
+                url: `/pages/details/payment/index`
+              })
             },
             complete: res => {
               console.log(res)

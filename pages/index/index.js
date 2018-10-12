@@ -152,7 +152,8 @@ Page({
   },
   onPullDownRefresh(){
     wx.showNavigationBarLoading();
-    this.onLoad()
+    this.gettuan()
+    this.getActive()
     setTimeout(() => {
       wx.hideNavigationBarLoading();
       wx.stopPullDownRefresh()

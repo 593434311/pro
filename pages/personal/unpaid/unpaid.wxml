@@ -6,12 +6,12 @@
     <text>待支付</text>
   </view>
   <view class="unpaid_rt">
-    <text>{{order_info.act_info.title}}</text>
+    <text>{{actUser.title}}</text>
   </view>
 </view>
 <!-- 参与详情 -->
 <view class="tuan_detail contentW">
- <offered data="{{user_list}}" Surplus="{{order_info.act_info}}" ></offered>
+ <offered data="{{user_list}}" Surplus="{{actUser}}" issere="ye" isSurplus="{{user_list.length == 0 ? 'ye':''}}"></offered>
 </view>
 <!-- 信息填写 -->
 <view class="information contentW">
@@ -22,16 +22,17 @@
     </view>
   </view>
     <view class="information_cont bottom_border">
-      <view>姓名</view>
+      <view><text>* </text>姓名</view>
       <input type='text' placeholder="请输入姓名" data-type='1' bindinput="voteuser" />
-      <view wx:if="{{isusernum!= null && !isusernum}}" class='usename'>bbbb</view>
+      <!-- <view wx:if="false" class='usename yesref'></view>
+      <view wx:if="false" class='errmsgna'></view> -->
     </view>
     <view class="information_cont">
-      <view>电话</view>
+      <view><text>* </text>电话</view>
       <input type='number' placeholder="请输入手机号码" data-type='2' bindinput="voteuser" />
-      <view wx:if="{{isuseripne!= null && !isuseripne}}" class="telephone">aaaa</view>
+      <!-- <view wx:if="false" class="telephone noref"></view>
+      <view wx:if="false" class='errmsgph'></view> -->
     </view>
-
 </view>
 <!-- 购买数量 -->
 <view class="quantity contentW">
@@ -71,7 +72,7 @@
 <view class="bottom"> 
   <view class="bottom_cont">
     <view class="bottom_text">实际支付：<text>￥{{onponmony?onponmony:order_info.act_info.p_price}}</text></view>
-    <view wx:if="{{isusernum && isuseripne}}"><button class="bottom_pay" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即支付</button></view>
+    <view wx:if="true"><button class="bottom_pay" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即支付</button></view>
     <view wx:else class="bottom_pay" bindtap='regulte'>立即支付</view>
   </view>
 </view>

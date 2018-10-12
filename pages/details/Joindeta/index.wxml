@@ -1,15 +1,12 @@
 <!--pages/details/othergro/index.wxml-->
 <view class='member leader'>
-  <view>
-    <image src="{{joundata.avatar || '/static/images/icon/767123217235158646.png'}}"></image>
-  </view>
   <block wx:if='{{data.length > 0}}' wx:key='un'>
     <view wx:for="{{data}}" wx:key="index">
       <image src="{{item.avatar || '/static/images/icon/767123217235158646.png'}}"></image>
     </view>
   </block>
-  <block wx:if='{{data.length < joundata.sub_num}}'>
-    <view wx:for='{{joundata.remainder -0-0}}' wx:key="index">
+  <block wx:if='{{data.length < Surplus.sub_num}}'>
+    <view wx:for='{{Surplus.remainder -0-0}}' wx:key="index">
       <image src='/static/images/icon/916992777366978025.png'></image>
     </view>
   </block>
@@ -18,10 +15,10 @@
 <view class='yaoq'>
     <view style='color:#737373;font-size:24rpx;'>成团倒计时</view>
     <view class="count_dn flex">
-      <view class="time"><i>{{order_info.day}}</i>天<i>{{order_info.hour}}</i>时<i>{{order_info.minute}}</i></view>
+      <view class="time"><i>{{Surplus.day}}</i>天<i>{{Surplus.hour}}</i>时<i>{{Surplus.minute}}</i></view>
     </view>
-    <view class="tit_text2">还差<text>{{ joundata.remainder }}</text>人成团</view>
-    <button class='kaitButton'>
+    <view class="tit_text2">还差<text>{{ Surplus.remainder }}</text>人成团</view>
+    <button wx:if="{{isshere}}" class='kaitButton'>
       <text class='shea'></text>
       <text>邀请好友成团返现</text>
     </button>

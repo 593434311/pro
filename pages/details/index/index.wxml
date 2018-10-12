@@ -115,11 +115,11 @@
   </view>
   <view class='Placeanorder'>
     <button class='Private' data-type='' open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>
-      <view>￥80</view>
+      <view>￥{{act_info.p_price}}</view>
       <view>自己开团</view>
     </button>
     <button class='participate' data-type='true' open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>
-      <view>￥80</view>
+      <view>￥{{act_info.p_price}}</view>
       <view>参与拼团</view>
     </button>
   </view>

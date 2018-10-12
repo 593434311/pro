@@ -26,7 +26,7 @@ Component({
   methods: {
     goseorder(self) {
       wx.navigateTo({
-        url: `/pages/personal/nogroup/index?older=${self.currentTarget.dataset.oldid}`,
+        url: `/pages/personal/yesorder/index?order=${this.data.data.order_id}`,
       })
     }
   }

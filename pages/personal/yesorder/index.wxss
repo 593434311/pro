@@ -42,6 +42,7 @@
 .unpaid  .unpaid_rt{
   position:relative;
   padding-left:50rpx;
+  width:400rpx;
 }
 .unpaid  .unpaid_rt::before{
   content:"";

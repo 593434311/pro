@@ -2,15 +2,15 @@
 <view class="unpaid contentW">
   <view class="unpaid_lt">
     <image src="/static/images/icon2/qianbao2@2x.png"></image>
-    <text>待支付</text>
+    <text>已付款</text>
   </view>
   <view class="unpaid_rt">
-    <text>{{act_info.title}}</text>
+    <text>{{actUser.title}}</text>
   </view>
 </view>
 <!-- 参与详情 -->
 <view class="tuan_detail contentW">
- <offered data="{{user_list}}" Surplus="{{act_info}}"></offered>
+ <offered data="{{user_list}}" Surplus="{{actUser}}"></offered>
 </view>
 <!-- 信息填写 -->
 <view class="information contentW">

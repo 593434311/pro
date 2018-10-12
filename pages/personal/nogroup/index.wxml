@@ -11,7 +11,7 @@
 </view>
 <!-- 参与详情 -->
 <view class="tuan_detail contentW">
- <offered data="{{user_list}}" Surplus="{{order_info.act_info}}" state="2"></offered>
+ <offered data="{{user_list}}" Surplus="{{actUser}}" state="2"></offered>
 </view>
 <!-- 信息填写 -->
 <view class="information contentW">

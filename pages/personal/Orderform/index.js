@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabs: ["全部", "代付款", "已付款", "已成团", "未成团"],
+    tabs: ["全部", "待付款", "已付款", "已成团", "未成团"],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,

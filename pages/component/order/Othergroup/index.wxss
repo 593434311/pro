@@ -12,9 +12,12 @@
 }
 .rests_cont .cont_lt{
   display: flex;
-  justify-content:space-between;
-  padding:0 42rpx;
-
+  width: 340rpx;
+  flex-direction: row;
+  padding-left: 42rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 .rests_cont .cont_lt image{
   width:87rpx;
@@ -30,7 +33,7 @@
 .cont_rt{
   display: flex;
   align-items:center;
-  
+  width: 360rpx
 }
 .cont_rt .cont_rt_lt{
   text-align:right;
