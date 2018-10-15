@@ -1,1 +1,72 @@
 /* pages/personal/wallet/index.wxss */
+.wallet{
+
+}
+.wall_head {
+  position: relative;
+  width: 100%;
+  height:475rpx;
+  
+}
+.wall_bg{
+  height: 345rpx;
+  width: 100%;
+  background: linear-gradient(#fe6e41, #fd933d);
+  
+}
+.wall_mary{
+  position: absolute;
+  left: 25rpx;
+  bottom: 24rpx;
+  height: 346rpx;
+  width: 702rpx;
+  padding: 0 39rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  background-color: #fff;
+}
+.Price {
+  text-align: center;
+  color: #e58574;
+  font-size: 72rpx;
+  margin-top: 50rpx;
+}
+.Price text{
+  font-size: 48rpx;
+}
+.sure{
+  margin-top: 10rpx;
+  color: #737373;
+  font-size: 24rpx;
+}
+.counter{
+  padding: 32rpx 66rpx;
+  background-color: #fff;
+}
+.bill {
+  width: 100%;
+  height: 121rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 48rpx;
+  border-top: 1rpx solid #e4e4e4;
+}
+.bill>view view:first-child{
+  color: #737373;
+  font-size: 36rpx;
+}
+.bill>view view:last-child{
+  color: #b8b8b8;
+  font-size: 24rpx;
+}
+.settled{
+  width: 311rpx;
+}
+.line{
+  height: 62rpx;
+  width: 1rpx;
+  background-color: #e4e4e4;
+}
+.audited{
+  width: 311rpx;
+}

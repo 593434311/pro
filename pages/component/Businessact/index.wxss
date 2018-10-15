@@ -1,7 +1,7 @@
 .active_list{
    padding:24rpx 24rpx 0 24rpx;
   background-color:#fff;
-  margin-bottom: 24rpx;
+  margin-bottom: 12rpx;
 }
 .active_list .active_top{
   margin-bottom:18rpx;
@@ -72,13 +72,7 @@
   font-size:20rpx;
   color:#b8b8b8;
 }
-.active .more{
-   padding:12px 326rpx 84rpx 326rpx; 
-}
-.active .more image{
-  width:99rpx;
-  height:57rpx;
-}
+
 
  .price{
   display:flex;

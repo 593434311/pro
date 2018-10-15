@@ -1,0 +1,74 @@
+
+<view class="unpaid contentW">
+  <view class="unpaid_lt">
+    <image src="/static/images/icon2/qianbao2@2x.png"></image>
+    <text>已付款</text>
+  </view>
+  <view class="unpaid_rt">
+    <text>{{actUser.title}}</text>
+  </view>
+</view>
+<!-- 参与详情 -->
+<view class="tuan_detail contentW">
+ <offered data="{{user_list}}" Surplus="{{actUser}}"></offered>
+</view>
+<!-- 信息填写 -->
+<view class="information contentW">
+  <view class="title">
+    <view class="xinxi">
+      <image src="/static/images/icon2/xinxi@2x.png"></image>
+      <text class="tit_text1">信息填写</text>
+    </view>
+  </view>
+  <form>
+    <view class="name information_cont bottom_border">
+      <view>姓名</view>
+      <input name="input" placeholder="请输入收货人姓名" />
+    </view>
+    <view class="telephone information_cont">
+      <view>电话</view>
+      <input name="input" placeholder="请输入手机号码" />
+    </view>
+
+  </form>
+</view>
+<!-- 购买数量 -->
+<view class="quantity contentW">
+  <view class="title">
+    <view class="shuliang">
+      <image src="/static/images/icon2/qianbao@2x.png"></image>
+      <text class="tit_text1">购买数量</text>
+    </view>
+    <view class="tit_quantity">数量：<text>1</text></view>
+  </view>
+  <view class="quantity_cont">
+    <text class="return_money bottom_border">(省钱攻略：如有同伴请邀请TA入团，可获返现)</text>
+    <view class="price">
+      <text>单价买￥{{act_info.o_price}}</text>
+      <view class="group_price">参团价:<text>￥{{act_info.p_price}}</text></view>
+    </view>
+  </view>
+</view>
+<!-- 优惠券 -->
+<view class="coupon contentW">
+  <view class="title bottom_border">
+    <view class="yhj">
+      <image src="/static/images/icon2/youhuiquan@2x.png"></image>
+      <text class="tit_text1">优惠券</text>
+    </view>
+    <view class="money_off">
+      <text>满50元减5元</text>
+      <image src="/static/images/details_index/more@2x.png"></image>
+    </view>
+  </view>
+  <view class="payment">
+    <view class="payment_price">支付价格：<text>￥75</text></view>
+    <view class="discounts">优惠价格：<text>￥5</text></view>
+  </view>
+</view>
+<view class="bottom">
+  <view class="bottom_cont">
+    <view class="bottom_text">实际支付：<text>￥75</text></view>
+    <view class="bottom_pay">立即支付</view>
+  </view>
+</view>

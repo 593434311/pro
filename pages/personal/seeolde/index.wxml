@@ -1,0 +1,46 @@
+
+<view class="unpaid contentW">
+  <view class="unpaid_lt">
+    <image src="/static/images/icon2/qianbao2@2x.png"></image>
+    <text>已成团</text>
+  </view>
+  <view class="unpaid_rt">
+    <text>拼团成功</text>
+    <text>请准时参加活动哦~</text>
+  </view>
+</view>
+<!-- 参与详情 -->
+<view class="tuan_detail contentW">
+ <offered data="{{user_list}}" Surplus="{{actUser}}" state="1"></offered>
+</view>
+<!-- 信息填写 -->
+<view class="information contentW">
+  <view class="title">
+    <view class="xinxi">
+      <image src="/static/images/icon2/xinxi@2x.png"></image>
+      <text class="tit_text1">信息填写</text>
+    </view>
+  </view>
+  <form>
+    <view class="name information_cont bottom_border">
+      <view>姓名</view>
+      <input name="input" disabled="true" value='{{order_info.name}}'/>
+    </view>
+    <view class="telephone information_cont">
+      <view>电话</view>
+      <input name="input" disabled="true" value='{{order_info.phone}}'/>
+    </view>
+  </form>
+</view>
+<oldgroup item="{{order_info}}" isshow="1"></oldgroup>
+<view class='text_orde'>
+  <view>订单编号：{{order_info.order_id}}<text class='fuzi'>复制</text></view>
+  <view>支付方式：微信</view>
+  <view>下单时间：{{order_info.c_date}}</view>
+</view>
+<!-- 购买数量 -->
+<view class="bottom">
+  <view class="bottom_cont">
+    <view><button class="bottom_text">联系客服</button></view>
+  </view>
+</view>

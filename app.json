@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/personal/index/index",
+    "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
+    "pages/personal/index/index",
     "pages/find/index/index",
     "pages/details/business/index",
     "pages/details/actideails/index",
@@ -10,10 +11,14 @@
     "pages/details/payment/index",
     "pages/personal/unpaid/unpaid",
     "pages/details/othergro/index",
-    "pages/personal/wallet/index",
     "pages/personal/mycollection/index",
     "pages/find/selectedActi/index",
-    "pages/find/selectedmerc/index"
+    "pages/find/selectedmerc/index",
+    "pages/details/Joindeta/index",
+    "pages/personal/seeolde/index",
+    "pages/personal/nogroup/index",
+    "pages/personal/yesorder/index",
+    "pages/details/selecoupon/index"
   ],
   "window": {
     "backgroundTextStyle": "center",

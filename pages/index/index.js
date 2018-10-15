@@ -28,6 +28,10 @@ Page({
    * 页面的初始数据
    */
   onLoad: function(option) {
+    // wx.setTabBarBadge({
+    //   index: 2,
+    //   text: '5'
+    // })
     var self = this;
     var cuea = setInterval(() => {
       if (wx.getStorageSync('cuea')){
@@ -72,7 +76,7 @@ Page({
         })
       }
     }) 
-      // this.onShow(this.data.RegimentData)
+ 
   },
   gettuan(){
     app.RequiseData('activity.actor.actlist', { p: this.data.RegimentPage, pagesize: 10 }, res => {
@@ -80,7 +84,6 @@ Page({
         this.setData({
           activeData: res.data
         })
-      // this.tuantimeOut(this.data.activeData)
         this.setData({
           actbeforData: res.data.slice(0, 2),
           activePage: res.data.length / 2,
@@ -88,77 +91,6 @@ Page({
         })
       }
     }) 
-  },
-  onShow(dates) {
-    // let that = this;
-    // let len = dates.length;//时间数据长度
-    // function nowTime() { //时间函数
-    //   for(var i = 0; i<len; i++) {
-    //     var intDiff = dates[i].second;//获取数据中的时间戳
-    //     // console.log(intDiff)
-    //     var day = 0, hour = 0, minute = 0, second = 0;
-    //     if (intDiff > 0) {//转换时间
-    //       day = Math.floor(intDiff / (60 * 60 * 24));
-    //       hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
-    //       minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
-    //       second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
-    //       if (hour <= 9) hour = '0' + hour;
-    //       if (minute <= 9) minute = '0' + minute;
-    //       if (second <= 9) second = '0' + second;
-    //       dates[i].second--;
-    //       var str = day + '天' + hour + '时' + minute + '分'
-    //       // console.log(str)    
-    //     } else {
-    //       var str = "已结束！";
-    //       //area
-    //     }
-      
-    //     if (!that.data.isloaddData) {
-    //       clearInterval(timer)
-    //     }
-    //     dates[i].str = str;//在数据中添加difftime参数名，把时间放进去
-    //   }
-     
-    //   that.setData({
-    //     RegimentData: dates
-    //   })
-    // }
-    // nowTime();
-    // var timer = setInterval(nowTime, 60000);
-  },
-  tuantimeOut(dates) {
-    // let that = this;
-    // let len = dates.length;//时间数据长度
-    // function nowTime() { //时间函数
-    //   for (var i = 0; i < len; i++) {
-    //     var intDiff = dates[i].second;//获取数据中的时间戳
-    //     // console.log(intDiff)
-    //     var day = 0, hour = 0, minute = 0, second = 0;
-    //     if (intDiff > 0) {//转换时间
-    //       day = Math.floor(intDiff / (60 * 60 * 24));
-    //       hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
-    //       minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
-    //       second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
-    //       if (hour <= 9) hour = '0' + hour;
-    //       if (minute <= 9) minute = '0' + minute;
-    //       if (second <= 9) second = '0' + second;
-    //       dates[i].second--;
-    //       var str = day + '天' + hour + '时' + minute + '分'
-    //       // console.log(str)    
-    //     } else {
-    //       var str = "已结束！";
-    //       //area
-    //     }
-    //     dates[i].day = day;//在数据中添加difftime参数名，把时间放进去
-    //     dates[i].hour = hour;//在数据中添加difftime参数名，把时间放进去
-    //     dates[i].minute = minute;//在数据中添加difftime参数名，把时间放进去
-    //   }
-    //   that.setData({
-    //     activeData: dates
-    //   })
-    // }
-    // nowTime();
-    // var timer = setInterval(nowTime, 1000);
   },
   cuitWent(even){
     var data = even.currentTarget.dataset;
@@ -174,19 +106,44 @@ Page({
       actbeforPage = 1
       actbeforData = this.data.activeData.slice(0, 2);
     }
-    console.log(actbeforData)
     this.setData({
       actbeforData: actbeforData,
       actbeforPage: actbeforPage
     })
   },
-  getCoupon(e){
-    console.log(e.currentTarget.dataset.deat)
-    if (e.currentTarget.dataset.deat == 'true'){
-      console.log('领')
-    } else this.setData({
-      isCoupon: false
-    })
+  bindGetUserInfo: function (e) {
+    if (e.detail.iv){
+      wx.showLoading({
+        title: '加载中',
+      })
+      this.setData({
+        isCoupon: false
+      })
+      console.log(e.detail)
+      app.setuserinfo(e.detail.userInfo, res => {
+        if (res.status === 0) {
+          app.globalData.user_info = res.data
+          app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {
+            wx.hideLoading()
+            if(res.status == 0){
+              wx.showToast({
+                title: '领取成功',
+                icon: 'success',
+                duration: 2000
+              })
+            }
+          })
+        }
+        console.log(app.globalData.user_info)
+      })
+     
+    }else{
+      wx.showLoading({
+        title: '授权失败',
+        icon: 'none',
+        duration: 1000
+      })
+    }
   },
   onReachBottom(){
     if (this.data.isweedata) {
@@ -195,6 +152,12 @@ Page({
   },
   onPullDownRefresh(){
     wx.showNavigationBarLoading();
+    this.gettuan()
+    this.getActive()
+    setTimeout(() => {
+      wx.hideNavigationBarLoading();
+      wx.stopPullDownRefresh()
+    },1500)
   },
   swiperChange: function (e) {
     this.setData({

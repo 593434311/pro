@@ -1,7 +1,6 @@
 /* header */
 page {
   display: block;
-  min-height: 100%;
   background-color: #f9f9fa;
 }
 .contentW{
@@ -26,9 +25,11 @@ page {
 .header .user image{
   width:106rpx;
   height:107rpx;
-  padding-bottom:32rpx;
+  border-radius: 50%;
+ 
 }
 .header .user text{
+  margin-top:32rpx;
   font-size:26rpx;
   height:26rpx;
   color:#fff;
@@ -112,6 +113,10 @@ page {
   text-align: center;
   line-height: 20rpx;
 }
+.user {
+  
+}
+
 /* 我的钱包 */
 .wallet{
   margin-bottom:14rpx;
@@ -180,7 +185,6 @@ page {
 }
 /* 联系客服 */
 .service {
-  margin-bottom:100rpx;
 }
 .service .title{
   padding:36rpx 0 38rpx 0;

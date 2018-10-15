@@ -2,7 +2,7 @@
 <import src="../../../wxParse/wxParse.wxml"/>
 <view class="active_list contentW">
   <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
       <swiper-item>
         <view>
           <image src="{{item}}" mode="aspectFill"></image>
@@ -20,9 +20,10 @@
           <s>单价买￥{{act_info.o_price}}</s>
           <s>￥{{act_info.p_price}}</s>
         </view>
-        <view class="want">
-          <image src="/static/images/details_index/aixin2@2x.png"></image>
-          <text>36270人想去</text>
+        <view class="want" data-id='{{act_info.id}}' data-type='2' data-behavior="{{act_info.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
+          <image wx:if="{{!act_info.user_attribute.collect}}" src="/static/images/icon/aixinhui@2x.png"></image>
+          <image wx:else src="/static/images/icon/aixin@2x.png"></image>
+          <text>{{act_info.attribute_num.collect}}人想去</text>
         </view>
       </view>
       <view class="return_money">
@@ -46,32 +47,14 @@
 </view>
 <!-- 其他人的团 -->
 <view class="rests contentW">
-  <view class="title">
+  <view class="title" bindtap='gogrolpdet'>
     <view class="qita">
       <image src="/static/images/details_index/qita@2x.png"></image>
       <text class="tit_text1">该活动其他人的团</text>
     </view>
     <text class="tit_text2">全部</text>
   </view>
-  <view class="rests_cont rests_tuan" wx:for="{{act_list}}" wx:for-index="index" wx:key="index" bindtap='gogrolpdet'>
-    <view class="cont_lt">
-      <image src="{{item.avatar}}"></image>
-      <text>{{item.nickname}}的团</text>
-    </view>
-    <view class="cont_rt">
-      <view class="cont_rt_lt">
-        <text>还差{{item.remainder}}人成团</text>
-        <view class="count_dn">
-          <image src="/static/images/details_index/biao@2x.png"></image>
-          <text>01天28小时35分</text>
-        </view>
-      </view>
-      <view class="cont_rt_rt">
-        <image src="/static/images/details_index/qianggou@2x.png"></image>
-      </view>
-
-    </view>
-  </view>
+  <ohtgro wx:for="{{act_list}}" wx:for-index="index" wx:if="{{! (index > 1)}}" wx:key="index" ohtgro="{{item}}"></ohtgro>
 </view>
 <!-- 拼团攻略 -->
 <view class="strategy contentW">
@@ -131,12 +114,12 @@
     </view>
   </view>
   <view class='Placeanorder'>
-    <button class='Private' open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>
-      <view>￥80</view>
+    <button class='Private' data-type='' open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>
+      <view>￥{{act_info.p_price}}</view>
       <view>自己开团</view>
     </button>
-    <button class='participate' bindtap='goOrderform'>
-      <view>￥80</view>
+    <button class='participate' data-type='true' open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>
+      <view>￥{{act_info.p_price}}</view>
       <view>参与拼团</view>
     </button>
   </view>

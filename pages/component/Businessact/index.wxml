@@ -25,9 +25,12 @@
         </view>
       </view>
     </view>
-    <view class="bm_b want" data-id='{{data.id}}' data-behavior="{{data.iscollect?'no_collect':'collect'}}" data-type='1' catchtap='cuitWent'>
-      <image src="/static/images/icon/aixin@2x.png"></image>
-      <text>36270人想去</text>
+    <view class="bm_b want">
+      <view style='height:45rpx' data-id='{{data.id}}' data-type='1' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
+        <image wx:if="{{!data.user_attribute.collect}}" src="/static/images/icon/aixinhui@2x.png"></image>
+        <image wx:else src="/static/images/icon/aixin@2x.png"></image>
+        <text>{{data.attribute_num.collect}}人想去</text>
+      </view>
     </view>
   </view>
 </view>

@@ -10,24 +10,44 @@
         <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
     </view>
     <view class="weui-tab__panel">
-      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-        <beforder></beforder>
-        <oldorder></oldorder>
-        <oldgroup></oldgroup>
-        <befgroup></befgroup>
-      </view>
-      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-        <beforder></beforder>
-      </view>
-      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
-        <oldorder></oldorder>
-      </view>
-      <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
-        <oldgroup></oldgroup>
-      </view>
-      <view class="weui-tab__content" hidden="{{activeIndex != 4}}">
-        <befgroup></befgroup>
-      </view>
+      <scroll-view class="list" style='height:{{windowheight*2-96}}rpx;' scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore">
+        <view class="weui-tab__content"  wx:if="{{activeIndex == 0}}">
+          <block wx:for="{{befodata}}" wx:key="index">
+            <block wx:if="{{item.state === '1'}}">
+              <beforder item="{{item}}"></beforder>
+            </block>
+            <block wx:elif="{{item.state === '2'}}">
+              <oldorder item="{{item}}"></oldorder>
+            </block>
+            <block wx:elif="{{item.state === '3'}}">
+              <oldgroup item="{{item}}"></oldgroup>
+            </block>
+            <block wx:elif="{{item.state === '4'}}">
+              <befgroup item="{{item}}"></befgroup>
+            </block>
+          </block>
+        </view>
+        <view class="weui-tab__content" wx:if="{{activeIndex == 1}}">
+          <block wx:for="{{befodata}}" wx:key="index">
+            <beforder item="{{item}}"></beforder>
+          </block> 
+        </view>
+        <view class="weui-tab__content" wx:if="{{activeIndex == 2}}">
+          <block wx:for="{{befodata}}" wx:key="index">
+            <oldorder item="{{item}}"></oldorder>
+          </block>
+        </view>
+        <view class="weui-tab__content" wx:if="{{activeIndex == 3}}">
+          <block wx:for="{{befodata}}" wx:key="index">
+            <oldgroup item="{{item}}"></oldgroup>
+          </block>
+        </view>
+        <view class="weui-tab__content" wx:if="{{activeIndex == 4}}">
+          <block wx:for="{{befodata}}" wx:key="index">
+            <befgroup item="{{item}}"></befgroup>
+          </block>
+        </view>
+      </scroll-view>
     </view>
   </view>
 </view>

@@ -1,6 +1,7 @@
 /* pages/details/othergro/index.wxss */
 .member {
   padding: 0 24rpx;
+  background-color: #fff;
 }
 .rests_cont{
   display: flex;
@@ -10,8 +11,7 @@
 }
 .rests_tuan{
   padding:36rpx 0 30rpx 0;
-  border-top:1px solid #e5e5e5;
-
+  border-bottom:1px solid #e5e5e5;
 }
 .rests_cont .cont_lt{
   display: flex;

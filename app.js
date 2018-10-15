@@ -14,12 +14,17 @@ App({
       request.request('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {
         if (res.status == 0) {
           this.globalData.openId = res.data.openid;
+          this.globalData.user_info = res.data.user_info;
+          if (res.data.iscoupon === '0'){
+            wx.setStorageSync('cuea', 'isd'); // 
+          }        
         } else {
           wx.login({
             success: resa => {
               request.request('login.login.login', { code: resa.code, type: 2 }, reques => {
                 if (reques.status == 0) {
                   this.globalData.openId = reques.data.openid;
+                  this.globalData.user_info = reques.data.user_info;
                   wx.setStorageSync('to-ken', reques.data.token);
                 }
               })
@@ -33,8 +38,11 @@ App({
           request.request('login.login.login', { code: res.code, type: 2 }, resd => {
             if (resd.status == 0) {
               this.globalData.openId = resd.data.openid
+              this.globalData.user_info = resd.data.user_info;
               wx.setStorageSync('to-ken', resd.data.token)
-              wx.setStorageSync('cuea', 'isd'); // 
+              if (resd.data.iscoupon === '0') {
+                wx.setStorageSync('cuea', 'isd'); // 
+              } 
             }// else console.error(res)
           })
         }
@@ -55,8 +63,11 @@ App({
   RequiseData(methods, data, callback, errFun) {
     request.request(methods, data, callback, errFun)
   },
+  setuserinfo(data, callback) {
+    request.setuserinfo(data, callback)
+  },
   globalData: {
-    userInfo: null,
+    user_info: null,
     openId: null
   }
 })

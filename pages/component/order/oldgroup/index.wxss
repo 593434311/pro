@@ -3,7 +3,7 @@
 .order_box{
   background-color: #fff;
   padding: 0 24rpx;
-  margin-top: 12rpx;
+  margin-bottom: 12rpx;
 }
 .header{
   height: 64rpx;
@@ -57,7 +57,6 @@
 .cout_left image{
   width: 140rpx;
   height: 140rpx;
-  border: 1px solid red;
   border-radius: 5px;
 }
 .cout_right{

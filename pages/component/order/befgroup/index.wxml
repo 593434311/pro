@@ -1,34 +1,32 @@
-<!--pages/component/order/befgroup/index.wxml-->
 <!--pages/component/order/beforder/index.wxml-->
-<view class='order_box'>
+<view class='order_box' style="{{isshow ?'margin-bottom:0':''}}">
   <view class='header'>
     <view class='head_left'>
       <image src='/static/images/icon/shangjia@2x.png'></image>
-      <view>商家名称</view>
+      <view>{{data.shop_info.shop_name}}</view>
       <view class='jiantou'></view>
     </view>
     <view class='head_right'>未成团</view>
   </view>
   <view class='counter'>
     <view class='cout_left'>
-      <image></image>
-      <view class='left_text'>大学生台球party I 带上你的
-女朋友体验台球3小时畅打...</view>
+      <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.act_info.cover_img}}?x-oss-process=image/resize,m_fill,h_100,w_100'></image>
+      <view class='left_text'>{{data.act_info.title}}</view>
     </view>
     <view class='cout_right'>
-      <view class='money'>￥80</view>
+      <view class='money'>￥{{data.o_price}}</view>
       <view class='num'>x1</view>
     </view>
   </view>
-  <view class='allmony'>实付：￥80</view>
-  <view class='orde_button'>
+  <view class='allmony'>实付：￥{{data.pay_price}}</view>
+  <view wx:if="{{!isshow}}" class='orde_button'>
     <view>
       <button>删除订单</button>
     </view>
     <view>
       <button>联系客服</button>
     </view>
-    <view class='border_rea'>
+    <view class='border_rea' bindtap='goseorder'>
       <button>查看订单</button>
     </view>
   </view>

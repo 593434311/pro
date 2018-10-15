@@ -1,6 +1,6 @@
 /* pages/component/befteam/index.wxss */
 .tuan_list{
-  min-height: 345rpx;
+  max-height: 345rpx;
   padding:25rpx;
   display: flex;
   justify-content:space-between;
