@@ -50,8 +50,6 @@ function api(data, method, timestamp){
   for (var d in data) {
     request_data[d] = data[d];
   }
-  console.log(request_data)
-  console.log(signature(request_data))
   return signature(request_data);
 }
 function objKeySort(obj) { // 排序的函数
@@ -73,6 +71,7 @@ function signature(data) {
     sign_str += k + v
   }
   sign_str += client_secret
+  console.log(sign_str);
   return md5.hexMD5(sign_str)
 }
 function setuserinfo(data, Callback){  
@@ -81,7 +80,7 @@ function setuserinfo(data, Callback){
   })
 }
 function setPhone(data, Callback) {
-  appRequest('login.login.getphone', { ivcode: data.iv, encrystr: data.str }, res => {
+  appRequest('login.login.getphone', { ivcode: encodeURIComponent(data.iv), encrystr: encodeURIComponent(data.str) }, res => {
     Callback(res)
   })
 
