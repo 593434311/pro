@@ -30,17 +30,17 @@
   </view>
   <!-- 热门活动 -->
   <view class="load" >
-      <image bindtap='Another' src="/static/images/icon/huanyipi@2x.png" ></image>
+      <!-- <image bindtap='Another' src="/static/images/icon/huanyipi@2x.png" ></image> -->
+      <text bindtap='Another'>换一批</text>
   </view>
   <view class="content_active">
     <view class="active_title">
       <image src="/static/images/icon/remenhuodong@2x.png"></image>
+      <text>更多</text>
     </view>
     <view class="active">
       <active wx:for="{{RegimentData}}" wx:for-index="index" wx:for-item="item" wx:key="index" listdata="{{item}}"></active>
-      <view class="more">
-        <image src="/static/images/icon/gengduo@2x.png"></image>
-      </view>
+      <view class="more"></view>
     </view>
     <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="700rpx" class="coupon" catchtouchmove="false">
       <image src='/static/images/icon/67782958429263482.png' mode="widthFix" style='border-radius: 5px'></image>
