@@ -15,6 +15,7 @@ Page({
     isload: false,
     usernum: '',
     useripne: '',
+    user_info:{},
     isusernum: null,
     isuseripne: null,
     is_mobile: false
@@ -29,6 +30,7 @@ Page({
         this.setData({
           order_info: res.data.order_info,
           actUser: res.data.act_user,
+          user_info: res.data.user_info,
           user_list: res.data.user_list,
           is_mobile: res.data.is_mobile,
           isload: true
@@ -78,7 +80,7 @@ Page({
   },
   regulte(){ // 按钮验证
     if (this.regular()){
-      console.log('通过')
+      this.doworder()
     }
   },
   voteuser(e){
@@ -90,39 +92,46 @@ Page({
     }
     this.regular()
   },
+  doworder(){
+    app.RequiseData('order.index.payorder', { orderid: order_id, code: coupon_code, name: name, phone: phone, cid: coupon_id }, res => {
+      if (res.status == 0) {
+        console.log(res)
+        var timeSta = res.data.timeStamp;
+        var nonceStr = res.data.nonceStr;
+        var packag = res.data.package;
+        var signType = res.data.signType;
+        var paySign = res.data.paySign;
+        wx.requestPayment({
+          timeStamp: timeSta,
+          nonceStr: nonceStr,
+          package: packag,
+          signType: signType,
+          paySign: paySign,
+          success: res => {
+            wx.navigateTo({
+              url: `/pages/details/payment/index`
+            })
+          },
+          complete: res => {
+            console.log(res)
+          }
+        })
+      }
+    })
+  },
   getPhoneNumber(e){
     var order = app.globalData[this.data.order_info.order_id]
     var order_id = this.data.order_info.order_id;
-    var coupon_code = order ? order.code : '0';
+    var coupon_code = order ? order.code : '';
     var name = this.data.usernum
     var phone = this.data.useripne
-    var coupon_id = order ? order.id : '0';
+    var coupon_id = order ? order.id : '';
     if (e.detail.iv){
-      app.RequiseData('order.index.payorder', { orderid: order_id, code: coupon_code, name: name, phone: phone, cid: coupon_id}, res => {
-        if(res.status == 0){
-          console.log(res)
-          var timeSta = res.data.timeStamp;
-          var nonceStr = res.data.nonceStr;
-          var packag = res.data.package;
-          var signType = res.data.signType;
-          var paySign = res.data.paySign;
-          wx.requestPayment({
-            timeStamp: timeSta,
-            nonceStr: nonceStr,
-            package: packag,
-            signType: signType,
-            paySign: paySign,
-            success: res =>{
-              wx.navigateTo({
-                url: `/pages/details/payment/index`
-              })
-            },
-            complete: res => {
-              console.log(res)
-            }
-          })
-        }
-       
+      console.log(e.detail.encryptedData)
+      app.setuserphone({ iv: e.detail.iv, str: e.detail.encryptedData },res => {
+         if(res.status == 0){
+           this.doworder()
+         }
       })
     }
   }

@@ -10,7 +10,7 @@
   </view>
   <view class='counter'>
     <view class='cout_left'>
-      <image></image>
+      <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.act_info.cover_img}}?x-oss-process=image/resize,m_fill,h_70,w_70'></image>
       <view class='left_text'>{{data.act_info.title}}</view>
     </view>
     <view class='cout_right'>

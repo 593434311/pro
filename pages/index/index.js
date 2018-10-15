@@ -106,6 +106,7 @@ Page({
       actbeforPage = 1
       actbeforData = this.data.activeData.slice(0, 2);
     }
+    console.log(actbeforData)
     this.setData({
       actbeforData: actbeforData,
       actbeforPage: actbeforPage

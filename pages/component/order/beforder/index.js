@@ -8,6 +8,7 @@ Component({
       type: Object,
       value: {},
       observer: function (newVal, oldVal, changedPath) {
+        console.log(newVal)
         this.setData({
           data: newVal
         })
