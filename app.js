@@ -13,11 +13,29 @@ App({
     if (wx.getStorageSync('to-ken')) {
       request.request('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {
         if (res.status == 0) {
-          this.globalData.openId = res.data.openid;
-          this.globalData.user_info = res.data.user_info;
-          if (res.data.iscoupon === '0'){
-            wx.setStorageSync('cuea', 'isd'); // 
-          }        
+          wx.checkSession({
+            success: succ =>{
+              this.globalData.openId = res.data.openid;
+              this.globalData.user_info = res.data.user_info;
+              if (res.data.iscoupon === '0') {
+                wx.setStorageSync('cuea', 'isd'); // 
+              }   
+            },
+            fail: fail => {
+              wx.login({
+                success: resa => {
+                  request.request('login.login.login', { code: resa.code, type: 2 }, reques => {
+                    if (reques.status == 0) {
+                      this.globalData.openId = reques.data.openid;
+                      this.globalData.user_info = reques.data.user_info;
+                      wx.setStorageSync('to-ken', reques.data.token);
+                    }
+                  })
+                }
+              })
+            }
+          })
+               
         } else {
           wx.login({
             success: resa => {
@@ -65,6 +83,9 @@ App({
   },
   setuserinfo(data, callback) {
     request.setuserinfo(data, callback)
+  },
+  setuserphone(data, callback) {
+    request.setPhone(data, callback)
   },
   globalData: {
     user_info: null,

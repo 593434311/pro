@@ -50,6 +50,8 @@ function api(data, method, timestamp){
   for (var d in data) {
     request_data[d] = data[d];
   }
+  console.log(request_data)
+  console.log(signature(request_data))
   return signature(request_data);
 }
 function objKeySort(obj) { // 排序的函数
@@ -79,12 +81,13 @@ function setuserinfo(data, Callback){
   })
 }
 function setPhone(data, Callback) {
-  appRequest('user.info.saveinfo', { nickname: data.nickName, avatar: data.avatarUrl, gender: data.gender  }, res => {
+  appRequest('login.login.getphone', { ivcode: data.iv, encrystr: data.str }, res => {
     Callback(res)
   })
 
 }
 module.exports = {
   request: appRequest,
-  setuserinfo: setuserinfo
+  setuserinfo: setuserinfo,
+  setPhone: setPhone
 }  
