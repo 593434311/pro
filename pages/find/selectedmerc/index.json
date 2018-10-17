@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "seledmerc": "/pages/component/find/selectedmer/index"
-  }
+  },
+  "enablePullDownRefresh": true
 }

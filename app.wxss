@@ -14,7 +14,6 @@ page {
 }
 
 view {
-  font-size: 28rpx;
   font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
  
 }

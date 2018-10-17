@@ -2,19 +2,17 @@
 <view class='quality'>
     <view class="tit">
       <view class='quality_boximg'>
-        <image src='/static/images/find/wz1@2x.png'></image>
+        <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.shop_logo}}'></image>
       </view>
       <view class='quality_text'>
-        <view class='qualityname'>陶艺k空间 <text></text></view>
+        <view class='qualityname'>{{data.shop_name}} <text></text></view>
         <view class='Label'>#哈哈</view>
       </view>
     </view>
     <view class='tex_img'>
-      <view class="tit">让陶泥在你手里.创意无限</view>
+      <view class="tit">{{data.cover_info}}</view>
       <view class='img'>
-        <image src='/static/images/find/tu2@2x.png'></image>
-        <image src='/static/images/find/tu2@2x.png'></image>
-        <image src='/static/images/find/tu2@2x.png'></image>
+        <image bindtap="imgYu" lazy-load="true" data-list="{{data.shop_img}}" wx:for="{{data.shop_img}}" data-src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{item}}" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{item}}?x-oss-process=image/resize,m_fill,h_216,w_216" wx:key="{{index}}"></image>
       </view>
     </view>
   </view>

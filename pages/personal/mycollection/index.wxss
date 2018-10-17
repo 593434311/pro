@@ -6,7 +6,7 @@
   background-color:#f2751a;
 }
 .page__bd .weui-tab__panel{
-  padding-top: 87rpx
+  padding-top: 93rpx
 }
 .weui-navbar{
   background-color: #fff;

@@ -52,10 +52,11 @@ page{
   border-radius: 50%;
   padding: 5rpx;
   background-color: #fff;
+  text-align: center
 }
 .portrait image{
-  width: 44rpx;
-  height: 44rpx;
+  width: 98rpx;
+  height: 98rpx;
 }
 .user_name{
   margin-top: 88rpx;

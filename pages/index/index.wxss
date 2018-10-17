@@ -91,7 +91,10 @@ swiper-container{
   color:#ff484a;
   margin-right:10rpx; 
 }
-
+.tuansw{
+  max-height: 690rpx;
+  min-height: 600rpx;
+}
  .price{
   display:flex;
   align-items:baseline;

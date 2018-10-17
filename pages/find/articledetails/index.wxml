@@ -1,0 +1,17 @@
+<!--pages/find/articledetails/index.wxml-->
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class='head'>
+  <view class='articlshei'>{{nodeinfo.title}}</view>
+  <view class='pulltime'>发布于：{{nodeinfo.u_time}}</view>
+</view>
+<view class='counter'>
+  <template is="wxParse" data="{{wxParseData:noteinfo.nodes}}"/>
+  <view class='end'></view>
+</view>
+<view class='fdex'>
+  <view class='like'>
+    <image src='../../../static/images/icon/aixin@2x.png'></image>
+    <text>0</text>
+  </view>
+  <view class='shere'></view>
+</view>

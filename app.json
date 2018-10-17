@@ -18,6 +18,7 @@
     "pages/personal/seeolde/index",
     "pages/personal/nogroup/index",
     "pages/personal/yesorder/index",
+    "pages/find/articledetails/index",
     "pages/details/selecoupon/index"
   ],
   "window": {

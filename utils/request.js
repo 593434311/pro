@@ -71,7 +71,6 @@ function signature(data) {
     sign_str += k + v
   }
   sign_str += client_secret
-  console.log(sign_str);
   return md5.hexMD5(sign_str)
 }
 function setuserinfo(data, Callback){  

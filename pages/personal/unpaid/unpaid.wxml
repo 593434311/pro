@@ -24,14 +24,14 @@
     <view class="information_cont bottom_border">
       <view><text>* </text>姓名</view>
       <input type='text' placeholder="请输入姓名" value='{{user_info.realname}}' data-type='1' bindinput="voteuser" />
-      <view wx:if="{{isusernum}}" class="usename {{isusernum?'yesref':'noref'}}"></view>
-      <view wx:if="{{isusernum}}" class='errmsgna'></view>
+      <view class="usename {{isusernum?'yesref':'noref'}}"></view>
+      <view wx:if="{{!isusernum}}" class='errmsgna'></view>
     </view>
     <view class="information_cont">
       <view><text>* </text>电话</view>
       <input type='number' placeholder="请输入手机号码" value='{{user_info.realmobile}}' data-type='2' bindinput="voteuser" />
-      <view wx:if="{{isuseripne}}" class="telephone {{isuseripne?'yesref':'noref'}}"></view>
-      <view wx:if="{{isuseripne}}" class='errmsgph'></view>
+      <view class="telephone {{isuseripne?'yesref':'noref'}}"></view>
+      <view wx:if="{{!isuseripne}}" class='errmsgph'></view>
     </view>
 </view>
 <!-- 购买数量 -->
@@ -72,7 +72,7 @@
 <view class="bottom"> 
   <view class="bottom_cont">
     <view class="bottom_text">实际支付：<text>￥{{onponmony?onponmony:order_info.act_info.p_price}}</text></view>
-    <view wx:if="!is_mobile"><button class="bottom_pay" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即支付</button></view>
+    <view wx:if="{{!is_mobile}}"><button class="bottom_pay" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即支付</button></view>
     <view wx:else class="bottom_pay" bindtap='regulte'>立即支付</view>
   </view>
 </view>

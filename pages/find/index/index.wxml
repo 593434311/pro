@@ -4,9 +4,8 @@
     <image src="/static/images/find/wz@2x.png"></image>
   </view>
   <view class='counter'>
-    <seledactive wx:for="{{[1,2,3]}}"></seledactive>
+    <seledactive wx:for="{{SedArticle}}" wx:key="{{index}}" data="{{item}}"></seledactive>
   </view>
-  
   <view class="gengduo">
     <image src="/static/images/icon/gengduo@2x.png" bindtap='goSelectedac'></image>
   </view>
@@ -14,8 +13,7 @@
     <image src="/static/images/find/wz@2x.png"></image>
   </view>
   <view>
-    <seledmerc></seledmerc>
-    <seledmerc></seledmerc>
+    <seledmerc wx:for="{{Sedbusin}}" wx:key="{{index}}" data="{{item}}"></seledmerc>
   </view>
   <view class="gengduo" style='margin-bottom:60rpx;'>
     <image src="/static/images/icon/gengduo@2x.png" bindtap='goSelectedmer'></image>

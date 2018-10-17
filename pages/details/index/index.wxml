@@ -102,7 +102,7 @@
 </view>
 <view class='bot_tab'>
   <view class='bot_left'>
-    <view class='busi' data-ids="123" bindtap='gobusiness'>
+    <view class='busi' data-ids="{{act_info.shop_id}}" bindtap='gobusiness'>
       <view class='business'></view>
       <view>商家</view>
     </view>

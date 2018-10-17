@@ -17,12 +17,10 @@ Page({
     isloaddData: true,
     isweedata: true,
     RegimentPage: 1,
+    currentTab: 0,
     RegimentData: [],// 热门活动
     wearList:[],
     activeData: [], // 即将成团
-    activePage: 1,
-    actbeforData: [],
-    actbeforPage: 0
   },
   /**
    * 页面的初始数据
@@ -54,12 +52,6 @@ Page({
     this.gettuan()
     this.getActive()
   },
-  
-  goactideails(self){
-    wx.navigateTo({
-      url: `/pages/details/actideails/index?id=${self.currentTarget.dataset.id}`,
-    })
-  },
   getActive(){
     wx.showLoading({
       title: '玩命加载中',
@@ -76,41 +68,42 @@ Page({
         })
       }
     }) 
- 
   },
   gettuan(){
-    app.RequiseData('activity.actor.actlist', { p: this.data.RegimentPage, pagesize: 10 }, res => {
+    app.RequiseData('activity.actor.actlist', { p: this.data.RegimentPage, pagesize: 20 }, res => {
+      var thit = this
       if(res.status === 0){
+         var tuandata = res.data;
+        var newdata = [];
+        var length = tuandata.length;
+        if(length %2 != 0){
+          tuandata.push(tuandata[0])
+        }
+        for (var i in tuandata){
+          if(i %2){
+            var arr = [];
+            arr[0] = tuandata[i - 1]
+            arr[1] = tuandata[i]
+            newdata.push(arr)
+          }
+        }
         this.setData({
-          activeData: res.data
-        })
-        this.setData({
-          actbeforData: res.data.slice(0, 2),
-          activePage: res.data.length / 2,
-          actbeforPage:1
+          activeData: newdata,
         })
       }
     }) 
   },
-  cuitWent(even){
-    var data = even.currentTarget.dataset;
-    app.RequiseData('user.info.userDeed', { type: data.type, actId: data.id, behavior:'collect' }, res => {
-      console.log(res)
-    })
-    console.log(even)
-  },
   Another(){
-    var actbeforPage = this.data.actbeforPage+1;
-    var actbeforData = this.data.activeData.slice((actbeforPage - 1) * 2, actbeforPage * 2);
-    if (actbeforPage > this.data.activePage) {
-      actbeforPage = 1
-      actbeforData = this.data.activeData.slice(0, 2);
-    }
-    console.log(actbeforData)
+    var leng = this.data.activeData.length
+    var berb = this.data.currentTab
+    berb++
+    berb = berb == leng ? 0 : berb
     this.setData({
-      actbeforData: actbeforData,
-      actbeforPage: actbeforPage
+      currentTab: berb
     })
+  },
+  catchTouchMove: function (res) {
+    return false
   },
   bindGetUserInfo: function (e) {
     if (e.detail.iv){
@@ -135,7 +128,6 @@ Page({
             }
           })
         }
-        console.log(app.globalData.user_info)
       })
      
     }else{

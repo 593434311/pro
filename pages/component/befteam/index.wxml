@@ -2,7 +2,7 @@
 <view class="tuan_list flex" data-id='{{data.id}}'  bindtap="goDetails">
     <view class="tuan_lt">
       <view class="tuan_img">
-        <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.cover_img}}?x-oss-process=image/resize,m_fill,h_122,w_122" mode="aspectFill"></image>
+        <image lazy-load="true" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.cover_img}}?x-oss-process=image/resize,m_fill,h_122,w_122" mode="aspectFill"></image>
       </view>
     </view>
     <view class="tuan_rt">

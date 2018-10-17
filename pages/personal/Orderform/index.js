@@ -60,7 +60,8 @@ Page({
       mask: true,
     })
     this.setData({
-      befodata: []
+      befodata: [],
+      befopage: 1
     })
     app.RequiseData('order.index.orderlist', { p: this.data.befopage, pagesize: 6, state: e.currentTarget.id }, res => {
       wx.hideLoading()
@@ -80,12 +81,6 @@ Page({
       sliderOffset: e.currentTarget.offsetLeft,
       activeIndex: e.currentTarget.id
     });
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  refresh(){
-    console.log('上拉')
   },
   loadMore() {
     if (this.data.isself){
@@ -107,6 +102,16 @@ Page({
         }
         wx.hideLoading()
       })
+    }
+  },
+  onShareAppMessage(res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      return {
+        title: res.target.dataset.title,
+        path: `/pages/details/index/index?id=${res.target.dataset.actid}&userid=${res.target.dataset.userid}`,
+        imageUrl: `http://gtshidai.oss-cn-shanghai.aliyuncs.com${res.target.dataset.image}`
+      }
     }
   }
 })

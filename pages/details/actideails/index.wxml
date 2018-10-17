@@ -99,7 +99,7 @@
 </view>
 <view class='bot_tab'>
   <view class='bot_left'>
-    <view class='busi' data-ids='12' bindtap='gobusiness'>
+    <view class='busi' data-ids='{{act_info.shopid}}' bindtap='gobusiness'>
       <view class='business'></view>
       <view>商家</view>
     </view>

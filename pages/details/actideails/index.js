@@ -12,8 +12,8 @@ Page({
     duration: 1000,
     indicatorDots: true,
     autoplay: true,
-    act_info: [],
-    act_list: [],
+    act_info: {},
+    act_list: {},
     user_info: {},
   },
   /*

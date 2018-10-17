@@ -1,6 +1,6 @@
 // pages/component/Businessact/index.js
 const app = getApp()
-
+var timer;
 Component({
   /**
    * 组件的属性列表
@@ -10,6 +10,7 @@ Component({
       type: Object,
       value: {},
       observer: function (newVal, oldVal, changedPath) {
+        // clearInterval(timer)
         this.activetimeOut(newVal)
       }
     }
@@ -23,6 +24,7 @@ Component({
   /**
    * 组件的方法列表
    */
+  
   methods: {
     goDetails(self) {
       wx.navigateTo({
@@ -56,7 +58,7 @@ Component({
           if (hour <= 9) hour = '0' + hour;
           if (minute <= 9) minute = '0' + minute;
           if (second <= 9) second = '0' + second;
-          dates.second = dates.second  - 60;
+          dates.second = dates.second  - 15;
           var str = day + '天' + hour + '时' + minute + '分'
           // console.log(str)    
         } else {
@@ -69,7 +71,7 @@ Component({
         })
       }      
       nowTime();
-      var timer = setInterval(nowTime, 60000);
+      timer = setInterval(nowTime, 15000);
     }
   }
 })

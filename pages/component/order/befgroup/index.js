@@ -34,6 +34,11 @@ Component({
       wx.navigateTo({
         url: `/pages/personal/nogroup/index?order=${this.data.data.order_id}`,
       })
+    },
+    gobusiness(self) {
+      wx.navigateTo({
+        url: `/pages/details/business/index?id=${self.currentTarget.dataset.ids}`,
+      })
     }
   }
 })

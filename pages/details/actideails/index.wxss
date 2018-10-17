@@ -398,6 +398,7 @@ button::after{ border: none; }
 .participate {
   width: 323rpx;
   color: #fff;
+  font-size: 28rpx;
   height: 84rpx;
   border-radius: 42rpx;
   background: linear-gradient(#fd933d, #fe6e41);

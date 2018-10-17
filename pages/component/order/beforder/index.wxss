@@ -13,6 +13,7 @@
 }
 .header .head_left {
   display: flex;
+  height: 64rpx;
   flex-direction: row;
   align-items: center;
   color: #8d8d8d;

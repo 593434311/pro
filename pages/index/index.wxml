@@ -25,7 +25,14 @@
       <image src="/static/images/icon/jijiangchengtuan@2x.png"></image>
     </view>
     <view class="tuan">
-      <berfitem wx:for="{{actbeforData}}" wx:for-index="index" wx:for-item="item" wx:key="{{index}}" item="{{item}}"></berfitem>
+      <swiper class='tuansw' current='{{currentTab}}' indicator-dots="{{false}}" autoplay="{{false}}" circular="{{false}}" duration="200" catchtouchmove='catchTouchMove'>
+        <block wx:for="{{activeData}}" wx:for-index="index" wx:key="{{index}}">
+          <swiper-item>
+              <berfitem wx:for="{{item}}" wx:for-item="items" wx:key="{{index}}" item="{{items}}"></berfitem>
+          </swiper-item>
+        </block>
+      </swiper>
+      
     </view>
   </view>
   <!-- 热门活动 -->

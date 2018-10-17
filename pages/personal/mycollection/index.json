@@ -1,1 +1,8 @@
-{}
+{
+  "usingComponents": {
+    "active": "/pages/component/Businessact/index",
+    "berfitem": "/pages/component/befteam/index",
+    "seledactive": "/pages/component/find/selectedact/index",
+    "seledmerc": "/pages/component/find/selectedmer/index"
+  }
+}

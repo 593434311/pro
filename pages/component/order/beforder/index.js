@@ -8,7 +8,6 @@ Component({
       type: Object,
       value: {},
       observer: function (newVal, oldVal, changedPath) {
-        console.log(newVal)
         this.setData({
           data: newVal
         })
@@ -25,6 +24,11 @@ Component({
     goOldede(self) {
       wx.navigateTo({
         url: `/pages/personal/unpaid/unpaid?older=${self.currentTarget.dataset.oldid}`
+      })
+    },
+    gobusiness(self) {
+      wx.navigateTo({
+        url: `/pages/details/business/index?id=${self.currentTarget.dataset.ids}`
       })
     }
   }

@@ -1,7 +1,7 @@
 // pages/component/befteam/index.js
 
 const app = getApp()
-
+var timer;
 Component({
   /**
    * 组件的属性列表
@@ -46,7 +46,6 @@ Component({
       let len = dates.length;//时间数据长度
       function nowTime() { //时间函数
           var intDiff = dates.second;//获取数据中的时间戳
-          // console.log(intDiff)
           var day = 0, hour = 0, minute = 0, second = 0;
           if (intDiff > 0) {//转换时间
             day = Math.floor(intDiff / (60 * 60 * 24));
@@ -56,7 +55,7 @@ Component({
             if (hour <= 9) hour = '0' + hour;
             if (minute <= 9) minute = '0' + minute;
             if (second <= 9) second = '0' + second;
-            dates.second = dates.second - 60;
+            dates.second = dates.second - 15;
             var str = day + '天' + hour + '时' + minute + '分'
             // console.log(str)    
           } else {
@@ -71,7 +70,7 @@ Component({
           })
         }
       nowTime();
-      var timer = setInterval(nowTime, 60000);
+      timer = setInterval(nowTime, 15000);
     },
   }
 })

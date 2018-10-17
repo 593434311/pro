@@ -1,5 +1,4 @@
 /* pages/details/index/index.wxss */
-@import "../../../wxParse/wxParse.wxss";
 .contentW{
   padding: 0 24rpx;
   background-color:#fff;

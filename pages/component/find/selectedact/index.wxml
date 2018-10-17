@@ -1,10 +1,10 @@
 <!--pages/component/find/selectedact/index.wxml-->
-<view class='selectedainst'>
+<view class='selectedainst' data-id='{{data.id}}' bindtap='godainst'>
   <view class='list_boximg'>
-    <image src='/static/images/find/wz1@2x.png'></image>
+    <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.cover_img}}?x-oss-process=image/resize,m_fill,h_120,w_120'></image>
   </view>
   <view class='box_text'>
-    <view>这是一个好地方</view>
-    <view class='cont'>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</view>
+    <view>{{data.title}}</view>
+    <view class='cont'>{{data.cover_info}}</view>
   </view>
 </view>

@@ -4,11 +4,8 @@
   padding:25rpx;
   display: flex;
   justify-content:space-between;
-  margin-top:6rpx;
+  margin-bottom:6rpx;
   background-color:#fff;
-}
-.tuan_list:first-child{
-  margin-top: 0;
 }
 .tuan_list .tuan_lt{
   width:245rpx;

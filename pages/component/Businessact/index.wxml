@@ -1,7 +1,7 @@
 <!--pages/component/Businessact/index.wxml-->
 <view class="active_list" data-id='{{data.id}}'  bindtap="goDetails">
   <view class="active_top">
-    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.cover_img}}"></image>
+    <image lazy-load="true" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.cover_img}}"></image>
   </view>
   <view>
   </view>

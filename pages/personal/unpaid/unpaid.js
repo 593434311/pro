@@ -33,8 +33,13 @@ Page({
           user_info: res.data.user_info,
           user_list: res.data.user_list,
           is_mobile: res.data.is_mobile,
+          usernum: res.data.user_info.realname,
+          useripne: res.data.user_info.realmobile,
           isload: true
         })
+        if (res.data.user_info.realname){
+          this.regular()
+        }
       }
     })
   },
@@ -90,12 +95,21 @@ Page({
     if (e.currentTarget.dataset.type == '2'){
       this.data.useripne = e.detail.value
     }
-    this.regular()
   },
   doworder(){
+    wx.showLoading({
+      title: '请稍后...',
+      mask: true,
+    })
+    var order = app.globalData[this.data.order_info.order_id]
+    var order_id = this.data.order_info.order_id;
+    var coupon_code = order ? order.code : '';
+    var name = this.data.usernum
+    var phone = this.data.useripne
+    var coupon_id = order ? order.id : '';
     app.RequiseData('order.index.payorder', { orderid: order_id, code: coupon_code, name: name, phone: phone, cid: coupon_id }, res => {
+      wx.hideLoading()
       if (res.status == 0) {
-        console.log(res)
         var timeSta = res.data.timeStamp;
         var nonceStr = res.data.nonceStr;
         var packag = res.data.package;
@@ -120,17 +134,14 @@ Page({
     })
   },
   getPhoneNumber(e){
-    var order = app.globalData[this.data.order_info.order_id]
-    var order_id = this.data.order_info.order_id;
-    var coupon_code = order ? order.code : '';
-    var name = this.data.usernum
-    var phone = this.data.useripne
-    var coupon_id = order ? order.id : '';
     if (e.detail.iv){
       console.log(e.detail.encryptedData)
       app.setuserphone({ iv: e.detail.iv, str: e.detail.encryptedData },res => {
          if(res.status == 0){
-           this.doworder()
+           this.setData({
+             is_mobile: true
+           })
+           this.regulte()
          }
       })
     }

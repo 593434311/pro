@@ -2,7 +2,7 @@
 <!--pages/component/order/beforder/index.wxml-->
 <view class='order_box'>
   <view class='header'>
-    <view class='head_left'>
+    <view class='head_left' data-ids='{{data.shop_id}}' bindtap='gobusiness'>
       <image src='/static/images/icon/shangjia@2x.png'></image>
       <view>{{data.shop_info.shop_name}}</view>
       <view class='jiantou'></view>
@@ -28,7 +28,7 @@
       <button bindtap='goseorder'>查看订单</button>
     </view>
     <view class='border_rea'>
-      <button>邀请好友</button>
+      <button data-userid='{{data.act_info.user_id}}' data-actid="{{data.frist_act.id}}" data-title='{{data.act_info.title}}' data-image='{{data.act_info.cover_img}}' open-type="share">邀请好友</button>
     </view>
   </view>
 </view>

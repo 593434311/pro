@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "seledactive": "/pages/component/find/selectedact/index"
-  }
+  },
+  "enablePullDownRefresh": true
 }

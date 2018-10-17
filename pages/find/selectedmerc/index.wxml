@@ -1,6 +1,4 @@
 <!--pages/find/selectedmerc/index.wxml-->
 <view>
-  <seledmerc></seledmerc>
-  <seledmerc></seledmerc>
-  <seledmerc></seledmerc>
+  <seledmerc  wx:for="{{Sedbusin}}" wx:key="{{index}}" data="{{item}}"></seledmerc>
 </view>

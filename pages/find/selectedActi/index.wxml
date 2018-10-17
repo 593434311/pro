@@ -1,6 +1,4 @@
 <!--pages/find/selectedActi/index.wxml-->
 <view>
-  <seledactive></seledactive>
-  <seledactive></seledactive>
-  <seledactive></seledactive>
+  <seledactive wx:for="{{SedArticle}}" wx:key="{{index}}" data="{{item}}"></seledactive>
 </view>

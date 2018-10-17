@@ -79,12 +79,10 @@ function html2json(html, bindName) {
     HTMLParser(html, {
         start: function (tag, attrs, unary) {
             //debug(tag, attrs, unary);
-            // node for this element
             var node = {
                 node: 'element',
                 tag: tag,
             };
-
             if (bufArray.length === 0) {
                 node.index = index.toString()
                 index += 1
@@ -113,18 +111,13 @@ function html2json(html, bindName) {
                         //  value = value.join("")
                         node.classStr = value;
                     }
-                    // has multi attibutes
-                    // make it array of attribute
                     if (name == 'style') {
-                        console.dir(value);
                         //  value = value.join("")
-                        node.styleStr = value;
+                      node.styleStr = value;
                     }
                     if (value.match(/ /)) {
                         value = value.split(' ');
                     }
-                    
-
                     // if attr already exists
                     // merge it
                     if (pre[name]) {
@@ -143,7 +136,6 @@ function html2json(html, bindName) {
                     return pre;
                 }, {});
             }
-
             //对img添加额外数据
             if (node.tag === 'img') {
                 node.imgIndex = results.images.length;
@@ -252,6 +244,7 @@ function html2json(html, bindName) {
             // parent.nodes.push(node);
         },
     });
+  console.log(results)
     return results;
 };
 
