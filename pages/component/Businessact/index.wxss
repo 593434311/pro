@@ -25,7 +25,9 @@
 }
 .bm_t .bm_tit text{
   color:#ff5246;
-  margin-right:10rpx; 
+  /* margin-right:10rpx;  */
+  position: relative;
+  left:-12rpx;
 }
 .bm_t .location{
   margin-bottom:11rpx;
