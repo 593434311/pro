@@ -3,6 +3,7 @@
     "beforder": "/pages/component/order/beforder/index",
     "oldorder": "/pages/component/order/oldorder/index",
     "befgroup": "/pages/component/order/befgroup/index",
-    "oldgroup": "/pages/component/order/oldgroup/index"
+    "oldgroup": "/pages/component/order/oldgroup/index",
+    "nodata": "/pages/component/nodata/index"
   }
 }

@@ -17,7 +17,8 @@ Page({
     hideBottom: false,
     befopage: 1,
     befodata: [],
-    isself: true
+    isself: true,
+    isdata: false
   },
   /**
    * 生命周期函数--监听页面加载
@@ -32,6 +33,11 @@ Page({
       if (res.status === 0) {
         this.setData({
           befodata: res.data.data
+        })
+      }
+      if (res.data.data.length == 0){
+        this.setData({
+          isdata: true
         })
       }
       if (res.data.data.length < 6) {
@@ -61,7 +67,8 @@ Page({
     })
     this.setData({
       befodata: [],
-      befopage: 1
+      befopage: 1,
+      isdata: false
     })
     app.RequiseData('order.index.orderlist', { p: this.data.befopage, pagesize: 6, state: e.currentTarget.id }, res => {
       wx.hideLoading()
@@ -69,6 +76,11 @@ Page({
         this.setData({
           befodata: res.data.data
         })
+        if (res.data.data.length == 0){
+          this.setData({
+            isdata: true
+          })
+        }
         if (res.data.data.length < 6) {
           this.setData({
             isself: false

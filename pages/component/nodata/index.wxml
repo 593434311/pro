@@ -1,0 +1,6 @@
+<!--pages/component/nodata/index.wxml-->
+<view class='noda'>
+  <image src='/static/images/nodata/{{befoimg || "zwdd@2x.png"}}'></image>
+</view>
+<view class='text'>{{text}}</view>
+<navigator wx:if="{{isbutton}}" open-type='switchTab' class='button' url='/pages/index/index'>去逛逛</navigator>

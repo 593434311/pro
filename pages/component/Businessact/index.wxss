@@ -93,8 +93,8 @@
   align-items:center;
 }
  .want image{
-  width:17rpx;
-  height:15rpx;
+  width:30rpx;
+  height:26rpx;
   margin-right:6rpx;
 }
 .active_bm .bm_b{
@@ -103,4 +103,8 @@
 .active_bm .bm_b text{
   font-size:20rpx;
   color:#b8b8b8;
+}
+.bm_b > view{
+  display: flex;
+  align-items: center;
 }

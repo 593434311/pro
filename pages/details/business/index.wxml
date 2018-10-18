@@ -30,4 +30,16 @@
       <active wx:for="{{businesActive}}" wx:for-index="index" wx:for-item="item" wx:key="index" listdata="{{item}}"></active>
     </view>
   </view>
+  <view class='fdex'>
+    <view class='like' data-id='{{businData.shop_id}}' data-type='3' data-behavior="{{businData.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
+      <image wx:if="{{!businData.user_attribute.collect}}" src='/static/images/icon/35924743315763989.png'></image>
+      <image wx:else src="/static/images/icon/660490541247726262.png"></image>
+      <text>{{businData.attribute_num.collect || 0}}</text>
+    </view>
+    <view class='shere'>
+      <button>
+        <image src='/static/images/icon/55786aba6448d0145da85aff9b18810.png'></image>
+      </button>
+    </view>
+  </view>
 </view>

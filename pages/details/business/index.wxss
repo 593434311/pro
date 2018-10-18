@@ -90,3 +90,38 @@ page{
 .toggle_data{
   background-color: #fff;
 }
+.fdex{
+  position: fixed;
+  bottom: 200rpx;
+  right: 24rpx;
+  display: flex;
+  flex-direction: row;
+}
+.like image{
+  width: 42rpx;
+  height: 37rpx;
+  margin-right: 12rpx;
+}
+.like{
+  height: 80rpx;
+  min-width: 160rpx;
+  padding: 0 29rpx;
+  display: flex;
+  align-items: center;
+  background-color: #e5e5e5;
+  border-radius: 40rpx;
+  margin-right: 38rpx;
+}
+.shere button{
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 50%;
+  background-color: #fe5354;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shere image{
+  width: 26rpx;
+  height: 30rpx;
+}

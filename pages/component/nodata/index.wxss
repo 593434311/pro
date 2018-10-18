@@ -1,0 +1,29 @@
+/* pages/component/nodata/index.wxss */
+.noda{
+  display: flex;
+  justify-content: center;
+}
+.noda image{
+  margin-top: 115rpx;
+  width: 319rpx;
+  height: 188rpx;
+}
+.text{
+  margin-top: 55rpx;
+  text-align: center;
+  font-size:26rpx;
+  color:#737373;
+}
+.button{
+  width: 422rpx;
+  height: 84rpx;
+  margin: 0 auto;
+  margin-top: 66rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background: linear-gradient(#fd933d, #fe6e41);
+  border-radius: 42rpx;
+  text-align: center;
+  line-height: 84rpx;
+ 
+}

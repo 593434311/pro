@@ -92,8 +92,8 @@
   align-items:center;
 }
 .want image{
-  width:17rpx;
-  height:15rpx;
+  width:30rpx;
+  height:26rpx;
   margin-right:6rpx;
 }
 .want text{
