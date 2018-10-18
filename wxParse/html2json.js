@@ -107,7 +107,6 @@ function html2json(html, bindName) {
                     var name = attr.name;
                     var value = attr.value;
                     if (name == 'class') {
-                        console.dir(value);
                         //  value = value.join("")
                         node.classStr = value;
                     }
@@ -244,7 +243,6 @@ function html2json(html, bindName) {
             // parent.nodes.push(node);
         },
     });
-  console.log(results)
     return results;
 };
 

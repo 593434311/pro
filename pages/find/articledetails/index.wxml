@@ -12,7 +12,7 @@
   <view class='like'data-id='{{nodeinfo.shop_id}}' data-type='4' data-behavior="{{nodeinfo.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
       <image wx:if="{{!nodeinfo.user_attribute.collect}}" src='/static/images/icon/35924743315763989.png'></image>
       <image wx:else src="/static/images/icon/660490541247726262.png"></image>
-      <text>{{nodeinfo.attribute_num.collect || 0}}</text>
+      <text>{{nodeinfo.attribute_num.collect}}</text>
   </view>
   <view class='shere'>
     <button>

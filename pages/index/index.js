@@ -102,9 +102,6 @@ Page({
       currentTab: berb
     })
   },
-  catchTouchMove: function (res) {
-    return false
-  },
   bindGetUserInfo: function (e) {
     if (e.detail.iv){
       wx.showLoading({

@@ -24,8 +24,8 @@ Page({
       }
     })
     app.RequiseData('shop.info.shopinfo', { shop_id: options.id}, res => {
-      console.log(res)
       WxParse.wxParse('shopinfo', 'html', res.data.describe, this, 5)
+      console.log(res)
       this.setData({
         businData: res.data
       })
@@ -41,12 +41,14 @@ Page({
     app.RequiseData('user.info.userDeed', { behavior: eve.behavior, actId: eve.id, type: eve.type }, res => {
       // to doing
     })
+    var colloe = this.data.businData.attribute_num
     if (eve.behavior == 'collect')
-      this.data.data.attribute_num.collect = Number(this.data.data.attribute_num.collect) + 1
-    else this.data.data.attribute_num.collect = Number(this.data.data.attribute_num.collect) - 1
-    this.data.data.user_attribute.collect = !this.data.data.user_attribute.collect
+      colloe.collect = Number(colloe.collect) + 1
+    else colloe.collect = Number(colloe.collect) - 1
+    this.data.businData.user_attribute.collect = !this.data.businData.user_attribute.collect
+    console.log(colloe.collect)
     this.setData({
-      data: this.data.data
+      businData: this.data.businData
     })
   },
 })
