@@ -26,6 +26,8 @@
 }
 .list_bm .bm_tit text{
   color:#ff5246;
+   position: relative;
+   left:-16rpx;
   
 }
 .list_bm .bm_m{

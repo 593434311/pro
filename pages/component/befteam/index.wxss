@@ -26,7 +26,8 @@
 }
 .tuan_rt .rt_tit text{
   color:#ff484a;
-  margin-right:10rpx; 
+  position: relative;
+  left:-12rpx;
 }
 
  .price{

@@ -19,6 +19,12 @@ Page({
   /*
    * 生命周期函数--监听页面加载
    */
+  // goShare() {
+  //   console.log(1111)
+  //   wx.navigateTo({
+  //     url: '/pages/details/share/share',
+  //   })
+  // },
   onLoad: function (options) {
     app.RequiseData('activity.index.actinfo', { id: options.id }, res => {
       if(res.status === 0){
@@ -30,10 +36,13 @@ Page({
         })
       }
     })
+    
   },
+ 
   /**
    * 页面上拉触底事件的处理函数
    */
+  
   gogrolpdet(self){
     wx.navigateTo({
       url: `/pages/details/othergro/index?data=${JSON.stringify(self.currentTarget.dataset.data)}`,
@@ -97,10 +106,13 @@ Page({
       act_info: this.data.act_info
     })
   },
+  zpp(even) {
+    console.log(even)
+  },
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    
   }
 })
