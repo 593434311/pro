@@ -56,9 +56,6 @@ swiper-container{
   height:53rpx;
 }
 
-
-
-
 .content_tuan .tuan .tuan_list{
   min-height: 345rpx;
   padding:25rpx;
@@ -177,17 +174,22 @@ swiper-container{
   background:#f9f9fa;
   
 }
-.load text{ 
-  display: block;
+.load .huan{ 
   font-size:22rpx;
   color:#fff;
   width:98rpx;
   height:50rpx;
   line-height:50rpx;
   text-align: center;
-  background:linear-gradient(#fd933d, #fe6e41);
+  background:linear-gradient(to right,#fd933d, #fe6e41);
   border-radius:25rpx;
-
+  box-shadow: rgba(254,110,65,0.3) 0 5rpx 3rpx; 
+}
+.load .tryss { 
+  transform: translateX(10rpx);
+  font-weight:bold;
+  
+  
 }
 
 /* 热门活动 */

@@ -24,12 +24,13 @@ Component({
   },
   methods: {
     goDetails(self) {
-      console.log(self);
+      
       wx.navigateTo({
         url: `/pages/details/index/index?id=${self.currentTarget.dataset.id}`,
       })
     },
     cuitWent(even){
+      
       var eve = even.currentTarget.dataset
       app.RequiseData('user.info.userDeed', { behavior: eve.behavior, actId: eve.id, type: eve.type}, res => {
         // to doing
