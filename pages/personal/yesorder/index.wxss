@@ -179,7 +179,6 @@
 }
 /* 优惠券 */
 .coupon{
-  margin-bottom:112rpx;
 }
 .coupon .money_off{
 

@@ -3,12 +3,7 @@ const app = getApp()
 var WxParse = require('../../../wxParse/wxParse.js')
 Page({
   data: {
-    imgUrls: [
-      '/static/images/details_index/banner@2x.png',
-      '/static/images/details_index/banner@2x.png',
-      '/static/images/details_index/banner@2x.png',
-      '/static/images/details_index/banner@2x.png'
-    ],
+    imgUrls: [],
     duration: 1000,
     indicatorDots: true,
     autoplay: true,
@@ -26,6 +21,7 @@ Page({
       if(res.status === 0){
         WxParse.wxParse('article', 'html', res.data.act_info.info, this, 5)
         this.setData({
+          imgUrls: res.data.act_info.img_list,
           act_info: res.data.act_info,
           act_list: res.data.act_list,
           user_info: res.data.user_info
@@ -101,6 +97,17 @@ Page({
     this.data.act_info.user_attribute.collect = !this.data.act_info.user_attribute.collect
     this.setData({
       act_info: this.data.act_info
+    })
+  },
+  imgYu(event) {
+    var src = event.currentTarget.dataset.src;//获取data-src
+    var imgList = event.currentTarget.dataset.list;//获取data-list
+    for (var i in imgList) {
+      imgList[i] = 'http://gtshidai.oss-cn-shanghai.aliyuncs.com' + imgList[i]
+    }
+    wx.previewImage({
+      current: src, // 当前显示图片的http链接
+      urls: imgList // 需要预览的图片http链接列表
     })
   },
   /**

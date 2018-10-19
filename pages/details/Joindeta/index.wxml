@@ -18,7 +18,7 @@
       <view class="time"><i>{{Surplus.day}}</i>天<i>{{Surplus.hour}}</i>时<i>{{Surplus.minute}}</i></view>
     </view>
     <view class="tit_text2">还差<text>{{ Surplus.remainder }}</text>人成团</view>
-    <button wx:if="{{isshere}}" class='kaitButton'>
+    <button wx:if="{{isshere}}" class='kaitButton' open-type='share'>
       <text class='shea'></text>
       <text>邀请好友成团返现</text>
     </button>

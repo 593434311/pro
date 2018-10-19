@@ -117,6 +117,20 @@ Page({
     var coupon_id = order ? order.id : '';
     app.RequiseData('order.index.payorder', { orderid: order_id, code: coupon_code, name: encodeURIComponent(name), phone: phone, cid: coupon_id }, res => {
       wx.hideLoading()
+      if (res.status != 0) {
+        wx.showModal({
+          title: '提示',
+          showCancel: false,
+          content: res.msg,
+          success: function (res) {
+            if (res.confirm) {
+              wx.navigateTo({
+                url: `/pages/personal/Orderform/index?id=1`
+              })
+            }
+          }
+        })
+      }
       if (res.status == 0) {
         var timeSta = res.data.timeStamp;
         var nonceStr = res.data.nonceStr;

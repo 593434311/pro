@@ -49,7 +49,6 @@ Page({
         var str = "已结束！";
         //area
       }
-      
       dates.day = day;//在数据中添加difftime参数名，把时间放进去
       dates.hour = hour;//在数据中添加difftime参数名，把时间放进去
       dates.minute = minute;//在数据中添加difftime参数名，把时间放进去
@@ -59,5 +58,8 @@ Page({
     }
     nowTime();
     var timer = setInterval(nowTime, 60000);
+  },
+  onShareAppMessage(e){
+    console.log(e)
   }
 })
