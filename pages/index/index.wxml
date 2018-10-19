@@ -6,7 +6,7 @@
       <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
           <block wx:for="{{slider}}" wx:key="unique">
             <swiper-item class="swiper-item">
-              <view>
+              <view bindtap="bannerDetail" data-id="{{item.id}}">
                 <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{item.imgsrc}}"></image>
               </view> 
             </swiper-item>

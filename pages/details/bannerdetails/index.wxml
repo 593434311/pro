@@ -1,0 +1,4 @@
+<!--pages/details/bannerdetails/index.wxml-->
+<view class="banner_img">
+  <image wx:for="{{bannerImage}}" wx:key="*this"src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{item}}" mode="widthFix"></image>
+</view>
