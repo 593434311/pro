@@ -19,12 +19,13 @@
             <berfitem item="{{item}}"></berfitem>
           </block>
           <block wx:if="{{activeIndex == 2}}">
-            <seledactive data="{{item}}"></seledactive>
+            <seledmerc data="{{item}}"></seledmerc>
           </block>
           <block wx:if="{{activeIndex == 3}}">
-            <seledmerc data="{{item}}"></seledmerc>
+            <seledactive data="{{item}}"></seledactive>
           </block> 
         </block>
+        <nodata wx:if="{{isdata}}" state="{{2}}" text="暂无活动，请保持关注哦~"></nodata>
       </scroll-view>
     </view>
   </view>

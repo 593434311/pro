@@ -12,6 +12,7 @@ Page({
     sliderOffset: 0,
     sliderLeft: 0,
     befopage: 1,
+    isdata: false,
     befodata: [],
     isself: true
   },
@@ -52,8 +53,10 @@ Page({
       title: '数据加载中...',
       mask: true,
     })
+    this.setData({
+      isdata: false
+    })
     app.RequiseData('user.info.usercollect', { type: Number(this.data.activeIndex)+1, pagesize: 10, p: this.data.befopage }, res => {
-      console.log(res)
       if (res.status === 0) {
         this.setData({
           befodata: this.data.befodata.concat(res.data)
@@ -63,6 +66,11 @@ Page({
             isself: false
           })
         }
+      }
+      if (res.data.length == 0) {
+        this.setData({
+          isdata: true
+        })
       }
       wx.hideLoading()
     })
