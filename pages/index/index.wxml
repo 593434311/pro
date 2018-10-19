@@ -7,7 +7,7 @@
           <block wx:for="{{slider}}" wx:key="unique">
             <swiper-item class="swiper-item">
               <view>
-                <image src="{{item.picUrl}}"></image>
+                <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{item.imgsrc}}"></image>
               </view> 
             </swiper-item>
           </block>

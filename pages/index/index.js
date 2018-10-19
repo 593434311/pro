@@ -5,12 +5,7 @@ const app = getApp()
 
 Page({
   data: {
-    slider: [
-      { picUrl: '/static/images/index/banner.png' },
-      { picUrl: '/static/images/index/banner.png' },
-      { picUrl: '/static/images/index/banner.png' },
-      { picUrl: '/static/images/index/banner.png' },
-    ],
+    slider: [],
     swiperCurrent: 0,
     isCoupon: false,
     clientHeight: 0,
@@ -26,10 +21,6 @@ Page({
    * 页面的初始数据
    */
   onLoad: function(option) {
-    // wx.setTabBarBadge({
-    //   index: 2,
-    //   text: '5'
-    // })
     var self = this;
     var cuea = setInterval(() => {
       if (wx.getStorageSync('cuea')){
@@ -49,8 +40,10 @@ Page({
         });
       }
     });
+
     this.gettuan()
     this.getActive()
+    this.getbutton()
   },
   getActive(){
     wx.showLoading({
@@ -68,6 +61,13 @@ Page({
         })
       }
     }) 
+  },
+  getbutton(){
+    app.RequiseData('login.login.bannerlist', { }, res => {
+      this.setData({
+        slider: res.data,
+      })
+    })
   },
   gettuan(){
     app.RequiseData('activity.actor.actlist', { p: this.data.RegimentPage, pagesize: 20 }, res => {
