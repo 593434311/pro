@@ -20,7 +20,7 @@
     </view>
   </view>
   <!--即将成团-->
-  <view class="content_tuan">
+  <view class="content_tuan" wx:if="{{activeData.length!=0}}">
     <view class="tuan_title">
       <image src="/static/images/icon/jijiangchengtuan@2x.png"></image>
     </view>
@@ -37,7 +37,7 @@
   <!-- 热门活动 -->
   <view class="load" >
       <!-- <image bindtap='Another' src="/static/images/icon/huanyipi@2x.png" ></image> -->
-      <view class="huan" bindtap='Another'hover-class="tryss" >换一批</view>
+      <view class="huan" bindtap='Another'hover-class="tryss" wx:if="{{activeData.length!=0}}" >换一批</view>
   </view>
   <view class="content_active">
     <view class="active_title">
