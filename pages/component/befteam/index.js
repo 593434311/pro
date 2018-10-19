@@ -24,7 +24,6 @@ Component({
   },
   methods: {
     goDetails(self) {
-      
       wx.navigateTo({
         url: `/pages/details/index/index?id=${self.currentTarget.dataset.id}`,
       })
