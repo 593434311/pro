@@ -46,11 +46,12 @@ Page({
     this.getbutton()
   },
   getActive(){
-    wx.showLoading({
-      title: '玩命加载中',
+    wx.showToast({
+      title: '',
+      image: '/static/images/icon/test.gif'
     })
     app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 2 }, res => {
-      wx.hideLoading();
+      // wx.hideToast();
       if(res.data.length === 0){
         this.data.isweedata = false
       }
