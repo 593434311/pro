@@ -32,26 +32,23 @@
           <block wx:for="{{befodata}}" wx:key="index">
             <beforder item="{{item}}"></beforder>
           </block> 
-          <nodata wx:if="{{isdata}}" state="{{0}}" text="你还没有订单哦，快去团购吧~"></nodata>
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 2}}">
           <block wx:for="{{befodata}}" wx:key="index">
             <oldorder item="{{item}}"></oldorder>
           </block>
-          <nodata wx:if="{{isdata}}" state="{{0}}" text="你还没有订单哦，快去团购吧~"></nodata>
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 3}}">
           <block wx:for="{{befodata}}" wx:key="index">
             <oldgroup item="{{item}}"></oldgroup>
           </block>
-          <nodata wx:if="{{isdata}}" state="{{0}}" text="你还没有订单哦，快去团购吧~"></nodata>
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 4}}">
           <block wx:for="{{befodata}}" wx:key="index">
             <befgroup item="{{item}}"></befgroup>
           </block>
-          <nodata wx:if="{{isdata}}" state="{{0}}" text="你还没有订单哦，快去团购吧~"></nodata>
         </view>
+        <nodata wx:if="{{isdata}}" state="{{0}}" text="你还没有订单哦，快去团购吧~"></nodata>
       </scroll-view>
     </view>
   </view>

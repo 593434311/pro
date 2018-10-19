@@ -7,21 +7,23 @@
   <view class='pay_counter'>
     <text class='Countdown_te'>成团倒计时</text>
     <view class='Countdown'>
-      <view>8</view>
-      <text>：</text>
-      <view>23</view>
-      <text>：</text>
-      <view>56</view>
+      <view>{{order_info.day}}</view>
+      <text>天</text>
+      <view>{{order_info.hour}}</view>
+      <text>分</text>
+      <view>{{order_info.minute}}</view>
     </view>
     <view class='difference'>
-      还差<text>7</text>人，赶快邀请好友来拼团
+      还差<text>{{act_info.remainder}}</text>人，赶快邀请好友来拼团
     </view>
     <view class='count_butt'>
-      <view></view>邀请好友成团返现
+      <button>
+        <view></view>邀请好友成团返现
+      </button>
     </view>
   </view>
   <view class='offered'>
-    <offered></offered>
+    <offered data="{{user_info}}" Surplus="{{act_info}}"></offered>
   </view>
   <view class='rule'>
     <view class='rule_left'>

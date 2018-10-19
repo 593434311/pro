@@ -18,7 +18,8 @@ Page({
     user_info:{},
     isusernum: null,
     isuseripne: null,
-    is_mobile: false
+    is_mobile: false,
+    orderid: null
   },
   /**
    * 生命周期函数--监听页面加载
@@ -28,6 +29,7 @@ Page({
       console.log(res)
       if(res.status === 0){
         this.setData({
+          orderid: options.older,
           order_info: res.data.order_info,
           actUser: res.data.act_user,
           user_info: res.data.user_info,
@@ -71,16 +73,18 @@ Page({
   regular(){
     var num = /^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/.test(this.data.usernum)
     var ipne = /^[1][3,4,5,6,7,8,9][0-9]{9}$/.test(this.data.useripne)
-    if (num){
-      this.setData({
-        isusernum: /^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/.test(this.data.usernum)
-      })
-    } else return false
-    if (num) {
-      this.setData({
-        isuseripne: /^[1][3,4,5,6,7,8,9][0-9]{9}$/.test(this.data.useripne)
-      })
-    } else return false
+    this.setData({
+      isusernum: num
+    })
+    if (!num){
+      return false
+    }
+    this.setData({
+      isuseripne: ipne
+    })
+    if (!ipne) {
+      return false
+    }
     return true
   },
   regulte(){ // 按钮验证
@@ -89,6 +93,10 @@ Page({
     }
   },
   voteuser(e){
+    this.setData({
+      isuseripne: true,
+      isusernum: true
+    })
     if (e.currentTarget.dataset.type == '1'){
       this.data.usernum = e.detail.value
     }
@@ -107,7 +115,7 @@ Page({
     var name = this.data.usernum
     var phone = this.data.useripne
     var coupon_id = order ? order.id : '';
-    app.RequiseData('order.index.payorder', { orderid: order_id, code: coupon_code, name: name, phone: phone, cid: coupon_id }, res => {
+    app.RequiseData('order.index.payorder', { orderid: order_id, code: coupon_code, name: encodeURIComponent(name), phone: phone, cid: coupon_id }, res => {
       wx.hideLoading()
       if (res.status == 0) {
         var timeSta = res.data.timeStamp;
@@ -123,7 +131,7 @@ Page({
           paySign: paySign,
           success: res => {
             wx.navigateTo({
-              url: `/pages/details/payment/index`
+              url: `/pages/details/payment/index?id=${this.data.orderid}`
             })
           },
           complete: res => {
