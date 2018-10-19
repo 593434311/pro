@@ -100,3 +100,5 @@ table, th, td {
   background-color: #fff;
   padding: 0 24rpx;
 }
+
+/* hover-class */

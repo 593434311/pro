@@ -14,16 +14,21 @@
   font-size:26rpx;
   color:#737373;
 }
-.button{
+.button{ 
+  font-size: 28rpx;
   width: 422rpx;
   height: 84rpx;
-  margin: 0 auto;
-  margin-top: 66rpx;
-  font-size: 28rpx;
-  color: #fff;
-  background: linear-gradient(#fd933d, #fe6e41);
   border-radius: 42rpx;
+  color: #fff;
+  margin-top: 66rpx;
+  background: linear-gradient(#fd933d, #fe6e41);
+  box-shadow: rgba(254,110,65,0.3) 0 5rpx 3rpx; 
+  text-shadow:rgba(255,255,255,.5) 0 1rpx 0;
+  line-height:100rpx;
   text-align: center;
-  line-height: 84rpx;
- 
+  margin:50rpx auto;
+  position: relative;
+  border-top: 1px solid rgba(255,255,255,0.8);
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+  
 }

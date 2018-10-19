@@ -32,18 +32,17 @@
           </swiper-item>
         </block>
       </swiper>
-      
     </view>
   </view>
   <!-- 热门活动 -->
   <view class="load" >
       <!-- <image bindtap='Another' src="/static/images/icon/huanyipi@2x.png" ></image> -->
-      <text bindtap='Another'>换一批</text>
+      <view class="huan" bindtap='Another'hover-class="tryss" >换一批</view>
   </view>
   <view class="content_active">
     <view class="active_title">
       <image src="/static/images/icon/remenhuodong@2x.png"></image>
-      <text>更多</text>
+      <text>更多></text>
     </view>
     <view class="active">
       <active wx:for="{{RegimentData}}" wx:for-index="index" wx:for-item="item" wx:key="index" listdata="{{item}}"></active>
