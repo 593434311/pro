@@ -56,9 +56,9 @@ Component({
     godetails(e){
       if (!this.data.isSurplus){
         if (!this.data.state) {
-          const data = this.data.Surplus.id
+          const data = this.data.Surplus
           wx.navigateTo({
-            url: `/pages/details/Joindeta/index?actid=${data}&nomny=${this.data.issere}`,
+            url: `/pages/details/Joindeta/index?actid=${data.id}&nomny=${this.data.issere}&actyid=${data.act_id}`,
           })
         }
       }

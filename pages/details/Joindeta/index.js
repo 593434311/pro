@@ -18,7 +18,7 @@ Page({
         isshere: false
       })
     }
-    app.RequiseData('activity.index.userlist', { act_id: options.actid }, res => {
+    app.RequiseData('activity.index.userlist', { act_id: options.actid, activity_id: options.actyid }, res => {
      if(res.status == 0){
        this.setData({
          data: res.data.user_list,
