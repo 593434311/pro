@@ -1,9 +1,10 @@
 <!--pages/details/share/share.wxml-->
-<view class="warp">
-  <view wx:if="{{isnewuser}}" class="btn_jion" bindtap='Receive'>立即参加</view>
-  <view wx:else class="btn_jion" bindtap='Receive'>立即参加</view>
-</view>
-<view class="content">
+<view class="bg">
+  <view class="warp">
+   <view wx:if="{{isnewuser}}" class="btn_jion"bindtap='Receive' hover-class='tryss'>立即参加</view>
+   <view wx:else class="btn_jion" bindtap='Receive' hover-class='tryss'>立即参加</view>
+  </view>
+  <view class="content">
   <view class="text_con">
     <view class="money">首次授权登录临港拼玩 即领<text>5元现金红包</text></view>
     <text>更有超多现金返现等你来拿</text>
@@ -13,6 +14,8 @@
     <text>»随便看看«</text>
   </view>
 </view>
+</view>
+
 <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="700rpx" class="coupon" catchtouchmove="false">
   <image src='/static/images/icon/67782958429263482.png' mode="widthFix" style='border-radius: 5px'></image>
   <view class='text'>这位新朋友你好，送你一张券试试看呗，不是骗子</view>

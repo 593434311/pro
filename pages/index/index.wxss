@@ -7,9 +7,6 @@
  
 }
 
-swiper-container{
-  
-}
 .swiper-container .swiper{
    width:618rpx;
    padding:24rpx 0;
@@ -44,7 +41,6 @@ swiper-container{
 /* 拼团 */
 
 .content_tuan{
-  /* height:800rpx; */
   background-color:#f9f9fa;
 }
 .content_tuan .tuan_title{

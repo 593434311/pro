@@ -1,6 +1,10 @@
 /* pages/details/share/share.wxss */
 page{
+  height:100%;
+}
+.bg{
   width:100%;
+  height:100%;
   background-image:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/shop/1/15398487116973.png);
   background-size:100%;
 }
@@ -16,8 +20,11 @@ page{
   text-align: center;
   margin:0 auto;
   background:linear-gradient(#fd9f53,#fe6b3c);
+  box-shadow: rgba(254,110,65,0.3) 0 5rpx 3rpx; 
   border-radius:50rpx;
+  
 }
+
 .content{
   color:#fff;
   text-align: center;
@@ -120,4 +127,43 @@ page{
   color: #fff;
   width: 20rpx;
   margin: 0 auto;
+}
+.warp .tryss{
+  font-weight:bold;
+  animation: gelatine 0.5s 1;
+  /* box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #fe6b3c; */
+  
+}
+@keyframes gelatine {
+  from, to {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
 }

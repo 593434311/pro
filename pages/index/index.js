@@ -21,7 +21,6 @@ Page({
    * 页面的初始数据
    */
   bannerDetail(e){
-    console.log(e.currentTarget.dataset.id)
     wx.navigateTo({
       url: `/pages/details/bannerdetails/index?id=${e.currentTarget.dataset.id}`,
     })

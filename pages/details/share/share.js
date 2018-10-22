@@ -1,4 +1,5 @@
 // pages/details/share/share.js
+const app = getApp()
 Page({
 
   /**
@@ -7,8 +8,7 @@ Page({
   data: {
     isnewuser: false,
     isCoupon: false,
-    Inviter: ''
-
+    inviter: ''
   },
 
   /**
@@ -16,9 +16,9 @@ Page({
    */
   onLoad: function (options) {
     var self = this;
-    this.setData({
-      Inviter: options.id
-    })
+    // this.setData({
+    //   inviter: options.id
+    // })
     var cuea = setInterval(() => {
       if (wx.getStorageSync('cuea')) {
         if (wx.getStorageSync('cuea') === 'isd') {
