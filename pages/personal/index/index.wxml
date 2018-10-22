@@ -82,7 +82,7 @@
 </view>
 <!-- 联系客服 -->
 <view class="service contentW">
-  <view class="title">
+  <button class="title" open-type='contact'>
     <view class="kefu tit_lt">
       <image src="/static/images/personal/lianxikefu@2x.png"></image>
       <text class="tit_text1">联系客服</text>
@@ -90,5 +90,5 @@
     <view class="tit_rt">
       <image  class="more" src="/static/images/details_index/more@2x.png"></image>
     </view>
-  </view>
+  </button>
 </view>

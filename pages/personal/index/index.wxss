@@ -51,6 +51,7 @@ page {
 
 .title {
   display:flex;
+  background-color: #fff;
   justify-content:space-between;
   align-items:baseline;
   padding:28rpx 0 23rpx 0;
@@ -79,13 +80,14 @@ page {
 .group_buy .group_buy_cont{
   display:flex;
    justify-content:space-between;
-   padding:40rpx 40rpx 36rpx 40rpx;
+   padding:20rpx 30rpx 16rpx 30rpx;
 }
 .group_buy_cont .content_cont{
-  width: 120rpx;
+  width: 140rpx;
   display:flex;
   flex-direction:column;
   align-items:center;
+  padding: 20rpx 0;
 }
 .content_cont image{
   width:44rpx;
@@ -102,7 +104,7 @@ page {
 .unpaid::after{
   position: absolute;
   right:20rpx;
-  top:-10rpx;
+  top: 5rpx;
   content: attr(data-num);
   width:20rpx;
   height: 20rpx;
@@ -122,7 +124,9 @@ page {
   margin-bottom:14rpx;
 }
 .wallet .title{
-  padding:30rpx 0;
+  height: 100rpx;
+  display: flex;
+  align-items: center
 }
 .title .tit_lt{
   display: flex;
@@ -153,7 +157,9 @@ page {
   margin-bottom:14rpx;
 }
 .collect .title{
-  padding:38rpx 0;
+  height: 100rpx;
+  display: flex;
+  align-items: center
 }
 .collect .title image{
   width:36rpx;
@@ -187,7 +193,9 @@ page {
 .service {
 }
 .service .title{
-  padding:36rpx 0 38rpx 0;
+  height: 100rpx;
+  display: flex;
+  align-items: center
 }
 .kefu image{
   width:30rpx;

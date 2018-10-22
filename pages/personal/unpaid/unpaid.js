@@ -94,8 +94,8 @@ Page({
   },
   voteuser(e){
     this.setData({
-      isuseripne: true,
-      isusernum: true
+      isuseripne: null,
+      isusernum: null
     })
     if (e.currentTarget.dataset.type == '1'){
       this.data.usernum = e.detail.value

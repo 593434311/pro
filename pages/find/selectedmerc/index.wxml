@@ -1,4 +1,5 @@
 <!--pages/find/selectedmerc/index.wxml-->
 <view>
   <seledmerc  wx:for="{{Sedbusin}}" wx:key="{{index}}" data="{{item}}"></seledmerc>
+  <view wx:if="{{!isself}}" class="moretext">---我们也是有底线的---</view>
 </view>

@@ -17,7 +17,7 @@
       还差<text>{{act_info.remainder}}</text>人，赶快邀请好友来拼团
     </view>
     <view class='count_butt'>
-      <button>
+      <button open-type="share">
         <view></view>邀请好友成团返现
       </button>
     </view>

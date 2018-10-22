@@ -161,12 +161,7 @@
 .active .more{
    padding:12px 326rpx 84rpx 326rpx; 
 }
-.moretext{
-  text-align: center;
-  color: #ccc;
-   padding:12px 0; 
-  font-size: 22rpx;
-}
+
 .active .more image{
   width:99rpx;
   height:57rpx;
@@ -218,11 +213,8 @@
    font-size:24rpx;
    color:#b8b8b8;
    position:absolute;
-   right:024rpx;
+   right:24rpx;
    bottom:22rpx;
-
-
-
 }
 
 .coupon .text{

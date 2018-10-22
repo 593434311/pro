@@ -12,7 +12,12 @@ page {
   font-size: 28rpx;
   background-color: #f9f9fa;
 }
-
+.moretext{
+  text-align: center;
+  color: #ccc;
+   padding:12px 0; 
+  font-size: 22rpx;
+}
 view {
   font-family: PingFang SC,Helvetica Neue,Helvetica,-apple-system,BlinkMacSystemFont,Roboto,Arial,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
  

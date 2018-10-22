@@ -12,10 +12,10 @@
   <view class='tuan_title'>
     <image src="/static/images/find/sj@2x.png"></image>
   </view>
+  <navigator url="/pages/details/allactive/index" hover-class="navigator-hover"><view class='more' bindtap='goSelectedmer'>更多></view></navigator>
   <view>
     <seledmerc wx:for="{{Sedbusin}}" wx:key="{{index}}" data="{{item}}"></seledmerc>
   </view>
   <view class="gengduo" style='margin-bottom:60rpx;'>
-    <image src="/static/images/icon/gengduo@2x.png" bindtap='goSelectedmer'></image>
   </view>
 </view>
