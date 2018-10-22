@@ -54,6 +54,7 @@ App({
       wx.login({
         success: res => {
           request.request('login.login.login', { code: res.code, type: 2 }, resd => {
+            console.log(res)
             if (resd.status == 0) {
               this.globalData.openId = resd.data.openid
               this.globalData.user_info = resd.data.user_info;

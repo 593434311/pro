@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "active": "/pages/component/Businessact/index"
+  },
+  "enablePullDownRefresh": true
+}

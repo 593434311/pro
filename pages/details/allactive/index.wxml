@@ -1,0 +1,4 @@
+<!--pages/details/allactive/index.wxml-->
+<view>
+  <active></active>
+</view>

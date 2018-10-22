@@ -20,7 +20,7 @@ Page({
         })
       }
     })
-    app.RequiseData('note.info.notelist', { p: 1, pagesize: 6 }, res => { // 精选帖子
+    app.RequiseData('note.info.notelist', { p: 1, pagesize: 3 }, res => { // 精选帖子
       if (res.status == 0) {
         this.setData({
           SedArticle: res.data.data

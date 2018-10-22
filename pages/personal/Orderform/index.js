@@ -121,7 +121,7 @@ Page({
       // 来自页面内转发按钮
       return {
         title: res.target.dataset.title,
-        path: `/pages/details/index/index?id=${res.target.dataset.actid}&userid=${res.target.dataset.userid}`,
+        path: `/pages/details/share/share?id${res.target.dataset.userid}`,
         imageUrl: `http://gtshidai.oss-cn-shanghai.aliyuncs.com${res.target.dataset.image}`
       }
     }

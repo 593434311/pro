@@ -50,13 +50,14 @@ Page({
     this.getActive()
     this.getbutton()
   },
-  getActive(){
-    wx.showLoading({
-      title: '玩命加载中',
+  getActive() {
+    wx.showToast({
+      title: '',
+      image: '/static/images/icon/test.gif'
     })
     app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 2 }, res => {
-      wx.hideLoading();
-      if(res.data.length === 0){
+      // wx.hideToast();
+      if (res.data.length === 0) {
         this.data.isweedata = false
       }
       if (res.status === 0) {
@@ -65,7 +66,7 @@ Page({
           RegimentPage: this.data.RegimentPage + 1
         })
       }
-    }) 
+    })
   },
   getbutton(){
     app.RequiseData('login.login.bannerlist', { }, res => {
@@ -115,8 +116,9 @@ Page({
       this.setData({
         isCoupon: false
       })
-      console.log(e.detail)
+      e.detail.inviter_id = ''
       app.setuserinfo(e.detail.userInfo, res => {
+        console.log(res)
         if (res.status === 0) {
           app.globalData.user_info = res.data
           app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {
