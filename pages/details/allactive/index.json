@@ -2,5 +2,6 @@
   "usingComponents": {
     "active": "/pages/component/Businessact/index"
   },
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "活动列表"
 }

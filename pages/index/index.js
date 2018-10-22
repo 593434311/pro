@@ -52,12 +52,11 @@ Page({
     this.getbutton()
   },
   getActive() {
-    wx.showToast({
-      title: '',
-      image: '/static/images/icon/test.gif'
+    wx.showLoading({
+      title: '加载中...'
     })
     app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 2 }, res => {
-      // wx.hideToast();
+      wx.hideLoading();
       if (res.data.length === 0) {
         this.data.isweedata = false
       }
@@ -110,7 +109,7 @@ Page({
     })
   },
   bindGetUserInfo: function (e) {
-    if (e.detail.iv){
+    if (e.detail.iv) {
       wx.showLoading({
         title: '加载中',
       })
@@ -124,7 +123,7 @@ Page({
           app.globalData.user_info = res.data
           app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {
             wx.hideLoading()
-            if(res.status == 0){
+            if (res.status == 0) {
               wx.showToast({
                 title: '领取成功',
                 icon: 'success',
@@ -134,8 +133,8 @@ Page({
           })
         }
       })
-     
-    }else{
+
+    } else {
       wx.showLoading({
         title: '授权失败',
         icon: 'none',

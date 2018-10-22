@@ -1,6 +1,6 @@
 <!--pages/component/find/selectedmer/index.wxml-->
 <view class='quality'>
-    <view class="tit">
+    <view class="tit" data-id='{{data.shop_id}}'  bindtap='gobusin'>
       <view class='quality_boximg'>
         <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.shop_logo}}'></image>
       </view>

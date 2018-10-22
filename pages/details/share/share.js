@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isnewuser: false,
+    isCoupon: false,
+    Inviter: ''
 
   },
 
@@ -12,55 +15,63 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var self = this;
+    this.setData({
+      Inviter: options.id
+    })
+    var cuea = setInterval(() => {
+      if (wx.getStorageSync('cuea')) {
+        if (wx.getStorageSync('cuea') === 'isd') {
+          this.setData({
+            isnewuser: true
+          })
+        }
+        clearInterval(cuea)
+        wx.removeStorageSync('cuea')
+      }
+    }, 2000)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  Receive(){
+    if (this.data.isnewuser ){
+      wx.navigateTo({
+        url: `/pages/details/index/index?id=${e.currentTarget.dataset.id}`,
+      })
+    }else{
+      this.setData({
+        isCoupon: true
+      })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  bindGetUserInfo: function (e) {
+    if (e.detail.iv) {
+      wx.showLoading({
+        title: '请稍后...',
+      })
+      this.setData({
+        isCoupon: false
+      })
+      e.detail.inviter_id = ''
+      app.setuserinfo(e.detail.userInfo, res => {
+        if (res.status === 0) {
+          app.globalData.user_info = res.data
+          app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {
+            wx.hideLoading()
+            if (res.status == 0) {
+              wx.showToast({
+                title: '领取成功',
+                icon: 'success',
+                duration: 2000
+              })
+            }
+          })
+        }
+      })
+    } else {
+      wx.showLoading({
+        title: '授权失败',
+        icon: 'none',
+        duration: 1000
+      })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

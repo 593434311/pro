@@ -16,7 +16,7 @@
         <image src="{{Surplus.avatar || '/static/images/icon/767123217235158646.png'}}"></image>
       </view>
       <view class="touxiang" wx:for="{{data}}" wx:for-index="index" wx:key="index">
-        <image src="{{item.avatar}}"></image>
+        <image src="{{item.avatar || '/static/images/icon/916992777366978025.png'}}"></image>
       </view>
     </view>
     <view class="head_more" wx:if="{{!state && !isSurplus}}">

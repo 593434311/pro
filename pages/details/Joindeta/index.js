@@ -7,7 +7,7 @@ Page({
   data: {
     data: [],
     Surplus:{},
-    isshere: true
+    isshere: false
   },
   /**
    * 生命周期函数--监听页面加载
@@ -22,7 +22,8 @@ Page({
      if(res.status == 0){
        this.setData({
          data: res.data.user_list,
-         Surplus: res.data.act_info
+         Surplus: res.data.act_info,
+         isshere: res.data.is_share
        })
      }
       this.tuantimeOut(this.data.Surplus)

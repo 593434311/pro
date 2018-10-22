@@ -8,7 +8,7 @@ Page({
   data: {
     order_info:{},
     user_info: {},
-    act_info: {}
+    act_info: {},
   },
 
   /**
@@ -20,7 +20,7 @@ Page({
         this.setData({
           act_info: res.data.act_user,
           user_info: res.data.user_list,
-          order_info: res.data.order_info.act_info
+          order_info: res.data.order_info.act_info,
         })
         this.tuantimeOut(this.data.order_info)
       }

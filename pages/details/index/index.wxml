@@ -1,7 +1,7 @@
 <!--pages/details/index/index.wxml-->
 <import src="../../../wxParse/wxParse.wxml"/>
 <view class="active_list contentW">
-  <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
+  <swiper class="banner" interval="2500" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key="index">
       <swiper-item>
         <view>
@@ -46,7 +46,7 @@
   <offered data="{{user_info}}" Surplus="{{act_info}}"></offered>
 </view>
 <!-- 其他人的团 -->
-<view class="rests contentW">
+<view class="rests contentW" wx:if="{{act_list != ''}}">
   <view class="title" bindtap='gogrolpdet'>
     <view class="qita">
       <image src="/static/images/details_index/qita@2x.png"></image>
@@ -63,7 +63,6 @@
       <image src="/static/images/details_index/gonglue@2x.png"></image>
       <text class="tit_text1">拼团攻略</text>
     </view>
-    <text class="tit_text2">详情</text>
   </view>
   <view class="strategy_cont">
     <view class="smile">

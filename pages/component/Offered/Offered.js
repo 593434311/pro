@@ -5,8 +5,19 @@ Component({
    */
   properties: {
     data: {
-      type: Object,
-      value: {}
+      type: Array,
+      value: [],
+      observer: function (newVal, oldVal, changedPath) {
+        var len = Number(this.data.Surplus.remainder)
+        for (var i = 0; i < len; i++){
+          if (!newVal[i]){
+            newVal[i] = {}
+          }
+        }
+        this.setData({
+          data: newVal
+        })
+      }
     },
     Surplus:{
       type: Object,
@@ -34,7 +45,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    Surplus:{}
+    Surplus:{},
+    data: []
   },
 
   /**

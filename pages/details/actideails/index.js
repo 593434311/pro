@@ -4,7 +4,7 @@ var WxParse = require('../../../wxParse/wxParse.js')
 Page({
   data: {
     imgUrls: [],
-    duration: 1000,
+    duration: 200,
     indicatorDots: true,
     autoplay: true,
     act_info: {},

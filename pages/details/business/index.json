@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "active": "/pages/component/Businessact/index"
+    "active": "/pages/component/Businessact/index",
+    "nodata": "/pages/component/nodata/index"
   }
 }
