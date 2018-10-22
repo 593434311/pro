@@ -21,8 +21,8 @@
     "pages/find/articledetails/index",
     "pages/details/selecoupon/index",
     "pages/details/share/share",
-    "pages/details/bannerdetails/index"
-    
+    "pages/details/bannerdetails/index",
+    "pages/details/allactive/index"
   ],
   "window": {
     "backgroundTextStyle": "center",
