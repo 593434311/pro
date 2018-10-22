@@ -1,6 +1,7 @@
 <!--pages/details/share/share.wxml-->
-<view class="warp">
-  <view class="btn_jion">立即参加</view>
+<view class="bg">
+  <view class="warp">
+   <view class="btn_jion" hover-class='tryss'>立即参加</view>
 </view>
 <view class="content">
   <view class="text_con">
@@ -11,4 +12,6 @@
   <view class="text_footer">
     <text>»随便看看«</text>
   </view>
+</view>
+
 </view>

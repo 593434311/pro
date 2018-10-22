@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/details/share/share",
     "pages/index/index",
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
@@ -20,7 +21,7 @@
     "pages/personal/yesorder/index",
     "pages/find/articledetails/index",
     "pages/details/selecoupon/index",
-    "pages/details/share/share",
+    
     "pages/details/bannerdetails/index"
     
   ],

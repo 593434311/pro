@@ -1,7 +1,7 @@
 <!--pages/details/index/index.wxml-->
 <import src="../../../wxParse/wxParse.wxml"/>
 <view class="active_list contentW">
-  <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
+  <swiper class="banner" indicator-dots="{{indicatorDots}}"  indicator-active-color="#ff3638" autoplay="{{autoplay}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key="index">
       <swiper-item>
         <view>
