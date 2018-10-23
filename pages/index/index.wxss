@@ -183,8 +183,7 @@
   box-shadow: rgba(254,110,65,0.3) 0 5rpx 3rpx; 
 }
 .load .tryss { 
-  transform: translateX(10rpx);
-  font-weight:bold;
+  background:#fe7f3e;
   
   
 }
