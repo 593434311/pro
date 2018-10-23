@@ -24,6 +24,7 @@
   color:#a7a7a7;
   margin-bottom:19rpx;
 }
+
 .tuan_rt .rt_tit text{
   color:#ff484a;
   position: relative;
