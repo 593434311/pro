@@ -53,7 +53,7 @@
 .tex_img .img image{
   width: 216rpx;
   height: 216rpx;
-  border-radius: 5px;
+  border-radius: 10rpx;
   margin-left: 27rpx;
 }
 .tex_img .img image:first-child{

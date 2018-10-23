@@ -80,7 +80,7 @@
   padding-bottom: 13rpx;
   color: #8d8d8d;
   font-size: 24rpx;
-  border-bottom: 1px solid #cacaca;
+  border-bottom: 1px solid #e5e5e5;
 }
 .orde_button {
   display: flex;

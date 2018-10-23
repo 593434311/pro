@@ -1,4 +1,4 @@
-<!--pages/component/find/selectedmer/index.wxml-->
+         <!--pages/component/find/selectedmer/index.wxml-->
 <view class='quality'>
     <view class="tit" data-id='{{data.shop_id}}'  bindtap='gobusin'>
       <view class='quality_boximg'>
