@@ -15,6 +15,7 @@
 .banner image{
   width:702rpx;
   height:355rpx;
+  border-radius:10rpx;
 }
 .active_list .list_bm{
 

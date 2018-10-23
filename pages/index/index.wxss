@@ -51,10 +51,9 @@
   width:402rpx;
   height:53rpx;
 }
-
 .content_tuan .tuan .tuan_list{
   min-height: 345rpx;
-  padding:25rpx;
+  padding:0 24rpx;
   display: flex;
   justify-content:space-between;
   margin-top:6rpx;

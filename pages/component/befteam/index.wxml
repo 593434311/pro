@@ -9,6 +9,7 @@
     <view class="rt_tit">
       <text>【{{data.sub_num}}人团】</text>
       <text>{{data.title}}</text>
+      
     </view>
     <view class="rt_btm">
       <view class="price">
@@ -29,7 +30,10 @@
           <image wx:else src="/static/images/icon/aixin@2x.png"></image>
           <text>{{data.attribute_num.collect}}人想玩</text>
         </view>
-        <image class="purchase" src="/static/images/icon/lijiqianggou@2x.png"></image>
+        <view class="purchase">
+          <image src="/static/images/icon/lijiqianggou@2x.png"></image>
+        </view>
+        
       </view>
     </view>
   </view>

@@ -1,5 +1,6 @@
 <!--pages/details/selecoupon/index].wxml-->
 <view>
   <copes wx:for="{{codelist}}" item="{{item}}" data-id="{{item}}"  bindtap='useConpon' wx:key="{{index}}"></copes>
+  <nodata wx:if="{{codelist.length == 0}}" state="{{0}}" isbutton="{{false}}" text="您现在还没有可用的优惠券~"></nodata>
   <view class='noconpon' bindtap='noconpon'>不使用优惠卷</view>
 </view>

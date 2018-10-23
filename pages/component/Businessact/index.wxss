@@ -13,6 +13,7 @@
 .active_list .active_top image{
   max-width:702rpx;
   height: 340rpx;
+  border-radius:10rpx;
   
 }
 .active_bm .bm_t{
@@ -26,7 +27,6 @@
 }
 .bm_t .bm_tit text{
   color:#ff5246;
-  /* margin-right:10rpx;  */
   position: relative;
   left:-12rpx;
 }
