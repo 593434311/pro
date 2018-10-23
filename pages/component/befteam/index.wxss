@@ -21,14 +21,17 @@
 }
 .tuan_rt .rt_tit{
   font-size:26rpx;
-  color:#a7a7a7;
   margin-bottom:19rpx;
 }
 
-.tuan_rt .rt_tit text{
+.tuan_rt .rt_tit text:nth-of-type(1){
   color:#ff484a;
   position: relative;
   left:-12rpx;
+}
+.tuan_rt .rt_tit text:nth-of-type(2){
+  color:#a7a7a7;
+  margin-left:-20rpx;
 }
 
  .price{
@@ -45,7 +48,6 @@
   color:#ff3638;
   font-size:36rpx;
 }
-
 .tuan_rt .count_dn{
   display:flex;
   justify-content: flex-start;
@@ -55,7 +57,6 @@
   font-size:24rpx;
   line-height:44rpx;
   margin-right:19rpx;
-
 }
 .count_dn .time{
   display: flex;

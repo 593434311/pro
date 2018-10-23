@@ -83,7 +83,7 @@
 .bm_bottom .location{
   padding-bottom:20rpx;
   position: relative;
-  padding-left:22rpx;
+  padding-left:32rpx;
 }
 .bm_bottom .location::before{
   content: '';
@@ -103,6 +103,7 @@
 .bm_bottom .time image{
   width:20rpx;
   height:20rpx; 
+  padding-right:8rpx;
 }
 /* 参团详情 */
 
