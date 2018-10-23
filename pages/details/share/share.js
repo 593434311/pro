@@ -60,8 +60,13 @@ Page({
               wx.showToast({
                 title: '领取成功',
                 icon: 'success',
-                duration: 2000
+                duration: 1200
               })
+              setTimeout(res=>{
+                wx.navigateTo({
+                  url: `/pages/details/index/index?id=${e.currentTarget.dataset.id}`,
+                })
+              }, 1200)
             }
           })
         }

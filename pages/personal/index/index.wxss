@@ -51,7 +51,7 @@ page {
 
 .title {
   display:flex;
-  background-color: #fff;
+  
   justify-content:space-between;
   align-items:baseline;
   padding:28rpx 0 23rpx 0;
@@ -190,12 +190,11 @@ page {
   bottom:3rpx;
 }
 /* 联系客服 */
-.service {
-}
 .service .title{
   height: 100rpx;
   display: flex;
-  align-items: center
+  align-items: center;
+  background-color: #fff;
 }
 .kefu image{
   width:30rpx;

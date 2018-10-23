@@ -8,7 +8,7 @@
     </view>
     <view class='head_right'>待支付</view>
   </view>
-  <view class='counter'>
+  <view class='counter' data-oldid='{{data.order_id}}' bindtap='goOldede'>
     <view class='cout_left'>
       <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.act_info.cover_img}}?x-oss-process=image/resize,m_fill,h_70,w_70'></image>
       <view class='left_text'>{{data.act_info.title}}</view>
@@ -21,7 +21,7 @@
   <view class='allmony'>实付：￥{{data.pay_price}}</view>
   <view class='orde_button'>
     <view>
-      <button>联系客服</button>
+      <button open-type='contact'>联系客服</button>
     </view>
     <view class='border_rea' data-oldid='{{data.order_id}}' bindtap='goOldede'>
       <button>立即支付</button>

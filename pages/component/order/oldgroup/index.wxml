@@ -9,7 +9,7 @@
     </view>
     <view class='head_right'>已成团</view>
   </view>
-  <view class='counter'>
+  <view class='counter' bindtap='goseorder'>
     <view class='cout_left'>
       <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.act_info.cover_img}}?x-oss-process=image/resize,m_fill,h_70,w_70'></image>
       <view class='left_text'>{{data.act_info.title}}</view>
@@ -22,7 +22,7 @@
   <view class='allmony'>实付：￥{{data.pay_price}}</view>
   <view wx:if="{{!isshow}}" class='orde_button'>
     <view>
-      <button>联系客服</button>
+      <button open-type='contact'>联系客服</button>
     </view>
     <view class='border_rea' bindtap='goseorder' >
       <button>查看订单</button>
