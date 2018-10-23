@@ -12,6 +12,7 @@
 
 .active_list .active_top image{
   max-width:702rpx;
+  height: 340rpx;
   
 }
 .active_bm .bm_t{

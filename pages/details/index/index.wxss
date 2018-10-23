@@ -273,7 +273,7 @@
   padding-bottom:36rpx;
 }
 .presentation .presentation_cont{
-  padding:0 42rpx;
+  overflow: auto;
 }
 .presentation .presentation_text{
   font-size:24rpx;

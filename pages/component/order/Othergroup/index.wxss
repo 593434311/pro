@@ -32,7 +32,8 @@
 }
 .cont_rt{
   display: flex;
-  align-items:center;
+  justify-content:flex-end;
+  align-items: center;
   width: 360rpx
 }
 .cont_rt .cont_rt_lt{

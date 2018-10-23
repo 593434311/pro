@@ -1,14 +1,14 @@
 <!--pages/component/order/Othergroup/index.wxml-->
-<view class="rests_cont rests_tuan">
+<view class="rests_cont rests_tuan" bindtap='godeta' data-id='{{ohtgro.id}}'>
   <view class="cont_lt">
     <image src="{{ohtgro.avatar}}"></image>
     <text>{{ohtgro.nickname}}的团</text>
   </view>
-  <view class="cont_rt" bindtap='godeta' data-id='{{ohtgro.id}}'>
+  <view class="cont_rt">
     <view class="cont_rt_lt">
       <text>还差{{ohtgro.remainder}}人成团</text>
       <view class="count_dn">
-        <image src="/static/images/details_index/biao@2x.png"></image>
+        <!-- <image src="/static/images/details_index/biao@2x.png"></image> -->
         <text>{{ohtgro.str}}</text>
       </view>
     </view>

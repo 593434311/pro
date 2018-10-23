@@ -75,7 +75,7 @@ Page({
     })
   },
   gettuan(){
-    app.RequiseData('activity.actor.actlist', { p: this.data.RegimentPage, pagesize: 20 }, res => {
+    app.RequiseData('activity.actor.actlist', { p: 1, pagesize: 20 }, res => {
       var thit = this
       if(res.status === 0){
          var tuandata = res.data;
@@ -148,7 +148,9 @@ Page({
   },
   onPullDownRefresh(){
     wx.showNavigationBarLoading();
+    this.data.RegimentPage = 1
     this.gettuan()
+    this.getbutton()
     this.getActive()
     setTimeout(() => {
       wx.hideNavigationBarLoading();

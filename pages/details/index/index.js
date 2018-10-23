@@ -17,6 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
     app.RequiseData('activity.actor.actinfo', { id: options.id }, res => {
       if(res.status === 0){
         WxParse.wxParse('article', 'html', res.data.act_info.info, this, 5)

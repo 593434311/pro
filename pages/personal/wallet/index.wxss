@@ -116,7 +116,7 @@
 }
 .money input{
   font-size:24rpx;
-  color:#cacaca;
+  color:#333;
 }
 .footer{
   background:#fff;

@@ -3,16 +3,16 @@
   <view class='wall_head'>
     <view class='wall_bg'></view>
     <view class='wall_mary'>
-      <view class='Price'><text>￥</text>0.00</view>
+      <view class='Price'><text>￥</text>{{may}}</view>
       <view class='sure'>可提现金额</view>
       <view class='bill'>
         <view class='settled'>
-          <view>￥0.00</view>
+          <view>￥{{yet}}</view>
           <view>已结算</view>
         </view>
         <view class='line'></view>
         <view class='audited'>
-          <view>￥50.00</view>
+          <view>￥{{audit}}</view>
           <view>待审核</view>
         </view>
       </view>
@@ -25,10 +25,10 @@
     <view class="deposit_tit">提现金额</view>
     <view class="money">
       <text>￥</text>
-      <input type='text' value=""placeholder="输入您要提现的金额" />
+      <input type='number' bindinput= "inputvalue" placeholder-style="color: #ccc" placeholder="输入您要提现的金额" />
     </view>
   </view>
   <view class="footer">
-    <view class="money_btn" hover-class='hove-button'>提现</view>
+    <view class="money_btn" hover-class='hove-button' bindtap='commitvalue'>提现</view>
   </view>
 </view>

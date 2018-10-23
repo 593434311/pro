@@ -9,6 +9,7 @@
   
 }
 .banner{
+  height: 355rpx;
   padding:24rpx 0;
 }
 .banner image{
@@ -287,13 +288,12 @@
   padding-bottom:36rpx;
 }
 .presentation .presentation_cont{
-  padding:0 42rpx;
+  overflow: auto;
 }
 .presentation .presentation_text{
   font-size:24rpx;
   line-height:36rpx;
   color:#8d8d8d;
-  
 }
 .image-text .tu_img{
   padding:28rpx 0 30rpx 0;
