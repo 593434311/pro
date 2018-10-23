@@ -8,7 +8,8 @@ Page({
   data: {
     order_info:{},
     user_info: {},
-    act_info: {}
+    act_info: {},
+    shere: {}
   },
 
   /**
@@ -20,7 +21,8 @@ Page({
         this.setData({
           act_info: res.data.act_user,
           user_info: res.data.user_list,
-          order_info: res.data.order_info.act_info
+          shere: res.data.order_info,
+          order_info: res.data.order_info.act_info,
         })
         this.tuantimeOut(this.data.order_info)
       }
@@ -59,6 +61,10 @@ Page({
     timer = setInterval(nowTime, 15000);
   },
   onShareAppMessage: function () {
-
+    return {
+      title: 'test',
+      path: `/pages/details/share/share?id${this.data.shere.user_id}`,
+      imageUrl: 'http://gtshidai.oss-cn-shanghai.aliyuncs.com' +this.data.shere.cover_img
+    }
   }
 })

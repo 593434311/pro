@@ -3,7 +3,7 @@
 <!--轮播-->
   <view class="header">
     <view  class="swiper-container">
-      <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+      <swiper autoplay="auto" interval="2500" duration="300" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
           <block wx:for="{{slider}}" wx:key="unique">
             <swiper-item class="swiper-item">
               <view bindtap="bannerDetail" data-id="{{item.id}}">
@@ -42,11 +42,11 @@
   <view class="content_active">
     <view class="active_title">
       <image src="/static/images/icon/remenhuodong@2x.png"></image>
-      <text>更多></text>
+      <navigator url="/pages/details/allactive/index" hover-class="navigator-hover"><text>更多></text></navigator>
     </view>
     <view class="active">
       <active wx:for="{{RegimentData}}" wx:for-index="index" wx:for-item="item" wx:key="index" listdata="{{item}}"></active>
-      <view class="more"></view>
+      <view wx:if="{{isweedata}}" class="moretext">---我们也是有底线的---</view>
     </view>
     <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="700rpx" class="coupon" catchtouchmove="false">
       <image src='/static/images/icon/67782958429263482.png' mode="widthFix" style='border-radius: 5px'></image>

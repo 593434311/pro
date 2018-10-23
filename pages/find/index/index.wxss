@@ -19,4 +19,11 @@
   width: 99rpx;
   height: 57rpx;
 }
-
+.more {
+  width: 100%;
+  text-align: right;
+  font-size:24rpx;
+  color:#b8b8b8;
+  padding-right: 24rpx;
+  line-height: 50rpx;
+}

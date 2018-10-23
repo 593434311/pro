@@ -28,6 +28,7 @@
     </view>
     <view wx:if="{{activeIndex == 2}}" class="active">
       <active wx:for="{{businesActive}}" wx:for-index="index" wx:for-item="item" wx:key="index" listdata="{{item}}"></active>
+      <nodata wx:if="{{businesActive.length == 0}}" isbutton="{{false}}" state="{{1}}" text="该商家还没有活动~"></nodata>
     </view>
   </view>
   <view class='fdex'>

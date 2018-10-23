@@ -29,6 +29,11 @@ Component({
         current: src, // 当前显示图片的http链接
         urls: imgList // 需要预览的图片http链接列表
       })
+    },
+    gobusin(self){
+      wx.navigateTo({
+        url: `/pages/details/business/index?id=${self.currentTarget.dataset.id}`,
+      })
     }
   }
 })

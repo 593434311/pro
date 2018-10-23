@@ -1,1 +1,7 @@
 /* pages/details/allactive/index.wxss */
+.moretext{
+  text-align: center;
+  color: #ccc;
+   padding:12px 0; 
+  font-size: 22rpx;
+}

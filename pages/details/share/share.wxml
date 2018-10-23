@@ -1,9 +1,10 @@
 <!--pages/details/share/share.wxml-->
 <view class="bg">
   <view class="warp">
-   <view class="btn_jion" hover-class='tryss'>立即参加</view>
-</view>
-<view class="content">
+   <view wx:if="{{isnewuser}}" class="btn_jion"bindtap='Receive' hover-class='tryss'>立即参加</view>
+   <view wx:else class="btn_jion" bindtap='Receive' hover-class='tryss'>立即参加</view>
+  </view>
+  <view class="content">
   <view class="text_con">
     <view class="money">首次授权登录临港拼玩 即领<text>5元现金红包</text></view>
     <text>更有超多现金返现等你来拿</text>
@@ -13,5 +14,25 @@
     <text>»随便看看«</text>
   </view>
 </view>
-
 </view>
+
+<coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="700rpx" class="coupon" catchtouchmove="false">
+  <image src='/static/images/icon/67782958429263482.png' mode="widthFix" style='border-radius: 5px'></image>
+  <view class='text'>这位新朋友你好，送你一张券试试看呗，不是骗子</view>
+  <view class='coupon_reduce'>
+    <view class='reduce_left'>
+      <view class='left_left'>
+        <text>￥5</text>
+        <view>满50元可用</view>
+      </view>
+      <view class='left_right'>
+        <view>参团立减</view>
+        <text>有效期：10日</text>
+      </view>
+    </view>
+    <view class='reduce_right'>
+      <view>立减卷</view>
+    </view>
+  </view> 
+  <button open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>立即领取</button>
+</coupon>

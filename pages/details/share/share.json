@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "coupon": "/pages/component/coupon/Coupon"
+  }
+}

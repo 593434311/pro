@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
@@ -24,12 +23,11 @@
     "pages/details/bannerdetails/index",
     "pages/details/share/share",
     "pages/details/allactive/index"
-    
   ],
   "window": {
     "backgroundTextStyle": "center",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "咖友街",
+    "navigationBarTitleText": "临港拼命",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

@@ -1,4 +1,5 @@
 <!--pages/find/selectedActi/index.wxml-->
 <view>
   <seledactive wx:for="{{SedArticle}}" wx:key="{{index}}" data="{{item}}"></seledactive>
+  <view wx:if="{{!isself}}" class="moretext">---我们也是有底线的---</view>
 </view>

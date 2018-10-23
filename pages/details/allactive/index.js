@@ -1,42 +1,48 @@
 // pages/details/allactive/index.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    RegimentPage: 1,
+    RegimentPage: 0,
     RegimentData: [],
-    isweedata: false
+    isweedata: true
   },
   onLoad: function (option) {
-    getActive()
+    wx.startPullDownRefresh()
   },
   getActive() {
-    wx.showToast({
-      title: '',
-      image: '/static/images/icon/test.gif'
+    wx.showLoading({
+      title: '加载中...'
     })
+    this.data.RegimentPage++
     app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 6 }, res => {
-      // wx.hideToast();
+      wx.stopPullDownRefresh()
+      wx.hideLoading();
       if (res.data.length === 0) {
         this.data.isweedata = false
       }
       if (res.status === 0) {
         this.setData({
           RegimentData: this.data.RegimentData.concat(res.data),
-          RegimentPage: this.data.RegimentPage + 1
+          RegimentPage: this.data.RegimentPage
         })
       }
     })
   },
   onPullDownRefresh: function () {
-
+    this.setData({
+      RegimentPage: 0,
+      isweedata: true,
+      RegimentData: []
+    })
+    this.getActive()
   },
   onReachBottom() {
     if (this.data.isweedata) {
       this.getActive()
     }
   }
-
 })

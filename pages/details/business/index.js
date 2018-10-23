@@ -9,7 +9,7 @@ Page({
   data: {
     activeIndex: 1,
     businData:{},
-    businesActive:{}
+    businesActive: []
   },
 
   /**

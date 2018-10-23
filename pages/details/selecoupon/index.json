@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "copes": "/pages/component/conpons/index"
+    "copes": "/pages/component/conpons/index",
+    "offered": "/pages/component/Offered/Offered"
   }
 }

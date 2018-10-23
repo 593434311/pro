@@ -118,7 +118,7 @@
   height:22rpx;
 }
 /* 信息填写 */
-.information{
+.placeholder{
 
 }
 .information .information_cont{
@@ -134,7 +134,7 @@
   color:#ff9394;
 }
 .information .information_cont input{
-  color:#b8b8b8;
+  color:#333;
   padding-left:58rpx;
 }
 
@@ -227,6 +227,7 @@
   display: flex;
   justify-content:flex-end;
   align-items:center;
+  border-top: 1rpx solid #ddd;
 } 
 .bottom .bottom_cont .bottom_text{
   color:#8d8d8d;

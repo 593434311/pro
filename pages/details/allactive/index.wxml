@@ -1,4 +1,5 @@
 <!--pages/details/allactive/index.wxml-->
 <view>
-  <active></active>
+  <active wx:for="{{RegimentData}}" wx:for-index="index" wx:for-item="item" wx:key="index" listdata="{{item}}"></active>
+  <view wx:if="{{isweedata}}" class="moretext">---我们也是有底线的---</view>
 </view>
