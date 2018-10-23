@@ -79,10 +79,11 @@ page {
 .group_buy .group_buy_cont{
   display:flex;
    justify-content:space-between;
-   padding:40rpx 40rpx 36rpx 40rpx;
+   padding:40rpx 42rpx 36rpx 42rpx;
+
 }
 .group_buy_cont .content_cont{
-  width: 120rpx;
+  width: 72rpx;
   display:flex;
   flex-direction:column;
   align-items:center;

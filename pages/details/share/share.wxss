@@ -46,42 +46,10 @@ page{
 .content .text_footer{
   font-size:28rpx;
 }
-.warp .tryss{
+ .tryss{
   font-weight:bold;
-  animation: gelatine 0.5s 1;
-  /* box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #fe6b3c; */
+  /* background:linear-gradient(to right,#fe6b3c,#fd9f53); */
+  background:#fe6b3c;
   
-}
-@keyframes gelatine {
-  from, to {
-    transform: scale(1, 1);
-  }
-
-  25% {
-    transform: scale(0.9, 1.1);
-  }
-
-  50% {
-    transform: scale(1.1, 0.9);
-  }
-
-  75% {
-    transform: scale(0.95, 1.05);
-  }
-
-  from, to {
-    transform: scale(1, 1);
-  }
-
-  25% {
-    transform: scale(0.9, 1.1);
-  }
-
-  50% {
-    transform: scale(1.1, 0.9);
-  }
-
-  75% {
-    transform: scale(0.95, 1.05);
-  }
+  
 }

@@ -1,6 +1,6 @@
 <!--pages/component/nodata/index.wxml-->
 <view class='noda'>
-  <image src='/static/images/nodata/{{befoimg || "zwdd@2x.png"}}'></image>
+  <image src='/static/images/nodata/{{befoimg || "zwdd@2x.jpg"}}'></image>
 </view>
 <view class='text'>{{text}}</view>
 <navigator wx:if="{{isbutton}}" open-type='switchTab' hover-class="tryss" class='button' url='/pages/index/index'>去逛逛</navigator>
