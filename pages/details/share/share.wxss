@@ -46,6 +46,8 @@ page{
 .content .text_footer{
   font-size:28rpx;
 }
+
+ 
 .coupon .text{
   width: 392rpx;
   margin: 0 auto;
@@ -129,41 +131,9 @@ page{
   margin: 0 auto;
 }
 .warp .tryss{
-  font-weight:bold;
-  animation: gelatine 0.5s 1;
-  /* box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #fe6b3c; */
+  background:#fe7f3e;
+  
   
 }
-@keyframes gelatine {
-  from, to {
-    transform: scale(1, 1);
-  }
 
-  25% {
-    transform: scale(0.9, 1.1);
-  }
 
-  50% {
-    transform: scale(1.1, 0.9);
-  }
-
-  75% {
-    transform: scale(0.95, 1.05);
-  }
-
-  from, to {
-    transform: scale(1, 1);
-  }
-
-  25% {
-    transform: scale(0.9, 1.1);
-  }
-
-  50% {
-    transform: scale(1.1, 0.9);
-  }
-
-  75% {
-    transform: scale(0.95, 1.05);
-  }
-}

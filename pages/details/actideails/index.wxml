@@ -50,7 +50,7 @@
       <image src="/static/images/details_index/qita@2x.png"></image>
       <text class="tit_text1">该活动其他人的团</text>
     </view>
-    <text class="tit_text2">全部</text>
+    <text class="tit_text2">全部></text>
   </view>
   <ohtgro wx:for="{{act_list}}" wx:for-index="index" wx:if="{{! (index > 1)}}" wx:key="index" ohtgro="{{item}}"></ohtgro>
 </view>

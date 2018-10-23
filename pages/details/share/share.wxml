@@ -1,7 +1,7 @@
 <!--pages/details/share/share.wxml-->
 <view class="bg">
   <view class="warp">
-   <view wx:if="{{isnewuser}}" class="btn_jion"bindtap='Receive' hover-class='tryss'>立即参加</view>
+   <view wx:if="{{isnewuser}}" class="btn_jion" bindtap='Receive' hover-class='tryss'>立即参加</view>
    <view wx:else class="btn_jion" bindtap='Receive' hover-class='tryss'>立即参加</view>
   </view>
   <view class="content">

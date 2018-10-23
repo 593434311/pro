@@ -16,9 +16,9 @@ Page({
    */
   onLoad: function (options) {
     var self = this;
-    // this.setData({
-    //   inviter: options.id
-    // })
+    this.setData({
+      inviter: options.id
+    })
     var cuea = setInterval(() => {
       if (wx.getStorageSync('cuea')) {
         if (wx.getStorageSync('cuea') === 'isd') {
@@ -34,7 +34,7 @@ Page({
   Receive(){
     if (this.data.isnewuser ){
       wx.navigateTo({
-        url: `/pages/details/index/index?id=${e.currentTarget.dataset.id}`,
+        url: `/pages/details/index/index?id=${this.data.inviter}`,
       })
     }else{
       this.setData({
@@ -64,7 +64,7 @@ Page({
               })
               setTimeout(res=>{
                 wx.navigateTo({
-                  url: `/pages/details/index/index?id=${e.currentTarget.dataset.id}`,
+                  url: `/pages/details/index/index?id=${this.data.inviter}`,
                 })
               }, 1200)
             }

@@ -20,8 +20,8 @@
     "pages/personal/yesorder/index",
     "pages/find/articledetails/index",
     "pages/details/selecoupon/index",
-    "pages/details/share/share",
     "pages/details/bannerdetails/index",
+    "pages/details/share/share",
     "pages/details/allactive/index"
   ],
   "window": {

@@ -12,7 +12,7 @@
   <view class='tuan_title'>
     <image src="/static/images/find/sj@2x.png"></image>
   </view>
-  <navigator url="/pages/details/allactive/index" hover-class="navigator-hover"><view class='more' bindtap='goSelectedmer'>更多></view></navigator>
+  <view class='more' hover-class="navigator-hover" bindtap='goSelectedmer'>更多></view>
   <view>
     <seledmerc wx:for="{{Sedbusin}}" wx:key="{{index}}" data="{{item}}"></seledmerc>
   </view>
