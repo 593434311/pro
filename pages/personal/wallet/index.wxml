@@ -19,9 +19,7 @@
     </view>
   </view>
   <view class='counter'>
-    <view class="explain">说明</view>
-    <text>最低提现额度20元，点击提现后，一周内会提现
-至您的微信零钱</text>
+    最低提现额度20元，点击提现后，一周内会提现至您的微信零钱
   </view>
   <view class="deposit">
     <view class="deposit_tit">提现金额</view>
@@ -31,6 +29,6 @@
     </view>
   </view>
   <view class="footer">
-    <view class="money_btn">提现</view>
+    <view class="money_btn" hover-class='hove-button'>提现</view>
   </view>
 </view>

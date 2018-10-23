@@ -131,8 +131,7 @@ page{
   margin: 0 auto;
 }
 .warp .tryss{
-  font-weight:bold;
-  background:#fe6b3c;
+  background:#fe7f3e;
   
   
 }

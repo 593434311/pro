@@ -43,25 +43,23 @@
   padding: 32rpx 66rpx;
   background-color: #fff;
   font-size:24rpx;
-  display:flex; 
-  align-items:baseline ;
+  line-height: 38rpx;
   margin-bottom: 12rpx;
 }
-.counter .explain{
+.counter::before{
+  content:"说明";
+  display:inline-block;
   width:84rpx;
   height:38rpx;
+  font-size:24rpx;
+  line-height: 40rpx;
   background-color: #ff9394;
   border-radius:19rpx;
   color:#fff;
   text-align:center;
-  margin-right:4rpx;
+ 
   
 }
-.counter text{
-  display:block;
-  font-size:24rpx;
-  line-height:38rpx;
-} 
 
 
 .bill {
@@ -132,5 +130,7 @@
   background:linear-gradient(#fd9f53,#fe6b3c);
   color:#fff;
   text-align: center;
-
+}
+.hove-button{
+  background:#fe7f3e;
 }
