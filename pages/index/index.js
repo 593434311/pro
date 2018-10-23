@@ -54,7 +54,7 @@ Page({
     wx.showLoading({
       title: '加载中...'
     })
-    app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 2 }, res => {
+    app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 4 }, res => {
       wx.hideLoading();
       if (res.data.length === 0) {
         this.data.isweedata = false
@@ -149,6 +149,7 @@ Page({
   onPullDownRefresh(){
     wx.showNavigationBarLoading();
     this.data.RegimentPage = 1
+    this.data.RegimentData = []
     this.gettuan()
     this.getbutton()
     this.getActive()

@@ -7,6 +7,7 @@
 
 .banner{
   padding:24rpx 0;
+  height: 355rpx;
 }
 .banner image{
   width:702rpx;
@@ -275,6 +276,9 @@
 }
 .presentation .presentation_cont{
   overflow: auto;
+}
+.presentation .presentation_cont image{
+  width: 100%;
 }
 .presentation .presentation_text{
   font-size:24rpx;

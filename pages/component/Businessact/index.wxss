@@ -11,7 +11,7 @@
 }
 
 .active_list .active_top image{
-  max-width:702rpx;
+  width:702rpx;
   height: 340rpx;
   
 }
@@ -55,7 +55,6 @@
 .bm_t_m .count_dn{
   color:#b8b8b8;
   font-size:24rpx;
-  line-height: 46rpx;
   display:flex;
   align-items:center;
 }

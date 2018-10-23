@@ -6,7 +6,7 @@
     <block wx:for="{{imgUrls}}" wx:key="index">
       <swiper-item>
         <view>
-          <image bindtap="imgYu" lazy-load="true" data-list="{{imgUrls}}" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{item}}?x-oss-process=image/resize,m_fill,h_173,w_350"></image>
+          <image bindtap="imgYu" lazy-load="true" data-list="{{imgUrls}}" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{item}}?x-oss-process=image/resize,m_fill,h_340,w_702"></image>
         </view>
       </swiper-item>
     </block>

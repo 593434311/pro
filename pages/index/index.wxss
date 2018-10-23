@@ -85,8 +85,8 @@
   margin-right:10rpx; 
 }
 .tuansw{
-  max-height: 690rpx;
-  min-height: 600rpx;
+  max-height: 790rpx;
+  min-height: 630rpx;
 }
  .price{
   display:flex;

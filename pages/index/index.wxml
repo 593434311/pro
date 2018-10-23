@@ -22,7 +22,7 @@
   <!--即将成团-->
   <view class="content_tuan" wx:if="{{activeData.length!=0}}">
     <view class="tuan_title">
-      <image src="/static/images/icon/jijiangchengtuan@2x.png"></image>
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bt1@3x.png"></image>
     </view>
     <view class="tuan">
       <swiper class='tuansw' current='{{currentTab}}' indicator-dots="{{false}}"  autoplay="{{false}}" circular="{{false}}" duration="200">

@@ -291,6 +291,9 @@
 .presentation .presentation_cont{
   overflow: auto;
 }
+.presentation .presentation_cont image{
+  width: 100%;
+}
 .presentation .presentation_text{
   font-size:24rpx;
   line-height:36rpx;
