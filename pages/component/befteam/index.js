@@ -29,7 +29,6 @@ Component({
       })
     },
     cuitWent(even){
-      
       var eve = even.currentTarget.dataset
       app.RequiseData('user.info.userDeed', { behavior: eve.behavior, actId: eve.id, type: eve.type}, res => {
         // to doing

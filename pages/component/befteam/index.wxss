@@ -36,7 +36,7 @@
 }
 .tuan_rt .rt_tit text:nth-of-type(2){
   color:#727272;
-  margin-left:-20rpx;
+  /* margin-left:-20rpx; */
 }
 
  .price{

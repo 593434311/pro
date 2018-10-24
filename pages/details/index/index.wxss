@@ -11,6 +11,7 @@
 .banner image{
   width:702rpx;
   height:355rpx;
+  /* border-radius:10rpx; */
 }
 
 .list_bm .bm_top{
