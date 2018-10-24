@@ -22,7 +22,6 @@
 }
 .tuan_rt .rt_tit{
   font-size:26rpx;
-  margin-bottom:19rpx;
 }
 .tuan_rt .rt_btm{
   width:412rpx;
@@ -43,7 +42,7 @@
  .price{
   display:flex;
   align-items:baseline;
-  margin-bottom: 25rpx;
+  margin-bottom: 38rpx;
 }
 .price s:nth-of-type(1){
   color:#b8b8b8;
@@ -70,7 +69,7 @@
   font-size:24rpx;
   color:#ff5246;
   text-align: center;
-  
+  padding-bottom:18rpx;
 }
 .count_dn .time i{
   display:inline-block;
@@ -91,6 +90,7 @@
   font-size:18rpx;
   display: flex;
   align-items:flex-end;
+  position:relative;
 }
 
 .want{
@@ -107,13 +107,17 @@
   font-size: 20rpx;
 }
 .collect .purchase{
-  width:99rpx;
-  height:57rpx;
+  width:88rpx;
+  height:45rpx;
+  position: absolute;
+  right:0;bottom:0;
   
 }
 .collect .purchase image{
-  width:99rpx;
-  height:57rpx;
+  width:88rpx;
+  height:45rpx;
+  border-radius:22.5rpx;
+  box-shadow: rgba(254,110,65,0.3) 0 5rpx 3rpx; 
   
   
 }

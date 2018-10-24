@@ -41,8 +41,10 @@
   </view>
   <view class="content_active">
     <view class="active_title">
-      <image src="/static/images/icon/remenhuodong@2x.png"></image>
-      <navigator url="/pages/details/allactive/index" hover-class="navigator-hover"><text>更多></text></navigator>
+      <image class="img1" src="/static/images/icon/remenhuodong@2x.png"></image>
+      <navigator url="/pages/details/allactive/index" hover-class="navigator-hover">
+        <image class="img2" src="/static/images/icon/more@2x.png"></image>
+      </navigator>
     </view>
     <view class="active">
       <active wx:for="{{RegimentData}}" wx:for-index="index" wx:for-item="item" wx:key="index" listdata="{{item}}"></active>

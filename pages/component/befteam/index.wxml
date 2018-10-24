@@ -9,7 +9,6 @@
     <view class="rt_tit">
       <text>【{{data.sub_num}}人团】</text>
       <text>{{data.title}}</text>
-      
     </view>
     <view class="rt_btm">
       <view class="price">
