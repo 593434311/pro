@@ -5,9 +5,9 @@
     <image class='top_img' src='/static/images/tempalry/bj@2x.png'></image>
     <view class='portrait'>
       <image wx:if="{{businData.shop_logo}}" src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{businData.shop_logo}}?x-oss-process=image/resize,m_fill,h_108,w_108'></image>
-      <image wx:else src='/static/images/icon/767123217235158646.png'></image>
+      <image wx:else src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/tx2@3x.png'></image>
     </view>
-    <view class='user_name'>德玛西亚盖伦商铺</view>
+    <view class='user_name'>{{businData.shop_name}}</view>
     <view class="bm_bottom">
       <view class="location">
         <text>{{businData.address}}</text>
@@ -33,13 +33,13 @@
   </view>
   <view class='fdex'>
     <view class='like' data-id='{{businData.shop_id}}' data-type='3' data-behavior="{{businData.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
-      <image wx:if="{{!businData.user_attribute.collect}}" src='/static/images/icon/35924743315763989.png'></image>
-      <image wx:else src="/static/images/icon/660490541247726262.png"></image>
+      <image wx:if="{{!businData.user_attribute.collect}}" src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/101368314372049455.png'></image>
+      <image wx:else src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/180250902895359249.png"></image>
       <text>{{businData.attribute_num.collect}}</text>
     </view>
     <view class='shere'>
       <button>
-        <image src='/static/images/icon/55786aba6448d0145da85aff9b18810.png'></image>
+        <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/fx@3x.png'></image>
       </button>
     </view>
   </view>

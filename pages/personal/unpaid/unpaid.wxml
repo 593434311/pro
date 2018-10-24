@@ -2,7 +2,7 @@
 <!--pages/personal/index/index.wxml-->
 <view class="unpaid contentW">
   <view class="unpaid_lt">
-    <image src="/static/images/icon2/qianbao2@2x.png"></image>
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/zfcg@3x.png"></image>
     <text>待支付</text>
   </view>
   <view class="unpaid_rt">
@@ -18,7 +18,7 @@
 <view class="information contentW">
   <view class="title">
     <view class="xinxi">
-      <image src="/static/images/icon2/xinxi@2x.png"></image>
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/407388878126105425.png"></image>
       <text class="tit_text1">信息填写</text>
     </view>
   </view>
@@ -43,7 +43,7 @@
 <view class="quantity contentW">
   <view class="title">
     <view class="shuliang">
-      <image src="/static/images/icon2/qianbao@2x.png"></image>
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/892645531760546253.png"></image>
       <text class="tit_text1">购买数量</text>
     </view>
     <view class="tit_quantity">数量：<text>1</text></view>
@@ -60,7 +60,7 @@
 <view class="coupon contentW">
   <view class="title bottom_border" bindtap='gocuoer'>
     <view class="yhj">
-      <image src="/static/images/icon2/youhuiquan@2x.png"></image>
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/396354947202660573.png"></image>
       <text class="tit_text1">优惠券</text>
     </view>
     <view class="money_off">

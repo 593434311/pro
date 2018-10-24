@@ -1,7 +1,7 @@
 
 <view class="unpaid contentW">
   <view class="unpaid_lt">
-    <image src="/static/images/icon2/qianbao2@2x.png"></image>
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/zfcg@3x.png"></image>
     <text>未成团</text>
   </view>
   <view class="unpaid_rt">
@@ -17,7 +17,7 @@
 <view class="information contentW">
   <view class="title">
     <view class="xinxi">
-      <image src="/static/images/icon2/xinxi@2x.png"></image>
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/407388878126105425.png"></image>
       <text class="tit_text1">参团信息</text>
     </view>
   </view>

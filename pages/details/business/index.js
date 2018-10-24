@@ -25,7 +25,6 @@ Page({
     })
     app.RequiseData('shop.info.shopinfo', { shop_id: options.id}, res => {
       WxParse.wxParse('shopinfo', 'html', res.data.describe, this, 5)
-      console.log(res)
       this.setData({
         businData: res.data
       })

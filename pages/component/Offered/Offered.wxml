@@ -13,10 +13,10 @@
   <view class="head_portrait" bindtap='godetails'>
     <view class="head_img">
       <view class="touxiang leader">
-        <image src="{{Surplus.avatar || '/static/images/icon/767123217235158646.png'}}"></image>
+        <image src="{{Surplus.avatar || 'http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/tx2@3x.png'}}"></image>
       </view>
       <view class="touxiang" wx:for="{{data}}" wx:for-index="index" wx:key="index">
-        <image src="{{item.avatar || '/static/images/icon/916992777366978025.png'}}"></image>
+        <image src="{{item.avatar || 'http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/tx@3x.png'}}"></image>
       </view>
     </view>
     <view class="head_more" wx:if="{{!state && !isSurplus}}">

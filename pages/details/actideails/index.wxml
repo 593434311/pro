@@ -6,7 +6,7 @@
     <block wx:for="{{imgUrls}}" wx:key="index">
       <swiper-item>
         <view>
-          <image bindtap="imgYu" lazy-load="true" data-list="{{imgUrls}}" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{item}}?x-oss-process=image/resize,m_fill,h_173,w_350"></image>
+          <image bindtap="imgYu" lazy-load="true" data-list="{{imgUrls}}" data-src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{item}}' src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{item}}?x-oss-process=image/resize,m_fill,h_340,w_702"></image>
         </view>
       </swiper-item>
     </block>
@@ -21,9 +21,9 @@
           <s>单价买￥{{act_info.o_price}}</s>
           <s>￥{{act_info.p_price}}</s>
         </view>
-        <view class="want" data-id='{{act_info.id}}' data-type='1' data-behavior="{{act_info.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
-          <image wx:if="{{!act_info.user_attribute.collect}}" src="/static/images/icon/aixinhui@2x.png"></image>
-          <image wx:else src="/static/images/icon/aixin@2x.png"></image>
+        <view class="want" hover-class='hove-want' data-id='{{act_info.id}}' data-type='1' data-behavior="{{act_info.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
+          <image wx:if="{{!act_info.user_attribute.collect}}" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh@3x.png"></image>
+          <image wx:else src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh2@3x.png"></image>
           <text>{{act_info.attribute_num.collect}}人想去</text>
         </view>
       </view>

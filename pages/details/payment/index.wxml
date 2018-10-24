@@ -1,7 +1,7 @@
 <!--pages/details/payment/index.wxml-->
 <view class='payment'>
   <view class='pay_header'>
-    <image src='/static/images/icon/qb@2x.png'></image>
+    <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/zfcg@3x.png'></image>
     <text>恭喜您已支付成功</text>
   </view>
   <view class='pay_counter'>

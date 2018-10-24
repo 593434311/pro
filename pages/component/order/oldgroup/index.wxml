@@ -3,7 +3,7 @@
 <view class='order_box' style="{{isshow ?'margin-bottom:0':''}}">
   <view class='header'>
     <view class='head_left' data-ids='{{data.shop_id}}' bindtap='gobusiness'>
-      <image src='/static/images/icon/shangjia@2x.png'></image>
+      <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/shangjia@3x.png'></image>
       <view>{{data.shop_info.shop_name}}</view>
       <view class='jiantou'></view>
     </view>
@@ -20,7 +20,7 @@
     </view>
   </view>
   <view class='allmony'>实付：￥{{data.pay_price}}</view>
-  <view wx:if="{{!isshow}}" class='orde_button'>
+  <view class='orde_button'>
     <view>
       <button open-type='contact'>联系客服</button>
     </view>

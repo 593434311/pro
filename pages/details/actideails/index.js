@@ -12,7 +12,11 @@ Page({
     user_info: {},
   },
   onLoad: function (options) {
+    wx.showLoading({
+      title: '加载中...',
+    })
     app.RequiseData('activity.index.actinfo', { id: options.id }, res => {
+      wx.hideLoading()
       if(res.status === 0){
         WxParse.wxParse('article', 'html', res.data.act_info.info, this, 5)
 　        this.setData({
@@ -25,11 +29,6 @@ Page({
     })
     
   },
- 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  
   gogrolpdet(self){
     wx.navigateTo({
       url: `/pages/details/othergro/index?data=${JSON.stringify(self.currentTarget.dataset.data)}`,

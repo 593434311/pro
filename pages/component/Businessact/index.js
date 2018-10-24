@@ -71,7 +71,7 @@ Component({
         })
       }      
       nowTime();
-      timer = setInterval(nowTime, 15000);
+      // timer = setInterval(nowTime, 15000);
     }
   }
 })

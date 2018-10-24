@@ -1,7 +1,7 @@
 
 <view class="unpaid contentW">
   <view class="unpaid_lt">
-    <image src="/static/images/icon2/qianbao2@2x.png"></image>
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/zfcg@3x.png"></image>
     <text>已成团</text>
   </view>
   <view class="unpaid_rt">
@@ -17,7 +17,7 @@
 <view class="information contentW">
   <view class="title">
     <view class="xinxi">
-      <image src="/static/images/icon2/xinxi@2x.png"></image>
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/407388878126105425.png"></image>
       <text class="tit_text1">信息填写</text>
     </view>
   </view>
@@ -32,7 +32,27 @@
     </view>
   </form>
 </view>
-<oldgroup item="{{order_info}}" isshow="1"></oldgroup>
+<view class='order_box'>
+  <view class='header'>
+    <view class='head_left' data-ids='{{shop_info.shop_id}}' bindtap='gobusiness'>
+      <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/shangjia@3x.png'></image>
+      <view>{{shop_info.shop_name}}</view>
+      <view class='jiantou'></view>
+    </view>
+    <view class='head_right'>已成团</view>
+  </view>
+  <view class='counter' data-oldid='{{order_info.order_id}}'>
+    <view class='cout_left'>
+      <image wx:if="{{order_info.cover_img}}" src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{order_info.cover_img}}?x-oss-process=image/resize,m_fill,h_70,w_70'></image>
+      <view class='left_text'>{{order_info.act_info.title}}</view>
+    </view>
+    <view class='cout_right'>
+      <view class='money'>￥{{order_info.o_price}}</view>
+      <view class='num'>x1</view>
+    </view>
+  </view>
+  <view class='allmony'>实付：￥{{order_info.pay_price}}</view>
+</view>
 <view class='text_orde'>
   <view>订单编号：{{order_info.order_id}}<text class='fuzi'>复制</text></view>
   <view>支付方式：微信</view>

@@ -10,15 +10,22 @@ Page({
     act_info: [],
     act_list: [],
     user_info: [],
-    getPhNumber: false
+    getPhNumber: false,
+    inviter_id: '' // 邀请人 
     // getPhNumber: 'getPhoneNumber'
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    this.setData({
+      inviter_id: options.userid
+    })
+    wx.showLoading({
+      title: '加载中...',
+    })
     app.RequiseData('activity.actor.actinfo', { id: options.id }, res => {
+      wx.hideLoading()
       if(res.status === 0){
         WxParse.wxParse('article', 'html', res.data.act_info.info, this, 5)
         this.setData({
@@ -50,7 +57,7 @@ Page({
   },
   orderdown(ty){
     app.RequiseData('activity.index.openact', 
-      { act_id: this.data.act_info.act_id, target_user_id: ty.type ? this.data.act_info.user_id:'', inviter_id: '' }, res => {
+      { act_id: this.data.act_info.act_id, target_user_id: ty.type ? this.data.act_info.user_id : '', inviter_id: this.data.inviter_id }, res => {
       wx.hideToast();
       if(res.status === 0){
         wx.navigateTo({

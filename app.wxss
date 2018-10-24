@@ -7,6 +7,7 @@
 button::after{
   border:none;
 }
+
 page {
   display: block;
   font-size: 28rpx;
@@ -104,6 +105,13 @@ table, th, td {
 .order_box{
   background-color: #fff;
   padding: 0 24rpx;
+}
+ .want{
+   transition:all 0.3s;
+
+ }
+.hove-want{
+  transform: scale(.9)
 }
 
 /* hover-class */

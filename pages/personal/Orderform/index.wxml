@@ -30,7 +30,7 @@
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 1}}">
           <block wx:for="{{befodata}}" wx:key="index">
-            <beforder item="{{item}}"></beforder>
+            <beforder item="{{item}}" bind:confirmEvent="_confirmEvent"></beforder>
           </block> 
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 2}}">

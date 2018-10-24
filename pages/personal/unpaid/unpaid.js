@@ -26,7 +26,6 @@ Page({
    */
   onLoad: function (options) {
     app.RequiseData('order.index.orderinfo', { orderid: options.older}, res =>{
-      console.log(res)
       if(res.status === 0){
         this.setData({
           orderid: options.older,

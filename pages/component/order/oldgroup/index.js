@@ -12,10 +12,6 @@ Component({
           data: newVal
         })
       }
-    },
-    isshow:{
-      type: Number,
-      value: null
     }
   },
   data: {

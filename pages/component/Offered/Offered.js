@@ -8,7 +8,8 @@ Component({
       type: Array,
       value: [],
       observer: function (newVal, oldVal, changedPath) {
-        var len = Number(this.data.Surplus.remainder)
+        var allnum = Number(this.data.Surplus.sub_num)
+        var len = allnum < 5 ? allnum - 1:5
         for (var i = 0; i < len; i++){
           if (!newVal[i]){
             newVal[i] = {}

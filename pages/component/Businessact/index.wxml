@@ -1,7 +1,7 @@
 <!--pages/component/Businessact/index.wxml-->
 <view class="active_list" data-id='{{data.id}}'  bindtap="goDetails">
   <view class="active_top">
-    <image lazy-load="true" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.cover_img}}?x-oss-process=image/resize,m_fill,h_173,w_350"></image>
+    <image lazy-load="true" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.cover_img}}?x-oss-process=image/resize,m_fill,h_340,w_702"></image>
   </view>
   <view>
   </view>
@@ -16,7 +16,7 @@
       </view>
       <view class="bm_t_m">
         <view class="count_dn">
-          <image src="/static/images/icon/biao@2x.png"></image>
+          <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/djs@3x.png"></image>
           <text>{{data.str}}</text>
         </view>
         <view class="price">
@@ -25,10 +25,10 @@
         </view>
       </view>
     </view>
-    <view class="bm_b want">
-      <view style='height:45rpx' data-id='{{data.id}}' data-type='1' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
-        <image wx:if="{{!data.user_attribute.collect}}" src="/static/images/icon/aixinhui@2x.png"></image>
-        <image wx:else src="/static/images/icon/aixin@2x.png"></image>
+    <view class="bm_b wantas">
+      <view style='height:45rpx' hover-class='hove-want' data-id='{{data.id}}' data-type='1' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
+        <image wx:if="{{!data.user_attribute.collect}}" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh@3x.png"></image>
+        <image wx:else src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh2@3x.png"></image>
         <text>{{data.attribute_num.collect}}人想去</text>
       </view>
     </view>
