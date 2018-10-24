@@ -53,111 +53,14 @@
   width:373rpx;
   height: 48rpx;
 }
-.content_tuan .tuan .tuan_list{
-  min-height: 345rpx;
-  padding:0 24rpx;
-  display: flex;
-  justify-content:space-between;
-  margin-top:6rpx;
-  background-color:#fff;
-}
-.content_tuan .tuan .tuan_list:first-child{
-  margin-top: 0;
-}
-.tuan_list .tuan_lt{
-  width:245rpx;
-  height:245rpx;
-}
-.tuan_list .tuan_img image{
-  width:245rpx;
-  height:245rpx;
-  border-radius:10rpx;
-}
-.tuan_list .tuan_rt{
-  width:412rpx;
-}
-.tuan_rt .rt_tit{
-  font-size:26rpx;
-  color:#a7a7a7;
-  margin-bottom:19rpx;
-}
-.tuan_rt .rt_tit text{
-  color:#ff484a;
-  margin-right:10rpx; 
-}
+
 .tuansw{
   max-height: 790rpx;
   min-height: 650rpx;
 }
- .price{
-  display:flex;
-  align-items:baseline;
-  margin-bottom: 25rpx;
-}
-.price s:nth-of-type(1){
-  color:#b8b8b8;
-  font-size:20rpx;
-  margin-right:20rpx;
-}
- .price s:nth-of-type(2){
-  color:#ff3638;
-  font-size:36rpx;
-}
-
 .tuan_rt .count_dn{
   display:flex;
   justify-content: flex-start;
-}
-.tuan_rt .count_dn text{
-  color:#939393;
-  font-size:24rpx;
-  line-height:44rpx;
-  margin-right:19rpx;
-
-}
-.count_dn .time{
-  font-size:20rpx;
-  color:#ff5246;
-  text-align: center;
-}
-.count_dn .time i{
-  display:inline-block;
-  width:44rpx;
-  height:44rpx;
-  line-height:44rpx;
-  background:linear-gradient(#fbfbfb 50%, #ffffff 50%);
-  border-radius:6rpx;
-  margin:0 5rpx;
-  box-shadow:1rpx 1rpx 29rpx rgba(213,212,210,0.49);
-}
-.count_dn .time i:nth-of-type(1){
-  box-shadow:2rpx 2rpx 6rpx rgba(213,212,210,0.4);
-  margin-left:0;
-}
-
-.tuan_rt .collect{
-  color:#d5d5d5;
-  font-size:18rpx;
-  display: flex;
-  align-items:baseline;
-  justify-content:space-between;
-
-}
-
-.want{
-  height: 50rpx;
-  display: flex;
-  align-items:center;
-}
- .want image{
-  width:17rpx;
-  height:15rpx;
-  margin-right:6rpx;
-}
-.collect .purchase{
-  width:99rpx;
-  height:57rpx;
-  
 }
 .active .more{
    padding:12px 326rpx 84rpx 326rpx; 
@@ -168,7 +71,7 @@
   height:57rpx;
 }
 .load{
-  padding:36rpx 326rpx 72rpx 326rpx;
+  padding:34rpx 326rpx;
   background:#f9f9fa;
   
 }
@@ -186,7 +89,6 @@
 .load .tryss { 
   background:#fe7f3e;
   
-  
 }
 
 /* 热门活动 */
@@ -195,17 +97,27 @@
   height:92rpx;
 }
 
-
 .content_active .active_title{
-  
    background:#f9f9fa;
+   height:124rpx;
    position:relative;
 }
-.content_active .active_title image{
+.content_active .active_title .img1{
   width:373rpx;
   height:52rpx;
-   padding:0 186rpx 80rpx 188rpx; 
+  position:absolute;
+  left:188rpx;
+  top:38rpx;
 }
+.content_active .active_title .img2{
+  width:42rpx;
+  height:42rpx;
+  position:absolute;
+  right:24rpx;
+  top:40rpx;
+   /* padding:0 186rpx 80rpx 188rpx;  */
+}
+
 .content_active .active{
   background-color:#f9f9fa;
 }

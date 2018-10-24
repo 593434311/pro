@@ -41,8 +41,10 @@
   </view>
   <view class="content_active">
     <view class="active_title">
-      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bt2@3x.png"></image>
-      <navigator url="/pages/details/allactive/index" hover-class="navigator-hover"><text>更多></text></navigator>
+      <image class="img1" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bt2@3x.png"></image>
+      <navigator url="/pages/details/allactive/index" hover-class="navigator-hover">
+        <image class="img2" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/gd@3x.png"></image>
+      </navigator>
     </view>
     <view class="active">
       <active wx:for="{{RegimentData}}" wx:for-item="item" wx:key="{{index}}" listdata="{{item}}"></active>
