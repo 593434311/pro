@@ -19,7 +19,7 @@
 .unpaid{
   padding:24rpx 66rpx 38rpx;
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-start;
   align-items:center;
    background:linear-gradient(to right,orangered,orange);
 }
@@ -29,7 +29,7 @@
 .unpaid .unpaid_lt image{
   width:134rpx;
   height:106rpx;
-  padding-bottom:34rpx;
+  padding-bottom:15rpx;
 }
 .unpaid .unpaid_lt text{
   display: block;
@@ -37,19 +37,26 @@
   font-size:24rpx;
 }
 .unpaid .unpaid_rt{
-  position:relative;
-  padding-left:50rpx;
-  width: 400rpx;
+  padding-left:40rpx;
+  display: flex;
+  align-items:center;
 }
-.unpaid  .unpaid_rt::before{
+.line{
+  width:1rpx;
+  height:100rpx;
+  background-color:#feb08f;
+  margin-right:50rpx;
+
+}
+/* .line::before{
   content:"";
   width:1rpx;
   height:100rpx;
   background-color:#feb08f;
   position:absolute;
-  top:0;
-  left:0;
-}
+  top:-20rpx;
+  left:10rpx;
+} */
 .unpaid  .unpaid_rt text{
   color:#fff;
   font-size:28rpx;

@@ -6,6 +6,7 @@
     <text>待支付</text>
   </view>
   <view class="unpaid_rt">
+    <view class="line"></view>
     <text>{{actUser.title}}</text>
   </view>
 </view>
