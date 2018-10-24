@@ -2,7 +2,7 @@
 <view class='order_box' style="{{isshow ?'margin-bottom:0':''}}">
   <view class='header'>
     <view class='head_left' data-ids='{{data.shop_id}}' bindtap='gobusiness'>
-      <image src='/static/images/icon/shangjia@2x.png'></image>
+      <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/shangjia@3x.png'></image>
       <view>{{data.shop_info.shop_name}}</view>
       <view class='jiantou'></view>
     </view>

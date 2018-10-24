@@ -9,7 +9,6 @@
     <view class="rt_tit">
       <text>【{{data.sub_num}}人团】</text>
       <text>{{data.title}}</text>
-      
     </view>
     <view class="rt_btm">
       <view class="price">
@@ -25,15 +24,12 @@
         </view>
       </view>
       <view class="collect flex">
-        <view class="want" data-id='{{data.id}}' data-type='2' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
+        <view class="want" hover-class='hove-want' data-id='{{data.id}}' data-type='2' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
           <image wx:if="{{!data.user_attribute.collect}}" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh@3x.png"></image>
           <image wx:else src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh2@3x.png"></image>
           <text>{{data.attribute_num.collect}}人想玩</text>
         </view>
-        <view class="purchase">
-          <image src="/static/images/icon/lijiqianggou@2x.png"></image>
-        </view>
-        
+        <image class="purchase" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/qg@3x.png"></image>
       </view>
     </view>
   </view>

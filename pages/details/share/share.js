@@ -8,7 +8,8 @@ Page({
   data: {
     isnewuser: false,
     isCoupon: false,
-    inviter: ''
+    inviter: '',
+    act: ''
   },
 
   /**
@@ -17,7 +18,8 @@ Page({
   onLoad: function (options) {
     var self = this;
     this.setData({
-      inviter: options.id
+      act: options.id,
+      inviter: options.userid
     })
     var cuea = setInterval(() => {
       if (wx.getStorageSync('cuea')) {
@@ -32,9 +34,9 @@ Page({
     }, 2000)
   },
   Receive(){
-    if (this.data.isnewuser ){
+    if (!this.data.isnewuser ){
       wx.navigateTo({
-        url: `/pages/details/index/index?id=${this.data.inviter}`,
+        url: `/pages/details/index/index?id=${this.data.act}&userid=${this.data.inviter}`,
       })
     }else{
       this.setData({

@@ -25,8 +25,8 @@
         </view>
       </view>
     </view>
-    <view class="bm_b want">
-      <view style='height:45rpx' data-id='{{data.id}}' data-type='1' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
+    <view class="bm_b wantas">
+      <view style='height:45rpx' hover-class='hove-want' data-id='{{data.id}}' data-type='1' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
         <image wx:if="{{!data.user_attribute.collect}}" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh@3x.png"></image>
         <image wx:else src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh2@3x.png"></image>
         <text>{{data.attribute_num.collect}}人想去</text>

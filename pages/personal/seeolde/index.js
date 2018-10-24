@@ -8,27 +8,31 @@ Page({
   data: {
     actUser: {},
     order_info: {},
-    user_list: []
+    user_list: [],
+    shop_info: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
     app.RequiseData('order.index.orderinfo', { orderid: options.order }, res => {
       if (res.status === 0) {
         this.setData({
           actUser: res.data.act_user,
           order_info: res.data.order_info,
-          user_list: res.data.user_list
+          user_list: res.data.user_list,
+          shop_info: res.data.shop_info
         })
       }
     })
+    
   },
-  /**
-   * 用户点击右上角分享
-   */
+  gobusiness(self) {
+    wx.navigateTo({
+      url: `/pages/details/business/index?id=${self.currentTarget.dataset.ids}`
+    })
+  },
   onShareAppMessage: function () {
 
   }

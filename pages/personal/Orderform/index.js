@@ -116,12 +116,44 @@ Page({
       })
     }
   },
+  _confirmEvent(){
+    this.getdata()
+  },
+  getdata(){
+    wx.showLoading({
+      title: '数据加载中...',
+      mask: true,
+    })
+    this.setData({
+      befodata: [],
+      befopage: 1,
+      isdata: false
+    })
+    app.RequiseData('order.index.orderlist', { p: this.data.befopage, pagesize: 6, state: this.data.activeIndex  }, res => {
+      wx.hideLoading()
+      if (res.status === 0) {
+        this.setData({
+          befodata: res.data.data
+        })
+        if (res.data.data.length == 0) {
+          this.setData({
+            isdata: true
+          })
+        }
+        if (res.data.data.length < 6) {
+          this.setData({
+            isself: false
+          })
+        }
+      }
+    })
+  },
   onShareAppMessage(res) {
     if (res.from === 'button') {
       // 来自页面内转发按钮
       return {
         title: res.target.dataset.title,
-        path: `/pages/details/share/share?id${res.target.dataset.userid}`,
+        path: `/pages/details/share/share?id${res.target.dataset.actid}&userid=${res.target.dataset.userid}`,
         imageUrl: `http://gtshidai.oss-cn-shanghai.aliyuncs.com${res.target.dataset.image}`
       }
     }

@@ -106,5 +106,12 @@ table, th, td {
   background-color: #fff;
   padding: 0 24rpx;
 }
+ .want{
+   transition:all 0.3s;
+
+ }
+.hove-want{
+  transform: scale(.9)
+}
 
 /* hover-class */

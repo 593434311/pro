@@ -74,8 +74,6 @@
   font-size:20rpx;
   color:#b8b8b8;
 }
-
-
  .price{
   display:flex;
   align-items:baseline;
@@ -90,14 +88,15 @@
   color:#ff3638;
   font-size:36rpx;
 }
- .want{
+ .wantas{
   display: flex;
   align-items:center;
 }
- .want image{
+ .wantas image{
   width:30rpx;
   height:26rpx;
-  margin-right:6rpx;
+  margin-right: 12rpx;
+  margin-bottom: 2rpx;
 }
 .active_bm .bm_b{
   padding:22rpx 0 28rpx 0;
@@ -109,4 +108,8 @@
 .bm_b > view{
   display: flex;
   align-items: center;
+  transition:  all 0.3s;
+}
+.hove-want{
+  transform: scale(.9)
 }

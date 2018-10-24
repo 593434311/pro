@@ -22,7 +22,7 @@
   <!--即将成团-->
   <view class="content_tuan" wx:if="{{activeData.length!=0}}">
     <view class="tuan_title">
-      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bt1@3x.png"></image>
+      <image mode='widthFix' src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bt1@3x.png"></image>
     </view>
     <view class="tuan">
       <swiper class='tuansw' current='{{currentTab}}' indicator-dots="{{false}}"  autoplay="{{false}}" circular="{{false}}" duration="200">
@@ -41,11 +41,11 @@
   </view>
   <view class="content_active">
     <view class="active_title">
-      <image src="/static/images/icon/remenhuodong@2x.png"></image>
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bt2@3x.png"></image>
       <navigator url="/pages/details/allactive/index" hover-class="navigator-hover"><text>更多></text></navigator>
     </view>
     <view class="active">
-      <active wx:for="{{RegimentData}}" wx:for-index="index" wx:for-item="item" wx:key="index" listdata="{{item}}"></active>
+      <active wx:for="{{RegimentData}}" wx:for-item="item" wx:key="{{index}}" listdata="{{item}}"></active>
       <view wx:if="{{isweedata}}" class="moretext">---我们也是有底线的---</view>
     </view>
     <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="700rpx" class="coupon" catchtouchmove="false">

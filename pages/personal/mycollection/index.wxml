@@ -7,7 +7,7 @@
                 <view class="weui-navbar__title">{{item}}</view>
             </view>
         </block>
-        <view class="weui-navbar__slider" style="left: {{sliderLeft*2}}rpx; transform: translateX({{sliderOffset*2}}rpx); -webkit-transform: translateX({{sliderOffset*2}}rpx);"></view>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
     </view>
     <view class="weui-tab__panel">
       <scroll-view class="list" style='height:{{windowheight*2-96}}rpx;' scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore">

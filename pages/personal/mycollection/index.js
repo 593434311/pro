@@ -40,7 +40,6 @@ Page({
       befopage: 1
     })
     this.pulldata()
-   
   },
   loadMore() {
     if (this.data.isself) {

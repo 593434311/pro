@@ -17,7 +17,7 @@
 </view>
 
 <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="700rpx" class="coupon" catchtouchmove="false">
-  <image src='/static/images/icon/67782958429263482.png' mode="widthFix" style='border-radius: 5px'></image>
+  <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bj2@3x.png' mode="widthFix" style='border-radius: 5px'></image>
   <view class='text'>这位新朋友你好，送你一张券试试看呗，不是骗子</view>
   <view class='coupon_reduce'>
     <view class='reduce_left'>

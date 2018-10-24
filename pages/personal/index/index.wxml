@@ -1,11 +1,11 @@
 <view class="header">
   <view wx:if="{{getuser}}" class="user">
     <image wx:if="{{getuser.avatar}}" src="{{getuser.avatar}}"></image>
-    <image wx:else src='/static/images/icon/767123217235158646.png'></image>
+    <image wx:else src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/tx2@3x.png'></image>
     <text>{{getuser.nickname}}</text>
   </view>
   <view wx:else class="user">
-    <image src='/static/images/icon/767123217235158646.png'></image>
+    <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/tx2@3x.png'></image>
   </view>
   <view class="or_code">
     <image src="/static/images/personal/erweima@2x.png"></image>

@@ -148,8 +148,12 @@ Page({
   },
   onPullDownRefresh(){
     wx.showNavigationBarLoading();
-    this.data.RegimentPage = 1
-    this.data.RegimentData = []
+    this.setData({
+      activeData: [],
+      slider: [],
+      RegimentPage: 1,
+      RegimentData: []
+    })
     this.gettuan()
     this.getbutton()
     this.getActive()
@@ -157,6 +161,17 @@ Page({
       wx.hideNavigationBarLoading();
       wx.stopPullDownRefresh()
     },1500)
+  },
+  onShow(){
+    this.setData({
+      activeData: [],
+      slider: [],
+      RegimentPage: 1,
+      RegimentData: []
+    })
+    this.gettuan()
+    this.getbutton()
+    this.getActive()
   },
   swiperChange: function (e) {
     this.setData({

@@ -54,6 +54,9 @@
   color:#ff3638;
   font-size:36rpx;
 }
+.hove-want{
+  transform: scale(.9)
+}
 .tuan_rt .count_dn{
   display:flex;
   justify-content: flex-start;
@@ -90,6 +93,7 @@
   color:#d5d5d5;
   font-size:18rpx;
   display: flex;
+  justify-content: space-between;
   align-items:flex-end;
 }
 
@@ -97,18 +101,20 @@
   height: 50rpx;
   display: flex;
   align-items:flex-end;
+  transition: all 0.3s;
 }
 .want image{
   width:30rpx;
   height:26rpx;
-  margin-right:6rpx;
+  margin-right:12rpx;
+  margin-bottom: 2rpx;
 }
 .want text{
   font-size: 20rpx;
 }
 .collect .purchase{
-  width:99rpx;
-  height:57rpx;
+  width: 88rpx;
+  height: 45rpx;
   
 }
 .collect .purchase image{

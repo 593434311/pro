@@ -2,12 +2,12 @@
 <view class='member leader'>
   <block wx:if='{{data.length > 0}}' wx:key='un'>
     <view wx:for="{{data}}" wx:key="index">
-      <image src="{{item.avatar || '/static/images/icon/767123217235158646.png'}}"></image>
+      <image src="{{item.avatar || 'http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/tx2@3x.png'}}"></image>
     </view>
   </block>
   <block wx:if='{{data.length < Surplus.sub_num}}'>
     <view wx:for='{{Surplus.remainder -0-0}}' wx:key="index">
-      <image src='/static/images/icon/916992777366978025.png'></image>
+      <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/tx@3x.png'></image>
     </view>
   </block>
 </view>
