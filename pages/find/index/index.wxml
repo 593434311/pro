@@ -12,7 +12,7 @@
   <view class='tuan_title'>
     <image mode='widthFix' src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/809453397608806410.png"></image>
   </view>
-  <view class='more' hover-class="navigator-hover" bindtap='goSelectedmer'>更多></view>
+  
   <view>
     <seledmerc wx:for="{{Sedbusin}}" wx:key="{{index}}" data="{{item}}"></seledmerc>
   </view>

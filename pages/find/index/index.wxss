@@ -29,3 +29,10 @@
   padding-right: 24rpx;
   line-height: 50rpx;
 }
+.title_wrap{
+
+}
+.title_wrap .more image{
+  width:42rpx;
+  height:42rpx;
+}

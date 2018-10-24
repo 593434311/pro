@@ -1,7 +1,7 @@
 .active_list{
    padding:24rpx 24rpx 0 24rpx;
   background-color:#fff;
-  margin-bottom: 6rpx;
+  margin-bottom: 12rpx;
 }
 .active_list .active_top{
   margin-bottom:18rpx;
