@@ -141,6 +141,9 @@ Page({
       })
     }
   },
+  catchTouchMove: function (res) {
+    console.log(res)
+  },
   onReachBottom(){
     if (this.data.isweedata) {
       this.getActive()

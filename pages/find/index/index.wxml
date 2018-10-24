@@ -10,7 +10,7 @@
     <image mode="widthFix" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/644792515037509847.png" bindtap='goSelectedac'></image>
   </view>
   <view class='tuan_title'>
-    <image mode='widthFix' src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/804836471921596354.png"></image>
+    <image mode='widthFix' src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/809453397608806410.png"></image>
   </view>
   <view class='more' hover-class="navigator-hover" bindtap='goSelectedmer'>更多></view>
   <view>

@@ -21,9 +21,6 @@
   <view class='allmony'>实付：￥{{data.pay_price}}</view>
   <view wx:if="{{!isshow}}" class='orde_button'>
     <view>
-      <button type='primary' bindtap='dedlorder'>删除订单</button>
-    </view>
-    <view>
       <button open-type='contact'>联系客服</button>
     </view>
     <view class='border_rea' bindtap='goseorder'>

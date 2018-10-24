@@ -16,7 +16,7 @@
       </view>
       <view class="bm_t_m">
         <view class="count_dn">
-          <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/djs@3x.png"></image>
+          <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/422749702911807138.png"></image>
           <text>{{data.str}}</text>
         </view>
         <view class="price">

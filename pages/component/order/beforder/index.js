@@ -36,7 +36,7 @@ Component({
       var dataid = this.data.data.id
       wx.showModal({
         title: '提示',
-        content: '确定要删除该订单吗？',
+        content: '确定要取消该订单吗？',
         success:  res => {
           if (res.confirm) {
             app.RequiseData('order.index.delorder', { id: dataid }, res => {

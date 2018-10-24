@@ -33,7 +33,27 @@
 
   </form>
 </view>
-<befgroup item="{{order_info}}" isshow="1"></befgroup>
+<view class='order_box'>
+  <view class='header'>
+    <view class='head_left' data-ids='{{shop_info.shop_id}}' bindtap='gobusiness'>
+      <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/shangjia@3x.png'></image>
+      <view>{{shop_info.shop_name}}</view>
+      <view class='jiantou'></view>
+    </view>
+    <view class='head_right'>未成团</view>
+  </view>
+  <view class='counter' data-oldid='{{order_info.order_id}}'>
+    <view class='cout_left'>
+      <image wx:if="{{order_info.cover_img}}" src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{order_info.cover_img}}?x-oss-process=image/resize,m_fill,h_70,w_70'></image>
+      <view class='left_text'>{{order_info.act_info.title}}</view>
+    </view>
+    <view class='cout_right'>
+      <view class='money'>￥{{order_info.o_price}}</view>
+      <view class='num'>x1</view>
+    </view>
+  </view>
+  <view class='allmony'>实付：￥{{order_info.pay_price}}</view>
+</view>
 <view class='text_orde'>
   <view>订单编号：{{order_info.order_id}}<text class='fuzi'>复制</text></view>
   <view>支付方式：微信</view>
@@ -41,7 +61,6 @@
 </view>
 <view class="bottom">
   <view class="bottom_cont">
-    <view><button class="bottom_text">联系客服</button></view>
-    <view><button class="bottom_pay">删除订单</button></view>
+    <view><button class="bottom_text" open-type='contact'>联系客服</button></view>
   </view>
 </view>

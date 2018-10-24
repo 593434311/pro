@@ -3,7 +3,7 @@
 <!--轮播-->
   <view class="header">
     <view  class="swiper-container">
-      <swiper autoplay="auto" interval="2500" duration="300" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+      <swiper autoplay="auto" vertical='{{true}}'  interval="2500" duration="300" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
           <block wx:for="{{slider}}" wx:key="unique">
             <swiper-item class="swiper-item">
               <view bindtap="bannerDetail" data-id="{{item.id}}">
@@ -27,7 +27,7 @@
     <view class="tuan">
       <swiper class='tuansw' current='{{currentTab}}' indicator-dots="{{false}}"  autoplay="{{false}}" circular="{{false}}" duration="200">
         <block wx:for="{{activeData}}" wx:for-index="index" wx:key="{{index}}">
-          <swiper-item>
+          <swiper-item catchtouchmove='catchTouchMove'>
             <berfitem wx:for="{{item}}" wx:for-item="items" wx:key="{{index}}" item="{{items}}"></berfitem> 
           </swiper-item>
         </block>

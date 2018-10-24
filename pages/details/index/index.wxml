@@ -35,7 +35,7 @@
         <text>{{act_info.address? act_info.address:'未知地址'}}</text>
       </view>
       <view class="time">
-        <image src="/static/images/details_index/riqi@2x.png"></image>
+        <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/445820036349453787.png"></image>
         <text>  {{act_info.startdate}} ~ {{act_info.enddate}}</text>
       </view>
     </view>
