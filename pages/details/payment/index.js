@@ -60,10 +60,10 @@ Page({
     nowTime();
     timer = setInterval(nowTime, 15000);
   },
-  onShareAppMessage: function () {
+  onShareAppMessage: function (res) {
     return {
       title: 'test',
-      path: `/pages/details/share/share?id${this.data.shere.user_id}`,
+      path: `/pages/details/share/share?id${res.target.dataset.actid}&userid=${res.target.dataset.userid}`,
       imageUrl: 'http://gtshidai.oss-cn-shanghai.aliyuncs.com' +this.data.shere.cover_img
     }
   }

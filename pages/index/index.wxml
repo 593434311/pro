@@ -25,7 +25,7 @@
       <image mode='widthFix' src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bt1@3x.png"></image>
     </view>
     <view class="tuan">
-      <swiper class='tuansw' current='{{currentTab}}' indicator-dots="{{false}}"  autoplay="{{false}}" circular="{{false}}" duration="200">
+      <swiper class='tuansw'  current='{{currentTab}}' indicator-dots="{{false}}"  autoplay="{{false}}" circular="{{false}}" duration="200">
         <block wx:for="{{activeData}}" wx:for-index="index" wx:key="{{index}}">
           <swiper-item>
             <berfitem wx:for="{{item}}" wx:for-item="items" wx:key="{{index}}" item="{{items}}"></berfitem> 
@@ -35,9 +35,9 @@
     </view>
   </view>
   <!-- 热门活动 -->
-  <view class="load" >
-      <!-- <image bindtap='Another' src="/static/images/icon/huanyipi@2x.png" ></image> -->
-      <view class="huan" bindtap='Another'hover-class="tryss" wx:if="{{activeData.length!=0}}" >换一批</view>
+  <view class="load" wx:if="{{activeData.length!=0}}">
+      <image class="huan" bindtap='Another' src="/static/images/details_index/huanyipi@2x.png" ></image>
+      <!-- <view class="huan" bindtap='Another'hover-class="tryss" wx:if="{{activeData.length!=0}}" >换一批</view> -->
   </view>
   <view class="content_active">
     <view class="active_title">

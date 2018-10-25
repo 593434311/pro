@@ -20,7 +20,7 @@
           <text>{{data.str}}</text>
         </view>
         <view class="price">
-          <s>单价买￥{{data.o_price}}</s>
+          <s>原价￥{{data.o_price}}</s>
           <s>￥{{data.p_price}}</s>
         </view>
       </view>

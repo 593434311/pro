@@ -12,8 +12,8 @@
     </view>
     <view class="rt_btm">
       <view class="price">
-        <s>单价买￥{{data.o_price}}</s>
         <s>￥{{data.p_price}}</s>
+        <s>单价买￥{{data.o_price}}</s>
       </view>
       <view class="count_dn flex">
         <text>剩余时间</text>

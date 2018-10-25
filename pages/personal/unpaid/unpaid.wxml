@@ -2,12 +2,12 @@
 <!--pages/personal/index/index.wxml-->
 <view class="unpaid contentW">
   <view class="unpaid_lt">
-    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/zfcg@3x.png"></image>
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/unpaid@3x.png"></image>
     <text>待支付</text>
   </view>
   <view class="unpaid_rt">
     <view class="line"></view>
-    <text>{{actUser.title}}</text>
+    <view class="dai">请您尽快完成付款，如15分钟内未完成支付，将无法完成参团</view>
   </view>
 </view>
 <!-- 参与详情 -->

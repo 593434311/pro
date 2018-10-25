@@ -1,14 +1,12 @@
 /**index.wxss**/
 .header{
   width:100%;
-  height:350rpx;
-  background:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bj1@3x.png);
+  /* background:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bj1@3x.png); */
   background-size:100% 350rpx;
- 
 }
-
 .swiper-container .swiper{
-   width:618rpx;
+   width:690rpx;
+   height: 358rpx;
    padding:24rpx 0;
    margin:0 auto;
 }
@@ -17,10 +15,10 @@
   overflow: hidden;
 }
 .swiper-container .swiper image{
- width:618rpx;
-  height:328rpx;
+ width:690rpx;
+  height:358rpx;
 }
-.swiper-container .dots{
+/* .swiper-container .dots{
   display: flex;
   justify-content: center;
 }
@@ -36,7 +34,7 @@
   width: 14rpx;
   height:14rpx;
   background: #ff3638;
-}
+} */
 
 /* 拼团 */
 
@@ -44,7 +42,7 @@
   background-color:#f9f9fa;
 }
 .content_tuan .tuan_title{
-  padding:69rpx 0 36rpx 0;
+  padding:0  0 24rpx 0;
   margin: 0 auto;
   text-align: center;
   background:#f9f9fa;
@@ -53,6 +51,7 @@
   width:373rpx;
   height: 48rpx;
 }
+
 
 .tuansw{
   max-height: 790rpx;
@@ -65,17 +64,34 @@
 .active .more{
    padding:12px 326rpx 84rpx 326rpx; 
 }
-
+/* .tuan{
+  position: relative;
+}
+.tuan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 1;
+} */
 .active .more image{
   width:99rpx;
   height:57rpx;
 }
 .load{
-  padding:34rpx 326rpx;
+  padding:20rpx 310rpx 10rpx;
   background:#f9f9fa;
   
 }
 .load .huan{ 
+  width:130rpx;
+  height:50rpx;
+ 
+}
+/* .load .huan{ 
   font-size:22rpx;
   color:#fff;
   width:98rpx;
@@ -85,11 +101,11 @@
   background:linear-gradient(to right,#fd933d, #fe6e41);
   border-radius:25rpx;
   box-shadow: rgba(254,110,65,0.3) 0 5rpx 3rpx; 
-}
-.load .tryss { 
+} */
+/* .load .tryss { 
   background:#fe7f3e;
   
-}
+} */
 
 /* 热门活动 */
 .active .more{
@@ -99,23 +115,25 @@
 
 .content_active .active_title{
    background:#f9f9fa;
-   height:124rpx;
-   position:relative;
+   height:90rpx;
+   position: relative;
 }
 .content_active .active_title .img1{
   width:373rpx;
   height:52rpx;
   position:absolute;
   left:188rpx;
-  top:38rpx;
+  top:20rpx;
+  
+  
 }
 .content_active .active_title .img2{
   width:42rpx;
   height:42rpx;
   position:absolute;
-  right:24rpx;
-  top:40rpx;
-   /* padding:0 186rpx 80rpx 188rpx;  */
+   right:24rpx;
+  top:22rpx;
+  
 }
 
 .content_active .active{
