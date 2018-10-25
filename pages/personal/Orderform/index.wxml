@@ -14,10 +14,10 @@
         <view class="weui-tab__content"  wx:if="{{activeIndex == 0}}">
           <block wx:for="{{befodata}}" wx:key="index">
             <block wx:if="{{item.state === '1'}}">
-              <beforder item="{{item}}"></beforder>
+              <beforder item="{{item}}" bind:confirmEvent="_confirmEvent"></beforder>
             </block>
             <block wx:elif="{{item.state === '2'}}">
-              <oldorder item="{{item}}"></oldorder>
+              <oldorder item="{{item}}" bind:confirmEvent="_confirmEvent"></oldorder>
             </block>
             <block wx:elif="{{item.state === '3'}}">
               <oldgroup item="{{item}}"></oldgroup>
@@ -35,7 +35,7 @@
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 2}}">
           <block wx:for="{{befodata}}" wx:key="index">
-            <oldorder item="{{item}}"></oldorder>
+            <oldorder item="{{item}}" bind:confirmEvent="_confirmEvent"></oldorder>
           </block>
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 3}}">

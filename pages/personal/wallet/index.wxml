@@ -19,7 +19,9 @@
     </view>
   </view>
   <view class='counter'>
-    最低提现额度20元，点击提现后，一周内会提现至您的微信零钱
+    <text>1.余额为当前可提现金额，满20元方可提现;</text>
+    <text>2.待审核为需审核的金额，通过审核后现金将进入可提现金额，未通过审核付款将原路退回;</text>
+    <text>3.总收入为您获得收入的总和。</text>
   </view>
   <view class="deposit">
     <view class="deposit_tit">提现金额</view>

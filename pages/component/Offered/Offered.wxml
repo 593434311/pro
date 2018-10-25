@@ -8,7 +8,7 @@
 
     <view wx:if="{{state == 1}}" class="tit_text2">拼团成功</view>
     <view wx:elif="{{state == 2}}" class="tit_text2">拼团失败</view>
-    <view  wx:else class="tit_text2">还差<text>{{Surplus.remainder}}</text>人成团</view>
+    <view  wx:else class="tit_text2">还差<text>{{Surplus.remainder}}</text>人</view>
   </view>
   <view class="head_portrait" bindtap='godetails'>
     <view class="head_img">

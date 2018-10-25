@@ -69,7 +69,7 @@
 }
 .leader::after{
   position: absolute;
-  left:50rpx;
+  left:70rpx;
   top:-10rpx;
   content: "团长";
   height: 24rpx;

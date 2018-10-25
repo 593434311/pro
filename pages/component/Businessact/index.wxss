@@ -83,6 +83,7 @@
   color:#b8b8b8;
   font-size:22rpx;
   margin-right:20rpx;
+  text-decoration:line-through;
 }
  .price s:nth-of-type(2){
   color:#ff3638;

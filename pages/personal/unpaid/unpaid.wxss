@@ -137,6 +137,12 @@
   font-size:28rpx;
   color:#8d8d8d;
 }
+.information_cont .text_tit{
+  width:100rpx;
+   line-height: 28rpx;
+  /* display: flex;
+  align-items:center; */
+}
 .information .information_cont text{
   color:#ff9394;
 }

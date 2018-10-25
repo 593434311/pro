@@ -21,7 +21,7 @@
   <view class='allmony'>实付：￥{{data.pay_price}}</view>
   <view class='orde_button'>
     <view>
-      <button class="bottom_pay" bindtap='dedlorder'>删除订单</button>
+      <button class="bottom_pay" bindtap='dedlorder'>取消订单</button>
     </view>
     <view>
       <button open-type='contact'>联系客服</button>

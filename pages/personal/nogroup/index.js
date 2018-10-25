@@ -4,7 +4,8 @@ Page({
   data: {
     actUser: {},
     order_info: {},
-    user_list: []
+    user_list: [],
+    shop_info: {}
   },
   onLoad: function (options) {
     app.RequiseData('order.index.orderinfo', { orderid: options.order }, res => {
@@ -12,7 +13,8 @@ Page({
         this.setData({
           actUser: res.data.act_user,
           order_info: res.data.order_info,
-          user_list: res.data.user_list
+          user_list: res.data.user_list,
+          shop_info: res.data.shop_info
         })
       }
     })

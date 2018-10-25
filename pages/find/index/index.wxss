@@ -5,7 +5,7 @@
  .tuan_title{
   /* padding:37rpx 0 30rpx 0; */
   background:#f9f9fa;
-   height:124rpx;
+   height:90rpx;
    position:relative;
 }
  .tuan_title .img1{
@@ -13,20 +13,20 @@
   height:52rpx;
   position:absolute;
   left:188rpx;
-  top:38rpx;
+  top:20rpx;
 }
 .tuan_title .img3{
   width:42rpx;
   height:42rpx;
   position:absolute;
   right:24rpx;
-  top:40rpx;
+  top:22rpx;
 }
 
 .gengduo{
    width: 99rpx;
    margin: 0 auto;
-   margin-top: 35rpx;
+   padding:20rpx 0 10rpx 0;
 }
 .gengduo image{
   width: 100rpx;

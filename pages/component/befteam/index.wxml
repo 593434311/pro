@@ -3,34 +3,40 @@
   <view class="tuan_lt">
     <view class="tuan_img">
       <image lazy-load="true" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.cover_img}}?x-oss-process=image/resize,m_fill,h_244,w_244" mode="aspectFill"></image>
+      <view class="surplus">剩<text>9</text>人</view>
     </view>
   </view>
   <view class="tuan_rt">
     <view class="rt_tit">
       <text>【{{data.sub_num}}人团】</text>
       <text>{{data.title}}</text>
+      
     </view>
     <view class="rt_btm">
-      <view class="price">
-        <s>￥{{data.p_price}}</s>
-        <s>单价买￥{{data.o_price}}</s>
+      <view class="tuan_mon">
+        <view class="price">
+          <s>￥{{data.p_price}}</s>
+          <s>原价￥{{data.o_price}}</s>
+        </view>
+        <image class="purchase" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/qg@3x.png"></image>
       </view>
-      <view class="count_dn flex">
+      
+      <!-- <view class="count_dn flex">
         <text>剩余时间</text>
         <view class="time">
           <i>{{data.day}}</i>天
           <i>{{data.hour}}</i>时
           <i>{{data.minute}}</i>
         </view>
-      </view>
-      <view class="collect flex">
-        <view class="want" hover-class='hove-want' data-id='{{data.id}}' data-type='2' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
+      </view> -->
+      <!-- <view class="collect flex"> 
+  
+      </view> -->
+      <view class="want" hover-class='hove-want' data-id='{{data.id}}' data-type='2' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
           <image wx:if="{{!data.user_attribute.collect}}" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh@3x.png"></image>
           <image wx:else src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh2@3x.png"></image>
           <text>{{data.attribute_num.collect}}人想玩</text>
         </view>
-        <image class="purchase" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/qg@3x.png"></image>
-      </view>
     </view>
   </view>
 </view>

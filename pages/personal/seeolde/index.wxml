@@ -61,6 +61,6 @@
 <!-- 购买数量 -->
 <view class="bottom">
   <view class="bottom_cont">
-    <view><button class="bottom_text">联系客服</button></view>
+    <view><button class="bottom_text" open-type='contact'>联系客服</button></view>
   </view>
 </view>

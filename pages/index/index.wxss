@@ -51,11 +51,9 @@
   width:373rpx;
   height: 48rpx;
 }
-
-
 .tuansw{
   max-height: 790rpx;
-  min-height: 650rpx;
+  min-height: 484rpx;
 }
 .tuan_rt .count_dn{
   display:flex;

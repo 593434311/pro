@@ -91,7 +91,7 @@ table, th, td {
 }
 .leader::after{
   position: absolute;
-  left:50rpx;
+  left:60rpx;
   top:-10rpx;
   content: "团长";
   height: 24rpx;
