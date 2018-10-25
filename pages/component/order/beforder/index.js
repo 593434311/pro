@@ -33,15 +33,20 @@ Component({
       })
     },
     dedlorder(e) {
-      var dataid = this.data.data.id
+      var dataid = this.data.data.order_id
       wx.showModal({
         title: '提示',
         content: '确定要取消该订单吗？',
         success:  res => {
           if (res.confirm) {
-            app.RequiseData('order.index.delorder', { id: dataid }, res => {
+            app.RequiseData('order.index.canorder', { orderid: dataid }, res => {
               if(res.status == 0){
                 this.triggerEvent("confirmEvent");
+              }else{
+                wx.showModal({
+                  content: res.msg,
+                  showCancel: false
+                });
               }
             })
           }

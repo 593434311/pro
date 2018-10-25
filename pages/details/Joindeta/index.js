@@ -62,15 +62,11 @@ Page({
     var timer = setInterval(nowTime, 60000);
   },
   onShareAppMessage(e){
-    console.log(1)
-    console.log(this.data.Surplus)
     return {
-      title: 'test',
-      path: `/pages/details/share/share?id${this.data.data[0].id}&userid=${this.data.Surplus.user_id}`,
+      title: this.data.Surplus.title,
+      path: `/pages/details/share/share?=id${this.data.data[0].id}&userid=${this.data.Surplus.user_id}`,
       imageUrl:'http://gtshidai.oss-cn-shanghai.aliyuncs.com' + this.data.Surplus.cover_img,
-      success: function(res){
-        
-      }
+     
     }
     
   }

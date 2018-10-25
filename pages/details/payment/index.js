@@ -18,6 +18,7 @@ Page({
   onLoad: function (options) {
     app.RequiseData('order.index.orderinfo', { orderid: options.id }, res => {
       if(res.status == 0){
+        console.log(res)
         this.setData({
           act_info: res.data.act_user,
           user_info: res.data.user_list,
@@ -62,8 +63,8 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: 'test',
-      path: `/pages/details/share/share?id${this.data.shere.user_id}`,
+      title: this.data.shere.title,
+      path: `/pages/details/share/share?id=${this.data.act_info.id}&userid=${this.data.shere.user_id}`,
       imageUrl: 'http://gtshidai.oss-cn-shanghai.aliyuncs.com' +this.data.shere.cover_img
     }
   }
