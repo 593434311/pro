@@ -167,15 +167,20 @@
    color:#b8b8b8;
    font-size: 20rpx;
    margin-right:30rpx;
+    text-decoration:line-through;
 }
-.price .group_price{
+.price .group_price {
    color:#737373;
    font-size: 26rpx;
    display:inline-block;
+   
 }
+
 .price .group_price text{
    color:#ff5646;
    font-size: 36rpx;
+   
+    
 }
 /* 优惠券 */
 .coupon{

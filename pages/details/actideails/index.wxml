@@ -18,7 +18,7 @@
       </view>
       <view class="bm_m">
         <view class="price">
-          <s>单价买￥{{act_info.o_price}}</s>
+          <s>原价￥{{act_info.o_price}}</s>
           <s>￥{{act_info.p_price}}</s>
         </view>
         <view class="want" hover-class='hove-want' data-id='{{act_info.id}}' data-type='1' data-behavior="{{act_info.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>

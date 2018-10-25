@@ -9,12 +9,13 @@ Component({
       value: [],
       observer: function (newVal, oldVal, changedPath) {
         var allnum = Number(this.data.Surplus.sub_num)
-        var len = allnum < 5 ? allnum - 1:5
+        var len = allnum < 4 ? allnum - 1:4
         for (var i = 0; i < len; i++){
           if (!newVal[i]){
             newVal[i] = {}
           }
         }
+        console.log(newVal)
         this.setData({
           data: newVal
         })

@@ -53,11 +53,11 @@
 
 }
 .head_img .touxiang{
-  padding-right:14rpx;
+  padding-right:30rpx;
 }
 .head_img .touxiang image{
-  width:87rpx;
-  height:87rpx;
+  width:100rpx;
+  height:100rpx;
   border-radius: 50%;
 }
 .head_portrait .head_more image{
@@ -69,7 +69,7 @@
 }
 .leader::after{
   position: absolute;
-  left:50rpx;
+  left:70rpx;
   top:-10rpx;
   content: "团长";
   height: 24rpx;

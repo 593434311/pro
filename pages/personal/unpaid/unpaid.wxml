@@ -2,12 +2,12 @@
 <!--pages/personal/index/index.wxml-->
 <view class="unpaid contentW">
   <view class="unpaid_lt">
-    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/zfcg@3x.png"></image>
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/unpaid@3x.png"></image>
     <text>待支付</text>
   </view>
   <view class="unpaid_rt">
     <view class="line"></view>
-    <text>{{actUser.title}}</text>
+    <view class="dai">请您尽快完成付款，如15分钟内未完成支付，将无法完成参团</view>
   </view>
 </view>
 <!-- 参与详情 -->
@@ -23,7 +23,7 @@
     </view>
   </view>
     <view class="information_cont bottom_border">
-      <view><text>* </text>姓名</view>
+      <view class="text_tit"><text>* </text>姓名</view>
       <input type='text' placeholder="请输入姓名" placeholder-style="color: #ccc" value='{{user_info.realname}}' data-type='1' bindinput="voteuser" />
       <block wx:if="{{isusernum !== null}}">
         <view class="usename {{isusernum?'yesref':'noref'}}"></view>
@@ -31,7 +31,7 @@
       </block>
     </view>
     <view class="information_cont">
-      <view><text>* </text>电话</view>
+      <view class="text_tit"><text>* </text>电话</view>
       <input type='number' placeholder="请输入手机号码" placeholder-style="color: #ccc" value='{{user_info.realmobile}}' data-type='2' bindinput="voteuser" />
       <block wx:if="{{isuseripne !== null}}">
         <view class="telephone {{isuseripne?'yesref':'noref'}}"></view>

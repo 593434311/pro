@@ -17,7 +17,7 @@
   <view class="title">
     <view class="xinxi">
       <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/407388878126105425.png"></image>
-      <text class="tit_text1">信息填写</text>
+      <text class="tit_text1">个人信息</text>
     </view>
   </view>
   <form>
@@ -42,9 +42,9 @@
     <view class="tit_quantity">数量：<text>1</text></view>
   </view>
   <view class="quantity_cont">
-    <text class="return_money bottom_border">(省钱攻略：如有同伴请邀请TA入团，可获返现)</text>
+    <text class="return_money bottom_border">(邀好友入团，即得返现)</text>
     <view class="price">
-      <text>单价买￥{{act_info.o_price}}</text>
+      <text>原价￥{{act_info.o_price}}</text>
       <view class="group_price">参团价:<text>￥{{act_info.p_price}}</text></view>
     </view>
   </view>

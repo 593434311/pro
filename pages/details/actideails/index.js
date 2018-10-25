@@ -16,7 +16,6 @@ Page({
       title: '加载中...',
     })
     app.RequiseData('activity.index.actinfo', { id: options.id }, res => {
-      wx.hideLoading()
       if(res.status === 0){
         WxParse.wxParse('article', 'html', res.data.act_info.info, this, 5)
 　        this.setData({
@@ -26,6 +25,7 @@ Page({
             user_info: res.data.user_info  ||{}
         })
       }
+      wx.hideLoading()
     })
     
   },

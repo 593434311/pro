@@ -61,7 +61,7 @@ Page({
     nowTime();
     timer = setInterval(nowTime, 15000);
   },
-  onShareAppMessage: function () {
+  onShareAppMessage: function (res) {
     return {
       title: this.data.shere.title,
       path: `/pages/details/share/share?id=${this.data.act_info.id}&userid=${this.data.shere.user_id}`,

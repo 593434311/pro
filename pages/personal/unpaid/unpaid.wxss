@@ -41,7 +41,7 @@
   display: flex;
   align-items:center;
 }
-.line{
+.unpaid_rt .line{
   width:1rpx;
   height:100rpx;
   background-color:#feb08f;
@@ -57,7 +57,7 @@
   top:-20rpx;
   left:10rpx;
 } */
-.unpaid  .unpaid_rt text{
+.unpaid  .unpaid_rt .dai{
   color:#fff;
   font-size:28rpx;
   height:42rpx;
@@ -136,6 +136,12 @@
   line-height: 28rpx;
   font-size:28rpx;
   color:#8d8d8d;
+}
+.information_cont .text_tit{
+  width:100rpx;
+   line-height: 28rpx;
+  /* display: flex;
+  align-items:center; */
 }
 .information .information_cont text{
   color:#ff9394;

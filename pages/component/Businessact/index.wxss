@@ -59,8 +59,8 @@
   align-items:center;
 }
 .bm_t_m .count_dn image{
-  width:37rpx;
-  height:37rpx;
+  width:28rpx;
+  height:28rpx;
   margin-right:11rpx;
 }
 .bm_t_m .price{
@@ -71,7 +71,7 @@
   padding:22rpx 0 28rpx 0;
 }
 .active_bm .bm_b text{
-  font-size:20rpx;
+  font-size:22rpx;
   color:#b8b8b8;
 }
  .price{
@@ -81,8 +81,9 @@
 }
 .price s:nth-of-type(1){
   color:#b8b8b8;
-  font-size:20rpx;
+  font-size:22rpx;
   margin-right:20rpx;
+  text-decoration:line-through;
 }
  .price s:nth-of-type(2){
   color:#ff3638;
