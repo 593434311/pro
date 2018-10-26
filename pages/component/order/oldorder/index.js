@@ -13,6 +13,11 @@ Component({
           data: newVal
         })
       }
+    },
+    isnony: {
+      type: Boolean,
+      value: false,
+    
     }
   },
   /**

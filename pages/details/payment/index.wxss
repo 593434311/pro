@@ -46,7 +46,7 @@
   font-weight: bold;
 }
 .Countdown text{
-  color: #ff8688;
+  color: #ccc;
 }
 .difference{
   font-size: 26rpx;

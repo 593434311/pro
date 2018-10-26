@@ -1,0 +1,16 @@
+<!--pages/zpp/zpp.wxml-->
+<view class='coupon_reduce'>
+  <view class='reduce_left'>
+    <view class='left_left'>
+      <text>￥{{datalist.money_reduce_y}}</text>
+      <view>满{{datalist.money_max_y}}元可用</view>
+    </view>
+    <view class='left_right'>
+      <view>参团立减</view>
+      <text>有效期：{{datalist.datestr}}</text>
+    </view>
+  </view>
+  <view class='reduce_right'>
+    <view>满减卷</view>
+  </view>
+</view>

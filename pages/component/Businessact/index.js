@@ -10,8 +10,11 @@ Component({
       type: Object,
       value: {},
       observer: function (newVal, oldVal, changedPath) {
-        // clearInterval(timer)
-        this.activetimeOut(newVal)
+        console.log(newVal)
+        this.setData({
+          data: newVal
+        })
+        //this.activetimeOut(newVal)
       }
     }
   },

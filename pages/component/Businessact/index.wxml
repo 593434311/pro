@@ -13,11 +13,11 @@
       <view class="location">
         <text>{{data.city}} {{data.area}}</text>
         <text>#{{data.acttype}}#</text>
-      </view>
+      </view> 
       <view class="bm_t_m">
         <view class="count_dn">
           <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/422749702911807138.png"></image>
-          <text>{{data.str}}</text>
+          <text>{{data.startdate}}~{{data.enddate}}</text>
         </view>
         <view class="price">
           <s>原价￥{{data.o_price}}</s>

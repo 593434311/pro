@@ -28,12 +28,12 @@
 
 .list_bm .bm_tit{
   color:#737373;
-  font-size:36rpx;
+  font-size:30rpx;
   line-height:46rpx;
   margin-bottom:23rpx;
 }
 .list_bm .bm_tit text{
-  color:#ff5246;
+  /* color:#ff5246; */
   position: relative;
   left:-16rpx;
   
@@ -51,15 +51,16 @@
   align-items:baseline;
   line-height:42rpx;
 }
-.price s:nth-of-type(1){
+.price s:nth-of-type(2){
   color:#cacaca;
   font-size:24rpx;
   margin-right:23rpx;
   text-decoration:line-through;
 }
-.price s:nth-of-type(2){
+.price s:nth-of-type(1){
   color:#ff5246;
-  font-size:48rpx;
+  font-size:36rpx;
+  margin-right:10rpx;
 }
 .bm_m .want{
   line-height:42rpx;
@@ -252,10 +253,11 @@
 .strategy{
   
 }
-.strategy .strategy_cont{
+.strategy_cont{
   padding:0 42rpx;
 }
 .strategy_cont .smile{
+   
   padding:0 38rpx 0 54rpx;
 }
  .strategy_cont .smile image{
@@ -263,28 +265,26 @@
   height:32rpx;
 }
 .strategy_bm{
-  display:flex;
+  padding-bottom:34rpx; 
+  display: flex;
   justify-content:space-between;
-  padding-bottom:34rpx;
 }
 .strategy_bm_cont{
-  /* display:flex;
-  align-content:center; */
+  width:168rpx;
+  font-size:18rpx;
+  line-height:24rpx;
+  color:#b8b8b8;
+  
 }
-.strategy_bm .strategy_bm_cont text{
-  display:block;
-  text-align: center;
-}
-.strategy_bm_cont text:nth-of-type(1){
+
+.strategy_bm_cont text{
+  display: block;
+  text-align:center;
   font-size:24rpx;
   color:#8d8d8d;
   padding:30rpx 0 12rpx 0;
 }
-.strategy_bm_cont text:nth-of-type(2){
-  font-size:18rpx;
-  line-height:24rpx;
-  color:#b8b8b8;
-}
+
 /* 活动介绍 */
 .presentation{
   margin-bottom:112rpx;

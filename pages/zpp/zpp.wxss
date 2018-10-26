@@ -1,5 +1,4 @@
-/* pages/component/conpons/index.wxss */
-
+/* pages/zpp/zpp.wxss */
 .coupon_reduce {
   width: 702rpx;
   height: 171rpx;

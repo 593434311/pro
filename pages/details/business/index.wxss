@@ -115,9 +115,13 @@ page{
   padding: 0 29rpx;
   display: flex;
   align-items: center;
-  background-color: #e5e5e5;
+  justify-content:center;
+  background-color: #fff;
+  border:1rpx solid #fe5354;
   border-radius: 40rpx;
   margin-right: 38rpx;
+ 
+
 }
 .shere button{
   width: 84rpx;

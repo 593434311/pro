@@ -26,7 +26,7 @@
   margin-bottom: 20rpx;
 }
 .bm_t .bm_tit text{
-  color:#ff5246;
+  /* color:#ff5246; */
   position: relative;
   left:-12rpx;
 }
@@ -94,8 +94,8 @@
   align-items:center;
 }
  .wantas image{
-  width:30rpx;
-  height:26rpx;
+  width:28rpx;
+  height:24rpx;
   margin-right: 12rpx;
   margin-bottom: 2rpx;
 }

@@ -25,6 +25,9 @@
             <block wx:elif="{{item.state === '4'}}">
               <befgroup item="{{item}}"></befgroup>
             </block>
+             <block wx:elif="{{item.state === '5'}}">
+              <oldorder item="{{item}}" isnony="{{true}}" bind:confirmEvent="_confirmEvent"></oldorder>
+            </block>
             <nodata wx:if="{{isdata}}" state="{{0}}" text="你还没有订单哦，快去团购吧~"></nodata>
           </block>
         </view>
@@ -35,7 +38,8 @@
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 2}}">
           <block wx:for="{{befodata}}" wx:key="index">
-            <oldorder item="{{item}}" bind:confirmEvent="_confirmEvent"></oldorder>
+            <oldorder wx:if="{{item.state === '5'}}" isnony="{{true}}" item="{{item}}" bind:confirmEvent="_confirmEvent"></oldorder>
+            <oldorder wx:else item="{{item}}" bind:confirmEvent="_confirmEvent"></oldorder>
           </block>
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 3}}">

@@ -16,10 +16,10 @@
   <navigator url="/pages/personal/Orderform/index?id=0">
     <view class="title margin_bm">
       <view class="tuangou">
-        <text class="tit_text1">我的团购</text>
+        <text class="tit_text1">我的拼团</text>
       </view>
       <view class="tit_rt">
-        <text>更多团购</text>
+        <text>更多</text>
         <image class="more" src="/static/images/details_index/more@2x.png"></image>
       </view>
     </view>

@@ -4,7 +4,7 @@
     <view class='wall_bg'></view>
     <view class='wall_mary'>
       <view class='Price'><text>￥</text>{{may}}</view>
-      <view class='sure'>可提现金额</view>
+      <view class='sure'>余额</view>
       <view class='bill'>
         <view class='settled'>
           <view>￥{{yet}}</view>
@@ -19,9 +19,10 @@
     </view>
   </view>
   <view class='counter'>
-    <text>1.余额为当前可提现金额，满20元方可提现;</text>
-    <text>2.待审核为需审核的金额，通过审核后现金将进入可提现金额，未通过审核付款将原路退回;</text>
-    <text>3.总收入为您获得收入的总和。</text>
+    <view class="explain">提现说明</view>
+    <text>1.余额为当前可提现金额，满20元方可提现；</text>
+    <text>2.待审核为需审核的金额，通过审核后现金将进入可提现金额，未通过审核付款将原路退回；</text>
+    <text>3.总收入为您获得收入的总和；</text>
   </view>
   <view class="deposit">
     <view class="deposit_tit">提现金额</view>

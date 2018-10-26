@@ -11,7 +11,10 @@ Component({
       type: Object,
       value: {},
       observer: function (newVal, oldVal, changedPath) {
-        this.tuantimeOut(newVal)
+        this.setData({
+          data: newVal
+        })
+        // this.tuantimeOut(newVal)
       }
     }
   },

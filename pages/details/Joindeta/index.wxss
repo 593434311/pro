@@ -19,7 +19,7 @@ page{
   line-height: 24rpx;
 }
 .member{
-  padding: 48rpx 15rpx; 
+  padding: 48rpx 65rpx; 
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -31,7 +31,7 @@ page{
   margin-bottom: 24rpx;
   border-radius: 50%;
 }
-.member view:nth-child(7n){
+.member view:nth-child(5n){
   margin-right: 0
 }
 .member view image{
@@ -80,12 +80,15 @@ page{
   background-repeat:no-repeat;
   background-size:100%; 
 }
+.count_dn .time{
+  color:#ccc;
+}
 .count_dn .time i{
   display:inline-block;
-  width:68rpx;
-  height:68rpx;
-  color:#ccc;
-  line-height:68rpx;
+  color: red;
+  width:44rpx;
+  height:44rpx;
+  line-height:44rpx;
   background:linear-gradient(#fbfbfb 50%, #ffffff 50%);
   border-radius:6rpx;
   margin:0 5rpx;

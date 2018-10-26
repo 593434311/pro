@@ -27,7 +27,7 @@
         </view>
       </view>
       <view class="return_money">
-        邀请好友成团返现，每人可返现￥2 (秒转）
+        邀请好友成团，领取返现（立即到账）
       </view>
     </view>
     <view class="bm_bottom">
@@ -70,19 +70,13 @@
     </view>
     <view class="strategy_bm">
       <view class="strategy_bm_cont">
-        <text>开团或拼团</text>
-        <text>支付完成后，邀请
-  成功获得返现</text>
+        <text>开团或参团</text>按照步骤正确参与即可完成拼团
       </view>
       <view class="strategy_bm_cont">
-        <text>开团或拼团</text>
-        <text>支付完成后，邀请
-  成功获得返现</text>
+        <text>邀好友领返现</text>邀好友成团，立获返现，团内小伙伴均可参与邀请
       </view>
       <view class="strategy_bm_cont">
-        <text>开团或拼团</text>
-        <text>支付完成后，邀请
-  成功获得返现</text>
+        <text>成功开团</text>到达参团人数后将成功开团，否则将自动退款
       </view>
     </view>
   </view>
