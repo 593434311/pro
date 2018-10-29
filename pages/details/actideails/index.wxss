@@ -381,7 +381,7 @@ button::after{ border: none; }
 .business {
   width: 32rpx;
   height: 31rpx;
-  background-image: url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/shangjia@3x.png);
+  background-image: url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/shangjia@2x.png);
   background-repeat: no-repeat;
   background-size: 100%;
   margin: 0 auto;
@@ -389,7 +389,7 @@ button::after{ border: none; }
 .Customer_se {
   width: 32rpx;
   height: 31rpx;
-  background-image: url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/kefu@3x.png);
+  background-image: url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/kefu@2x%20.png);
   background-repeat: no-repeat;
   background-size: 100%;
   margin: 0 auto;

@@ -1,4 +1,5 @@
 /* pages/personal/index/index.wxss */
+
 .contentW{
   padding: 0 24rpx;
   background-color:#fff;

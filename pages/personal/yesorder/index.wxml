@@ -36,7 +36,7 @@
 <view class="quantity contentW">
   <view class="title">
     <view class="shuliang">
-      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/892645531760546253.png"></image>
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/shul@2x.png"></image>
       <text class="tit_text1">购买数量</text>
     </view>
     <view class="tit_quantity">数量：<text>1</text></view>

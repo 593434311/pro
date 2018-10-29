@@ -6,12 +6,10 @@
   </view>
   <view class="content">
   <view class="text_con">
-    <view class="money">首次授权登录临港拼玩 即领<text>5元现金红包</text></view>
-    <text>更有超多现金返现等你来拿</text>
-    <text>优惠拼玩 聚会交友 精品活动 一网打尽</text>
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/share_img@2x.png"></image>
   </view>
-  <view class="text_footer">
-    <text>»随便看看«</text>
+  <view class="text_footer" bindtap='toIndex'>
+    <text>»查看其他活动«</text>
   </view>
 </view>
 </view>

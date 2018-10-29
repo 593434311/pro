@@ -1,11 +1,11 @@
 /* pages/details/share/share.wxss */
 page{
-  height:100%;
+ height:auto;
 }
 .bg{
   width:100%;
-  height:100%;
-  background-image:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/shop/1/15398487116973.png);
+  height:1672rpx;
+  background-image:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/share_bg@2x.png);
   background-size:100%;
 }
 .warp{
@@ -29,20 +29,20 @@ page{
   color:#fff;
   text-align: center;
 }
-.content .text_con{
-  padding:63rpx 0 140rpx 0;
-}
-.content .text_con>text{
-  display:block;
-  font-size:24rpx;
-  line-height:42rpx;
+.content .text_con {
+  padding:60rpx 0 61rpx 0;
+  margin:0 auto;
   
+
 }
-.text_con .money text{
-  color:#fe4755;
-  font-size:24rpx;
-  line-height:42rpx;
+.content .text_con image{
+  /* padding:63rpx 0 140rpx 0; */
+  width:520rpx;
+  height:476rpx;
+
 }
+
+
 .content .text_footer{
   font-size:28rpx;
 }
