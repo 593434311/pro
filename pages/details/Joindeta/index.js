@@ -64,7 +64,7 @@ Page({
   onShareAppMessage(e){
     return {
       title: this.data.Surplus.title,
-      path: `/pages/details/share/share?=id${this.data.data[0].id}&userid=${this.data.Surplus.user_id}`,
+      path: `/pages/details/share/share?id${this.data.data[0].id}&userid=${this.data.Surplus.user_id}`,
       imageUrl:'http://gtshidai.oss-cn-shanghai.aliyuncs.com' + this.data.Surplus.cover_img,
      
     }

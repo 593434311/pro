@@ -25,6 +25,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if (app.globalData.payment){
+      wx.redirectTo({
+        url: '/pages/index/index'
+      })
+      app.globalData.payment = false
+    }
     app.RequiseData('order.index.orderinfo', { orderid: options.older}, res =>{
       if(res.status === 0){
         this.setData({

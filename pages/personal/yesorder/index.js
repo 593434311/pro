@@ -17,6 +17,7 @@ Page({
    */
   onLoad: function (options) {
     app.RequiseData('order.index.orderinfo', { orderid: options.order }, res => {
+      console.log(res)
       if (res.status === 0) {
         this.setData({
           actUser: res.data.act_user,

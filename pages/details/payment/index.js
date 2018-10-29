@@ -16,9 +16,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    app.globalData.payment = true
     app.RequiseData('order.index.orderinfo', { orderid: options.id }, res => {
       if(res.status == 0){
-        console.log(res)
         this.setData({
           act_info: res.data.act_user,
           user_info: res.data.user_list,
