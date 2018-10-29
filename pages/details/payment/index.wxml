@@ -21,6 +21,7 @@
         <view></view>邀请好友成团返现
       </button>
     </view>
+    <view class="toindex" bindtap='toIndex'>返回首页</view>
   </view>
   <view class='offered'>
     <offered data="{{user_info}}" Surplus="{{act_info}}"></offered>

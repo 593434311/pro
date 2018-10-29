@@ -74,7 +74,7 @@
   height: 131rpx;
   display: flex;
   align-items: center;
-  margin-top: 48rpx;
+  margin-top: 18rpx;
   border-top: 1rpx solid #e4e4e4;
 }
 .bill>view view:first-child{
@@ -97,7 +97,6 @@
 .audited{
   width: 311rpx;
 }
-
 .deposit{
   background-color: #fff;
  padding:40rpx 66rpx 0 66rpx;
@@ -123,7 +122,7 @@
   
 }
 .money input{
-  font-size:24rpx;
+  font-size:28rpx;
   color:#333;
 }
 .footer{

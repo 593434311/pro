@@ -100,8 +100,8 @@
   align-items:center;
 }
  .wantas image{
-  width:28rpx;
-  height:24rpx;
+  width:26rpx;
+  height:22rpx;
   margin-right: 12rpx;
   margin-bottom: 2rpx;
 }

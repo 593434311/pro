@@ -7,6 +7,7 @@ Page({
    */
   data: {
     tabs: ["全部", "待付款", "已付款", "已成团", "未成团"],
+    texts: ['你还没有订单哦，快去团购吧~', '你还没有订单哦，快去团购吧~1', '你还没有订单哦，快去团购吧~2', '你还没有订单哦，快去团购吧~3', '你还没有订单哦，快去团购吧4~'],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
@@ -118,6 +119,11 @@ Page({
   },
   _confirmEvent(){
     this.getdata()
+  },
+  cannelorder(){
+    wx.navigateTo({
+      url: "/pages/personal/cancel/index"
+    })
   },
   getdata(){
     wx.showLoading({

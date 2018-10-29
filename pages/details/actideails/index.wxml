@@ -63,7 +63,7 @@
       <image src="/static/images/details_index/gonglue@2x.png"></image>
       <text class="tit_text1">拼团攻略</text>
     </view>
-    <text class="tit_text2">详情</text>
+    <text class="tit_text2"></text>
   </view>
   <view class="strategy_cont">
     <view class="smile">

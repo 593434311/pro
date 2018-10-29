@@ -12,7 +12,7 @@
   width:373rpx;
   height:52rpx;
   position:absolute;
-  left:188rpx;
+  left:182rpx;
   top:20rpx;
 }
 .tuan_title .img3{
