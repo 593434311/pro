@@ -31,13 +31,19 @@
   font-size:30rpx;
   line-height:46rpx;
   margin-bottom:23rpx;
+  position: relative;
 }
 .list_bm .bm_tit text{
-  /* color:#ff5246; */
-  position: relative;
-  left:-16rpx;
+   position: absolute;
+   top: 0;
+   left:-12rpx;
   
   
+}
+
+.list_bm .bm_tit view{
+  display:inline-block;
+  text-indent:140rpx
 }
 .list_bm .bm_m{
   display:flex;

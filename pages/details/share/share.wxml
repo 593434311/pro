@@ -17,22 +17,14 @@
 </view>
 
 <coupon wx:if="{{isCoupon}}" width_a="582rpx" height_a="700rpx" class="coupon" catchtouchmove="false">
-  <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/bj2@3x.png' mode="widthFix" style='border-radius: 5px'></image>
-  <view class='text'>这位新朋友你好，送你一张券试试看呗，不是骗子</view>
-  <view class='coupon_reduce'>
-    <view class='reduce_left'>
-      <view class='left_left'>
-        <text>￥5</text>
-        <view>满50元可用</view>
-      </view>
-      <view class='left_right'>
-        <view>参团立减</view>
-        <text>有效期：10日</text>
-      </view>
+  <view class="coupon_reduce">
+    <view class="coupon_img">
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/coupon_bg@2x.png"></image>
     </view>
-    <view class='reduce_right'>
-      <view>立减卷</view>
+      <view class="coupon_btn">
+      <button open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>
+        <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/coupon_btn@2x.png"></image>
+      </button>
     </view>
-  </view> 
-  <button open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>立即领取</button>
+  </view>
 </coupon>

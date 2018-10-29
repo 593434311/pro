@@ -14,7 +14,8 @@
   <view class="list_bm">
     <view class="bm_top">
       <view class="bm_tit">
-        <text>【{{act_info.num}}人团】</text>{{act_info.title}}
+        <text class='text'>【{{act_info.num}}人团】</text>
+        <view class='view'>{{act_info.title}}</view>
       </view>
       <view class="bm_m">
         <view class="price">

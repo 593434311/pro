@@ -25,6 +25,5 @@
   animation: Projectile .3s;
   margin: 0 auto;
   border-radius: 5px;
-  background-color: #f8f8f8;
-  margin-top: 200rpx;
+  margin-top: 150rpx;
 }

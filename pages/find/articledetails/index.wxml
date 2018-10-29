@@ -10,8 +10,9 @@
 </view>
 <view class='fdex'>
   <view class='like'data-id='{{nodeinfo.id}}' data-type='4' data-behavior="{{nodeinfo.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
-      <image wx:if="{{!nodeinfo.user_attribute.collect}}" src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/101368314372049455.png'></image>
+      <image wx:if="{{!nodeinfo.user_attribute.collect}}" src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xin@3x.png'></image>
       <image wx:else src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/180250902895359249.png"></image>
+    
       <text>{{nodeinfo.attribute_num.collect}}</text>
   </view>
   <view class='shere'>

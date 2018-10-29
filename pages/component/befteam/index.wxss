@@ -56,7 +56,7 @@
 }
 .tuan_rt .rt_tit view{
   display:inline-block;
-  text-indent:130rpx
+  text-indent:140rpx
 }
 .tuan_rt .rt_btm{
   width:500rpx;

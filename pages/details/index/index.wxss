@@ -25,12 +25,18 @@
   font-size:32rpx;
   line-height:46rpx;
   margin-bottom:23rpx;
+  position: relative;
 }
 .list_bm .bm_tit text{
-  color:#ff5246;
-   position: relative;
-   left:-16rpx;
+  position: absolute;
+  top: 0;
+  left:-12rpx;
   
+}
+
+.list_bm .bm_tit view{
+  display:inline-block;
+  text-indent:150rpx;
 }
 .list_bm .bm_m{
   display:flex;
@@ -257,7 +263,7 @@
   justify-content:space-between;
 }
 .strategy_bm_cont{
-  width:168rpx;
+  width:174rpx;
   font-size:20rpx;
   line-height:28rpx;
   color:#b8b8b8;
