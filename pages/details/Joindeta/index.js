@@ -20,7 +20,6 @@ Page({
     }
     app.RequiseData('activity.index.userlist', { act_id: options.actid, activity_id: options.actyid }, res => {
      if(res.status == 0){
-       console.log(res)
        this.setData({
          data: res.data.user_list,
          Surplus: res.data.act_info,
@@ -66,8 +65,6 @@ Page({
       title: this.data.Surplus.title,
       path: `/pages/details/share/share?id=${this.data.data[0].id}&userid=${this.data.Surplus.user_id}`,
       imageUrl:'http://gtshidai.oss-cn-shanghai.aliyuncs.com' + this.data.Surplus.cover_img,
-     
     }
-    
   }
 })

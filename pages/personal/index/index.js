@@ -14,6 +14,7 @@ Page({
   onLoad: function (options) {
     
     // this.onLoad(options)
+    app.globalData.payment = false
     this.setData({
       getuser: app.globalData.user_info ||undefined
     })

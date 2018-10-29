@@ -90,6 +90,7 @@ App({
   },
   globalData: {
     user_info: null,
-    openId: null
+    openId: null,
+    payment: false
   }
 })
