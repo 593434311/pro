@@ -7,7 +7,7 @@
 .swiper-container .swiper{
    width:690rpx;
    height: 358rpx;
-   padding:24rpx 0;
+   padding:30rpx 0;
    margin:0 auto;
 }
 .swiper-container .swiper-item {
@@ -117,7 +117,7 @@
    position: relative;
 }
 .content_active .active_title .img1{
-  width:373rpx;
+  width:372rpx;
   height:52rpx;
   position:absolute;
   left:188rpx;
