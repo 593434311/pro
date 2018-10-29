@@ -42,21 +42,21 @@
 }
 .tuan_rt .rt_tit{
   display:flex;
+  position: relative;
   max-width: 500rpx;
   /* overflow:hidden; */
-  font-size:26rpx;
+  font-size:30rpx;
   color:#727272;
 }
 
-.tuan_rt .rt_tit text:nth-of-type(1){
-
-  display:block;
-  position: relative;
+.tuan_rt .rt_tit .text{
+  position: absolute;
+  top: 0;
   left:-12rpx;
 }
-.tuan_rt .rt_tit text{
+.tuan_rt .rt_tit view{
   display:inline-block;
-  
+  text-indent:130rpx
 }
 .tuan_rt .rt_btm{
   width:500rpx;
@@ -68,6 +68,8 @@
   width:500rpx;
   display:flex;
   justify-content:space-between;
+  align-items: flex-end; 
+
 }
  .tuan_mon .price{
   display:flex;
@@ -82,8 +84,8 @@
 }
  .price s:nth-of-type(1){
   color:#ff3638;
-  font-size:36rpx;
-  padding-right:6rpx;
+  font-size:34rpx;
+  padding-right:10rpx;
 }
 .tuan_mon .purchase{
   width:88rpx;
@@ -137,18 +139,20 @@
 
 .want{
   height: 50rpx;
+  width: 180rpx;
   display: flex;
   align-items:flex-end;
   transition: all 0.3s;
 }
 .want image{
-  width:30rpx;
-  height:26rpx;
+  width:28rpx;
+  height:24rpx;
   margin-right:12rpx;
   margin-bottom: 2rpx;
 }
 .want text{
   font-size: 20rpx;
+  color:#b8b8b8;
 }
 
 /* .collect .purchase image{

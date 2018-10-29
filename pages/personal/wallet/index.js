@@ -52,7 +52,7 @@ Page({
       })
     }else{
       wx.showModal({
-        content: '请输入您要体现的金额',
+        content: '请输入您要提现的金额',
         showCancel: false
       });
     }

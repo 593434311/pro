@@ -25,8 +25,7 @@ Page({
       url: `/pages/details/bannerdetails/index?id=${e.currentTarget.dataset.id}`,
     })
   },
-  onLoad: function(option) {
-    var self = this;
+  onloadaaa: function (res) {
     var cuea = setInterval(() => {
       if (wx.getStorageSync('cuea')){
         if (wx.getStorageSync('cuea') === 'isd'){
@@ -172,9 +171,7 @@ Page({
       RegimentPage: 1,
       RegimentData: []
     })
-    this.gettuan()
-    this.getbutton()
-    this.getActive()
+    this.onloadaaa()
   },
   swiperChange: function (e) {
     this.setData({

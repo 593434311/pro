@@ -3,5 +3,5 @@
   <ohtgro wx:for="{{act_list}}" wx:for-index="index" wx:if="{{! (index > 1)}}" wx:key="index" ohtgro="{{item}}"></ohtgro>
 </view>
 <view>
-  <view class='kaitButton' bindtap='goactivdet' data-id='{{act_list[0].act_id}}'>我要自己去开团</view>
+  <view class='kaitButton' bindtap='goactivdet' data-id='{{act_list[0].act_id}}'>立即成为团长</view>
 </view>

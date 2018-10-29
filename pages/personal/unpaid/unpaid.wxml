@@ -19,7 +19,7 @@
   <view class="title">
     <view class="xinxi">
       <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/407388878126105425.png"></image>
-      <text class="tit_text1">信息填写</text>
+      <text class="tit_text1">个人信息</text>
     </view>
   </view>
     <view class="information_cont bottom_border">

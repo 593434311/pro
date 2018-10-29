@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
@@ -22,7 +23,10 @@
     "pages/details/selecoupon/index",
     "pages/details/bannerdetails/index",
     "pages/details/share/share",
-    "pages/details/allactive/index"
+    "pages/details/allactive/index",
+    "pages/personal/cancel/index",
+    "pages/zpp/zpp"
+   
   ],
   "window": {
     "backgroundTextStyle": "center",

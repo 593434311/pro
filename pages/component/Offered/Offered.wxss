@@ -48,7 +48,7 @@
   
 }
 .head_portrait .head_img{
-  padding:0 42rpx;
+  padding-left: 42rpx;
   display: flex;
 
 }

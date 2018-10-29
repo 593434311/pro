@@ -1,0 +1,68 @@
+/* pages/personal/cancel/index.wxss */
+.header{
+  background-color:#fc7649;
+  padding-top:38rpx;
+}
+.header .logo_img{
+  width:144rpx;
+  height:143rpx;
+  margin:0 auto;
+
+} 
+.header .logo_img image{
+   width:144rpx;
+  height:143rpx;
+  
+} 
+.header .h_text{
+  color:#fff;
+   display: flex;
+  align-items: center;
+  font-size:30rpx;
+  padding:35rpx 0 74rpx 0;
+  margin-left: 200rpx;
+  
+ 
+}
+.header .h_text image{
+  width:29rpx;
+  height:29rpx;
+  margin-right:15rpx;
+}
+.content{
+  padding:0 66rpx;
+}
+.content .con_text1{
+  color:#fc7649;
+  font-size:30rpx;
+  text-align: center;
+  font-weight:bold;
+  letter-spacing:3rpx;
+  padding:43rpx 0 36rpx 0;
+  
+
+}
+.content .con_text2{
+  padding:25rpx 0 35rpx 0;
+  border:1px dotted #ccc;
+  text-align: center;
+}
+.content .con_text2 text{
+  display: block;
+  color:#333;
+  line-height:40rpx;
+  font-size:24rpx;
+
+}
+.btn{
+  width:422rpx;
+  height:84rpx;
+  background:linear-gradient(#fd933d,#fe6f40);
+  border-radius:42rpx;
+  line-height:84rpx;
+  text-align: center;
+  color:#fff;
+  margin:70rpx auto 0;
+}
+
+

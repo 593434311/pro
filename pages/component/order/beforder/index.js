@@ -36,7 +36,9 @@ Component({
       var dataid = this.data.data.order_id
       wx.showModal({
         title: '提示',
-        content: '确定要取消该订单吗？',
+        content: '你真的决定要离开我吗？',
+        cancelText: '再想想',
+        confirmText: "残忍离开",
         success:  res => {
           if (res.confirm) {
             app.RequiseData('order.index.canorder', { orderid: dataid }, res => {

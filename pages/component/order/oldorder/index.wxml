@@ -7,7 +7,7 @@
       <view>{{data.shop_info.shop_name}}</view>
       <view class='jiantou'></view>
     </view>
-    <view class='head_right'>已付款</view>
+    <view class='head_right'>{{isnony? '退款中':'已付款'}}</view>
   </view>
   <view class='counter' bindtap='goseorder'>
     <view class='cout_left'>
@@ -24,8 +24,11 @@
     <view>
       <button open-type='contact'>联系客服</button>
     </view>
-    <view>
+    <view wx:if="{{}}">
       <button bindtap='dedlorder'>申请退款</button>
+    </view>
+    <view wx:else>
+      <button bindtap='goseorder'>查看订单</button>
     </view>
     <view class='border_rea'>
       <button data-userid='{{data.user_id}}' data-actid="{{data.frist_act.id}}" data-title='{{data.act_info.title}}' data-image='{{data.act_info.cover_img}}' open-type="share">邀请好友</button>

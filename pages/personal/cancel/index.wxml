@@ -1,0 +1,17 @@
+<!--pages/personal/cancel/index.wxml-->
+<view class="header">
+  <view class="logo_img">
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/logo@2x.png" mode='aspectFit'></image>
+  </view>
+  <view class="h_text">
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/success@3x.png"></image>
+  您的订单已成功取消！</view>
+</view>
+<view class="content">
+  <view class="con_text1">请不要着急哦</view>
+  <view class="con_text2">
+    <text>工作人员正在努力为您办理退款，预计</text>
+    <text>时间2个工作日内退到您的微信钱包</text>
+  </view>
+<view class="btn">继续逛逛</view>
+</view>

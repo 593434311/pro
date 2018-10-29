@@ -12,6 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
     // this.onLoad(options)
     app.globalData.payment = false
     this.setData({
@@ -25,6 +26,8 @@ Page({
    */
   getreloadLog: function () {
     app.RequiseData('user.info.userinfo', { }, res => {
+      console.log(res);
+
       if(res.status === 0){
         this.setData({
           num: res.data.order_count,
