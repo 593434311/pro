@@ -24,11 +24,17 @@
   line-height:45rpx;
   color:#727272;
   margin-bottom: 20rpx;
+  position: relative;
 }
 .bm_t .bm_tit text{
-  /* color:#ff5246; */
-  position: relative;
+  position: absolute;
+  top: 0;
   left:-12rpx;
+}
+
+.bm_t .bm_tit view{
+  display:inline-block;
+  text-indent:140rpx
 }
 .bm_t .location{
   margin-bottom:11rpx;
@@ -94,8 +100,8 @@
   align-items:center;
 }
  .wantas image{
-  width:28rpx;
-  height:24rpx;
+  width:26rpx;
+  height:22rpx;
   margin-right: 12rpx;
   margin-bottom: 2rpx;
 }

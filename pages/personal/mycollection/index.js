@@ -7,6 +7,7 @@ Page({
    */
   data: {
     tabs: ["活动", "团购", "商家", "文章"],
+  
     activeIndex: 0,
     windowheight: 0,
     sliderOffset: 0,

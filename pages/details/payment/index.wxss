@@ -27,9 +27,9 @@
 }
 .pay_counter .Countdown_te{
   display: block;
-  font-size: 24rpx;
- 
+  font-size: 26rpx;
   margin-bottom: 17rpx;
+  padding-top:20rpx;
 }
 .pay_counter .Countdown{
   display: flex;
@@ -113,6 +113,11 @@
   background-size: 100%;
   background-repeat: no-repeat;
 }
+.rule_left text:nth-of-type(2){
+  font-size:30rpx;
+  color:#4c4c4c;
+  
+}
 .rule_right{
   color: #ff373a;
   font-size: 22rpx;
@@ -167,4 +172,13 @@
   margin-top: 30rpx;
   font-size: 22rpx;
   line-height: 36rpx;
+}
+.toindex{
+  width:114rpx;
+  height:42rpx;
+  line-height: 42rpx;
+  font-size:28rpx;
+  color:#666;
+  border-bottom:1rpx solid #999;
+  margin:36rpx auto 0;
 }

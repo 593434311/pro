@@ -1,7 +1,7 @@
 /* pages/component/befteam/index.wxss */
 .tuan_list{
   /* max-height: 345rpx; */
-  padding:25rpx  24rpx ;
+  padding:24rpx;
   display: flex;
   justify-content:space-between;
   margin-bottom:12rpx;
@@ -56,7 +56,7 @@
 }
 .tuan_rt .rt_tit view{
   display:inline-block;
-  text-indent:130rpx
+  text-indent:140rpx
 }
 .tuan_rt .rt_btm{
   width:500rpx;
@@ -84,8 +84,8 @@
 }
  .price s:nth-of-type(1){
   color:#ff3638;
-  font-size:34rpx;
-  padding-right:10rpx;
+  font-size:30rpx;
+  padding-right:20rpx;
 }
 .tuan_mon .purchase{
   width:88rpx;
@@ -145,8 +145,8 @@
   transition: all 0.3s;
 }
 .want image{
-  width:28rpx;
-  height:24rpx;
+  width:26rpx;
+  height:22rpx;
   margin-right:12rpx;
   margin-bottom: 2rpx;
 }

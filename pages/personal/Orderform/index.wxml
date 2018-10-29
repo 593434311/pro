@@ -17,7 +17,7 @@
               <beforder item="{{item}}" bind:confirmEvent="_confirmEvent"></beforder>
             </block>
             <block wx:elif="{{item.state === '2'}}">
-              <oldorder item="{{item}}" bind:confirmEvent="_confirmEvent"></oldorder>
+              <oldorder item="{{item}}" bind:cannelorder="cannelorder"></oldorder>
             </block>
             <block wx:elif="{{item.state === '3'}}">
               <oldgroup item="{{item}}"></oldgroup>
@@ -25,10 +25,10 @@
             <block wx:elif="{{item.state === '4'}}">
               <befgroup item="{{item}}"></befgroup>
             </block>
-             <block wx:elif="{{item.state === '5' || '6'}}">
-              <oldorder item="{{item}}" isnony="{{true}}" bind:confirmEvent="_confirmEvent"></oldorder>
+             <block wx:elif="{{item.state == '5' || item.state == '6'}}">
+              <oldorder item="{{item}}" isnony="{{true}}"></oldorder>
             </block>
-            <nodata wx:if="{{isdata}}" state="{{0}}" text="你还没有订单哦，快去团购吧~"></nodata>
+            <nodata wx:if="{{isdata}}" state="{{0}}" text="{{texts[0]}}"></nodata>
           </block>
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 1}}">
@@ -38,8 +38,8 @@
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 2}}">
           <block wx:for="{{befodata}}" wx:key="index">
-            <oldorder wx:if="{{item.state == '5' || '6'}}" isnony="{{true}}" item="{{item}}" bind:confirmEvent="_confirmEvent"></oldorder>
-            <oldorder wx:else item="{{item}}" bind:confirmEvent="_confirmEvent"></oldorder>
+            <oldorder wx:if="{{item.state == '5' || item.state == '6'}}" isnony="{{true}}" item="{{item}}"></oldorder>
+            <oldorder wx:else item="{{item}}" bind:cannelorder="cannelorder"></oldorder>
           </block>
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 3}}">
@@ -52,7 +52,7 @@
             <befgroup item="{{item}}"></befgroup>
           </block>
         </view>
-        <nodata wx:if="{{isdata}}" state="{{0}}" text="你还没有订单哦，快去团购吧~"></nodata>
+        <nodata wx:if="{{isdata}}" state="{{0}}" text="{{texts[activeIndex]}}"></nodata>
       </scroll-view>
     </view>
   </view>

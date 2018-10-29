@@ -7,7 +7,7 @@ Page({
    */
   data: {
     isnewuser: false,
-    isCoupon: false,
+    isCoupon: false ,
     inviter: '',
     act: ''
   },

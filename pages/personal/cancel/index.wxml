@@ -13,5 +13,5 @@
     <text>工作人员正在努力为您办理退款，预计</text>
     <text>时间2个工作日内退到您的微信钱包</text>
   </view>
-<view class="btn">继续逛逛</view>
 </view>
+ <view class="btn" catchtap='toIndex'>继续逛逛</view>

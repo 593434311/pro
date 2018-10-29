@@ -30,7 +30,7 @@
     <view wx:else>
       <button bindtap='goseorder'>查看订单</button>
     </view>
-    <view class='border_rea'>
+    <view class='border_rea' wx:if="{{!isnony}}">
       <button data-userid='{{data.user_id}}' data-actid="{{data.frist_act.id}}" data-title='{{data.act_info.title}}' data-image='{{data.act_info.cover_img}}' open-type="share">邀请好友</button>
     </view>
   </view>

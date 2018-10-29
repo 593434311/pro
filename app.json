@@ -9,7 +9,7 @@
     "pages/details/business/index",
     "pages/details/actideails/index",
     "pages/details/index/index",
-    "pages/details/payment/index",
+    
     "pages/personal/unpaid/unpaid",
     "pages/details/othergro/index",
     "pages/personal/mycollection/index",
@@ -25,7 +25,8 @@
     "pages/details/share/share",
     "pages/details/allactive/index",
     "pages/personal/cancel/index",
-    "pages/zpp/zpp"
+    "pages/details/payment/index"
+    
    
   ],
   "window": {
