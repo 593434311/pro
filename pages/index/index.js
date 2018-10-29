@@ -116,7 +116,6 @@ Page({
       })
       e.detail.inviter_id = ''
       app.setuserinfo(e.detail.userInfo, res => {
-        console.log(res)
         if (res.status === 0) {
           app.globalData.user_info = res.data
           app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {
@@ -141,7 +140,6 @@ Page({
     }
   },
   catchTouchMove: function (res) {
-    console.log(res)
   },
   onReachBottom(){
     if (this.data.isweedata) {

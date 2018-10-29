@@ -1,9 +1,10 @@
 /* pages/personal/seeolde/index.wxss */
 /* pages/personal/index/index.wxss */
 .contentW{
+  width: 100%;
+  overflow: hidden;
   padding: 0 24rpx;
   background-color:#fff;
-  margin-bottom:12rpx;
 }
 .bottom_border{
   position: relative;
@@ -62,6 +63,12 @@
 /* 参团详情 */
 .tuan_detail{
 
+}
+.information_cont .text_tit{
+  width:100rpx;
+   line-height: 28rpx;
+  /* display: flex;
+  align-items:center; */
 }
  .title {
   display:flex;

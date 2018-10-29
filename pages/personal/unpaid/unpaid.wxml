@@ -74,6 +74,7 @@
     <view class="discounts">优惠价格：<text>￥{{wxconpon ? wxconpon.money_reduce_y:'0'}}</text></view>
   </view>
 </view>
+<view style='height: 100rpx;'></view>
 <view class="bottom"> 
   <view class="bottom_cont">
     <view class="bottom_text">实际支付：<text>￥{{onponmony?onponmony:order_info.act_info.p_price}}</text></view>

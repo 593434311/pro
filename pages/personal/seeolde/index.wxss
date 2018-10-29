@@ -1,6 +1,8 @@
 /* pages/personal/seeolde/index.wxss */
 /* pages/personal/index/index.wxss */
 .contentW{
+  width: 100%;
+  overflow: hidden;
   padding: 0 24rpx;
   background-color:#fff;
   margin-bottom:12rpx;
@@ -16,6 +18,12 @@
   width:750rpx;
   height: 2rpx;
   background-color:#f2f2f2;
+}
+.information_cont .text_tit{
+  width:100rpx;
+   line-height: 28rpx;
+  /* display: flex;
+  align-items:center; */
 }
 
 .unpaid{
@@ -177,14 +185,14 @@
   border-radius: 25rpx;
 }
 .text_orde{
+  margin-bottom: 12rpx;
   background-color: #fff;
-  margin-bottom: 100rpx;
   color: #a7a7a7;
   line-height: 42rpx;
-  padding: 24rpx 24rpx;
+  padding: 50rpx 24rpx;
 }
 .text_orde view{
-  font-size: 18rpx;
+  font-size: 24rpx;
 }
 .fuzi{
   color: #ff9394;
@@ -197,11 +205,10 @@
   margin-bottom: 12rpx;
 }
 .header{
-  height: 64rpx;
+  height: 88rpx;
   display: flex;
   align-items: center;
   justify-content:space-between;
-  border-bottom: 1px solid #e5e5e5;
 }
 .header .head_left {
   display: flex;

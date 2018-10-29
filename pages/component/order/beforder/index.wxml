@@ -18,7 +18,7 @@
       <view class='num'>x1</view>
     </view>
   </view>
-  <view class='allmony'>实付：￥{{data.pay_price}}</view>
+  <view class='allmony'>实付：￥{{data.p_price}}</view>
   <view class='orde_button'>
     <view>
       <button class="bottom_pay" bindtap='dedlorder'>取消订单</button>

@@ -23,11 +23,11 @@
   </view>
   <form>
     <view class="name information_cont bottom_border">
-      <view>姓名</view>
+      <view class='text_tit'>姓名</view>
       <input name="input" disabled="true" value='{{order_info.name}}'/>
     </view>
     <view class="telephone information_cont">
-      <view>电话</view>
+      <view class='text_tit'>电话</view>
       <input name="input" disabled="true" value='{{order_info.phone}}'/>
     </view>
   </form>
@@ -58,6 +58,7 @@
   <view>支付方式：微信</view>
   <view>下单时间：{{order_info.c_date}}</view>
 </view>
+<view style='height: 100rpx;'></view>
 <!-- 购买数量 -->
 <view class="bottom">
   <view class="bottom_cont">

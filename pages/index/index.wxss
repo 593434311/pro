@@ -7,7 +7,7 @@
 .swiper-container .swiper{
    width:690rpx;
    height: 358rpx;
-   padding:24rpx 0;
+   padding:30rpx 0;
    margin:0 auto;
 }
 .swiper-container .swiper-item {
@@ -42,7 +42,7 @@
   background-color:#f9f9fa;
 }
 .content_tuan .tuan_title{
-  padding:10rpx  0 24rpx 0;
+  padding:0  0 24rpx 0;
   margin: 0 auto;
   text-align: center;
   background:#f9f9fa;
@@ -117,7 +117,7 @@
    position: relative;
 }
 .content_active .active_title .img1{
-  width:373rpx;
+  width:372rpx;
   height:52rpx;
   position:absolute;
   left:189rpx;
