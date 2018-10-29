@@ -49,7 +49,7 @@ Component({
           if (res.confirm) {
             app.RequiseData('order.index.cannelorder', { orderid: dataid }, res => {
               if (res.status == 0) {
-                this.triggerEvent("confirmEvent");
+                this.triggerEvent("cannelorder");
               }
               else{
                 wx.showModal({

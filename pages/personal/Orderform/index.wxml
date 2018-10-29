@@ -17,7 +17,7 @@
               <beforder item="{{item}}" bind:confirmEvent="_confirmEvent"></beforder>
             </block>
             <block wx:elif="{{item.state === '2'}}">
-              <oldorder item="{{item}}" bind:confirmEvent="_confirmEvent"></oldorder>
+              <oldorder item="{{item}}" bind:cannelorder="cannelorder"></oldorder>
             </block>
             <block wx:elif="{{item.state === '3'}}">
               <oldgroup item="{{item}}"></oldgroup>

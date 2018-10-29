@@ -24,7 +24,7 @@
     <view>
       <button open-type='contact'>联系客服</button>
     </view>
-    <view wx:if="{{}}">
+    <view wx:if="{{!isnony}}">
       <button bindtap='dedlorder'>申请退款</button>
     </view>
     <view wx:else>
