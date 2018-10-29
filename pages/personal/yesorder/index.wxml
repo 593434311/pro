@@ -22,11 +22,11 @@
   </view>
   <form>
     <view class="name information_cont bottom_border">
-      <view>姓名</view>
+      <view class='text_tit'>姓名</view>
       <input name="input" value='{{order_info.name}}' disabled="true" placeholder="请输入收货人姓名" />
     </view>
     <view class="telephone information_cont">
-      <view>电话</view>
+      <view class='text_tit'>电话</view>
       <input name="input" value='{{order_info.phone}}' disabled="true" placeholder="请输入手机号码" />
     </view>
 
@@ -57,9 +57,8 @@
       <text class="tit_text1">优惠券</text>
     </view>
     <view class="money_off">
-      <text wx:if="{{}}">满{{}}元减{{}}元</text>
+      <text wx:if="{{coupon_info}}">满{{coupon_info.money_max_y}}元减{{coupon_info.reduce_y}}元</text>
       <text wx:else>未使用</text>
-      <image src="/static/images/details_index/more@2x.png"></image>
     </view>
   </view>
   <view class="payment">

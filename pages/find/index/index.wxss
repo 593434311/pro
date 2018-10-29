@@ -5,11 +5,12 @@
  .tuan_title{
   /* padding:37rpx 0 30rpx 0; */
   background:#f9f9fa;
-   height:90rpx;
-   position:relative;
+  margin-top: 10rpx;
+  height:90rpx;
+  position:relative;
 }
  .tuan_title .img1{
-  width:373rpx;
+  width:372rpx;
   height:52rpx;
   position:absolute;
   left:182rpx;

@@ -6,11 +6,10 @@
   margin-bottom: 12rpx;
 }
 .header{
-  height: 64rpx;
+  height: 88rpx;
   display: flex;
   align-items: center;
   justify-content:space-between;
-  border-bottom: 1px solid #e5e5e5;
 }
 .header .head_left {
   display: flex;

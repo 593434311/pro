@@ -42,7 +42,7 @@
   background-color:#f9f9fa;
 }
 .content_tuan .tuan_title{
-  padding:10rpx  0 24rpx 0;
+  padding:0  0 24rpx 0;
   margin: 0 auto;
   text-align: center;
   background:#f9f9fa;

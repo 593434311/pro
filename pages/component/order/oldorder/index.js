@@ -47,7 +47,12 @@ Component({
         content: '确定要申请退款吗？',
         success: res => {
           if (res.confirm) {
+            wx.showLoading({
+              title: '数据加载中...',
+              mask: true,
+            })
             app.RequiseData('order.index.cannelorder', { orderid: dataid }, res => {
+              wx.hideLoading()
               if (res.status == 0) {
                 this.triggerEvent("cannelorder");
               }

@@ -15,7 +15,6 @@ Component({
             newVal[i] = {}
           }
         }
-        console.log(newVal)
         this.setData({
           data: newVal
         })

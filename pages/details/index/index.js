@@ -18,9 +18,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
     this.setData({
-      inviter_id: options.userid
+      inviter_id: options.userid  || ''
     })
     wx.showLoading({
       title: '加载中...',
