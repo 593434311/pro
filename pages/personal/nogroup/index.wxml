@@ -6,7 +6,7 @@
   </view>
   <view class="unpaid_rt">
     <text>拼团失败</text>
-    <text>您的金额会在48小时内退换至您的账户</text>
+    <text>您的付款会在48小时内退换至您的账户</text>
   </view>
 </view>
 <!-- 参与详情 -->

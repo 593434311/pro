@@ -1,6 +1,5 @@
 {
   "pages": [
-   
     "pages/index/index",
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
@@ -17,14 +16,14 @@
     "pages/find/selectedActi/index",
     "pages/find/selectedmerc/index",
     "pages/details/Joindeta/index",
-   
+    "pages/personal/cancel/index",
     "pages/personal/yesorder/index",
     "pages/find/articledetails/index",
     "pages/details/selecoupon/index",
     "pages/details/bannerdetails/index",
     "pages/details/share/share",
     "pages/details/allactive/index",
-    "pages/personal/cancel/index",
+    
     "pages/details/payment/index"
     
    

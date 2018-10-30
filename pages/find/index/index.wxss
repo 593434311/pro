@@ -4,7 +4,7 @@
  }
  
 .title{
-  padding:24rpx 0;
+  padding:30rpx 0 24rpx;
   background:#f9f9fa;
   margin-left:154rpx;
 }
