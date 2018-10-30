@@ -8,10 +8,10 @@
   您的订单已成功取消！</view>
 </view>
 <view class="content">
-  <view class="con_text1">请不要着急哦</view>
+  <view class="con_text1">请耐心等待~</view>
   <view class="con_text2">
-    <text>工作人员正在努力为您办理退款，预计</text>
-    <text>时间2个工作日内退到您的微信钱包</text>
+    <text>您的退款正在受理中，预计在7个工作日内</text>
+    <text>将退还到您的微信钱包~</text>
   </view>
 </view>
  <view class="btn" catchtap='toIndex'>继续逛逛</view>

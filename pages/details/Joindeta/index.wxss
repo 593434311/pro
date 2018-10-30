@@ -58,7 +58,6 @@ page{
   align-items: center;
   justify-content:center;
   font-size: 26rpx;
-  font-weight: bold;
   color:#ff5246;
   text-align: center;
 }
