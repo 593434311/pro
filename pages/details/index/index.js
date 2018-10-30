@@ -47,8 +47,8 @@ Page({
    */
   bindGetUserInfo(e){
     wx.showToast({ title: '请稍后...', icon: 'loading'});
-    if(!app.globalData.user_info){ // 判断本地是否有数据
-      app.setuserinfo(e.detail.rawData, res =>{
+    if (!app.globalData.user_info.avatar){ // 判断本地是否有数据
+      app.setuserinfo(e.detail.userInfo, res =>{
         if(res.status === 0){
           this.orderdown(e.currentTarget.dataset)
         }
@@ -126,7 +126,12 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage(res) {
+    // 来自页面内转发按钮
+    return {
+      title: this.data.act_info.title,
+      path: `/pages/details/share/share?id=${this.data.act_info.id}&userid=`,
+      imageUrl: `http://gtshidai.oss-cn-shanghai.aliyuncs.com${this.data.act_info.cover_img}`
+    }
   }
 })

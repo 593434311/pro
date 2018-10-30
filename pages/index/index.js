@@ -27,8 +27,8 @@ Page({
   },
   onloadaaa: function (res) {
     var cuea = setInterval(() => {
-      if (wx.getStorageSync('cuea')){
-        if (wx.getStorageSync('cuea') === 'isd'){
+      if (wx.getStorageSync('cuea')) {
+        if (wx.getStorageSync('cuea') === 'isd') {
           this.setData({
             isCoupon: true
           })
@@ -36,7 +36,7 @@ Page({
         clearInterval(cuea)
         wx.removeStorageSync('cuea')
       }
-    },2000)
+    }, 2000)
     wx.getSystemInfo({
       success: res => {
         this.setData({
@@ -44,7 +44,6 @@ Page({
         });
       }
     });
-
     this.gettuan()
     this.getActive()
     this.getbutton()
@@ -114,7 +113,7 @@ Page({
       this.setData({
         isCoupon: false
       })
-      e.detail.inviter_id = ''
+      e.detail.userInfo.inviter_id = ''
       app.setuserinfo(e.detail.userInfo, res => {
         if (res.status === 0) {
           app.globalData.user_info = res.data

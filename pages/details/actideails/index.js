@@ -41,8 +41,8 @@ Page({
   },
   bindGetUserInfo: function (e) {
     wx.showToast({ title: '请稍后...', icon: 'loading' });
-    if (!app.globalData.user_info) { // 判断本地是否有数据
-      app.setuserinfo(e.detail.rawData, res => {
+    if (!app.globalData.user_info.avatar) { // 判断本地是否有数据
+      app.setuserinfo(e.detail.userInfo, res => {
         if (res.status === 0) {
           this.orderdown(e.currentTarget.dataset)
         }
@@ -92,9 +92,6 @@ Page({
       act_info: this.data.act_info
     })
   },
-  zpp(even) {
-    console.log(even)
-  },
   imgYu(event){
     var src = event.currentTarget.dataset.src;//获取data-src
     var imgList = event.currentTarget.dataset.list;//获取data-list
@@ -110,6 +107,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+    return {
+      title: this.data.act_info.title,
+      path: `/pages/details/actideails/index?id=${this.data.act_info.id}&userid=`,
+      imageUrl: `http://gtshidai.oss-cn-shanghai.aliyuncs.com${this.data.act_info.cover_img}`
+    }
   }
 })

@@ -34,8 +34,8 @@ Page({
           user_info: res.data.user_info,
           user_list: res.data.user_list,
           is_mobile: res.data.is_mobile,
-          usernum: res.data.user_info.realname,
-          useripne: res.data.user_info.realmobile,
+          usernum: res.data.user_info.realname||'',
+          useripne: res.data.user_info.realmobile|| '',
           isload: true
         })
         if (res.data.user_info.realname){
@@ -117,8 +117,8 @@ Page({
     var order = app.globalData[this.data.order_info.order_id]
     var order_id = this.data.order_info.order_id;
     var coupon_code = order ? order.code : '';
-    var name = this.data.usernum
-    var phone = this.data.useripne
+    var name = this.data.usernum;
+    var phone = this.data.useripne;
     var coupon_id = order ? order.id : '';
     app.RequiseData('order.index.payorder', { orderid: order_id, code: coupon_code, name: encodeURIComponent(name), phone: phone, cid: coupon_id }, res => {
       wx.hideLoading()

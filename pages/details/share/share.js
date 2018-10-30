@@ -21,23 +21,18 @@ Page({
     })
   },
   onLoad: function (options) {
-    console.log(options);
     var self = this;
     this.setData({
       act: options.id,
-      inviter: options.userid
+      inviter: options.userid || ''
     })
-    var cuea = setInterval(() => {
-      if (wx.getStorageSync('cuea')) {
-        if (wx.getStorageSync('cuea') === 'isd') {
-          this.setData({
-            isnewuser: true
-          })
-        }
-        clearInterval(cuea)
-        wx.removeStorageSync('cuea')
+    app.RequiseData('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {
+      if (res.data.iscoupon === '0'){
+        this.setData({
+          isnewuser: true
+        })
       }
-    }, 2000)
+    })
   },
   Receive(){
     if (!this.data.isnewuser ){
@@ -58,7 +53,7 @@ Page({
       this.setData({
         isCoupon: false
       })
-      e.detail.inviter_id = ''
+      e.detail.userInfo.inviter_id = this.data.inviter
       app.setuserinfo(e.detail.userInfo, res => {
         if (res.status === 0) {
           app.globalData.user_info = res.data
@@ -72,7 +67,7 @@ Page({
               })
               setTimeout(res=>{
                 wx.navigateTo({
-                  url: `/pages/details/index/index?id=${this.data.inviter}`,
+                  url: `/pages/details/index/index?id=${this.data.act}&userid=${this.data.inviter}`,
                 })
               }, 1200)
             }

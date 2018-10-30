@@ -1,6 +1,5 @@
 {
   "pages": [
-   
     "pages/index/index",
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
@@ -9,7 +8,7 @@
     "pages/details/business/index",
     "pages/details/actideails/index",
     "pages/details/index/index",
-     "pages/personal/nogroup/index",
+    "pages/personal/nogroup/index",
     "pages/personal/seeolde/index",
     "pages/personal/unpaid/unpaid",
     "pages/details/othergro/index",
@@ -17,7 +16,6 @@
     "pages/find/selectedActi/index",
     "pages/find/selectedmerc/index",
     "pages/details/Joindeta/index",
-   
     "pages/personal/yesorder/index",
     "pages/find/articledetails/index",
     "pages/details/selecoupon/index",

@@ -73,7 +73,7 @@ function signature(data) {
   sign_str += client_secret
   return md5.hexMD5(sign_str)
 }
-function setuserinfo(data, Callback){  
+function setuserinfo(data, Callback){ 
   appRequest('user.info.saveinfo', { nickname: encodeURIComponent(data.nickName), avatar: encodeURIComponent(data.avatarUrl), gender: data.gender, inviter_id: data.inviter_id }, res => {
     Callback(res)
   })

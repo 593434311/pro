@@ -3,7 +3,6 @@ var hexMD5 = require('utils/md5.js')
 var request = require('utils/request.js')
 
 App({
-  
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -19,7 +18,7 @@ App({
               this.globalData.user_info = res.data.user_info;
               if (res.data.iscoupon === '0') {
                 wx.setStorageSync('cuea', 'isd'); // 
-              }   
+              }
             },
             fail: fail => {
               wx.login({
@@ -54,7 +53,6 @@ App({
       wx.login({
         success: res => {
           request.request('login.login.login', { code: res.code, type: 2 }, resd => {
-            console.log(res)
             if (resd.status == 0) {
               this.globalData.openId = resd.data.openid
               this.globalData.user_info = resd.data.user_info;
