@@ -2,10 +2,18 @@
 .head{
   background-color: #fff;
   padding: 24rpx;
+  height:146rpx;
+  position:fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 14rpx;
+  z-index:1;
   
 }
 .articlshei{
-  color: #737373;
+  color: #333;
   font-size: 36rpx;
 }
 .pulltime{
@@ -16,8 +24,10 @@
 }
 .counter{
   padding: 36rpx 24rpx;
-  margin-top: 14rpx;
   background-color: #fff;
+  position:absolute;
+  top:158rpx;
+  left:0;
 }
 .counter image{
   width: 100%;
@@ -52,7 +62,7 @@
   align-items: center;
   justify-content:center;
   background-color: #fff;
-  border:1rpx solid #fe5354;
+  box-shadow:0 0 8rpx #d8d8d8;
   border-radius: 40rpx;
   margin-right: 38rpx;
  

@@ -5,14 +5,15 @@
 }
 .quality > .tit{
   display: flex;
+  align-items:center;
   flex-direction: row;
   padding: 24rpx;
   padding-bottom: 14rpx;
   margin-bottom: 4rpx;
 }
 .quality_boximg image{
-  width: 100rpx;
-  height: 100rpx;
+  width: 80rpx;
+  height: 80rpx;
   border-radius: 50%;
 }
 .qualityname{
@@ -20,8 +21,8 @@
   margin-top:5rpx;
   align-items: center;
   flex-direction: row;
-  color: #7b7b7b;
-  font-size: 30rpx;
+  color: #333;
+  font-size: 28rpx;
 }
 .quality_text{
   margin-left: 20rpx;
@@ -36,7 +37,7 @@
 }
 .Label{
   font-size: 24rpx;
-  color: #ffa4a5;
+  color: #ccc;
   margin-top: 20rpx;
 }
 .tex_img{
@@ -53,7 +54,6 @@
 .tex_img .img image{
   width: 216rpx;
   height: 216rpx;
-  border-radius: 10rpx;
   margin-left: 27rpx;
 }
 .tex_img .img image:first-child{

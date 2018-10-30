@@ -17,7 +17,7 @@
 .tuan_title{
    background:#f9f9fa;
    height:52rpx;
-   margin:19rpx 0;
+   margin:24rpx 0;
    position: relative;
    
    

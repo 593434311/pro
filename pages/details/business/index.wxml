@@ -2,7 +2,7 @@
 <import src="../../../wxParse/wxParse.wxml"/>
 <view>
   <view class='headrer'>
-    <image class='top_img' src='/static/images/tempalry/bj@2x.png'></image>
+    <image class='top_img' src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/store@2x.png'></image>
     <view class='portrait'>
       <image wx:if="{{businData.shop_logo}}" src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{businData.shop_logo}}?x-oss-process=image/resize,m_fill,h_108,w_108'></image>
       <image wx:else src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/tx2@3x.png'></image>

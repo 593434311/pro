@@ -25,7 +25,7 @@
             <seledactive data="{{item}}"></seledactive>
           </block> 
         </block>
-        <nodata wx:if="{{isdata}}" state="{{2}}" text="暂无活动，请保持关注哦~"></nodata>
+        <nodata wx:if="{{isdata}}" state="{{2}}" text="当前暂无收藏~"></nodata>
       </scroll-view>
     </view>
   </view>
