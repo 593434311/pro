@@ -52,7 +52,7 @@ Page({
     wx.showLoading({
       title: '加载中...'
     })
-    app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 4 }, res => {
+    app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 8 }, res => {
       wx.hideLoading();
       if (res.data.length === 0) {
         this.data.isweedata = false
@@ -172,6 +172,7 @@ Page({
     this.setData({
       activeData: [],
       slider: [],
+      isweedata:true,
       RegimentPage: 1,
       RegimentData: []
     })

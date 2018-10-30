@@ -94,6 +94,9 @@ page{
   padding: 24rpx;
   background-color: #fff;
 }
+.toggle_data image{
+  width: 100%;
+}
 .toggle_data .active{
   padding-bottom: 100rpx;
 }
