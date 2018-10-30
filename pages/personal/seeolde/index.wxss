@@ -40,7 +40,7 @@
 .unpaid .unpaid_lt image{
   width:134rpx;
   height:106rpx;
-  padding-bottom:34rpx;
+  padding-bottom:15rpx;
 }
 .unpaid .unpaid_lt text{
   display: block;
