@@ -4,7 +4,7 @@
  }
  
 .title{
-  padding:30rpx 0 24rpx;
+  padding:32rpx 0 18rpx;
   background:#f9f9fa;
   margin-left:154rpx;
 }
@@ -17,7 +17,7 @@
 .tuan_title{
    background:#f9f9fa;
    height:52rpx;
-   margin:24rpx 0;
+   margin:24rpx 0 28rpx;
    position: relative;
    
    

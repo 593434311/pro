@@ -2,13 +2,13 @@
 .head{
   background-color: #fff;
   padding: 24rpx;
-  height:146rpx;
+  padding-bottom:20rpx;
+  height:138rpx;
   position:fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin-bottom: 14rpx;
   z-index:1;
   
 }
@@ -19,14 +19,14 @@
 .pulltime{
   font-size: 22rpx;
   color: #b8b8b8;
-  margin-top: 20rpx;
-  text-align: right;
+  margin-top: 15rpx;
+  text-align: left;
 }
 .counter{
   padding: 36rpx 24rpx;
   background-color: #fff;
   position:absolute;
-  top:158rpx;
+  top:150rpx;
   left:0;
 }
 .counter image{

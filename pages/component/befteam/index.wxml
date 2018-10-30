@@ -8,7 +8,7 @@
   </view>
   <view class="tuan_rt">
     <view class="rt_tit">
-      <text class='text'>【{{data.sub_num}}人团】</text>
+      <!-- <text class='text'>【{{data.sub_num}}人团】</text> -->
       <view class='view'>{{data.title}}</view>
       
     </view>
@@ -32,11 +32,11 @@
       <!-- <view class="collect flex"> 
   
       </view> -->
-      <view class="want" hover-class='hove-want' data-id='{{data.id}}' data-type='2' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
+      <!-- <view class="want" hover-class='hove-want' data-id='{{data.id}}' data-type='2' data-behavior="{{data.user_attribute.collect?'no_collect':'collect'}}" catchtap='cuitWent'>
           <image wx:if="{{!data.user_attribute.collect}}" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh@3x.png"></image>
           <image wx:else src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/xh2@3x.png"></image>
           <text>{{data.attribute_num.collect}}人想玩</text>
-        </view>
+        </view> -->
     </view>
   </view>
 </view>

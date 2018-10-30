@@ -1,15 +1,18 @@
 /* pages/component/find/selectedmer/index.wxss */
 .quality{
   background-color: #fff;
-  margin-bottom: 12rpx;
+  margin-bottom: 18rpx;
 }
 .quality > .tit{
   display: flex;
   align-items:center;
   flex-direction: row;
   padding: 24rpx;
-  padding-bottom: 14rpx;
+  padding-bottom: 10rpx;
   margin-bottom: 4rpx;
+}
+.quality_boximg{
+  padding-top:6rpx;
 }
 .quality_boximg image{
   width: 80rpx;
@@ -38,18 +41,18 @@
 .Label{
   font-size: 24rpx;
   color: #ccc;
-  margin-top: 20rpx;
+  margin-top: 14rpx;
 }
 .tex_img{
   padding: 0 24rpx;
-  padding-bottom: 40rpx;
+  padding-bottom: 24rpx;
 }
 .tex_img .tit{
-  color: #7b7b7b;
+  color: #999;
   font-size: 26rpx;
 }
 .tex_img .img{
-  margin-top: 24rpx;
+  margin-top:24rpx;
 }
 .tex_img .img image{
   width: 216rpx;

@@ -79,17 +79,24 @@ Page({
          var tuandata = res.data;
         var newdata = [];
         var length = tuandata.length;
-        if(length %2 != 0){
-          tuandata.push(tuandata[0])
-        }
-        for (var i in tuandata){
-          if(i %2){
-            var arr = [];
-            arr[0] = tuandata[i - 1]
-            arr[1] = tuandata[i]
-            newdata.push(arr)
+        if(length %3 != 0){
+          var ken = 3 - (length % 3)
+          for (var i = 0; i < ken; i++){
+            tuandata.push(tuandata[i])
           }
         }
+        console.log(tuandata)
+        for (var i in tuandata){
+          if (Number(i+3) %3 == 0){
+              var arr = [];
+              arr[0] = tuandata[i]
+              arr[1] = tuandata[Number(i)+1]
+              arr[2] = tuandata[Number(i)+2]
+              newdata.push(arr)
+            }
+          
+        }
+        
         this.setData({
           activeData: newdata,
         })

@@ -1,40 +1,42 @@
 /* pages/component/befteam/index.wxss */
 .tuan_list{
   /* max-height: 345rpx; */
-  padding:24rpx;
+  padding:20rpx;
   display: flex;
   justify-content:space-between;
-  margin-bottom:12rpx;
+  margin-bottom:14rpx;
   background-color:#fff;
 }
 .tuan_list .tuan_lt{
-  width:180rpx;
-  height:180rpx;
+  width:120rpx;
+  height:120rpx;
   position:relative;
 }
 .tuan_list .tuan_img image{
-  width:180rpx;
-  height:180rpx;
+  width:120rpx;
+  height:120rpx;
   border-radius:10rpx;
 }
 .tuan_list .tuan_img .surplus{
   width:90rpx;
   height:28rpx;
   line-height:28rpx;
-  background-color:rgba(0,0,0,.5);
+  background-color:rgba(0,0,0,.3);
   border-radius:14rpx;
+  font-weight:bold;
   font-size:18rpx;
   color:#fff;
   text-align:center;
   letter-spacing:5rpx;
   position:absolute;
   top:6rpx;
-  right:6rpx;
+  right:16rpx;
 
 }
 .surplus text{
-  color:#fe374e;
+  color:red;
   font-size:24rpx;
+  
 }
 .tuan_list .tuan_rt{
   width:500rpx;
@@ -45,8 +47,8 @@
   position: relative;
   max-width: 500rpx;
   /* overflow:hidden; */
-  font-size:30rpx;
-  color:#727272;
+  font-size:28rpx;
+  color:#888;
 }
 
 .tuan_rt .rt_tit .text{
@@ -56,7 +58,7 @@
 }
 .tuan_rt .rt_tit view{
   display:inline-block;
-  text-indent:140rpx
+  /* text-indent:140rpx */
 }
 .tuan_rt .rt_btm{
   width:500rpx;
@@ -88,8 +90,8 @@
   padding-right:20rpx;
 }
 .tuan_mon .purchase{
-  width:88rpx;
-  height:45rpx;
+  width:70rpx;
+  height:36rpx;
  
 }
 .hove-want{

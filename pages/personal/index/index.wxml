@@ -7,8 +7,8 @@
   <view wx:else class="user">
     <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/tx2@3x.png'></image>
   </view>
-  <view class="or_code">
-    <image src="/static/images/personal/erweima@2x.png"></image>
+  <view class="or_code" >
+    <image  bindtap='imgYu' src="/static/images/personal/erweima@2x.png" data-list="{{}}" data-src="{{}}" ></image>
   </view>
 </view>
 <!-- 我的团购 -->
