@@ -28,6 +28,7 @@ Component({
   data: {
     imglist: ['zwdd@2x.png', 'zwhd@2x.png', 'zwsc@2x.png','zwxx@2x.png'],
     befoimg: 'zwdd@2x.png'
+    
   },
   /**
    * 组件的方法列表

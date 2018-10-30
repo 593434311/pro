@@ -71,16 +71,13 @@
     </view>
     <view class="strategy_bm">
       <view class="strategy_bm_cont">
-        <text>开团或参团</text>
-        按照步骤正确参与即可完成拼团
+        <text>开团或参团</text>按照步骤正确参与即可完成拼团
       </view>
       <view class="strategy_bm_cont">
-        <text>邀好友领返现</text>
-        邀好友成团，立获返现，团内小伙伴均可参与邀请
+        <text>邀好友领返现</text>邀好友成团，立获返现，团内小伙伴均可参与邀请
       </view>
       <view class="strategy_bm_cont">
-        <text>成功开团</text>
-        到达参团人数后将成功开团，否则将自动退款
+        <text>成功开团</text>到达参团人数后将成功开团，否则将自动退款
       </view>
     </view>
   </view>

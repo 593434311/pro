@@ -28,7 +28,7 @@
              <block wx:elif="{{item.state == '5' || item.state == '6'}}">
               <oldorder item="{{item}}" isnony="{{true}}"></oldorder>
             </block>
-            <nodata wx:if="{{isdata}}" state="{{0}}" text="{{texts[0]}}"></nodata>
+            <nodata wx:if="{{isdata}}" state="{{0}}" text="{{texts}}"></nodata>
           </block>
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 1}}">
@@ -52,7 +52,7 @@
             <befgroup item="{{item}}"></befgroup>
           </block>
         </view>
-        <nodata wx:if="{{isdata}}" state="{{0}}" text="{{texts[activeIndex]}}"></nodata>
+        <nodata wx:if="{{isdata}}" state="{{0}}" text="{{texts}}"></nodata>
       </scroll-view>
     </view>
   </view>
