@@ -23,10 +23,7 @@
     "pages/details/bannerdetails/index",
     "pages/details/share/share",
     "pages/details/allactive/index",
-    
     "pages/details/payment/index"
-    
-   
   ],
   "window": {
     "backgroundTextStyle": "center",

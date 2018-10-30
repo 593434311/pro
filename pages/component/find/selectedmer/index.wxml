@@ -6,7 +6,7 @@
       </view>
       <view class='quality_text'>
         <view class='qualityname'>{{data.shop_name}} <text></text></view>
-        <view class='Label'>#哈哈</view>
+        <view class='Label'>#{{data.shop_type_str || ''}}</view>
       </view>
     </view>
     <view class='tex_img'>
