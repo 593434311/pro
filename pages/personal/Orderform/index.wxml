@@ -26,7 +26,7 @@
               <befgroup item="{{item}}"></befgroup>
             </block>
              <block wx:elif="{{item.state == '5' || item.state == '6'}}">
-              <oldorder item="{{item}}" isnony="{{true}}"></oldorder>
+              <befgroup item="{{item}}"></befgroup>
             </block>
             <nodata wx:if="{{isdata}}" state="{{0}}" text="{{texts[0]}}"></nodata>
           </block>
@@ -38,8 +38,7 @@
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 2}}">
           <block wx:for="{{befodata}}" wx:key="index">
-            <oldorder wx:if="{{item.state == '5' || item.state == '6'}}" isnony="{{true}}" item="{{item}}"></oldorder>
-            <oldorder wx:else item="{{item}}" bind:cannelorder="cannelorder"></oldorder>
+            <oldorder item="{{item}}" bind:cannelorder="cannelorder"></oldorder>
           </block>
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 3}}">
@@ -49,7 +48,8 @@
         </view>
         <view class="weui-tab__content" wx:if="{{activeIndex == 4}}">
           <block wx:for="{{befodata}}" wx:key="index">
-            <befgroup item="{{item}}"></befgroup>
+            <befgroup wx:if="{{item.state == '5' || item.state == '6'}}" item="{{item}}"></befgroup>
+            <befgroup wx:else item="{{item}}"></befgroup>
           </block>
         </view>
         <nodata wx:if="{{isdata}}" state="{{0}}" text="{{texts[activeIndex]}}"></nodata>

@@ -4,7 +4,7 @@
     <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com{{data.cover_img}}?x-oss-process=image/resize,m_fill,h_120,w_120'></image>
   </view>
   <view class='box_text'>
-    <view>{{data.title}}</view>
+    <view class='box_tit'>{{data.title}}</view>
     <view class='cont'>{{data.cover_info}}</view>
   </view>
 </view>

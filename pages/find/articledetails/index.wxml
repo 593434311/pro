@@ -16,7 +16,7 @@
       <text>{{nodeinfo.attribute_num.collect}}</text>
   </view>
   <view class='shere'>
-    <button>
+    <button open-type='share'>
       <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/fx@3x.png'></image>
     </button>
   </view>

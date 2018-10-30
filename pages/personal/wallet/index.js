@@ -40,12 +40,12 @@ Page({
       app.RequiseData('user.money.subdeposit', { num: this.data.pulvalue*100 }, res => {
         if(res.status == 0){
           wx.showModal({
-            content: '恭喜您申请提现成功~',
+            content: '已接受您的提现申请，我们将在7个工作日之内发放至您的微信钱包',
             showCancel: false
           });
-        }else{
+        } else {
           wx.showModal({
-            content: res.data,
+            content: res.msg,
             showCancel: false
           });
         }
