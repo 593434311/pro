@@ -2,35 +2,53 @@
  page{
    background-color: #f9f9fa;
  }
- .tuan_title{
-  /* padding:37rpx 0 30rpx 0; */
+ 
+.title{
+  padding:24rpx 0;
   background:#f9f9fa;
-  margin-top: 10rpx;
-  height:90rpx;
-  position:relative;
+  margin-left:154rpx;
 }
- .tuan_title .img1{
-  width:372rpx;
+.title image{
+  width:442rpx;
+  height: 52rpx;
+}
+
+
+.tuan_title{
+   background:#f9f9fa;
+   height:52rpx;
+   margin:19rpx 0;
+   position: relative;
+   
+   
+}
+.tuan_title .img2{
+  width:442rpx;
   height:52rpx;
   position:absolute;
-  left:182rpx;
-  top:20rpx;
+  left:154rpx;
+  top:0;
+ 
+  
+  
 }
 .tuan_title .img3{
   width:42rpx;
   height:42rpx;
   position:absolute;
   right:24rpx;
-  top:22rpx;
+  top:5rpx;
+  
 }
 
+
 .gengduo{
-   width: 99rpx;
+   width: 98rpx;
    margin: 0 auto;
-   padding:20rpx 0 10rpx 0;
+   padding:32rpx 0 10rpx 0;
 }
 .gengduo image{
-  width: 100rpx;
-  height: 50.5rpx;
+  width: 98rpx;
+  height: 50rpx;
 }
 

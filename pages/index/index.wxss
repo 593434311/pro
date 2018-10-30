@@ -43,13 +43,14 @@
 }
 .content_tuan .tuan_title{
   padding:0  0 24rpx 0;
-  margin: 0 auto;
-  text-align: center;
+  /* margin: 0 auto;
+  text-align: center; */
   background:#f9f9fa;
+  margin-left:154rpx;
 }
 .content_tuan .tuan_title image{
-  width:373rpx;
-  height: 48rpx;
+  width:442rpx;
+  height: 52rpx;
 }
 .tuansw{
   max-height: 790rpx;
@@ -113,15 +114,19 @@
 
 .content_active .active_title{
    background:#f9f9fa;
-   height:90rpx;
+   height:52rpx;
+   margin:19rpx 0;
    position: relative;
+   
+   
 }
 .content_active .active_title .img1{
-  width:372rpx;
+  width:442rpx;
   height:52rpx;
   position:absolute;
-  left:189rpx;
-  top:20rpx;
+  left:154rpx;
+  top:0;
+ 
   
   
 }
@@ -130,7 +135,7 @@
   height:42rpx;
   position:absolute;
    right:24rpx;
-  top:22rpx;
+  top:5rpx;
   
 }
 
