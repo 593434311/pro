@@ -18,5 +18,28 @@ Page({
         })
       }
     })
+  },
+  copyTBL(e) {
+    wx.setClipboardData({
+      data: e.currentTarget.dataset.text,
+      success(res) {
+        wx.getClipboardData({
+          success(res) {
+            // wx.showModal({
+            //   title: '提示',
+            //   content: '复制成功',
+            //   showCancel: false
+            // })
+          }
+        })
+      }
+    })
+  },
+  onShareAppMessage() {
+    return {
+      title: '临港拼玩·开启优惠拼团之旅',
+      path: '/pages/index/index',
+      imageUrl: 'http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/banner/index.png'
+    }
   }
 })
