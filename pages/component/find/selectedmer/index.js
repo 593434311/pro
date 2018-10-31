@@ -20,6 +20,7 @@ Component({
    */
   methods: {
     imgYu(event){
+      console.log(event)
       var src = event.currentTarget.dataset.src;//获取data-src
       var imgList = event.currentTarget.dataset.list;//获取data-list
       for (var i in imgList){
