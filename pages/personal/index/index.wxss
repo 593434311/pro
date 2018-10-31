@@ -34,9 +34,13 @@ page {
   color:#fff;
 }
 .header .or_code{
+  width:100rpx;
+  height:100rpx;
+  text-align:center;
+  line-height: 100rpx; 
   position: absolute;
-  top:56rpx;
-  right:52rpx;
+  top:50rpx;
+  right:20rpx;
 }
 .header .or_code image{
   width:45rpx;
@@ -202,4 +206,63 @@ page {
   width:30rpx;
   height:27rpx;
   margin-right:12rpx;
+}
+/*mask*/
+.drawer_screen { 
+ width: 100%; 
+ height: 100%; 
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ z-index: 1000; 
+ background: #000; 
+ opacity: 0.5; 
+ overflow: hidden; 
+} 
+  
+/*content*/
+.drawer_box { 
+ width: 620rpx; 
+ overflow: hidden; 
+ position: fixed;  
+ left: 0; 
+ top:0;
+ z-index: 1001; 
+ background: #FAFAFA; 
+ margin: 35% 65rpx 0; 
+ border-radius: 3px; 
+} 
+.drawer_content { 
+ height: auto; 
+ overflow-y: scroll; /*超出父盒子高度可滚动*/
+} 
+  
+.btn_ok{ 
+ padding: 10px; 
+ font-size:30rpx; 
+ text-align: center; 
+ border-top: 1px solid #E8E8EA; 
+ color: #3CC51F; 
+} 
+.erweima{
+  padding:100rpx 107rpx 50rpx;
+}  
+.erweima image{
+  width:406rpx;
+  height:406rpx;
+ 
+}
+.download{
+  padding:0 290rpx 10rpx;
+}
+.download image{
+  width:40rpx;
+  height:40rpx;
+}
+.text{
+  width:100%;
+  font-size:26rpx;
+  text-align: center;
+  padding-bottom: 60rpx;
+  color:#666;
 }

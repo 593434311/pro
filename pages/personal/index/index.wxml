@@ -8,8 +8,23 @@
     <image src='http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/tx2@3x.png'></image>
   </view>
   <view class="or_code" >
-    <image  bindtap='imgYu' src="/static/images/personal/erweima@2x.png"  data-src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/12345.png" ></image>
+    <image  bindtap='powerDrawe' src="/static/images/personal/erweima@2x.png"></image>
   </view>
+  <view class="drawer_screen" catchtouchmove="move" bindtap="powerDrawer" wx:if="{{showModalStatus}}"></view>  
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view class="drawer_box" catchtouchmove="move" animation="{{animationData}}" wx:if="{{showModalStatus}}"> 
+  <view class="drawer_content"> 
+    <view class="erweima">
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/erweima@2x.png"></image>
+    </view>
+    <view class="download" bindtap='download'>
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/download@2x.png"></image>
+    </view>
+    <view class="text" bindtap='download'>保存二维码到手机</view>
+  </view> 
+  <!-- <view class="btn_ok" bindtap="back">返回</view>  -->
+</view>
 </view>
 <!-- 我的团购 -->
 <view class="group_buy contentW">

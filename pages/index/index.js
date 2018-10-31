@@ -85,7 +85,6 @@ Page({
             tuandata.push(tuandata[i])
           }
         }
-        console.log(tuandata)
         for (var i in tuandata){
           if (Number(i+3) %3 == 0){
               var arr = [];
@@ -94,9 +93,7 @@ Page({
               arr[2] = tuandata[Number(i)+2]
               newdata.push(arr)
             }
-          
         }
-        
         this.setData({
           activeData: newdata,
         })

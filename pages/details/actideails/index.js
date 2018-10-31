@@ -53,7 +53,6 @@ Page({
     app.RequiseData('activity.index.openact',
       { act_id: this.data.act_info.id, target_user_id: ty.type ? this.data.act_info.user_id : '', inviter_id: '' }, res => {
         wx.hideToast();
-        console.log(res)
         if (res.status === 0) {
           wx.navigateTo({
             url: `/pages/personal/unpaid/unpaid?older=${res.data}`

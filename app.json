@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/erweima/erweima",
+    
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
     "pages/personal/index/index",
@@ -24,6 +26,7 @@
     "pages/details/share/share",
     "pages/details/allactive/index",
     "pages/details/payment/index"
+   
   ],
   "window": {
     "backgroundTextStyle": "center",
