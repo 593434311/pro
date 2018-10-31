@@ -44,5 +44,12 @@ Page({
     if (this.data.isweedata) {
       this.getActive()
     }
+  },
+  onShareAppMessage() {
+    return {
+      title: '临港拼玩·开启优惠拼团之旅',
+      path: '/pages/index/index',
+      imageUrl: 'http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/banner/index.png'
+    }
   }
 })

@@ -9,7 +9,8 @@ Page({
     audit: 0.00,
     may: 0.00,
     yet: 0.00,
-    pulvalue: 0
+    pulvalue: 0,
+    orderid: ''
   },
 
   /**
@@ -19,6 +20,7 @@ Page({
     app.RequiseData('user.money.moneyinfo', { orderid: options.older }, res => {
       if(res.status == 0){
         this.setData({
+          orderid: options.older,
           audit: res.data.audit_money,
           may: res.data.may_money,
           yet: res.data.yet_money
@@ -46,6 +48,7 @@ Page({
             content: '已接受您的提现申请，我们将在7个工作日之内发放至您的微信钱包',
             showCancel: false
           });
+          this.onLoad(this.data.orderid)
         } else {
           wx.showModal({
             content: res.msg,
@@ -58,6 +61,13 @@ Page({
         content: '请输入您要提现的金额',
         showCancel: false
       });
+    }
+  },
+  onShareAppMessage() {
+    return {
+      title: '临港拼玩·开启优惠拼团之旅',
+      path: '/pages/index/index',
+      imageUrl: 'http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/banner/index.png'
     }
   }
 })

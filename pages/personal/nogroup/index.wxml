@@ -55,7 +55,7 @@
   <view class='allmony'>实付：￥{{order_info.pay_price}}</view>
 </view>
 <view class='text_orde'>
-  <view>订单编号：{{order_info.order_id}}<text class='fuzi'>复制</text></view>
+  <view>订单编号：{{order_info.order_id}}<text class='fuzi' bindtap='copyTBL' data-text='{{order_info.order_id}}'>复制</text></view>
   <view>支付方式：微信</view>
   <view>下单时间：{{order_info.c_date}}</view>
 </view>

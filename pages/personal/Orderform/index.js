@@ -162,6 +162,13 @@ Page({
         path: `/pages/details/share/share?id=${res.target.dataset.actid}&userid=${res.target.dataset.userid}`,
         imageUrl: `http://gtshidai.oss-cn-shanghai.aliyuncs.com${res.target.dataset.image}`
       }
+    }else{
+        return {
+          title: '临港拼玩·开启优惠拼团之旅',
+          path: '/pages/index/index',
+          imageUrl: 'http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/banner/index.png'
+        }
+      
     }
   }
 })
