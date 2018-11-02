@@ -163,7 +163,7 @@ Page({
     setTimeout(() => {
       wx.hideNavigationBarLoading();
       wx.stopPullDownRefresh()
-    },1500)
+    },1000)
   },
   onShow(){
     this.setData({
