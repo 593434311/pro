@@ -77,13 +77,12 @@ Page({
       } else if (res.status === 300){
         wx.showModal({
           title: '提示',
-          content: res.msg,
+          content: '您在该活动中有未支付订单, 是否前往支付？',
           confirmText: '前往',
           success(ress) {
-            console.log(res)
-            if (res.confirm) {
+            if (ress.confirm) {
               wx.navigateTo({
-                url: `/pages/personal/unpaid/unpaid?older=${res.data}`
+                url: `/pages/personal/unpaid/unpaid?older=${res.msg}`
               })
             }
           }

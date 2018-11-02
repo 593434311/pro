@@ -28,7 +28,7 @@
   "window": {
     "backgroundTextStyle": "center",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "临港拼玩",
+    "navigationBarTitleText": "拼玩",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
