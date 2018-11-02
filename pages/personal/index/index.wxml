@@ -16,7 +16,7 @@
 <view class="drawer_box" catchtouchmove="move" animation="{{animationData}}" wx:if="{{showModalStatus}}"> 
   <view class="drawer_content"> 
     <view class="erweima">
-      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/erweima@2x.png"></image>
+      <image src="/static/images/details_index/erweima@2x.png"></image>
     </view>
     <view class="download" bindtap='download'>
       <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/download@2x.png"></image>
