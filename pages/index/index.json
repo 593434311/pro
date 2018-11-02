@@ -4,6 +4,5 @@
     "active": "/pages/component/Businessact/index",
     "berfitem": "/pages/component/befteam/index"
   },
-  "enablePullDownRefresh": true,
-  "navigationBarTitleText": "临港拼玩"
+  "enablePullDownRefresh": true
 }

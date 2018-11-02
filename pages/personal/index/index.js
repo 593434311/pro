@@ -64,20 +64,34 @@ Page({
     wx.hideTabBarRedDot({index: 2})
   },
   download() {
-    wx.showLoading({
-      title: '下载中...',
-      mask: true,
-    })
-    wx.downloadFile({
-      url: 'http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/erweima@2x.png',
-      success: res => {
-        wx.hideLoading()
-        wx.saveImageToPhotosAlbum({
-          filePath: res.tempFilePath,
-          success: res =>{
-            this.setData({
-              showModalStatus: false
+    wx.authorize({
+      scope: 'scope.writePhotosAlbum',
+      success: function (res) {
+        wx.showLoading({
+          title: '下载中...',
+          mask: true,
+        })
+        var imgUrl = "http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/erweima@2x.png";
+        wx.downloadFile({//下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径
+          url: imgUrl,
+          success: function (res) {
+            // 下载成功后再保存到本地
+            wx.saveImageToPhotosAlbum({
+              filePath: res.tempFilePath,//返回的临时文件路径，下载后的文件会存储到一个临时文件
+              success: function (res) {
+                wx.showToast({
+                  title: '成功保存到相册',
+                  icon: 'success'
+                })
+              },
+              complete: res=>{
+                this.setData({showModalStatus: false}
+                );
+              }
             })
+          },
+          complete: res => {
+            wx.hideLoading()
           }
         })
       }

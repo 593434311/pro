@@ -124,7 +124,6 @@ Page({
       wx.hideLoading()
       if (res.status != 0) {
         wx.showModal({
-          title: '提示',
           showCancel: false,
           content: res.msg,
           success: function (res) {
@@ -152,9 +151,6 @@ Page({
             wx.navigateTo({
               url: `/pages/details/payment/index?id=${this.data.orderid}`
             })
-          },
-          complete: res => {
-            console.log(res)
           }
         })
       }

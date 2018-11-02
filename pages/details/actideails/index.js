@@ -67,6 +67,25 @@ Page({
               }
             }
           });
+        } else if (res.status === 300) {
+          wx.showModal({
+            title: '提示',
+            content: res.msg,
+            confirmText: '前往',
+            success(res) {
+              console.log(res)
+              if (res.confirm) {
+                wx.navigateTo({
+                  url: `/pages/personal/unpaid/unpaid?older=${res.data}`
+                })
+              }
+            }
+          });
+        } else {
+          wx.showModal({
+            content: res.msg,
+            showCancel: false
+          });
         }
       })
   },

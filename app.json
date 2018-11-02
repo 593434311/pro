@@ -1,8 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/erweima/erweima",
-    
+    "pages/index/index",    
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
     "pages/personal/index/index",
