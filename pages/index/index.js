@@ -25,7 +25,7 @@ Page({
       url: `/pages/details/bannerdetails/index?id=${e.currentTarget.dataset.id}`,
     })
   },
-  onloadaaa: function (res) {
+  onloadaaa(res) {
     var cuea = setInterval(() => {
       if (wx.getStorageSync('cuea')) {
         if (wx.getStorageSync('cuea') === 'isd') {
@@ -44,6 +44,7 @@ Page({
         });
       }
     });
+    
     this.gettuan()
     this.getActive()
     this.getbutton()
@@ -109,7 +110,7 @@ Page({
       currentTab: berb
     })
   },
-  bindGetUserInfo: function (e) {
+  bindGetUserInfo(e) {
     if (e.detail.iv) {
       wx.showLoading({
         title: '加载中',
@@ -131,11 +132,16 @@ Page({
               })
             }
           })
+        }else{
+          wx.showModal({
+            content: res.msg,
+            showCancel: false
+          });
         }
       })
 
     } else {
-      wx.showLoading({
+      wx.showToast({
         title: '授权失败',
         icon: 'none',
         duration: 1000
@@ -175,7 +181,7 @@ Page({
     })
     this.onloadaaa()
   },
-  swiperChange: function (e) {
+  swiperChange(e) {
     this.setData({
       swiperCurrent: e.detail.current
     })

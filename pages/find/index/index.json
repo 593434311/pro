@@ -2,5 +2,6 @@
   "usingComponents": {
     "seledactive": "/pages/component/find/selectedact/index",
     "seledmerc": "/pages/component/find/selectedmer/index"
-  }
+  },
+  "enablePullDownRefresh": true
 }

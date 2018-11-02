@@ -85,8 +85,7 @@ Page({
                 })
               },
               complete: res=>{
-                this.setData({showModalStatus: false}
-                );
+                this.setData({showModalStatus: false});
               }
             })
           },

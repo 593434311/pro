@@ -14,6 +14,8 @@ Page({
    */
   onLoad: function (options) {
     app.RequiseData('shop.info.shoplist', { p: 1, pagesize: 6 }, res => {// 精选商家
+      wx.hideNavigationBarLoading();
+      wx.stopPullDownRefresh()
       if(res.status == 0){
         this.setData({
           Sedbusin: res.data.data
@@ -27,6 +29,7 @@ Page({
         })
       }
     })
+    
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
@@ -44,6 +47,10 @@ Page({
   /**
    * 用户点击右上角分享
    */
+  onPullDownRefresh() {
+    wx.showNavigationBarLoading();
+    this.onLoad()
+  },
   onShareAppMessage: function () {
 
   }

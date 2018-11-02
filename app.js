@@ -40,7 +40,6 @@ App({
               })
             }
           })
-               
         } else {
           wx.login({
             success: resa => {
