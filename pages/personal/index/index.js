@@ -93,10 +93,13 @@ Page({
   /**
    * 生命周期函数--监听页面卸载
    */
-  getreloadLog: function () {
+  getreloadLog () {
+    this.setData({
+      num: {}
+    })
     app.RequiseData('user.info.userinfo', { }, res => {
-      console.log(res);
       if(res.status === 0){
+        var dat = 
         this.setData({
           num: res.data.order_count,
           getuser: res.data.user_info
