@@ -48,7 +48,7 @@ function api(data, method, timestamp){
   request_data['platform'] = "web";
   request_data['_timestamp'] = timestamp;
   if (method == "login.login.bannerlist" || method == "activity.actor.actlist" || method == "activity.index.actlist" || method == "shop.info.shoplist" || method == "note.info.notelist" || method =="login.login.bannerinfo"){
-    data.trade = 1; // 不同地区的小程序
+    data.trade = wx.getStorageSync('region') || 2; // 不同地区的小程序
   }
   for (var d in data) {
     request_data[d] = data[d];

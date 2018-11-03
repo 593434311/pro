@@ -2,6 +2,10 @@
 <!-- <scroll-view scroll-y="{{isloaddData}}" style="width: 100%;height:{{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrolltolower"> -->
 <!--轮播-->
   <view class="header">
+    <view class='selectadd' bindtap='goselectadd'>
+      <block wx:if="{{region == '1'}}">临港</block>
+      <block wx:else>南汇</block>
+    <text></text></view>
     <view  class="swiper-container">
       <swiper autoplay="auto"   interval="2500" duration="300" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
           <block wx:for="{{slider}}" wx:key="unique">

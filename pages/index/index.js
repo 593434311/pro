@@ -12,6 +12,7 @@ Page({
     isloaddData: true,
     isweedata: true,
     RegimentPage: 1,
+    region: 1,
     currentTab: 0,
     RegimentData: [],// 热门活动
     wearList:[],
@@ -175,6 +176,7 @@ Page({
     this.setData({
       activeData: [],
       slider: [],
+      region: wx.getStorageSync('region') || 2,
       isweedata:true,
       RegimentPage: 1,
       RegimentData: []
@@ -184,6 +186,11 @@ Page({
   swiperChange(e) {
     this.setData({
       swiperCurrent: e.detail.current
+    })
+  },
+  goselectadd(){
+    wx.navigateTo({
+      url: `/pages/details/selectregion/index`,
     })
   },
   onShareAppMessage(){

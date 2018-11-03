@@ -8,6 +8,7 @@
    width:690rpx;
    height: 358rpx;
    padding:30rpx 0;
+   padding-top: 20rpx;
    margin:0 auto;
 }
 .swiper-container .swiper-item {
@@ -47,6 +48,25 @@
   text-align: center; */
   background:#f9f9fa;
   margin-left:154rpx;
+}
+.selectadd{
+  display: flex;
+  justify-content:center;
+  width: 350rpx;
+  height: 50rpx;
+  color: #666;
+  font-size: 28rpx;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center
+}
+.selectadd text{
+  margin-left: 25rpx;
+  width: 20rpx;
+  height: 12rpx;
+  background: url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/445231914644034596.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 .content_tuan .tuan_title image{
   width:442rpx;
