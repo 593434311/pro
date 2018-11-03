@@ -1,2 +1,24 @@
 <!--pages/details/selectregion/index.wxml-->
-<text>pages/details/selectregion/index.wxml</text>
+<view class="header">
+  <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/sq2@2x.png"></image>
+  <view>目前已有商圈</view>
+</view>
+<view class="content">
+  <view class="{{selectindex == '2'? 'img_lt active': 'img_lt'}}" data-id='2' bindtap='selectd'>
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/lg@2x.png"></image>
+    <view class="text">南汇大学城</view>
+  </view>
+  <view class="{{selectindex == '1'? 'img_rt active': 'img_rt'}}" data-id='1' bindtap='selectd'>
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/nh@2x.png"></image>
+    <view class="text">临港大学城</view>
+  </view>
+</view>
+<view class="btn" bindtap='goIndex'>确定</view>
+<view class="footer">
+  <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/zzkf@2x.png"></image>
+  <view class="footer_text">
+    <text>以上为目前所开放的商圈</text>
+    <text>其他商圈会陆续开放，敬请期待</text>
+</view>
+
+</view>

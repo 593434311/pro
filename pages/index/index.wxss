@@ -8,7 +8,7 @@
    width:690rpx;
    height: 358rpx;
    padding:30rpx 0;
-   padding-top: 20rpx;
+   padding-top: 0rpx;
    margin:0 auto;
 }
 .swiper-container .swiper-item {
@@ -53,15 +53,15 @@
   display: flex;
   justify-content:center;
   width: 350rpx;
-  height: 50rpx;
-  color: #666;
+  height: 78rpx;
+  color: #999;
   font-size: 28rpx;
   align-items: center;
   margin: 0 auto;
   text-align: center
 }
 .selectadd text{
-  margin-left: 25rpx;
+  margin-left: 15rpx;
   width: 20rpx;
   height: 12rpx;
   background: url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/445231914644034596.png);

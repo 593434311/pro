@@ -12,7 +12,7 @@ Page({
     isloaddData: true,
     isweedata: true,
     RegimentPage: 1,
-    region: 1,
+    region: 2,
     currentTab: 0,
     RegimentData: [],// 热门活动
     wearList:[],
