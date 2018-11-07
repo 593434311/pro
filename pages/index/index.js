@@ -29,13 +29,12 @@ Page({
   onloadaaa(res) {
     var cuea = setInterval(() => {
       if (wx.getStorageSync('cuea')) {
-        if (wx.getStorageSync('cuea') === 'isd') {
+        if (wx.getStorageSync('cuea') == 'isd') {
           this.setData({
             isCoupon: true
           })
         }
         clearInterval(cuea)
-        wx.removeStorageSync('cuea')
       }
     }, 2000)
     wx.getSystemInfo({
@@ -123,14 +122,19 @@ Page({
       app.setuserinfo(e.detail.userInfo, res => {
         if (res.status === 0) {
           app.globalData.user_info = res.data
-          app.RequiseData('coupon.user.couponadd', { type: 1 }, res => {
+          app.RequiseData('coupon.user.couponadd', { type: 1 }, resad => {
             wx.hideLoading()
-            if (res.status == 0) {
+            if (resad.status == 0) {
               wx.showToast({
                 title: '领取成功',
                 icon: 'success',
                 duration: 2000
               })
+            }else{
+              wx.showModal({
+                content: resad.msg,
+                showCancel: false
+              });
             }
           })
         }else{
