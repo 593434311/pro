@@ -40,7 +40,7 @@ Page({
     })
   },
   bindGetUserInfo: function (e) {
-    wx.showToast({ title: '请稍后...', icon: 'loading' });
+    wx.showToast({ mask: true, title: '请稍后...', icon: 'loading' });
     if (!app.globalData.user_info.avatar) { // 判断本地是否有数据
       app.setuserinfo(e.detail.userInfo, res => {
         if (res.status === 0) {

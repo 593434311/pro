@@ -28,15 +28,16 @@ Page({
   },
   onloadaaa(res) {
     var cuea = setInterval(() => {
-      if (wx.getStorageSync('cuea')) {
-        if (wx.getStorageSync('cuea') == 'isd') {
-          this.setData({
-            isCoupon: true
-          })
-        }
+      if (wx.getStorageSync('cuea') == 'isd') {
         clearInterval(cuea)
+        this.setData({
+          isCoupon: true
+        })
       }
-    }, 2000)
+    }, 500)
+    setTimeout( () =>{
+      clearInterval(cuea)
+    },5000)
     wx.getSystemInfo({
       success: res => {
         this.setData({
@@ -113,6 +114,7 @@ Page({
   bindGetUserInfo(e) {
     if (e.detail.iv) {
       wx.showLoading({
+        mask: true,
         title: '加载中',
       })
       this.setData({
@@ -120,6 +122,7 @@ Page({
       })
       e.detail.userInfo.inviter_id = ''
       app.setuserinfo(e.detail.userInfo, res => {
+        wx.removeStorageSync('cuea')
         if (res.status === 0) {
           app.globalData.user_info = res.data
           app.RequiseData('coupon.user.couponadd', { type: 1 }, resad => {
@@ -138,6 +141,7 @@ Page({
             }
           })
         }else{
+          wx.hideLoading()
           wx.showModal({
             content: res.msg,
             showCancel: false
