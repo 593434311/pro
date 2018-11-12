@@ -44,11 +44,14 @@ Page({
         });
       }
     });
+   
     
     this.gettuan()
     this.getActive()
     this.getbutton()
   },
+  
+  
   getActive() {
     wx.showLoading({
       title: '加载中...'
