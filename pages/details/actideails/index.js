@@ -7,15 +7,19 @@ Page({
     duration: 200,
     indicatorDots: true,
     autoplay: true,
+    showmask: false,
     act_info: {},
     act_list: {},
     user_info: {},
   },
   onLoad: function (options) {
-    wx.showLoading({
-      title: '加载中...',
+    this.setData({
+      showmask: true
     })
     app.RequiseData('activity.index.actinfo', { id: options.id }, res => {
+      this.setData({
+        showmask: false
+      })
       if(res.status === 0){
         WxParse.wxParse('article', 'html', res.data.act_info.info, this, 5)
 　        this.setData({
@@ -25,7 +29,6 @@ Page({
             user_info: res.data.user_info  ||{}
         })
       }
-      wx.hideLoading()
     })
     
   },
@@ -40,10 +43,18 @@ Page({
     })
   },
   bindGetUserInfo: function (e) {
-    wx.showToast({ mask: true, title: '请稍后...', icon: 'loading' });
+    this.setData({
+      showmask: true
+    })
     if (!app.globalData.user_info.avatar) { // 判断本地是否有数据
       app.setuserinfo(e.detail.userInfo, res => {
+        this.setData({
+          showmask: false
+        })
         if (res.status === 0) {
+          this.setData({
+            showmask: true
+          })
           this.orderdown(e.currentTarget.dataset)
         }
       })
@@ -52,7 +63,9 @@ Page({
   orderdown(ty) {
     app.RequiseData('activity.index.openact',
       { act_id: this.data.act_info.id, target_user_id: ty.type ? this.data.act_info.user_id : '', inviter_id: '' }, res => {
-        wx.hideToast();
+        this.setData({
+          showmask: false
+        })
         if (res.status === 0) {
           wx.navigateTo({
             url: `/pages/personal/unpaid/unpaid?older=${res.data}`

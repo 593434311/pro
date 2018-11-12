@@ -10,6 +10,7 @@ Page({
     isCoupon: false,
     clientHeight: 0,
     isloaddData: true,
+    showmask:false,
     isweedata: true,
     RegimentPage: 1,
     region: 2,
@@ -51,11 +52,13 @@ Page({
     this.getbutton()
   },
   getActive() {
-    wx.showLoading({
-      title: '加载中...'
+    this.setData({
+      showmask: true
     })
     app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 8 }, res => {
-      wx.hideLoading();
+      this.setData({
+        showmask: false
+      })
       if (res.data.length === 0) {
         this.data.isweedata = false
       }
@@ -115,7 +118,7 @@ Page({
     if (e.detail.iv) {
       wx.showLoading({
         mask: true,
-        title: '加载中',
+        title: '请稍后...',
       })
       this.setData({
         isCoupon: false

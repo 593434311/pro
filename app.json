@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/details/selectregion/index",
-  
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
     "pages/personal/index/index",
@@ -25,8 +24,8 @@
     "pages/details/bannerdetails/index",
     "pages/details/share/share",
     "pages/details/allactive/index",
-    "pages/details/payment/index"
-    
+    "pages/details/payment/index",
+    "pages/component/public/index"
   ],
   "window": {
     "backgroundTextStyle": "center",

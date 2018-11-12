@@ -7,7 +7,7 @@ Page({
    */
   data: {
     tabs: ["活动", "团购", "商家", "文章"],
-  
+    showmask: false,
     activeIndex: 0,
     windowheight: 0,
     sliderOffset: 0,
@@ -49,11 +49,8 @@ Page({
     }
   },
   pulldata(){
-    wx.showLoading({
-      title: '数据加载中...',
-      mask: true,
-    })
     this.setData({
+      showmask: true,
       isdata: false
     })
     app.RequiseData('user.info.usercollect', { type: Number(this.data.activeIndex)+1, pagesize: 10, p: this.data.befopage }, res => {
@@ -72,7 +69,9 @@ Page({
           isdata: true
         })
       }
-      wx.hideLoading()
+      this.setData({
+        showmask: false,
+      })
     })
   },
   /**

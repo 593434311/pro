@@ -1,6 +1,8 @@
 <!--index.wxml-->
 <!-- <scroll-view scroll-y="{{isloaddData}}" style="width: 100%;height:{{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrolltolower"> -->
+<import src="../component/public/index.wxml" />
 <!--轮播-->
+<template wx:if="{{showmask}}" is="item" data="{{text: 'forbar'}}"/>
   <view class="header">
     <view class='selectadd' bindtap='goselectadd'>
       <block wx:if="{{region == '1'}}">临港</block>

@@ -1,4 +1,6 @@
 <!--pages/personal/Orderform/index.wxml-->
+<import src="../../component/public/index.wxml" />
+<template wx:if="{{showmask}}" is="item" data="{{text: 'forbar'}}"/>
 <view class="page__bd">
   <view class="weui-tab">
     <view class="weui-navbar">
