@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Table template="views\report\client.xlsx">
+	<RowGroups>
+		<RowGroup sheet="0" name="client">
+			<DataTemps>
+				<Temp type="data" rowStart="2" rowCount="1" colStart="1" colCount="22"></Temp>
+			</DataTemps>
+		</RowGroup>
+	</RowGroups>
+	<Params>
+	</Params>
+</Table>
