@@ -1,0 +1,47 @@
+1.添加高阶组件
+
+高阶组件主要代码模板HOC.js
+
+复制代码
+export default (WrappedComponent) => {  
+return class extends Component {
+      constructor(props) {
+        super(props)
+        this.state = { //定义可复用的状态
+            
+        }
+        this.getCode = this.getCode.bind(this) 
+      }
+
+      componentWillMount() {
+        
+      }
+　　　　//定义可复用的方法
+      getCode(mobile) {
+       ...
+      }
+      postVcode(mobile) {
+        ...
+      }
+      render() {
+        return (
+          <div>
+            <WrappedComponent getCode={this.getCode} state={this.state} {...this.props}/>
+          </div>
+        )
+      }
+    }
+  }
+复制代码
+ 注：其中<WrappedComponent />的自定义属性getCode与state传递了对外可以用的方法与属性
+
+2.在其他组件中使用高阶组件
+
+register.js
+
+import HOC from 'common/js/HOC'
+class Register extends Component{
+　　...
+　　...
+}
+export default HOC(Register)
