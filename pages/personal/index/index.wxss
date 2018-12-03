@@ -4,8 +4,10 @@ page {
   background-color: #f9f9fa;
 }
 .contentW{
-  padding:0 24rpx;
   background-color:#fff;
+}
+.contentW navigator{
+  padding: 0 24rpx;
 }
 .header{
   width:750rpx;
@@ -197,6 +199,7 @@ page {
 }
 /* 联系客服 */
 .service .title{
+  padding: 0 24rpx;
   height: 100rpx;
   display: flex;
   align-items: center;

@@ -36,7 +36,7 @@ Component({
     cuitWent(even) {
       var eve = even.currentTarget.dataset
       app.RequiseData('user.info.userDeed', { behavior: eve.behavior, actId: eve.id, type: eve.type }, res => {
-        // to doing
+        console.log(res)
       })
       if (eve.behavior == 'collect')
         this.data.data.attribute_num.collect = Number(this.data.data.attribute_num.collect) + 1
@@ -46,6 +46,7 @@ Component({
         data: this.data.data
       })
     },
+    
     activetimeOut(dates) {
       let that = this;
       let len = dates.length;//时间数据长度

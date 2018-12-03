@@ -10,6 +10,7 @@ Page({
     act_info: [],
     act_list: [],
     user_info: [],
+    showmask: false,
     getPhNumber: false,
     inviter_id: '' // 邀请人 
     // getPhNumber: 'getPhoneNumber'
@@ -19,12 +20,15 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      inviter_id: options.userid  || ''
-    })
-    wx.showLoading({
-      title: '加载中...',
+      inviter_id: options.userid  || '',
+      showmask: true
     })
     app.RequiseData('activity.actor.actinfo', { id: options.id }, res => {
+      console.log(res)
+      
+      this.setData({
+        showmask: false
+      })
       if(res.status === 0){
         WxParse.wxParse('article', 'html', res.data.act_info.info, this, 5)
         this.setData({
@@ -46,10 +50,19 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   bindGetUserInfo(e){
-    wx.showToast({ title: '请稍后...', icon: 'loading'});
+    console.log(e)
+    this.setData({
+      showmask: true
+    })
     if (!app.globalData.user_info.avatar){ // 判断本地是否有数据
       app.setuserinfo(e.detail.userInfo, res =>{
+        this.setData({
+          showmask: false
+        })
         if(res.status === 0){
+          this.setData({
+            showmask: true
+          })
           this.orderdown(e.currentTarget.dataset)
         }
       })
@@ -58,7 +71,9 @@ Page({
   orderdown(ty){
     app.RequiseData('activity.index.openact', 
       { act_id: this.data.act_info.act_id, target_user_id: ty.type ? this.data.act_info.user_id : '', inviter_id: this.data.inviter_id }, res => {
-      wx.hideToast();
+        this.setData({
+          showmask: false
+        })
       if(res.status === 0){
         wx.navigateTo({
           url: `/pages/personal/unpaid/unpaid?older=${res.data}`
@@ -74,7 +89,7 @@ Page({
           }
         });
       } else if (res.status === 300){
-        wx.showModal({
+        wx.showModal({ 
           title: '提示',
           content: '您在该活动中有未支付订单, 是否前往支付？',
           confirmText: '前往',
@@ -127,6 +142,7 @@ Page({
     })
   },
   imgYu(event) {
+    console.log(event.currentTarget.dataset.src)
     var src = event.currentTarget.dataset.src;//获取data-src
     var imgList = event.currentTarget.dataset.list;//获取data-list
     for (var i in imgList) {

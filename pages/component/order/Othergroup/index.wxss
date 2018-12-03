@@ -15,9 +15,7 @@
   width: 340rpx;
   flex-direction: row;
   padding-left: 42rpx;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
+  
 }
 .rests_cont .cont_lt image{
   width:87rpx;
@@ -25,10 +23,19 @@
   border-radius: 50%;
   margin-right:25rpx;
 }
-.rests_cont .cont_lt text{
+.rests_cont .cont_lt view{
+  display: flex;
+  flex-direction: row;
   line-height:87rpx;
   font-size:26rpx;
   color:#8d8d8d;
+}
+.rests_cont .cont_lt view text{
+  display:block;
+  width: 120rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 .cont_rt{
   display: flex;

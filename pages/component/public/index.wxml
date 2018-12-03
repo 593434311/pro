@@ -1,0 +1,13 @@
+<!--pages/component/public/index.wxml-->
+<template name="item">
+  <view class='bg_mask' catchtouchmove="move">
+    <view class='mask_chi'>
+      <div class="la-ball-triangle-path la-2x">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+    </view>
+    
+  </view>
+</template>

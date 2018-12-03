@@ -10,6 +10,7 @@ Page({
     isCoupon: false,
     clientHeight: 0,
     isloaddData: true,
+    showmask:false,
     isweedata: true,
     RegimentPage: 1,
     region: 2,
@@ -28,15 +29,16 @@ Page({
   },
   onloadaaa(res) {
     var cuea = setInterval(() => {
-      if (wx.getStorageSync('cuea')) {
-        if (wx.getStorageSync('cuea') == 'isd') {
-          this.setData({
-            isCoupon: true
-          })
-        }
+      if (wx.getStorageSync('cuea') == 'isd') {
         clearInterval(cuea)
+        this.setData({
+          isCoupon: true
+        })
       }
-    }, 2000)
+    }, 500)
+    setTimeout( () =>{
+      clearInterval(cuea)
+    },5000)
     wx.getSystemInfo({
       success: res => {
         this.setData({
@@ -53,11 +55,13 @@ Page({
   
   
   getActive() {
-    wx.showLoading({
-      title: '加载中...'
+    this.setData({
+      showmask: true
     })
     app.RequiseData('activity.index.actlist', { p: this.data.RegimentPage, pagesize: 8 }, res => {
-      wx.hideLoading();
+      this.setData({
+        showmask: false
+      })
       if (res.data.length === 0) {
         this.data.isweedata = false
       }
@@ -116,13 +120,15 @@ Page({
   bindGetUserInfo(e) {
     if (e.detail.iv) {
       wx.showLoading({
-        title: '加载中',
+        mask: true,
+        title: '请稍后...',
       })
       this.setData({
         isCoupon: false
       })
       e.detail.userInfo.inviter_id = ''
       app.setuserinfo(e.detail.userInfo, res => {
+        wx.removeStorageSync('cuea')
         if (res.status === 0) {
           app.globalData.user_info = res.data
           app.RequiseData('coupon.user.couponadd', { type: 1 }, resad => {
@@ -141,6 +147,7 @@ Page({
             }
           })
         }else{
+          wx.hideLoading()
           wx.showModal({
             content: res.msg,
             showCancel: false

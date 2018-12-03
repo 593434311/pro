@@ -2,7 +2,7 @@
 <view class="rests_cont rests_tuan" bindtap='godeta' data-id='{{ohtgro.id}}'>
   <view class="cont_lt">
     <image src="{{ohtgro.avatar}}"></image>
-    <text>{{ohtgro.nickname}}的团</text>
+    <view><text>{{ohtgro.nickname}}</text>的团</view>
   </view>
   <view class="cont_rt">
     <view class="cont_rt_lt">

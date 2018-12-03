@@ -1,5 +1,7 @@
 <!--pages/details/index/index.wxml-->
 <import src="../../../wxParse/wxParse.wxml"/>
+<import src="../../component/public/index.wxml" />
+<template wx:if="{{showmask}}" is="item" data="{{text: 'forbar'}}"/>
 <view class="active_list contentW">
   <swiper class="banner" interval="2500" indicator-dots="{{indicatorDots}}"  indicator-active-color="#ff3638" autoplay="{{autoplay}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key="index">

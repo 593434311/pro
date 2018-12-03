@@ -14,6 +14,7 @@ Page({
     windowheight: 0,
     loadMoreData: '加载更多……' ,
     contentlist: [],
+    showmask: false,
     hideHeader: false,
     hideBottom: false,
     befopage: 1,
@@ -25,12 +26,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({
-      title: '数据加载中...',
-      mask: true,
+    this.setData({
+      showmask: true
     })
     app.RequiseData('order.index.orderlist', { p:1, pagesize: 6, state: options.id }, res => {
-      wx.hideLoading()
       if (res.status === 0) {
         this.setData({
           befodata: res.data.data
@@ -46,6 +45,9 @@ Page({
           isself: false
         })
       }
+      this.setData({
+        showmask: false
+      })
     })
     this.setData({
       activeIndex: options.id
@@ -62,9 +64,8 @@ Page({
     });
   },
   tabClick: function (e) {
-    wx.showLoading({
-      title: '数据加载中...',
-      mask: true,
+    this.setData({
+      showmask: true
     })
     this.setData({
       befodata: [],
@@ -72,7 +73,9 @@ Page({
       isdata: false
     })
     app.RequiseData('order.index.orderlist', { p: this.data.befopage, pagesize: 6, state: e.currentTarget.id }, res => {
-      wx.hideLoading()
+      this.setData({
+        showmask: false
+      })
       if(res.status === 0){
         this.setData({
           befodata: res.data.data
@@ -97,9 +100,8 @@ Page({
   },
   loadMore() {
     if (this.data.isself){
-      wx.showLoading({
-        title: '数据加载中...',
-        mask: true,
+      this.setData({
+        showmask: true
       })
       this.data.befopage++
       app.RequiseData('order.index.orderlist', { p: this.data.befopage, pagesize: 6, state: this.data.activeIndex }, res => {
@@ -113,7 +115,9 @@ Page({
             })
           }
         }
-        wx.hideLoading()
+        this.setData({
+          showmask: false
+        })
       })
     }
   },
@@ -126,17 +130,16 @@ Page({
     })
   },
   getdata(){
-    wx.showLoading({
-      title: '数据加载中...',
-      mask: true,
-    })
     this.setData({
       befodata: [],
       befopage: 1,
-      isdata: false
+      isdata: false,
+      showmask: true
     })
     app.RequiseData('order.index.orderlist', { p: this.data.befopage, pagesize: 6, state: this.data.activeIndex  }, res => {
-      wx.hideLoading()
+      this.setData({
+        showmask: false
+      })
       if (res.status === 0) {
         this.setData({
           befodata: res.data.data

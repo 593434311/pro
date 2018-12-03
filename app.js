@@ -8,12 +8,6 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    // wx.getLocation({
-    //   type: 'wgs84',
-    //   success: res =>{
-    //     console.log(res)
-    //   }
-    // })
     // 登录
     if (wx.getStorageSync('to-ken')) {
       request.request('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {

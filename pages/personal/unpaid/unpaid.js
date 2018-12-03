@@ -158,8 +158,12 @@ Page({
   },
   getPhoneNumber(e){
     if (e.detail.iv){
-      console.log(e.detail.encryptedData)
+      wx.showLoading({
+        title: '请稍后...',
+        mask: true,
+      })
       app.setuserphone({ iv: e.detail.iv, str: e.detail.encryptedData },res => {
+        wx.hideLoading()
          if(res.status == 0){
            this.setData({
              is_mobile: true
