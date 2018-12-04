@@ -9,7 +9,8 @@ Page({
     isnewuser: false,
     isCoupon: false ,
     inviter: '',
-    act: ''
+    id: '',
+    actid: ''
   },
 
   /**
@@ -23,8 +24,10 @@ Page({
   onLoad: function (options) {
     var self = this;
     this.setData({
-      act: options.id,
-      inviter: options.userid || ''
+      id: options.id || '',
+      inviter: options.userid || '',
+      actid: options.scene? decodeURIComponent(options.scene) : ''
+
     })
     app.RequiseData('login.login.chtoken', { token: wx.getStorageSync('to-ken') }, res => {
       if (res.data.iscoupon === '0'){
@@ -37,7 +40,7 @@ Page({
   Receive(){
     if (!this.data.isnewuser ){
       wx.navigateTo({
-        url: `/pages/details/index/index?id=${this.data.act}&userid=${this.data.inviter}`,
+        url: this.data.id ? `/pages/details/index/index?id=${this.data.id}&userid=${this.data.inviter}` : `/pages/details/actideails/index?id=${this.data.actid}`,
       })
     }else{
       this.setData({
@@ -67,7 +70,7 @@ Page({
               })
               setTimeout(res=>{
                 wx.navigateTo({
-                  url: `/pages/details/index/index?id=${this.data.act}&userid=${this.data.inviter}`,
+                  url: this.data.id ? `/pages/details/index/index?id=${this.data.id}&userid=${this.data.inviter}` : `/pages/details/actideails/index?id=${this.data.actid}`
                 })
               }, 1200)
             }

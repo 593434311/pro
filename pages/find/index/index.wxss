@@ -51,4 +51,9 @@
   width: 98rpx;
   height: 50rpx;
 }
-
+.moreall{
+  text-align: center;
+  background-color: #f9f9fa;
+  color: #ffa4a5;
+  text-decoration : underline
+}

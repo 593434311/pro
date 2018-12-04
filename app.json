@@ -25,7 +25,8 @@
     "pages/details/share/share",
     "pages/details/allactive/index",
     "pages/details/payment/index",
-    "pages/component/public/index"
+    "pages/component/public/index",
+    "pages/personal/Invitationcode/index"
   ],
   "window": {
     "backgroundTextStyle": "center",

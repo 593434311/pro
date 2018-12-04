@@ -1,5 +1,7 @@
 <!--pages/find/index/index.wxml-->
+<import src="../../component/public/index.wxml" />
 <view>
+<template wx:if="{{showmask}}" is="item" data="{{text: 'forbar'}}"/>
   <view class="title">
     <image class="img1" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/title_img/choiceness@2x.png"></image>
   </view>
@@ -15,6 +17,9 @@
   </view>
   <view>
     <seledmerc wx:for="{{Sedbusin}}" wx:key="{{index}}" data="{{item}}"></seledmerc>
+    <navigator class='moreall' wx:if="{{!isweedata}}" url="/pages/find/selectedmerc/index" hover-class="navigator-hover">
+      查看全部 >
+    </navigator>
   </view>
   <view class="gengduo" style='margin-bottom:60rpx;'>
   </view>
