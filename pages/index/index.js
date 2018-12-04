@@ -46,11 +46,14 @@ Page({
         });
       }
     });
+   
     
     this.gettuan()
     this.getActive()
     this.getbutton()
   },
+  
+  
   getActive() {
     this.setData({
       showmask: true

@@ -24,6 +24,8 @@ Page({
       showmask: true
     })
     app.RequiseData('activity.actor.actinfo', { id: options.id }, res => {
+      console.log(res)
+      
       this.setData({
         showmask: false
       })
@@ -48,6 +50,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   bindGetUserInfo(e){
+    console.log(e)
     this.setData({
       showmask: true
     })
@@ -86,7 +89,7 @@ Page({
           }
         });
       } else if (res.status === 300){
-        wx.showModal({
+        wx.showModal({ 
           title: '提示',
           content: '您在该活动中有未支付订单, 是否前往支付？',
           confirmText: '前往',
@@ -139,6 +142,7 @@ Page({
     })
   },
   imgYu(event) {
+    console.log(event.currentTarget.dataset.src)
     var src = event.currentTarget.dataset.src;//获取data-src
     var imgList = event.currentTarget.dataset.list;//获取data-list
     for (var i in imgList) {

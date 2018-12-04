@@ -46,7 +46,7 @@
       <!-- <view class="huan" bindtap='Another'hover-class="tryss" wx:if="{{activeData.length!=0}}" >换一批</view> -->
   </view>
   <view class="content_active">
-    <view class="active_title">
+    <view class="active_title" wx:if="{{RegimentData.length!=0}}">
       <image class="img1" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/active@2x.png"></image>
       <navigator url="/pages/details/allactive/index" hover-class="navigator-hover">
         <image class="img2" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/gd@3x.png"></image>
