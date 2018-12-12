@@ -158,6 +158,7 @@ Page({
    */
   onShareAppMessage(res) {
     // 来自页面内转发按钮
+    console.log(this.data)
     return {
       title: this.data.act_info.title,
       path: `/pages/details/share/share?id=${this.data.act_info.id}&userid=`,

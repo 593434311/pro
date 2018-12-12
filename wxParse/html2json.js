@@ -248,8 +248,8 @@ function html2json(html, bindName) {
 
 function transEmojiStr(str){
   // var eReg = new RegExp("["+__reg+' '+"]");
-//   str = str.replace(/\[([^\[\]]+)\]/g,':$1:')
-  
+  //   str = str.replace(/\[([^\[\]]+)\]/g,':$1:')
+
   var emojiObjs = [];
   //如果正则表达式为空
   if(__emojisReg.length == 0 || !__emojis){

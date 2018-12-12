@@ -110,6 +110,19 @@
     </view>
   </navigator>
 </view>
+<!-- <view class="collect contentW">
+  <navigator url='/pages/personal/mycollection/index'>
+    <view class="title">
+      <view class="shoucang tit_lt">
+        <image src="/static/images/personal/shoucang@2x.png"></image>
+        <text class="tit_text1">我的邀请码</text>
+      </view>
+      <view class="tit_rt">
+        <image  class="more" src="/static/images/details_index/more@2x.png"></image>
+      </view>
+    </view>
+  </navigator>
+</view> -->
 <!-- 联系客服 -->
 <view class="service contentW">
   <button class="title" open-type='contact'>
