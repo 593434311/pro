@@ -1,5 +1,5 @@
 <!--pages/details/share/share.wxml-->
-<view class="bg">
+<view class="bg" style=' background-image:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/share_bg@2x%20.jpg)'>
   <view class="warp">
    <view wx:if="{{isnewuser}}" class="btn_jion" bindtap='Receive' hover-class='tryss'>立即参加</view>
    <view wx:else class="btn_jion" bindtap='Receive' hover-class='tryss'>立即参加</view>

@@ -24,3 +24,10 @@
 .page__bd .weui-navbar{
   border-bottom: 0
 }
+.alldata{
+  text-align:center;
+  color:#ccc;
+  padding:12px 0;
+  font-size:22rpx;
+
+}

@@ -53,16 +53,16 @@ Page({
       showmask: true,
       isdata: false
     })
-    app.RequiseData('user.info.usercollect', { type: Number(this.data.activeIndex)+1, pagesize: 10, p: this.data.befopage }, res => {
+    app.RequiseData('user.info.usercollect', { type: Number(this.data.activeIndex)+1, pagesize: 5, p: this.data.befopage }, res => {
       if (res.status === 0) {
         this.setData({
           befodata: this.data.befodata.concat(res.data)
         })
-        if (res.data.length < 6) {
-          this.setData({
-            isself: false
-          })
-        }
+      }
+      if (res.data.length < 5) {
+        this.setData({
+          isself: false
+        })
       }
       if (res.data.length == 0) {
         this.setData({

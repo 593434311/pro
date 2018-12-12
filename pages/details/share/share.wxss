@@ -5,7 +5,7 @@ page{
 .bg{
   width:100%;
   height:1672rpx;
-  background-image:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/share_bg@2x%20.jpg);
+  background-color: lightcyan;
   background-size:100%;
 }
 .warp{

@@ -27,7 +27,8 @@
             <seledactive data="{{item}}"></seledactive>
           </block> 
         </block>
-        <nodata wx:if="{{isdata}}" state="{{2}}" text="当前暂无收藏~"></nodata>
+        <nodata wx:if="{{isdata && !befodata.length}}" state="{{2}}" text="当前暂无收藏~"></nodata>
+        <view  wx:if="{{!isself && befodata.length}}" class='alldata'> 已加载全部数据 </view>
       </scroll-view>
     </view>
   </view>
