@@ -1,0 +1,9 @@
+<!--pages/zpp/index.wxml-->
+<view class="{{chooseSize?'text':''}}" >请选择：颜色/尺码</view>
+<!-- <view class='maskLayer' wx:if="{{chooseSize}}" bindtap='hideModal'></view> -->
+<view class="ppp" bindtap='chooseSezi'>惦记我</view>
+<view class='choose' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+  <text>这里面是内容</text>
+  <text bindtap='hideModal'>按我</text>
+</view>
+

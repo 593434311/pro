@@ -1,0 +1,6 @@
+<!--pages/component/poster_mod/index.wxml-->
+  <view class="poster_tp">
+    <view class="tit">专属邀请码</view>
+    <text class="text1">NFKQIT</text>
+    <view class="button">复制</view>
+  </view>

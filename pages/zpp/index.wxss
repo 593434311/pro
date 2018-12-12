@@ -1,0 +1,41 @@
+page{
+  background:#fff;
+}
+.text {
+ width: 100%;
+ height:300rpx;
+  /* position: fixed; */
+  animation: jectile .3s;
+  /* z-index: 2000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; */
+  background: rgba(0, 0, 0, 0.3);
+
+
+}
+.choose{
+  width:100%;
+  height:2000rpx;
+  background:#e5e5e5;
+   position: fixed;
+   top: 0rpx;
+   left: 0;
+   bottom: 0;
+    z-index: 10000;
+
+}
+.choose text{
+  display:inline-block;
+  background: pink;
+}
+.ppp{
+  /* position: fixed;
+   top: 300rpx;
+   right: 0;
+   left: 0;
+   bottom: 0;
+    z-index: 1000; */
+    padding-top:300rpx;
+}

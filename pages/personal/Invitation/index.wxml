@@ -1,0 +1,98 @@
+<!--pages/personal/Invitation/index.wxml-->
+<!-- 邀请码 -->
+<view class="Invitation_top">
+  <view class="top_bg">
+    <view class="top_con">
+      <poster_mod></poster_mod>
+      <view class="text_con">
+        <text>已获收入：360元</text>
+        <text>已邀请人数：60人</text>
+      </view>
+      <view class="button" bindtap='go_del'>立即邀请</view>
+    </view>
+  </view>
+</view>
+<!-- 等级 -->
+<view class="Invitation_rank">
+  <view class="rank_tit">
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/link@2x.png"></image>
+    <view class="rank_text1">当前等级：<text>六耳猕猴</text></view>
+  </view>
+  <view class="rank_bg">
+    <view class="rank_text2">距离下一等级还差：<text>140人</text></view>
+    <view class="rank_name">
+      <view class="name_con name1">
+        <view class="name_img">
+          <image class="img1"  src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/img_1@2x.png"></image>
+        </view>
+        <text>石猴</text>
+      </view>
+      <view class="name_con name2">
+        <view class="name_img circle">
+          <image class="img2"  src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/img_2@2x.png"></image>
+        </view>
+        <text>弼马温</text>
+      </view>
+      <view class="name_con name3">
+        <view class="name_img">
+          <image class="img3" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/img_3@2x.png"></image>
+        </view>
+        <text>齐天大圣</text>
+      </view>
+      <view class="name_con name4">
+        <view class="name_img">
+          <image class="img4 "  src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/img_4@2x.png"></image>
+        </view>
+        <text>斗战胜佛</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 活动规则 -->
+<view class="Invitation_rule contentW">
+  <view class="title">
+    <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/regulation@2x.png"></image>
+    <text>活动规则</text>
+  </view>
+  <view class="rule_text">
+    <text>好友通过你的专属邀请码，成功成困后，你将获得最低单价5元，最高8元的推广奖励</text>
+    <text>首次通过邀请码至少邀请5位好友成团将额外获得10元奖励。</text>
+    <text>每月可领取推广任务。</text>
+    <text>已获奖励金可在个人中心-我的钱包中查看(可直接提现)</text>
+  </view>
+</view>
+<!-- 邀请记录 -->
+<view class="Invitation_record contentW">
+  <view class="title">
+    <image class="jilu_img" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/record@2x.png"></image>
+    <text>我的邀请记录</text>
+  </view>
+  <view class="date">
+    <view class="border-bottom">今天</view>
+    <view>本周</view>
+    <view>本月</view>
+  </view>
+  <view class="wrap_list">
+    <view class="list">
+      <view class="user_img">
+        <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/touxiang@2x.png"></image>
+        <text>小胖的团</text>
+      </view>
+      <view class="data_del">11-16</view>
+
+    </view>
+    <view class="list">
+      <view class="user_img">
+        <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/touxiang@2x.png"></image>
+        <text>小胖的团</text>
+      </view>
+      <view class="data_del">11-16</view>
+
+    </view>
+  </view>
+  <view class="page">
+    <view class="pre">上一页</view>
+    <view class="pagination">1/10</view>
+    <view class="next">下一页</view>
+  </view>
+</view>

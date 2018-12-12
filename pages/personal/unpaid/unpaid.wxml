@@ -1,6 +1,6 @@
 
 <!--pages/personal/index/index.wxml-->
-<view class="unpaid contentW">
+<view class="unpaid">
   <view class="unpaid_lt">
     <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/unpaid@3x.png"></image>
     <text>待支付</text>
@@ -69,6 +69,18 @@
       <image src="/static/images/details_index/more@2x.png"></image>
     </view>
   </view>
+  <!-- 邀请码 -->
+  <view class="Invitation bottom_border"  bindtap='chooseSezi'>
+    <view class="Invitation_lt">
+      <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/poster/yaoqingma2@2x.png"></image>
+      <text>邀请码</text>
+    </view>
+    <view class="Invitation_rt">
+      <text>{{is_inv}}</text>
+      <image src="/static/images/details_index/more@2x.png"></image>
+    </view>
+  
+  </view>
   <view class="payment">
     <view class="payment_price">支付价格：<text>￥{{order_info.act_info.p_price}}</text></view>
     <view class="discounts">优惠价格：<text>￥{{wxconpon ? wxconpon.money_reduce_y:'0'}}</text></view>
@@ -82,3 +94,7 @@
     <view wx:else class="bottom_pay" bindtap='regulte'>立即支付</view>
   </view>
 </view>
+<view wx:if="{{showmask}}" catchtouchmove="{{false}}" class="mask" bindtap='hideModal'></view>
+<unpaid_inv wx:if="{{showmask}}" catchtouchmove="{{false}}" bind:action="hideModal" class='choose' animation='{{animationData}}'></unpaid_inv>
+<!-- <unpaid_inv class='choose'></unpaid_inv> -->
+

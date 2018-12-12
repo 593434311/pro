@@ -10,8 +10,8 @@
   padding:28rpx 0 35rpx 0;
 }
 .title  .cantuan{
-   display:flex;
-  align-items:baseline;
+  display:flex;
+  align-items:center;
 }
 .tuan_detail .title  image{
   width:32rpx;

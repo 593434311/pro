@@ -1,0 +1,87 @@
+/* pages/details/poster/poster.wxss */
+.poster{
+  width:100%;
+  /* height:1500rpx; */
+  background:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/poster/poster_bg@2x.png) no-repeat;
+  background-size:100%;
+  margin:0 auto;
+  text-align: center;
+}
+ .poster_tp{
+  width:100%;
+  height:auto;
+  padding:277rpx 0 74rpx 0;
+  
+   
+}
+/*
+.poster_tp .tit{
+  color:#f17240;
+  font-size:26rpx;
+  margin-bottom:18rpx;
+}
+.poster_tp .text1{
+  display: inline-block;
+  color:#f17042;
+  font-size:72rpx;
+  line-height:72rpx;
+  margin-bottom:28rpx;
+}
+.poster_tp .button{
+  width:128rpx;
+  height:46rpx;
+  line-height: 46rpx;
+  background:linear-gradient(#fd9f53,#fe6b3c);
+  color:#fff;
+  text-align: center;
+  margin:0 auto;
+  border-radius:23rpx;
+} */
+.content{
+  width:100%;
+  height:670rpx;
+  
+}
+.content .logo{}
+.content .logo image{
+  width:199rpx;
+  height:68rpx;
+}
+.head_por{
+  padding-top:42rpx;
+  margin:0 auto;
+  
+}
+.head_por image{
+  width:98rpx;
+  height:98rpx;
+  border-radius:50%;
+}
+.head_por>text{
+  display:block;
+  padding-top:25rpx;
+  color:#333;
+  font-size:24rpx;
+  padding-bottom:49rpx;
+  
+}
+.text2{ 
+  width:322rpx;
+  line-height:30rpx;
+  color:#999;
+  font-size:20rpx;
+  text-align:left;
+  margin:0 auto;
+  padding-bottom:23rpx;
+
+}
+.go_button{
+  width:402rpx;
+  height:80rpx;
+  line-height:80rpx;
+  border-radius:40rpx;
+  background:linear-gradient(#fd9f53,#fe6b3c);
+  text-align:center;
+  margin:0 auto;
+  color:#fff;
+}

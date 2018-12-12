@@ -1,0 +1,60 @@
+/* pages/component/unpaid_invt/index.wxss */
+.invit{
+ 
+}
+
+.title{
+  height:112rpx;
+  line-height:112rpx;
+  width:100%;
+  background:#fff;
+  padding:0 24rpx;
+  color:#666;
+  font-size:28rpx;
+  margin-bottom:34rpx;
+
+}
+.inv_c{
+  display:flex;
+   justify-content: space-between;
+    padding:0 24rpx;
+}
+.inv_lt{
+  position: relative;
+
+}
+
+.inv_lt input{
+  width:496rpx;
+  height:72rpx;
+  line-height:72rpx;
+  border-radius:36rpx;
+  background:#fff;
+  color:#999;
+  font-size:24rpx;
+  padding-left:36rpx;
+  text-indent: 
+
+}
+.btn{
+  color:#fff;
+  width:150rpx;
+  height:72rpx;
+  line-height:72rpx;
+  border-radius:36rpx;
+  background:#fac0ae;
+}
+
+.active{
+  background:linear-gradient(#fd9e51,#fe6e41);
+}
+.errmsgph{
+  width:504rpx;
+  height:78rpx;
+  background:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/ts3@2x.png);
+  position:absolute;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  top:56rpx;
+  left:134rpx;
+}

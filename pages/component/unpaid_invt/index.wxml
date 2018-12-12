@@ -1,0 +1,17 @@
+<!--pages/component/unpaid_invt/index.wxml-->
+<view class="invit">
+  <view class="title">邀请码</view>
+  <view class="inv_con">
+    <view class="inv_c">    
+      <view class="inv_lt">
+        <input type="text" placeholder='请输入您的邀请码'  onfocus="name_focus" value="" bindinput="voteuser"/>
+        <view class="{{is_invit?'errmsgph':''}}"></view>
+      </view>
+      <view class="inv_rt">
+        <button class="{{invit_num>0?'btn active':'btn'}}" bindtap="go_talk" >使用</button>
+      </view>
+    </view>
+  </view>
+
+
+</view>
