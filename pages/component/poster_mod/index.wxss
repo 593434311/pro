@@ -1,0 +1,28 @@
+/* pages/component/poster_mod/index.wxss */
+ /* .poster_tp{
+  width:100%;
+  height:auto;
+  padding:277rpx 0 74rpx 0;  
+} */
+.poster_tp .tit{
+  color:#f17240;
+  font-size:26rpx;
+  margin-bottom:18rpx;
+}
+.poster_tp .text1{
+  display: inline-block;
+  color:#f17042;
+  font-size:72rpx;
+  line-height:72rpx;
+  margin-bottom:22rpx;
+}
+.poster_tp .button{
+  width:128rpx;
+  height:46rpx;
+  line-height: 46rpx;
+  background:linear-gradient(#fd9f53,#fe6b3c);
+  color:#fff;
+  text-align: center;
+  margin:0 auto;
+  border-radius:23rpx;
+}

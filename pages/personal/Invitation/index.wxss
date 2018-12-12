@@ -1,0 +1,241 @@
+/* pages/personal/Invitation/index.wxss */
+/* 邀请码 */
+.Invitation_top{
+   width:100%;
+   height:auto;
+}
+.Invitation_top .top_bg{
+  width:100%;
+  height:578rpx;
+  background: url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/Invitation_bg@2x.png) no-repeat;
+  background-size:100%;
+}
+.top_bg .top_con{
+  padding:80rpx 0 116rpx 0;
+  text-align: center;
+}
+.top_con .text_con{
+ color:#fe7240;
+ font-size:20rpx;
+ padding:60rpx 0 28rpx 0;
+}
+.top_con .text_con text:nth-of-type(1){
+  margin-right:36rpx;
+ 
+}
+.button{
+  width:402rpx;
+  height:80rpx;
+  line-height:80rpx;
+  border-radius:40rpx;
+  font-size:28rpx;
+  background:linear-gradient(#fd9f53,#fe6b3c);
+  text-align:center;
+  margin:0 auto;
+  color:#fff;
+}
+/* 等级 */
+.Invitation_rank{
+  margin-bottom:12rpx;
+}
+.rank_tit{
+  display:flex;
+  align-items:center;
+  padding:32rpx 0 21rpx 24rpx;
+  background:#fff;
+  margin-bottom:4rpx;
+
+}
+.rank_tit image{
+  width:26rpx;
+  height:24rpx;
+  margin-right:16rpx;
+}
+.rank_tit .rank_text1{
+  font-size:28rpx;
+  color:#666;
+}
+.rank_text1 text{
+  font-size:24rpx;
+  color:#fe6e41;
+}
+.rank_bg{
+  background:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/Invitation_line@2x.png)no-repeat;
+  background-size:100%;
+}
+.rank_bg .rank_text2{
+  font-size:26rpx;
+  color:#666;
+  padding-top:30rpx;
+  padding-left:24rpx;
+}
+.rank_text2 text{
+  font-size:36rpx;
+  color:#fe6e41;
+}
+.rank_name{
+  width:100%;
+  height:452rpx;
+  position: relative;
+}
+.rank_name .name_con{
+  position: absolute;
+  text-align: center;
+}
+.rank_name .name1{
+  left:52rpx;
+  top:250rpx;
+}
+.rank_name .name2{
+  left:254rpx;
+  top:230rpx;
+}
+.rank_name .name3{
+  right:218rpx;
+  top:180rpx;
+
+}
+.rank_name .name4{
+  right:40rpx;
+  top:104rpx;
+}
+ .name_img{
+  width:80rpx;
+  height:80rpx;
+  border:6rpx solid #fe6e41;
+  border-radius:50%;
+  /* text-align: center; */
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+}
+.name_img .img1{
+  width:52rpx;
+  height:50rpx;
+  border-radius:50%;
+}
+.name_img .img2{
+  width:83rpx;
+  height:58rpx;
+  border-radius:50%;
+}
+.name_img .img3{
+  width:51rpx;
+  height:68rpx;
+  border-radius:50%;
+}
+.name_img .img4{
+  width:47rpx;
+  height:66rpx;
+  border-radius:50%;
+}
+
+.rank_name .name_con text{
+  display:block;
+  color:#fe6e41;
+  font-size:28rpx;
+  padding-top:18rpx;
+}
+/* 当前等级圈 */
+.circle{
+  box-shadow: 0 0 0 16rpx #feb6a0; 
+}
+/* 活动规则 */
+.contentW{
+  background:#fff;
+  padding:0 24rpx;
+}
+.Invitation_rule{
+  padding-bottom:42rpx;
+  margin-bottom:12rpx;
+}
+.title{
+  display: flex;
+  align-items:center;
+  padding-top:38rpx;
+}
+.title image{
+  width:27rpx;
+  height:33rpx;
+  padding-right:16rpx;
+}
+ .title text{
+  font-size:28rpx;
+  color:#666;
+}
+.rule_text{
+  color:#999;
+  font-size:22rpx;
+  line-height:34rpx;
+  padding-top:26rpx;
+}
+.rule_text text{
+  display:block;
+}
+.date{
+  display: flex;
+  justify-content:space-between;
+  padding-top:45rpx;
+ 
+}
+.date view{
+  width:130rpx;
+  text-align: center;
+  color:#666;
+  font-size:26rpx;
+  padding-bottom:18rpx;
+}
+/* 下划线 */
+.border-bottom{
+  border-bottom:4rpx solid #f2751a;
+}
+/* 邀请记录 */
+.wrap_list{
+  padding-top:16rpx;
+}
+.list{
+  display: flex;
+  padding:22rpx 38rpx;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #e5e5e5;
+}
+.list .user_img{
+  display: flex;
+  align-items:center;
+}
+.list .user_img image{
+  width:87rpx;
+  height:87rpx;
+}
+.list .user_img text{
+  font-size:26rpx;
+  color:#666;
+  margin-left:24rpx;
+}
+.list .data_del{
+  font-size:26rpx;
+  color:#999;
+} 
+.title .jilu_img{
+  width:33rpx;
+  height:35rpx;
+  
+}
+/* 页数 */
+.page{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:75rpx 186rpx 60rpx;
+  color:#666;
+  font-size:22rpx;
+}
+.pagination{
+  padding:0 26rpx;
+  height:46rpx;
+  line-height: 46rpx;
+  border-radius:23rpx;
+  border:1px solid #e5e5e5;
+}

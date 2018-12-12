@@ -66,6 +66,21 @@
     </navigator>
   </view>
 </view>
+<!-- 我的邀请码 -->
+<view class="Invitation contentW">
+  <navigator url="/pages/personal/Invitation/index">
+    <view class="title">
+      <view class="Invitation_lt">
+        <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/poster/yaoqingma@2x.png"></image>
+        <text>我的邀请码</text>
+      </view>
+      <view class="Invitation_rt">
+        <image class="more" src="/static/images/details_index/more@2x.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+</view>
 <!-- 我的钱包 -->
 <view class="wallet contentW">
   <navigator url='/pages/personal/wallet/index'>
@@ -86,7 +101,7 @@
   <navigator url='/pages/personal/mycollection/index'>
     <view class="title">
       <view class="shoucang tit_lt">
-        <image src="/static/images/personal/shoucang@2x.png"></image>
+        <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/shoucang@2x.png"></image>
         <text class="tit_text1">我的收藏</text>
       </view>
       <view class="tit_rt tishi">

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "poster_mod": "/pages/component/poster_mod/index"
+  }
+}

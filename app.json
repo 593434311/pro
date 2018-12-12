@@ -1,18 +1,17 @@
 {
   "pages": [
-  
     "pages/index/index",
+    "pages/personal/unpaid/unpaid",
+    "pages/zpp/index",
     "pages/details/selectregion/index",
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
-    "pages/personal/index/index",
     "pages/find/index/index",
     "pages/details/business/index",
     "pages/details/actideails/index",
     "pages/details/index/index",
     "pages/personal/nogroup/index",
     "pages/personal/seeolde/index",
-    "pages/personal/unpaid/unpaid",
     "pages/details/othergro/index",
     "pages/personal/mycollection/index",
     "pages/find/selectedActi/index",
@@ -27,7 +26,13 @@
     "pages/details/allactive/index",
     "pages/details/payment/index",
     "pages/component/public/index",
+    "pages/personal/index/index",
+    "pages/details/poster/poster",
+    "pages/personal/Invitation/index",
+    "pages/component/poster_mod/index",
+    "pages/component/unpaid_invt/index",
     "pages/personal/Invitationcode/index"
+
   ],
   "window": {
     "backgroundTextStyle": "center",

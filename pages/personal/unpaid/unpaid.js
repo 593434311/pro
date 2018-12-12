@@ -19,8 +19,67 @@ Page({
     isusernum: null,
     isuseripne: null,
     is_mobile: false,
-    orderid: null
+    orderid: null,
+    chooseSize: false,
+    animationData: {},
+    showmask: false,
+    is_inv:''
   },
+
+  chooseSezi: function (e) {
+    // 用that取代this，防止不必要的情况发生
+    var that = this;
+    this.setData({
+      showmask: true
+    })
+    this.showmaska()
+    console.log(1)
+  },
+  showmaska(e){
+   
+    var animation = wx.createAnimation({
+      duration: 100,
+      timingFunction: 'linear'
+    })
+
+    this.animation = animation
+
+    animation.translateY(0).step()
+
+    this.setData({
+      animationData: animation.export()
+    })
+    setTimeout(function () {
+      var systemInfo = wx.getSystemInfoSync();
+      animation.translateY(-(220 * (750/ systemInfo.windowWidth))).step()
+      this.setData({
+        animationData: animation.export()
+      })
+    }.bind(this), 100)
+
+  },
+  hideModal: function (e) {
+    var is_inv = e.detail;
+    this.setData({
+      is_inv:is_inv
+    })
+    var that = this;
+    var animation = wx.createAnimation({
+      duration: 2000,
+      timingFunction: 'linear'
+    })
+    that.animation = animation
+    animation.translateY(0).step()
+    setTimeout(function () {
+      that.setData({
+        animationData: animation.export(),
+      })
+      that.setData({
+        showmask: false
+      })
+    }, 200)
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

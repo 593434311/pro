@@ -246,6 +246,10 @@
 .strategy{
   
 }
+.gonglue{
+  display:flex;
+  align-items:center;
+}
 .strategy_cont{
   padding:0 42rpx;
 }
@@ -281,6 +285,10 @@
 .presentation{
   margin-bottom:112rpx;
   padding-bottom:36rpx;
+}
+.jieshao{
+  display:flex;
+  align-items:center;
 }
 .presentation .presentation_cont{
   overflow: auto;
