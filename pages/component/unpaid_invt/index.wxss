@@ -43,18 +43,20 @@
   line-height:72rpx;
   border-radius:36rpx;
   background:#fac0ae;
+  font-size:28rpx;
 }
 
 .active{
   background:linear-gradient(#fd9e51,#fe6e41);
 }
 .errmsgph{
-  width:504rpx;
-  height:78rpx;
-  background:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/ts3@2x.png);
+  width:376rpx;
+  height:98rpx;
+  background:url(http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/ts3@3x.png);
   position:absolute;
   background-repeat: no-repeat;
   background-size: 100%;
   top:56rpx;
   left:134rpx;
+  
 }

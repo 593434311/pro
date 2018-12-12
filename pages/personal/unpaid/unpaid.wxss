@@ -142,7 +142,7 @@ page{
   position: relative;
   display: flex;
   align-items:center;
-  padding:30rpx 42rpx;
+  padding:60rpx 42rpx;
   line-height: 28rpx;
   font-size:28rpx;
   color:#8d8d8d;
@@ -308,7 +308,7 @@ page{
 .errmsgna{
   position: absolute;
   left: 138rpx;
-  top: 70rpx;
+  top: 78rpx;
   height: 98rpx;
   width: 376rpx;
   z-index: 99;
@@ -320,7 +320,7 @@ page{
 .errmsgph{
   position: absolute;
   left: 138rpx;
-  top: 70rpx;
+  top: 78rpx;
   height: 98rpx;
   width: 376rpx;
   border-radius: 26rpx;
@@ -381,7 +381,7 @@ page{
    bottom: -100%;
    left: 0;
   z-index: 2000;
-  background:#e5e5e5;
+  background:#f9f9fa;
 }
 .mask{
   position: fixed;

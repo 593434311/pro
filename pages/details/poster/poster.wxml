@@ -15,7 +15,7 @@
       <text>蒜苗君</text>
     </view>
     <view class="text2">支付时输入TA的邀请码，你和TA都可以获得立减哦</view> 
-    <view class="go_button">去看看</view>
+    <view class="go_button" bindtap='go_index'>去看看</view>
   </view>
 
 

@@ -1,6 +1,7 @@
 <!--pages/personal/Invitation/index.wxml-->
 <!-- 邀请码 -->
 <view class="Invitation_top">
+ 
   <view class="top_bg">
     <view class="top_con">
       <poster_mod></poster_mod>
@@ -8,7 +9,10 @@
         <text>已获收入：360元</text>
         <text>已邀请人数：60人</text>
       </view>
-      <view class="button" bindtap='go_del'>立即邀请</view>
+     
+      <view class="button" >
+         <button open-type='share'>立即邀请</button>
+      </view>
     </view>
   </view>
 </view>
@@ -16,7 +20,7 @@
 <view class="Invitation_rank">
   <view class="rank_tit">
     <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/link@2x.png"></image>
-    <view class="rank_text1">当前等级：<text>六耳猕猴</text></view>
+    <view class="rank_text1">当前等级：<text>灵明石猴</text></view>
   </view>
   <view class="rank_bg">
     <view class="rank_text2">距离下一等级还差：<text>140人</text></view>
@@ -25,7 +29,7 @@
         <view class="name_img">
           <image class="img1"  src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/img_1@2x.png"></image>
         </view>
-        <text>石猴</text>
+        <text>灵明石猴</text>
       </view>
       <view class="name_con name2">
         <view class="name_img circle">

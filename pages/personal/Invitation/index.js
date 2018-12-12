@@ -11,11 +11,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  go_del(e){
-    wx.navigateTo({
-      url: "/pages/details/poster/poster",
-    })
-  },
+  // go_del(e){
+  //   wx.navigateTo({
+  //     url: "/pages/details/poster/poster",
+  //   })
+  // },
   onLoad: function (options) {
 
   },
@@ -65,7 +65,12 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage() {
 
+    return {
+      title: `拼玩·开启优惠拼团之旅`,
+      path: '/pages/details/poster/poster',
+      imageUrl: ''
+    }
   }
 })

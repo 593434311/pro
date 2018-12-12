@@ -23,7 +23,7 @@
   margin-right:36rpx;
  
 }
-.button{
+.button button{
   width:402rpx;
   height:80rpx;
   line-height:80rpx;
@@ -91,13 +91,13 @@
   top:230rpx;
 }
 .rank_name .name3{
-  right:218rpx;
-  top:180rpx;
+  right:204rpx;
+  top:184rpx;
 
 }
 .rank_name .name4{
   right:40rpx;
-  top:104rpx;
+  top:110rpx;
 }
  .name_img{
   width:80rpx;

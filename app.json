@@ -1,8 +1,8 @@
 {
   "pages": [
+ 
     "pages/index/index",
     "pages/personal/unpaid/unpaid",
-    "pages/zpp/index",
     "pages/details/selectregion/index",
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
