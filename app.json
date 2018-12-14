@@ -1,7 +1,13 @@
 {
   "pages": [
+      "pages/index/index",
+    "pages/details/share/share",
+    "pages/personal/Invitation/index",
  
-    "pages/index/index",
+    "pages/details/poster/poster",
+    
+
+ 
     "pages/personal/unpaid/unpaid",
     "pages/details/selectregion/index",
     "pages/personal/wallet/index",
@@ -22,17 +28,17 @@
     "pages/find/articledetails/index",
     "pages/details/selecoupon/index",
     "pages/details/bannerdetails/index",
-    "pages/details/share/share",
+   
     "pages/details/allactive/index",
     "pages/details/payment/index",
     "pages/component/public/index",
     "pages/personal/index/index",
-    "pages/details/poster/poster",
-    "pages/personal/Invitation/index",
+    
     "pages/component/poster_mod/index",
     "pages/component/unpaid_invt/index",
+    "pages/details/lolactive/index",
     "pages/personal/Invitationcode/index"
-
+    
   ],
   "window": {
     "backgroundTextStyle": "center",

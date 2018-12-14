@@ -94,7 +94,7 @@
     <view wx:else class="bottom_pay" bindtap='regulte'>立即支付</view>
   </view>
 </view>
-<view wx:if="{{showmask}}" catchtouchmove="{{false}}" class="mask" bindtap='hideModal'></view>
-<unpaid_inv wx:if="{{showmask}}" catchtouchmove="{{false}}" bind:action="hideModal" class='choose' animation='{{animationData}}'></unpaid_inv>
-<!-- <unpaid_inv class='choose'></unpaid_inv> -->
+<view wx:if="{{showmask}}" catchtouchmove="{{false}}" class="mask" bindtap='hidemask'></view>
+<unpaid_inv wx:if="{{showmask}}" catchtouchmove="{{false}}" bind:action="hideModal" class='choose' animation='{{animationData}}' dataCode="{{invt_data.invite_code}}"></unpaid_inv>
+
 

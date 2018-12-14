@@ -4,11 +4,11 @@
  
   <view class="top_bg">
     <view class="top_con">
-      <poster_mod></poster_mod>
+      <poster_mod dataCode="{{invt_data.invite_code}}"></poster_mod>
       <view class="text_con">
-        <text>已获收入：360元</text>
-        <text>已邀请人数：60人</text>
-      </view>
+        <text>已获收入：{{invt_data.money}}元</text>
+        <text>已邀请人数：{{invt_data.count}}人</text>
+                </view>
      
       <view class="button" >
          <button open-type='share'>立即邀请</button>
@@ -20,31 +20,31 @@
 <view class="Invitation_rank">
   <view class="rank_tit">
     <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/link@2x.png"></image>
-    <view class="rank_text1">当前等级：<text>灵明石猴</text></view>
+    <view class="rank_text1">当前等级：<text>{{invt_data.levelname.name}}</text></view>
   </view>
   <view class="rank_bg">
-    <view class="rank_text2">距离下一等级还差：<text>140人</text></view>
+    <view class="rank_text2">距离下一等级还差：<text>{{invt_data.levelname.num}}人</text></view>
     <view class="rank_name">
       <view class="name_con name1">
-        <view class="name_img">
+        <view class="{{invt_data.level==1?'name_img circle':'name_img'}}">
           <image class="img1"  src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/img_1@2x.png"></image>
         </view>
         <text>灵明石猴</text>
       </view>
       <view class="name_con name2">
-        <view class="name_img circle">
+        <view class="{{invt_data.level==2?'name_img circle':'name_img'}}">
           <image class="img2"  src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/img_2@2x.png"></image>
         </view>
         <text>弼马温</text>
       </view>
       <view class="name_con name3">
-        <view class="name_img">
+        <view class="{{invt_data.level==3?'name_img circle':'name_img'}}">
           <image class="img3" src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/img_3@2x.png"></image>
         </view>
         <text>齐天大圣</text>
       </view>
       <view class="name_con name4">
-        <view class="name_img">
+        <view class="{{invt_data.level==4?'name_img circle':'name_img'}}">
           <image class="img4 "  src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/img_4@2x.png"></image>
         </view>
         <text>斗战胜佛</text>

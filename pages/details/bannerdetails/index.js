@@ -7,6 +7,7 @@ Page({
    */
   data: {
     bannerImage:[],
+    bannerpath:''
   },
 
   /**
@@ -14,14 +15,22 @@ Page({
    */
   onLoad: function (options) {
     app.RequiseData('login.login.bannerinfo', { id: options.id }, res =>{
+      console.log(res)
       if(res.status==0){
         this.setData({
-          bannerImage:res.data
+          bannerImage: res.data.data,
+          bannerpath:res.data.path
         })
       }
     })
   },
-  
+  goactive(){
+    if (this.data.bannerpath){
+      wx.navigateTo({
+        url: this.data.bannerpath,
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

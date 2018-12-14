@@ -10,7 +10,8 @@ Page({
     isCoupon: false ,
     inviter: '',
     id: '',
-    actid: ''
+    actid: '',
+    imma:'http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/static/share_bg@2x.png'
   },
 
   /**

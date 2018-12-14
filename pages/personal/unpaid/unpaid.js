@@ -23,7 +23,8 @@ Page({
     chooseSize: false,
     animationData: {},
     showmask: false,
-    is_inv:''
+    is_inv:'',
+    invt_data:[]
   },
 
   chooseSezi: function (e) {
@@ -33,19 +34,14 @@ Page({
       showmask: true
     })
     this.showmaska()
-    console.log(1)
   },
   showmaska(e){
-   
+
     var animation = wx.createAnimation({
       duration: 100,
       timingFunction: 'linear'
     })
-
     this.animation = animation
-
-    animation.translateY(0).step()
-
     this.setData({
       animationData: animation.export()
     })
@@ -58,14 +54,30 @@ Page({
     }.bind(this), 100)
 
   },
+  hidemask(){
+    var that = this
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'linear'
+    })
+    that.animation = animation
+    animation.translateY(0).step()
+    setTimeout(function () {
+      that.setData({
+        showmask: false,
+        animationData: animation.export()
+        // is_inv: ''
+      })
+    }, 200)
+  },
   hideModal: function (e) {
     var is_inv = e.detail;
     this.setData({
-      is_inv:is_inv
+      is_inv: is_inv
     })
     var that = this;
     var animation = wx.createAnimation({
-      duration: 2000,
+      duration: 1000,
       timingFunction: 'linear'
     })
     that.animation = animation
@@ -75,9 +87,12 @@ Page({
         animationData: animation.export(),
       })
       that.setData({
-        showmask: false
+        showmask: false,
+        // is_inv: ''
+
       })
     }, 200)
+    
   },
 
   /**
@@ -179,7 +194,8 @@ Page({
     var name = this.data.usernum;
     var phone = this.data.useripne;
     var coupon_id = order ? order.id : '';
-    app.RequiseData('order.index.payorder', { orderid: order_id, code: coupon_code, name: encodeURIComponent(name), phone: phone, cid: coupon_id }, res => {
+    var is_inv = this.data.is_inv || ''
+    app.RequiseData('order.index.payorder', { orderid: order_id, code: coupon_code, name: encodeURIComponent(name), phone: phone, cid: coupon_id, invite_code: is_inv }, res => {
       wx.hideLoading()
       if (res.status != 0) {
         wx.showModal({

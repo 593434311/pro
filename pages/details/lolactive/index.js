@@ -1,28 +1,18 @@
-// pages/personal/Invitation/index.js
-const app = getApp()
+// pages/details/lolactive/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    invt_data:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  // go_del(e){
-  //   wx.navigateTo({
-  //     url: "/pages/details/poster/poster",
-  //   })
-  // },
   onLoad: function (options) {
-    app.RequiseData('user.info.apply_code',{}, res => {
-      this.setData({
-        invt_data: res.data
-      })
-    })
+
   },
 
   /**
@@ -70,12 +60,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage() {
-    console.log(this.data.invt_data.invite_code)
-    return {
-      title: `拼玩·开启优惠拼团之旅`,
-      path: `/pages/details/poster/poster?id=${this.data.invt_data.invite_code}`,
-      imageUrl: ''
-    }
+  onShareAppMessage: function () {
+
   }
 })

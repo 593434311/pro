@@ -4,16 +4,23 @@ page{
 }
 .bg{
   width:100%;
-  height:1672rpx;
-  background-color: lightcyan;
-  background-size:100%;
+  height:1443rpx;
+  position:relative;
+
+}
+.bg image{
+  width:100%;
+  height:1443rpx;
+  
 }
 .warp{
-  padding:680rpx 24rpx 0;
+ position: absolute;
+ bottom:342rpx;
+ left:148rpx;
 }
 .warp .btn_jion{
-  width:340rpx;
-  height:100rpx;
+  width:448rpx;
+  height:108rpx;
   line-height:100rpx;
   color:#fff;
   font-size:36rpx;
@@ -21,11 +28,11 @@ page{
   margin:0 auto;
   background:linear-gradient(#fd9f53,#fe6b3c);
   box-shadow: rgba(254,110,65,0.3) 0 5rpx 3rpx; 
-  border-radius:50rpx;
+  border-radius:54rpx;
   
 }
 
-.content{
+/* .content{
   color:#fff;
   text-align: center;
 }
@@ -36,15 +43,19 @@ page{
 
 }
 .content .text_con image{
-  /* padding:63rpx 0 140rpx 0; */
+ 
   width:520rpx;
   height:476rpx;
 
-}
+} */
 
 
-.content .text_footer{
+.text_footer{
   font-size:28rpx;
+  color:#ffeedd;
+  position: absolute;
+  bottom:240rpx;
+  left:276rpx;
 }
 
  

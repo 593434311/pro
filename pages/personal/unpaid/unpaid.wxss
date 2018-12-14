@@ -4,7 +4,6 @@ page{
 }
 .contentW{
   width: 100%;
-  overflow: hidden;
   padding: 0 24rpx;
   background-color:#fff;
   margin-bottom:12rpx;
@@ -142,7 +141,7 @@ page{
   position: relative;
   display: flex;
   align-items:center;
-  padding:60rpx 42rpx;
+  padding:30rpx 42rpx;
   line-height: 28rpx;
   font-size:28rpx;
   color:#8d8d8d;

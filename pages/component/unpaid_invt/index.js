@@ -1,5 +1,5 @@
 // pages/component/unpaid_invt/index.js
-
+var app = getApp()
 Component({
   /**
    * 组件的属性列表
@@ -44,23 +44,17 @@ Component({
       })
     },
     go_talk(e) {
-      if (this.data.invit_num > 6 || this.data.invit_num < 6) {
-        this.setData({
-          is_invit: true,
+      if (this.data.is_val) {
+        app.RequiseData('user.info.iscode', { invite_code: this.data.is_val }, res => {
+          if (res.status === 0) {
+            this.triggerEvent("action", this.data.is_val);
+          } else {
+            this.setData({
+              is_invit: true,
+            })
+          }
         })
-        
-      } else {
-        this.setData({
-          is_invit: false,
-        })
-        this.triggerEvent("action", this.data.is_val);
-      }
-
-
-
+      } 
     },
-
-    
-    
   }
 })
