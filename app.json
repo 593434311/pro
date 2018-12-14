@@ -1,18 +1,15 @@
 {
   "pages": [
-      "pages/index/index",
+    "pages/index/index",
+    "pages/find/index/index",
+    "pages/personal/index/index",
     "pages/details/share/share",
     "pages/personal/Invitation/index",
- 
     "pages/details/poster/poster",
-    
-
- 
     "pages/personal/unpaid/unpaid",
     "pages/details/selectregion/index",
     "pages/personal/wallet/index",
     "pages/personal/Orderform/index",
-    "pages/find/index/index",
     "pages/details/business/index",
     "pages/details/actideails/index",
     "pages/details/index/index",
@@ -28,12 +25,9 @@
     "pages/find/articledetails/index",
     "pages/details/selecoupon/index",
     "pages/details/bannerdetails/index",
-   
     "pages/details/allactive/index",
     "pages/details/payment/index",
     "pages/component/public/index",
-    "pages/personal/index/index",
-    
     "pages/component/poster_mod/index",
     "pages/component/unpaid_invt/index",
     "pages/details/lolactive/index",
