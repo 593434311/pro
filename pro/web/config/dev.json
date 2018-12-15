@@ -1,0 +1,6 @@
+{
+    "dbUrl": "mongodb://127.0.0.1:27017/react",
+    "dbUser": "root",
+    "dbPass": "123123a",
+    "port": 8084
+}
