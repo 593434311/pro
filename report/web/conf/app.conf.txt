@@ -1,0 +1,22 @@
+appname = mingWeb
+httpport = 8080
+runmode = dev
+servername = mingweb 2.0
+
+[wechat]
+appid = wx868041f175008d7a
+appsecret = 175f2adf4554b436be3034bc0d901066
+token =
+encodingaeskey = 
+memcache = "127.0.0.1:11211"
+
+isdebug = true
+debugger = "o5veQwlNmqMqQCId09tFN8ivwVtg"
+
+[db]
+type = "sqlserver"
+connstring = "server=192.168.1.186;user id=bize;password=bize;database=OMRONCRM;connection timeout=30;"
+
+[db.aa]
+type = "adodb"
+connstring = "Provider=SQLOLEDB;Data Source=192.168.1.186;Initial Catalog=OMRONCRM;user id=bize;password=bize"

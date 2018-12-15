@@ -1,0 +1,162 @@
+JS高级(四)--ES6（常用的、重点的）
+一、模板字符串
+ 
+
+模板字符串就是一种字符串的新的表现形式
+
+模板字符串的基本用法
+var s1 = `abc`
+
+模板字符串的优势
+1、字符串和变量拼接
+
+var s3 =" a " + s1 + " b " + s2;
+
+var s4 = ` a ${s1} b ${s2}`;
+
+2、字符串换行
+
+var s5 =`<div>
+            <p>
+                <span>123</span>
+            </p>
+            <p>${s2}</p>
+            <p>${s3}</p>
+            <p>${s1}</p>
+        </div>`;
+console.log(s5);
+二、解构赋值
+ 
+
+对象的解构赋值
+
+var obj={name:"张三",age:18}
+ 
+var {name,age}=obj;
+//生成2个变量，
+//  name值来自于obj.name、
+//  age值来自于obj.age
+ 
+var {name:title}=obj;
+//生成一个变量：title，值来自于obj.name
+函数参数的解构赋值
+
+function f1(obj){
+    console.log(obj.age);
+    console.log(obj.height)
+}
+//等价于
+function f1({ age,height }){
+    console.log(age);
+    console.log(height)
+}
+ 
+f1({age:5,height:180})
+补充：属性的简写
+
+var a = 3 ;
+var c = 10;
+var b = { a,c } ;  
+//b对象有一个a属性，a属性的值，来自于a变量  ，
+//还有一个c属性，c属性的值来自于c变量
+console.log(b)
+三、rest参数
+ 
+
+使用背景：es6
+
+优点：arguments是伪数组，而rest参数是真数组
+
+function fn(){
+    //arguments是函数内部的一个局部变量，
+    //arguments.length表示函数的实参的个数
+    console.log(arguments.length);
+    for(var i =0 ; i<arguments.length; i++){
+        console.log(arguments[i]);
+    }
+}
+fn(1,3,5)       //3
+// fn("a","b","c","d","e") //5
+ 
+//es6箭头函数内部不能使用arguments
+//为了弥补这个问题，rest参数应孕而生
+ 
+//...args就是rest参数
+//-->产生了一个变量，这个变量是一个数组，数组里面包含了这个函数调用时传递的所有实参
+function q(...args){
+    //验证args是不是数组？
+    console.log(args instanceof Array);//true
+    console.log(Object.prototype.toString.call(args));//"[object Array]"
+    console.log(Array.isArray(args));   //true es5中的新方法
+ 
+    console.log(args);
+}
+q(1,3,5);
+q(2,3,4,5,6,7,8);　
+四、箭头函数
+ 
+
+箭头函数和普通匿名函数有哪些不同？
+1、函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
+
+2、不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。
+
+3、不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。
+
+4、（不常用）不可以使用yield命令，因此箭头函数不能用作 Generator 函数。
+
+--> generator函数现在经常用async替代
+
+场景：用于替代匿名函数
+基本用法
+//匿名函数
+div.onclick=function(){
+    console.log("你好")
+}
+//箭头函数
+div.onclick=()=>{
+    console.log("你好")
+}
+有一个参数的箭头函数
+var fn=(a)=>{
+    console.log("abc");
+}
+//等价于：
+var fn=a=>{
+    console.log("abc");
+}
+有2个及更多参数的箭头函数
+var f=(a,b,c)=>{
+    console.log("abc")
+}
+箭头函数的特点
+
+var p={
+    age:18,
+    //es6中对象方法的箭头函数表示形式
+    run:()=>{
+        setTimeout(()=>{
+            //this:window
+            console.log(this);//this是window
+        },100)
+    },
+    travel:function(){
+        //this:p
+        setTimeout(()=>{
+            console.log(this);//this是p
+        },100)
+    },
+    //推荐使用的方式☆☆☆：es6中对象方法的简写形式
+    say(){
+        console.log("say方法中的this：",this);
+        setTimeout(()=>{
+            console.log("say内部的延迟函数：",this);//this是p
+        },100)
+    },
+}
+ 
+p.run();
+ 
+p.travel();
+ 
+p.say();

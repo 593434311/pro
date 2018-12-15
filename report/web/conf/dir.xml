@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dirs>
+	<Dir name="/js" src="static/js" />
+	<Dir name="/css" src="static/css" />
+	<Dir name="/media" src="static/media" />
+	<Dir name="/font" src="static/font" />
+	<Dir name="/upload" src="/upload" />
+</Dirs>
