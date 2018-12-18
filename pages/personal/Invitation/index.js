@@ -6,16 +6,88 @@ Page({
    * 页面的初始数据
    */
   data: {
-    invt_data:[]
+    invt_data:[],
+    nowPage:1,
+    showData: [],
+    data_date:3,
+    pageSize:2,
+    allPage:0,
+    testData: []
+  },
+  dateHandle(e){
+    this.setData({
+      data_date: e.currentTarget.dataset.date,
+    })
+    this.getData()
+  },
+  getData:function(){
+    app.RequiseData('user.info.codelist', { date: this.data.data_date, p: this.data.nowPage, size: this.data.pageSize }, res =>{
+      console.log(res)
+      this.setData({
+        testData:res.data.data,
+        allPage: Math.ceil(res.data.count / this.data.pageSize)
+      })
+    })
+  },
+  preClick(e){
+    var pag = this.data.nowPage;
+    if(pag!=1){
+      this.setData({
+        nowPage:pag-1
+      })
+      this.getData()
+    }
+  },
+  nextClick(e) {
+    var pag = this.data.nowPage;
+    var allpag = this.data.allPage;
+    if (pag<allpag) {
+      this.setData({
+        nowPage: pag + 1
+      })
+      this.getData()
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  // go_del(e){
-  //   wx.navigateTo({
-  //     url: "/pages/details/poster/poster",
+
+
+
+
+  // dateHandle(e){
+  //   this.setData({
+  //     data_date: e.currentTarget.dataset.date,
+  //     nowPage: 1,
+  //     allPage: 0,
+  //     testData: []
   //   })
+  //   this.getData()
+  // },
+  // getData: function () {
+  //   app.RequiseData('user.info.codelist', { date: this.data.data_date, p: this.data.nowPage, size: this.data.pageSize }, res => {
+  //     this.setData({
+  //       allPage: Math.ceil(res.data.count / this.data.pageSize),
+  //       testData: res.data.data
+  //     })
+  //   })
+  // },
+  // preClick() {
+  //   var pag= this.data.nowPage
+  //   if (pag != 1){
+  //     this.setData({
+  //       nowPage: pag - 1
+  //     })
+  //     this.getData()
+  //   }
+  // },
+  // nextClick(){
+  //   var bepag = this.data.nowPage
+  //   var allpag = this.data.allPage
+  //   if (bepag < allpag) {
+  //     this.setData({
+  //       nowPage: bepag + 1
+  //     })
+  //     this.getData()
+  //   }
   // },
   onLoad: function (options) {
     app.RequiseData('user.info.apply_code',{}, res => {
@@ -23,53 +95,8 @@ Page({
         invt_data: res.data
       })
     })
+    this.getData()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage() {
     console.log(this.data.invt_data.invite_code)
     return {

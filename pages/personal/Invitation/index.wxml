@@ -72,31 +72,25 @@
     <text>我的邀请记录</text>
   </view>
   <view class="date">
-    <view class="border-bottom">今天</view>
-    <view>本周</view>
-    <view>本月</view>
+    <view class="{{data_date==1?'border-bottom':''}}" data-date="1" bindtap='dateHandle'>今天</view>
+    <view class="{{data_date==2?'border-bottom':''}}" data-date="2" bindtap='dateHandle'>本周</view>
+    <view class="{{data_date==3?'border-bottom':''}}" data-date="3" bindtap='dateHandle'>本月</view>
   </view>
   <view class="wrap_list">
-    <view class="list">
-      <view class="user_img">
-        <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/touxiang@2x.png"></image>
-        <text>小胖的团</text>
+    <view class="list" wx:for="{{testData}}" wx:key="{{index}}">
+       <view class="user_img" >
+        <image src="{{item.avatar}}"></image>
+        <text>{{item.nickname}}</text>
       </view>
-      <view class="data_del">11-16</view>
+      <view class="data_del">{{item.pay_date}}</view> 
+     
 
     </view>
-    <view class="list">
-      <view class="user_img">
-        <image src="http://gtshidai.oss-cn-shanghai.aliyuncs.com/pinwan/Invitation/touxiang@2x.png"></image>
-        <text>小胖的团</text>
-      </view>
-      <view class="data_del">11-16</view>
-
-    </view>
+    
   </view>
   <view class="page">
-    <view class="pre">上一页</view>
-    <view class="pagination">1/10</view>
-    <view class="next">下一页</view>
+    <view class="pre" bindtap='preClick'>上一页</view>
+    <view class="pagination">{{nowPage}}/{{allPage}}</view>
+    <view class="next" bindtap='nextClick'>下一页</view>
   </view>
 </view>
