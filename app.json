@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/zpp/index",
-    "pages/personal/Invitation/index",
     "pages/index/index",
+    "pages/personal/Invitation/index",
     "pages/details/share/share",
     "pages/details/poster/poster",
     "pages/personal/unpaid/unpaid",
