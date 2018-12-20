@@ -88,9 +88,15 @@
     </view>
     
   </view>
-  <view class="page">
-    <view class="pre" bindtap='preClick'>上一页</view>
-    <view class="pagination">{{nowPage}}/{{allPage}}</view>
-    <view class="next" bindtap='nextClick'>下一页</view>
+  <view>
+    <!-- <nodata wx:if="{{isdata}}" state="{{0}}" text="{{texts}}"></nodata> -->
+    <no_invitation wx:if="{{dara_count==0}}" text="{{texts}}"></no_invitation>
+    <view class="page" wx:if="{{dara_count!=0}}">
+      <view class="pre" bindtap='preClick'>上一页</view>
+      <view class="pagination">{{nowPage}}/{{allPage}}</view>
+      <view class="next" bindtap='nextClick'>下一页</view>
+    </view>
+  
   </view>
+  
 </view>

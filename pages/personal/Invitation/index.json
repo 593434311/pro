@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "poster_mod": "/pages/component/poster_mod/index"
+    "poster_mod": "/pages/component/poster_mod/index",
+    "no_invitation": "/pages/component/no_invitation/index"
   }
+  
 }

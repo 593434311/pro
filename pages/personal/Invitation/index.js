@@ -12,21 +12,32 @@ Page({
     data_date:3,
     pageSize:2,
     allPage:0,
-    testData: []
+    testData: [],
+    is_onShow:true,
+    dara_count:0,
+    texts: '您还没有邀请记录喔~',
   },
   dateHandle(e){
     this.setData({
       data_date: e.currentTarget.dataset.date,
     })
+    
     this.getData()
+    
+    
   },
   getData:function(){
     app.RequiseData('user.info.codelist', { date: this.data.data_date, p: this.data.nowPage, size: this.data.pageSize }, res =>{
-      console.log(res)
       this.setData({
         testData:res.data.data,
-        allPage: Math.ceil(res.data.count / this.data.pageSize)
+        allPage: Math.ceil(res.data.count / this.data.pageSize),
+        dara_count: res.data.count
+        
       })
+      if (res.data.count === 0) {
+        this.data.is_onShow=false
+      }
+         
     })
   },
   preClick(e){

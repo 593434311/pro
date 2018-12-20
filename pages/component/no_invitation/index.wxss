@@ -1,0 +1,35 @@
+/* pages/component/no_invitation/index.wxss */
+.noda{
+  display: flex;
+  justify-content: center;
+}
+.noda image{
+  /* margin-top: 115rpx; */
+  width: 319rpx;
+  height: 226rpx;
+}
+.text{
+  margin-top: 55rpx;
+  text-align: center;
+  font-size:26rpx;
+  color:#737373;
+  padding-bottom: 50rpx;
+}
+/* .button{ 
+  font-size: 28rpx;
+  width: 422rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-radius: 42rpx;
+  color: #fff;
+  margin-top: 66rpx;
+  background: linear-gradient(#fd933d, #fe6e41);
+  box-shadow: rgba(254,110,65,0.3) 0 5rpx 3rpx; 
+  text-align: center;
+  margin:50rpx auto;
+  position: relative;
+  
+}
+.tryss{
+  background:#fe7f3e;
+} */
