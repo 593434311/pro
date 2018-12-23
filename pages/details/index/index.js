@@ -70,7 +70,7 @@ Page({
   },
   orderdown(ty){
     app.RequiseData('activity.index.openact', 
-      { act_id: this.data.act_info.act_id, target_user_id: ty.type ? this.data.act_info.user_id : '', inviter_id: this.data.inviter_id }, res => {
+      { act_id: this.data.act_info.act_id, target_user_id: ty.type ? this.data.act_info.user_id : '', inviter_id: this.data.inviter_id, oid: ty.type ? this.data.act_info.id: '' }, res => {
         this.setData({
           showmask: false
         })
