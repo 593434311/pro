@@ -15,7 +15,7 @@ Page({
    */
   onLoad: function (options) {
     app.RequiseData('login.login.bannerinfo', { id: options.id }, res =>{
-      console.log(res)
+      // console.log(res)
       if(res.status==0){
         this.setData({
           bannerImage: res.data.data,
@@ -24,7 +24,8 @@ Page({
       }
     })
   },
-  goactive(){
+  goactive(e){
+    console.log(e)
     if (this.data.bannerpath){
       wx.navigateTo({
         url: this.data.bannerpath,

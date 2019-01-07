@@ -23,9 +23,18 @@ Page({
    * 页面的初始数据
    */
   bannerDetail(e){
-    wx.navigateTo({
-      url: `/pages/details/bannerdetails/index?id=${e.currentTarget.dataset.id}`,
-    })
+    console.log(e.currentTarget.dataset.id)
+   
+    if (e.currentTarget.dataset.id==4){
+      wx.navigateTo({
+        url: "/pages/details/webdetail/index",
+      })
+    }else{
+      wx.navigateTo({
+        url: `/pages/details/bannerdetails/index?id=${e.currentTarget.dataset.id}`,
+      })
+    }
+
   },
   onloadaaa(res) {
     var cuea = setInterval(() => {

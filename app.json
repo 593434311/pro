@@ -1,6 +1,5 @@
 {
   "pages": [
-   
     "pages/index/index",
     "pages/details/share/share",
     "pages/find/index/index",
@@ -32,8 +31,8 @@
     "pages/component/poster_mod/index",
     "pages/component/unpaid_invt/index",
     "pages/details/lolactive/index",
-    "pages/personal/Invitationcode/index"
- 
+    "pages/personal/Invitationcode/index",
+    "pages/details/webdetail/index"
   ],
   "window": {
     "backgroundTextStyle": "center",

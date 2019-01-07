@@ -1,0 +1,2 @@
+<!--pages/details/webdetail/index.wxml-->
+<web-view src="https://shop.gtdysd.com/LoLActivity/index"></web-view>
