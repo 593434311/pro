@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "pages": [
     "pages/index/index",
@@ -66,4 +67,75 @@
       }
     ]
   }
+=======
+{
+  "pages": [
+   
+    "pages/index/index",
+    "pages/details/share/share",
+    "pages/find/index/index",
+    "pages/personal/Invitation/index",
+    "pages/details/poster/poster",
+    "pages/personal/unpaid/unpaid",
+    "pages/details/selectregion/index",
+    "pages/personal/wallet/index",
+    "pages/personal/Orderform/index",
+    "pages/details/business/index",
+    "pages/details/actideails/index",
+    "pages/details/index/index",
+    "pages/personal/nogroup/index",
+    "pages/personal/seeolde/index",
+    "pages/details/othergro/index",
+    "pages/personal/mycollection/index",
+    "pages/find/selectedActi/index",
+    "pages/find/selectedmerc/index",
+    "pages/details/Joindeta/index",
+    "pages/personal/cancel/index",
+    "pages/personal/yesorder/index",
+    "pages/find/articledetails/index",
+    "pages/details/selecoupon/index",
+    "pages/details/bannerdetails/index",
+    "pages/details/allactive/index",
+    "pages/details/payment/index",
+    "pages/component/public/index",
+    "pages/personal/index/index",
+    "pages/component/poster_mod/index",
+    "pages/component/unpaid_invt/index",
+    "pages/details/lolactive/index",
+    "pages/personal/Invitationcode/index"
+ 
+  ],
+  "window": {
+    "backgroundTextStyle": "center",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "惠拼玩",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff3739",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/tabar/574909981906785859.png",
+        "selectedIconPath": "static/images/tabar/85958540329004083.png",
+        "text": "拼团"
+      },
+      {
+        "pagePath": "pages/find/index/index",
+        "iconPath": "static/images/tabar/22081532755178670.png",
+        "selectedIconPath": "static/images/tabar/577952809328792818.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/personal/index/index",
+        "iconPath": "static/images/tabar/170571711685383073.png",
+        "selectedIconPath": "static/images/tabar/350054131244882432.png",
+        "text": "我的"
+      }
+    ]
+  }
+>>>>>>> 350620ec4eee3f414bdffd347a57f6a975fe4082
 }
